@@ -1,0 +1,76 @@
+Okay here comes some of the more complex logic requirements.
+
+Do not feel the need to provide too large samples of code, just the specific requirement that I am asking for. 
+
+% 1. Does any line have the following words on them (the words should be verbatim, case insensitive, and completely alone except for html tags, empty spaces, or possibly some of the following symbols with them '([{}])' ):
+% a. Blackout
+% b. Lights Out
+% c. End of Play
+% d. End of Act
+% e. End of Scene
+% f. Fade to Black
+
+% 2. What would the code look like to scan each line individually for a character tag {c[1-9]+}, and determine if the next non empty space/html tag character is an [A-Z] Character?
+
+% 3a. What would the code be to scan through the extractedText doc, and filter through each line that starts with an italic tag '{i' to see if it has both a '(' but has no ')' inside of it?
+
+3b. For each line that matches, check each following line for either a ')' or a '('.
+
+3c. If a '(' is discovered first (i.e. meaning that there are now TWO open '(' in a row, then send a log to the console notifying about the specific {i} tag that had a single open parenthesis. Then continue the search from where the first '(' had been found (i.e. that way the 2nd '(' can still be run through the function).
+
+3d. If a ')' is discovered first (therefore closing the open parenthesis) then perform the following changes:
+
+3di. Consolidate all image tags starting with the one with the '(' and ending with the one with the ')'
+3dii. Rename the tag with the merged range (i.e. if tags 4, 5, and 6 were used, it should become 4-6)
+3diii. Run a search in the modifiedContent and locate the impacted matching placeholders. 
+3div. Replace the whole line of text starting with the first and ending with the last with the new merged range tag.
+
+4a. What would the code be to filter through the image tags, '{i[1-9]+}' inside of extractedText and find every line that has a '(' inside of it, and then 
+
+4b. Rename those image tags to '{ip[1-9]+}' (keeping the same internal tracking numbers). 
+
+4c. And to also rename the corresponding placeholder tags found in the doc modifiedContent doc.
+
+5a. What would the code be to filter through each line in the modifiedContent doc for all '{ip[1-9]+}' tags, and determining if the next non-empty-space/non-html-tag character is '[a-z|A-Z|1-9]?
+
+5b. For each positive match, convert the placeholder tag from '{ip[1-9]+}' to '{cd[1-9]+}' (with internal numbers remaining the same)
+
+5c. The corresponding tag inside of extractedText should also be updated to match.
+
+6a. What would the code be to filter through each line in the modifiedContent doc for all '{i[1-9]+}' tags, and determining if the PREVIOUS tag (it can be on a past line if necessary) is either a '{c[1-9]+}', '{cd[1-9]+}', or '[a-z|A-Z|1-9]'
+
+6b. For each positive match rename the '{i[1-9]+}' tag to '{em[1-9]+}' (keeping the internal numbers the same)
+
+6c. The corresponding tag inside of extractedText should also be updated to match.
+
+7a. What would the code be to process through the '{em[1-9]+}' tags in extractedText and add to the beginning of each of their contents <em>, and to the end of their contents </em>
+e.g. This: {em326} - [this]
+Would become: {em326} - [<em>this</em>]
+
+7b. Then create code to extract the contents ('<em>this</em>' in our example) and have them replace their placeholder in modifiedContent
+
+8a. What would the code be to filter through each line in the modifiedContent doc for all '{i[1-9]+}' tags, and determining if the PREVIOUS tag (it can be on a past line if necessary) is either a '{a[1-9]+}', '{s[1-9]+}', '{ad[1-9]+}', or '{sl[1-9]+}'
+
+8b. For each positive match rename the '{i[1-9]+}' tag to '{scd[1-9]+}' (keeping the internal numbers the same)
+
+8c. The corresponding tag inside of extractedText should also be updated to match.
+
+9a. What would the code be to extract the content from each '{cd[1-9]+}' tag inside of extractedText and replacing the matching placeholder within modifiedContent?
+
+10a. What would the code be scan each line in modifiedContent and extract the content directly following any '{c[1-9]+}' tag straight through the end of the line, including html mark-up, and then:
+
+10b. Replace it with a placeholder '{d[1-9]+}', and then:
+
+10c. Store the extracted text and its placeholder inside of the extractedText doc
+
+11a. What would the code be to filter through each line in the modifiedContent doc for all '{ip[1-9]+}' tags, and determining if the PREVIOUS tag (it can be on a past line if necessary) is either '{d[1-9]+}', or '{std[1-9]+}'
+
+11b. For each positive match, convert the placeholder tag from '{ip[1-9]+}' to '{std[1-9]+}' (with internal numbers remaining the same)
+
+11c. The corresponding tag inside of extractedText should also be updated to match.
+
+
+
+Let's call the function it is housed within 'consolidateStageDirections()'
+
+So far I have this (assuming the incoming content is already an array):
