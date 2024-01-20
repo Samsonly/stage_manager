@@ -100,15 +100,20 @@ function convertRTFtoHTML(filePath) {
 
     const dir = path.dirname(filePath);
     const baseName = path.basename(filePath, ".rtf");
+    const outputDir = path.join(dir, "testing-outputs");
+
     createHTMLFile(
-      path.join(dir, `${baseName}_modified.html`),
+      path.join(outputDir, `${baseName}_modified.html`),
       modifiedContent
     );
     createHTMLFile(
-      path.join(dir, `${baseName}_extracted.html`),
+      path.join(outputDir, `${baseName}_extracted.html`),
       extractedSections
     );
-    createHTMLFile(path.join(dir, `${baseName}_names.html`), characterNames);
+    createHTMLFile(
+      path.join(outputDir, `${baseName}_names.html`),
+      characterNames
+    );
   });
 }
 
