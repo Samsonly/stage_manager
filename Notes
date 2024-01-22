@@ -71,6 +71,43 @@ Would become: {em326} - [<em>this</em>]
 
 
 
-Let's call the function it is housed within 'consolidateStageDirections()'
+% I still don't think that is correct. You changed the logic order from my original function in addition to adding the needed logic.
 
-So far I have this (assuming the incoming content is already an array):
+% In this version, if the second line had another '(', it would still continue along since the first 'if' only asked if there was no ')'.
+
+% the logic order needs to be as follows:
+
+% If (!hasCloseParenthesis) && (!hasOpenParenthesis) {
+%      continue;
+% } else if (hasCloseParenthesis) && (hasOpenParenthesis) {
+%      if (closeIndex < openIndex) {
+%           // Logic for splitting line after closeIndex so that
+%           // '{i78} - [Words) (More Words]' 
+%           // turns into
+%           // '{78} - [Words)]
+%           // {i78.5 - [(More Words]' 
+%           // Essentially it should replace ')' with ')]\n', and then the next line should first trim, and then add on '{i##.5} - [' (where the numbers match the number from the line it split from
+%           //Then it would take the lines (from the start of the line with the indexed value until the end of the line with the discovered ')' that was just split
+%           //TODO: Then it needs the logic to consolidated. Lets wait on that for here for now
+%      } else { 
+%           // There should be logic here to print  'Unclosed Parenthesis in Line {i##}' (where the numbers match the line that is indexed)
+%           break;
+% } else if (hasOpenParenthesis) {
+%      // There should be logic here to print  'Unclosed Parenthesis in Line {i##}' (where the numbers match the line that is indexed)
+% } else {
+%      // Here is where the consolidation logic should go. The order of things here are:
+%     // Place the lines with the index '(' through the line with the newly discovered ')' into a temp array 'consolidationArray'
+%     // 
+%     //
+%     //
+     
+% if (firstLineMatch && secondLineMatch) {
+%     const updatedTags = firstLineMatch[0] + secondLineMatch[0];
+%     modifiedContent = modifiedContent.replace(new RegExp(firstLineMatch[0], 'g'), updatedTags);
+
+%     const indexToReplace = lines.findIndex(item => item.startsWith(firstLineMatch[0]));
+%     if (indexToReplace !== -1) {
+%       lines.splice(indexToReplace, 1, ...splitElements);
+
+
+

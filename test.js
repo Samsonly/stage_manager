@@ -240,3 +240,74 @@ function consolidateStageDirections(content) {
 //A: I had to change this since I realized some scenarios were missing, but I believe the rest of the logic holds up.
 //QUESTION
 // 1: Does this stop the whole process, or just this instance? I would want it just log the error and
+
+// below is attempt on Sat night:
+
+function consolidateStageDirections(content) {
+  const lines = content.temporaryDoc;
+  let modifiedContent = content.modifiedContent;
+  const openWithoutCloseRegex = /.*\[\((?!.*\))/;
+  let openParenthesisLines = [];
+
+  lines.forEach((line, index) => {
+    if (openWithoutCloseRegex.test(line)) {
+      openParenthesisLines.push(index);
+    }
+  });
+
+  openParenthesisLines.forEach((startIndex) => {
+    for (let i = startIndex + 1; i < lines.length; i++) {
+      const line = lines[i];
+      const hasCloseParenthesis = line.includes(")");
+      const hasOpenParenthesis = line.includes("(");
+      const openIndex = line.indexOf("(");
+      const closeIndex = line.indexOf(")");
+
+      if (!hasCloseParenthesis && !hasOpenParenthesis) {
+        continue;
+      } else if (hasCloseParenthesis && hasOpenParenthesis) {
+        if (closeIndex < openIndex) {
+          //logic to split line
+          const tagMatch = line.match(/\{i(\d+)\}/);
+        } else {
+          break;
+        }
+      } else if (hasOpenParenthesis) {
+      } else {
+      }
+    }
+  });
+}
+// delete below after copying:
+function consolidateStageDirections(content) {
+  const lines = content.temporaryDoc;
+  let modifiedContent = content.modifiedContent;
+  const openWithoutCloseRegex = /.*\[\((?!.*\))/;
+  let openParenthesisLines = [];
+
+  lines.forEach((line, index) => {
+    //logic exists here
+  });
+
+  openParenthesisLines.forEach((startIndex) => {
+    for (let i = startIndex + 1; i < lines.length; i++) {
+      //logic exists here
+    }
+
+    splitArray.forEach((element) => {
+      const splitElements = element.split("\n");
+      const firstLine = splitElements[0];
+      const digitMatch = firstLine.match(/\{i(\d+)\}/);
+
+      if (digitMatch) {
+        const indexToReplace = lines.findIndex((item) =>
+          item.startsWith(digitMatch[0])
+        );
+        if (indexToReplace !== -1) {
+          lines.splice(indexToReplace, 1, ...splitElements);
+        }
+      }
+    });
+  });
+  return { modifiedContent: modifiedContent, temporaryDoc: lines };
+}

@@ -333,6 +333,8 @@ function consolidateStageDirections(content) {
       const hasOpenParenthesis = line.includes("(");
       const openIndex = line.indexOf("(");
       const closeIndex = line.indexOf(")");
+      let splitArray = [];
+      let condensedArray = [];
 
       if (!hasCloseParenthesis && !hasOpenParenthesis) {
         continue;
@@ -343,43 +345,67 @@ function consolidateStageDirections(content) {
           if (tagMatch) {
             const tagNumber = tagMatch[1];
             lines[i] = line.replace(")", `)]\n{i${tagNumber}.5} - [`);
-            //this should leave the line that was originally tagMatched with only a ')' on it. We will want to handle Step 2 Logic Here
+            splitArray.push(i);
+            console.log(splitArray);
+            condensedArray.push(lines.slice(startIndex, i + 1));
+            //TODO There should be some additional logic here that confirms that the new '.5' line actually has a closing tag somewhere as well
+            //TODO does this 'break' pull it entirely out of the loop? Will it ever go through the successful find below?
           }
           break;
         } else {
-          console.error(`Unclosed Parenthesis in Line ${startIndex + 1}`);
+          const startLineTagMatch = lines[startIndex].match(/\{i(\d+)\}/);
+          if (startLineTagMatch) {
+            const startLineTag = startLineTagMatch[0];
+            console.error(`Unclosed Parenthesis in Line ${startLineTag}`);
+          } else {
+            console.error(`Unclosed Parenthesis in Line ${startIndex}`);
+          }
           break;
         }
       } else if (hasOpenParenthesis) {
-        console.error(`Unclosed Parenthesis in Line ${startIndex + 1}`);
+        const startLineTagMatch = lines[startIndex].match(/\{i(\d+)\}/);
+        if (startLineTagMatch) {
+          const startLineTag = startLineTagMatch[0];
+          console.error(`Unclosed Parenthesis in Line ${startLineTag}`);
+        } else {
+          console.error(`Unclosed Parenthesis in Line ${startIndex}`);
+        }
         break;
       } else {
-        let consolidationArray = [];
-        let endIndex = i;
-
-        for (let j = startIndex; j <= endIndex; j++) {
-          consolidationArray.push(lines[j].replace(/[\[\] ]/g, ""));
-        }
-
-        const consolidatedText = consolidationArray.join(" ");
-        const newTag = `{i${startIndex}-${endIndex}}`;
-        lines.splice(
-          startIndex,
-          endIndex - startIndex + 1,
-          `${newTag} - [${consolidatedText}]`
-        );
-
-        const oldTags = consolidationArray
-          .map((_, idx) => `{i${startIndex + idx}}`)
-          .join("");
-        modifiedContent = modifiedContent.replace(
-          new RegExp(oldTags, "g"),
-          newTag
-        );
-
+        condensedArray.push(lines.slice(startIndex, i + 1));
         break;
       }
     }
+
+    splitArray.forEach((element) => {
+      const splitElements = element.split("\n");
+      const firstLine = splitElements[0];
+      const secondLine = splitElements[1];
+      const firstLineMatch = firstLine.match(/\{i(\d+)\}/);
+      const secondLineMatch = secondLine.match(/\{i(\d+)\}/);
+      const updatedTags = firstLineMatch[0] + secondLineMatch[0];
+      const indexToReplace = lines.findIndex((item) =>
+        item.startsWith(firstLineMatch[0])
+      );
+
+      modifiedContent = modifiedContent.replace(
+        new RegExp(firstLineMatch[0], "g"),
+        updatedTags
+      );
+      lines.splice(indexToReplace, 1, ...splitElements);
+    });
+
+    condensedArray.forEach((element) => {
+      let mergedLines = element.join();
+      mergedLines = mergedLines.replace(/\]\s*\{i\d+\}\s*-\s*\[/g, " ");
+      mergedLines = mergedLines.replace(/\[\|\\]/g, "");
+
+      //snag each id tag at start and hold
+      //replace the multiple elements in 'lines' with result
+      //replace the multiple elements in 'modifiedContent' with result
+    });
+
+    //TODO adding logic so that it can replace the items in both extract list and modified doc
   });
 
   return { modifiedContent: modifiedContent, temporaryDoc: lines };
