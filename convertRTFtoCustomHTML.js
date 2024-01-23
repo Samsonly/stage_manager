@@ -302,19 +302,68 @@ function extractItalicSections(content) {
 }
 
 function consolidateItalicExtractions(content) {
-  const stageDirectionResults = consolidateStageDirections(content);
-
-  const sceneDescriptionResults = consolidateSceneDirections(
-    stageDirectionResults
+  const adjustableItalicSection = returnLooseParenthesis(content);
+  const stageDirectionResults = consolidateStageDirections(
+    adjustableItalicSection
   );
 
+  //  const sceneDescriptionResults = consolidateSceneDirections(
+  //    stageDirectionResults
+  //  );
+
+  // return {
+  //   modifiedContent: sceneDescriptionResults.modifiedContent,
+  //   temporaryDoc: sceneDescriptionResults.temporaryDoc,
+  // };
   return {
-    modifiedContent: sceneDescriptionResults.modifiedContent,
-    temporaryDoc: sceneDescriptionResults.temporaryDoc,
+    modifiedContent: stageDirectionResults.modifiedContent,
+    temporaryDoc: stageDirectionResults.temporaryDoc,
   };
 }
 
-function consolidateStageDirections(content) {
+function returnLooseParenthesis(content) {
+  const openParenRegex = /\(\s*(<[^>]+>\s*)*({i\d+})/g;
+  const closeParenRegex = /({i\d+})\s*(<[^>]+>\s*)*\)/g;
+  let modifiedContent = content.modifiedContent;
+  let temporaryDoc = content.temporaryDoc;
+
+  const processMatch = (tag, isOpenParen) => {
+    const tempDocIndex = temporaryDoc.findIndex((element) =>
+      element.includes(tag)
+    );
+
+    if (tempDocIndex !== -1) {
+      let regexPattern;
+      if (isOpenParen) {
+        temporaryDoc[tempDocIndex] = temporaryDoc[tempDocIndex].replace(
+          /\[/,
+          "[$("
+        );
+        regexPattern = new RegExp("\\(" + tag);
+      } else {
+        temporaryDoc[tempDocIndex] = temporaryDoc[tempDocIndex].replace(
+          /\](?![^\[]*\])/g,
+          ")]"
+        );
+        regexPattern = new RegExp(tag + "\\)");
+      }
+
+      modifiedContent = modifiedContent.replace(regexPattern, tag);
+    }
+  };
+
+  modifiedContent.replace(openParenRegex, (_, tag) => {
+    processMatch(tag, true);
+  });
+
+  modifiedContent.replace(closeParenRegex, (_, tag) => {
+    processMatch(tag, false);
+  });
+
+  return { modifiedContent, temporaryDoc };
+}
+
+function consolidateStageDirections(content, baseFilePath) {
   const lines = content.temporaryDoc;
   let modifiedContent = content.modifiedContent;
   const openWithoutCloseRegex = /.*\[\((?!.*\))/;
@@ -326,6 +375,9 @@ function consolidateStageDirections(content) {
     }
   });
 
+  let splitArray = [];
+  let condensedArray = [];
+
   openParenthesisLines.forEach((startIndex) => {
     for (let i = startIndex + 1; i < lines.length; i++) {
       const line = lines[i];
@@ -333,8 +385,6 @@ function consolidateStageDirections(content) {
       const hasOpenParenthesis = line.includes("(");
       const openIndex = line.indexOf("(");
       const closeIndex = line.indexOf(")");
-      let splitArray = [];
-      let condensedArray = [];
 
       if (!hasCloseParenthesis && !hasOpenParenthesis) {
         continue;
@@ -346,10 +396,10 @@ function consolidateStageDirections(content) {
             const tagNumber = tagMatch[1];
             lines[i] = line.replace(")", `)]\n{i${tagNumber}.5} - [`);
             splitArray.push(i);
-            console.log(splitArray);
             condensedArray.push(lines.slice(startIndex, i + 1));
             //TODO There should be some additional logic here that confirms that the new '.5' line actually has a closing tag somewhere as well
             //TODO does this 'break' pull it entirely out of the loop? Will it ever go through the successful find below?
+            //TODO test splitArray with a different script that has an example of this happening
           }
           break;
         } else {
@@ -376,46 +426,70 @@ function consolidateStageDirections(content) {
         break;
       }
     }
-
-    splitArray.forEach((element) => {
-      const splitElements = element.split("\n");
-      const firstLine = splitElements[0];
-      const secondLine = splitElements[1];
-      const firstLineMatch = firstLine.match(/\{i(\d+)\}/);
-      const secondLineMatch = secondLine.match(/\{i(\d+)\}/);
-      const updatedTags = firstLineMatch[0] + secondLineMatch[0];
-      const indexToReplace = lines.findIndex((item) =>
-        item.startsWith(firstLineMatch[0])
-      );
-
-      modifiedContent = modifiedContent.replace(
-        new RegExp(firstLineMatch[0], "g"),
-        updatedTags
-      );
-      lines.splice(indexToReplace, 1, ...splitElements);
-    });
-
-    condensedArray.forEach((element) => {
-      let mergedLines = element.join();
-      mergedLines = mergedLines.replace(/\]\s*\{i\d+\}\s*-\s*\[/g, " ");
-      mergedLines = mergedLines.replace(/\[\|\\]/g, "");
-
-      //snag each id tag at start and hold
-      //replace the multiple elements in 'lines' with result
-      //replace the multiple elements in 'modifiedContent' with result
-    });
-
-    //TODO adding logic so that it can replace the items in both extract list and modified doc
   });
 
-  return { modifiedContent: modifiedContent, temporaryDoc: lines };
-}
+  splitArray.forEach((element) => {
+    const splitElements = element.split("\n");
+    const firstLine = splitElements[0];
+    const secondLine = splitElements[1];
+    const firstLineMatch = firstLine.match(/\{i(\d+)\}/);
+    const secondLineMatch = secondLine.match(/\{i(\d+)\}/);
+    const updatedTags = firstLineMatch[0] + secondLineMatch[0];
+    const indexToReplace = lines.findIndex((item) =>
+      item.startsWith(firstLineMatch[0])
+    );
 
-function consolidateSceneDirections(content) {
-  const lines = content.temporaryDoc;
-  let modifiedContent = content.modifiedContent;
+    modifiedContent = modifiedContent.replace(
+      new RegExp(firstLineMatch[0], "g"),
+      updatedTags
+    );
+    lines.splice(indexToReplace, 1, ...splitElements);
+  });
+
+  condensedArray.forEach((nestedArray) => {
+    const listOfTags = [];
+    const endingIndex = nestedArray.length;
+    const startingIndex = lines.findIndex((line) =>
+      line.includes(nestedArray[0])
+    );
+    nestedArray.forEach((element) => {
+      const italicTag = element.match(/{i(\d+)\}/);
+      if (italicTag) {
+        listOfTags.push(italicTag[0]);
+      }
+    });
+
+    let mergedTags = listOfTags.join("");
+    mergedTags = mergedTags.replace(/\{i(\d+)\}.*/, "$1");
+    const lastTagMatch = listOfTags[listOfTags.length - 1].match(/\{i(\d+)\}/);
+    if (lastTagMatch) {
+      mergedTags = `{i${mergedTags}-${lastTagMatch[1]}}`;
+    }
+
+    let mergedLines = nestedArray.join("");
+    mergedLines = mergedLines.replace(/\]\s*\{i\d+\}\s*-\s*\[/g, " ");
+    mergedLines = mergedLines.replace(/\[\|\\]/g, "");
+    mergedLines = mergedLines.replace(/\{i\d+\}/g, mergedTags);
+
+    lines.splice(startingIndex, endingIndex, mergedLines);
+
+    let startingTag = listOfTags[0];
+    let endingTag = listOfTags[endingIndex - 1];
+    let regexPattern = new RegExp(startingTag + ".*?" + endingTag, "s");
+
+    modifiedContent = modifiedContent.replace(regexPattern, mergedTags);
+  });
+
+  createHTMLFile(`${baseFilePath}_extractedMid.html`, lines.join("\n"));
+
   return { modifiedContent, temporaryDoc: lines };
 }
+
+//function consolidateSceneDirections(content) {
+//const lines = content.temporaryDoc;
+//let modifiedContent = content.modifiedContent;
+//return { modifiedContent, temporaryDoc: lines };
+//}
 
 function extractActSections(content) {
   const temporaryDoc = [];
