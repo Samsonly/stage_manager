@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const pdfjsLib = require("pdfjs-dist/legacy/build/pdf.js");
 
 async function parsePDF(pdfPath) {
@@ -16,7 +17,8 @@ async function parsePDF(pdfPath) {
           text: item.str,
           isItalic: item.fontName.includes("Italic"),
           isBold: item.fontName.includes("Bold"),
-          // Other formatting attributes as needed
+          isUnderline: false,
+          isIndented: item.transform[4] > someIndentationThreshold,
         };
         extractedData.push(textObject);
       }
@@ -39,12 +41,26 @@ function convertToRTF(extractedData) {
     if (item.isItalic) {
       rtfText += "\\i ";
     }
+    if (item.isUnderline) {
+      rtfText += "\\ul ";
+    }
+    if (item.isIndented) {
+      rtfText += "\\li360 ";
+    }
+
     rtfText += item.text;
+
+    if (item.isIndented) {
+      rtfText += "\\li0 ";
+    }
+    if (item.isUnderline) {
+      rtfText += "\\ulnone ";
+    }
     if (item.isItalic) {
-      rtfText += " \\i0";
+      rtfText += "\\i0 ";
     }
     if (item.isBold) {
-      rtfText += " \\b0";
+      rtfText += "\\b0 ";
     }
   }
 
@@ -66,3 +82,36 @@ function outputRTF(rtfContent, outputPath) {
 process.on("uncaughtException", (error) => {
   console.error("Unhandled Exception:", error);
 });
+
+async function main() {
+  const inputFileName = process.argv[2];
+  if (!inputFileName) {
+    console.error("Please provide a PDF file name.");
+    return;
+  }
+
+  const pdfPath = path.join(__dirname, "sample-scripts", inputFileName);
+  const rtfOutputPath = path.join(
+    __dirname,
+    "testing-outputs",
+    path.basename(inputFileName, ".pdf") + ".rtf"
+  );
+
+  try {
+    const extractedData = await parsePDF(pdfPath);
+    if (!extractedData) {
+      throw new Error("Failed to extract data from PDF");
+    }
+
+    const rtfContent = convertToRTF(extractedData);
+    const isSuccessful = outputRTF(rtfContent, rtfOutputPath);
+
+    if (!isSuccessful) {
+      throw new Error("Failed to write RTF file");
+    }
+  } catch (error) {
+    console.error("An error occurred in the conversion process:", error);
+  }
+}
+
+main();
