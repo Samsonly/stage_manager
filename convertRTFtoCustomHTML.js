@@ -485,6 +485,31 @@ function consolidateStageDirections(content, baseFilePath) {
   return { modifiedContent, temporaryDoc: lines };
 }
 
+function parseStageDirections(content) {
+  const stgdRegex = /{i(\d+)}(?:\s|<[^>]+>|\n)*{c/g;
+  let modifiedContent = content.modifiedContent;
+  let extractedText = content.temporaryDoc;
+
+  modifiedContent = modifiedContent.replace(stgdRegex, (match, tagNumber) => {
+    const originalTag = `{i${tagNumber}}`;
+    const newTag = `{stgd${tagNumber}}`;
+
+    const arrayIndex = extractedText.findIndex((element) =>
+      element.includes(originalTag)
+    );
+    if (arrayIndex !== -1) {
+      extractedText[arrayIndex] = extractedText[arrayIndex].replace(
+        originalTag,
+        newTag
+      );
+    }
+
+    return match.replace(originalTag, newTag);
+  });
+
+  return { modifiedContent, temporaryDoc: array };
+}
+
 //function consolidateSceneDirections(content) {
 //const lines = content.temporaryDoc;
 //let modifiedContent = content.modifiedContent;
