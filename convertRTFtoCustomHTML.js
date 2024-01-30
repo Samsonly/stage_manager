@@ -29,6 +29,7 @@ function convertRTFtoHTML(filePath) {
 
 function processRTFContent(content) {
   let modifiedContent = convertRTFEscapeSequencesToHTML(content);
+
   modifiedContent = modifiedContent
     .replace(/\\(\s|$)/gm, " <br>")
     .replace(/\\pard(?![a-zA-Z])/g, "</i></u></b>\\")
@@ -41,10 +42,10 @@ function processRTFContent(content) {
     .replace(/\\ul(?![a-zA-Z])/g, "\\ <u>\\")
     .replace(/\\b(?![a-zA-Z])/g, "\\ <b>\\")
     .replace(/\\[a-zA-Z]+-?\d*\s?/g, "")
-    .replace(/\{[^{}<]*\}/g, "");
-  console.log(modifiedContent.substring(57000, 57500));
-
-  modifiedContent.replace(/\\/g, "").replace(/\( /g, "(").replace(/ \)/g, ")");
+    .replace(/\{[^{}<]*\}/g, "")
+    .replace(/\\/g, "")
+    .replace(/\( /g, "(")
+    .replace(/ \)/g, ")");
 
   if (modifiedContent.startsWith("{")) {
     modifiedContent = modifiedContent.substring(1);
@@ -426,9 +427,15 @@ function reorganizeItalicSection(content) {
   modifiedContent = replacedEmphasizedText.modifiedContent;
   italicArray = replacedEmphasizedText.italicArray;
 
+  console.log(modifiedContent.substring(29500, 30050));
+  modifiedContent = modifiedContent.replace(/\n/g, "");
+  console.log(modifiedContent.substring(29500, 30050));
+
   const extractedDialogue = extractDialogue(modifiedContent); //finds Dialogue and extracts them into their own array
   modifiedContent = extractedDialogue.modifiedContent;
   let dialogueArray = extractedDialogue.dialogueArray;
+
+  modifiedContent = modifiedContent.replace(/ /g, "");
 
   return {
     modifiedContent,
@@ -931,8 +938,7 @@ function extractDialogue(content) {
   let dialogueArray = [];
   let placeholderCount = 1;
 
-  const dialogueRegex = /(\{c\d+\}|\{cdir\d+(-\d+)*\})([^{]*)/g;
-
+  const dialogueRegex = /(\{c\d+\}|\{cdir\d+(-\d+)*\})([\s\S]*?)(?=\{)/g;
   let modifiedContent = content.replace(
     dialogueRegex,
     (match, tag, _, dialogueText) => {
@@ -967,7 +973,3 @@ if (process.argv.length < 3) {
 } else {
   convertRTFtoHTML(process.argv[2]);
 }
-//Fixes:
-//TODO search for section with: 'she goes about' as it is not being handled correctly. Figure out why and solve.
-// the reason is because it has a \ in it which turns into a <br> and then gets turned into <br>\n.
-// Look for other areas where there was a '\' in the middle of dialogue, and how that was successfully handled.
