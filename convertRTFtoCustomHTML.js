@@ -29,23 +29,22 @@ function convertRTFtoHTML(filePath) {
 
 function processRTFContent(content) {
   let modifiedContent = convertRTFEscapeSequencesToHTML(content);
-
   modifiedContent = modifiedContent
     .replace(/\\(\s|$)/gm, " <br>")
     .replace(/\\pard(?![a-zA-Z])/g, "</i></u></b>\\")
     .replace(/\\plain(?![a-zA-Z])/g, "</i></u></b>\\")
     .replace(/\\par/g, "\\ <br>\\")
-    .replace(/\\i0/g, "\\ </i >\\")
+    .replace(/\\i0/g, "\\ </i>\\")
     .replace(/\\ulnone/g, "\\ </u>\\")
     .replace(/\\b0/g, "\\ </b>\\")
     .replace(/\\i(?![a-zA-Z])/g, "\\ <i>\\")
     .replace(/\\ul(?![a-zA-Z])/g, "\\ <u>\\")
     .replace(/\\b(?![a-zA-Z])/g, "\\ <b>\\")
     .replace(/\\[a-zA-Z]+-?\d*\s?/g, "")
-    .replace(/\{[^{}<]*\}/g, "")
-    .replace(/\\/g, "")
-    .replace(/\( /g, "(")
-    .replace(/ \)/g, ")");
+    .replace(/\{[^{}<]*\}/g, "");
+  console.log(modifiedContent.substring(57000, 57500));
+
+  modifiedContent.replace(/\\/g, "").replace(/\( /g, "(").replace(/ \)/g, ")");
 
   if (modifiedContent.startsWith("{")) {
     modifiedContent = modifiedContent.substring(1);
@@ -67,14 +66,11 @@ function processRTFContent(content) {
     italicExtractionResult
   );
 
-  const sceneExtractionResult = extractSceneSections(
-    italicExtractionResult.modifiedContent
-  );
-  const characterExtractionResult = extractCharacterTags(
-    sceneExtractionResult.modifiedContent
-  );
+  //TODO parse and extract Dialoge
+  //TODO condense dialogue tags with new emphasis text inserted
 
-  let finalModifiedContent = characterExtractionResult.modifiedContent;
+  let finalModifiedContent = italicConsolidationResult.modifiedContent;
+
   let extractedSections =
     italicConsolidationResult.italicArray.join("\n") +
     "\n\n" +
@@ -82,13 +78,17 @@ function processRTFContent(content) {
     "\n\n" +
     italicConsolidationResult.actdArray.join("\n") +
     "\n\n" +
-    sceneExtractionResult.sceneArray.join("\n") +
+    italicConsolidationResult.sceneArray.join("\n") +
     "\n\n" +
-    characterExtractionResult.characterArray.join("\n") +
+    italicConsolidationResult.slocArray.join("\n") +
+    "\n\n" +
+    italicConsolidationResult.characterArray.join("\n") +
+    "\n\n" +
+    italicConsolidationResult.dialogueArray.join("\n") +
     "\n\n" +
     createNewLinesResult.endArray.join("\n");
 
-  let characterNames = characterExtractionResult.characterNames.join("\n");
+  let characterNames = italicConsolidationResult.characterNames.join("\n");
 
   return {
     modifiedContent: finalModifiedContent,
@@ -228,7 +228,7 @@ function createNewLines(content) {
 
   cleanedContent = cleanedContent.replace(/\n*{start}/g, "");
 
-  return { cleanedContent, endArray };
+  return { modifiedContent: cleanedContent, endArray };
 }
 
 function addEndTagToLines(content) {
@@ -302,6 +302,7 @@ function findEndingTags(content) {
 
 function extractItalicSections(content) {
   //TODO figure out how this works and make adjustments
+
   const italicArray = [];
   let placeholderCount = 1;
   let modifiedContent = "";
@@ -352,13 +353,16 @@ function processExtractedText(text) {
 
 function reorganizeItalicSection(content) {
   const pairedParenthesis = returnLooseParenthesis(content); //finds any parenthesis just outside of italicTags, and inserts them into the tag
+  let modifiedContent = pairedParenthesis.modifiedContent;
 
   const indexedOpenItalics = inventoryStageDirections(
     pairedParenthesis.italicArray
   ); //notes which lines have unmatched parenthesis
 
-  ({ italicArray, splitArray, condensedArray } =
-    groupStageDirections(indexedOpenItalics)); //indexes groups of multi-lined chunks within parenthesis, and lines that need to be split, into two new arrays
+  const notedItalicAdjustments = groupStageDirections(indexedOpenItalics); //indexes groups of multi-lined chunks within parenthesis, and lines that need to be split, into two new arrays
+  let italicArray = notedItalicAdjustments.italicArray;
+  let splitArray = notedItalicAdjustments.splitArray;
+  let condensedArray = notedItalicAdjustments.condensedArray;
 
   ({ modifiedContent, italicArray } = splitStageDirections(
     modifiedContent,
@@ -372,25 +376,71 @@ function reorganizeItalicSection(content) {
     condensedArray
   ); //uses stored index of lines needing to be grouped, and then groups them
 
-  ({ modifiedContent, actArray } = extractActSections(
-    finalizedStageDirections
-  )); //finds Acts and extracts them into their own array
+  const extractedActTags = extractActSections(
+    finalizedStageDirections.modifiedContent
+  ); //finds Acts and extracts them into their own array
+  let actArray = extractedActTags.actArray;
+  modifiedContent = extractedActTags.modifiedContent;
 
-  ({ modifiedContent, italicArray, actdArray } = actDescriptionSearch(
+  const extractedActDescTags = actDescriptionSearch(
     modifiedContent,
     italicArray
-  )); //finds Act Descriptions and extracts them into their own array
+  ); //finds Act Descriptions and extracts them into their own array
+  let actdArray = extractedActDescTags.actdArray;
+  modifiedContent = extractedActDescTags.modifiedContent;
+  italicArray = extractedActDescTags.italicArray;
 
-  const renamedStageDirections = parseStageDirections({
+  const extractedSceneSections = extractSceneSections(modifiedContent); //finds Scenes and extracts them into their own array
+  modifiedContent = extractedSceneSections.modifiedContent;
+  let sceneArray = extractedSceneSections.sceneArray;
+
+  const extractedCharacterTags = extractCharacterTags(modifiedContent); //finds Characters and extracts them into their own array
+  let characterArray = extractedCharacterTags.characterArray;
+  let characterNames = extractedCharacterTags.characterNames;
+  modifiedContent = extractedCharacterTags.modifiedContent;
+
+  const extractedSceneLocations = sceneLocationSearch(modifiedContent); //finds Scene Locations and extracts them into their own array
+  modifiedContent = extractedSceneLocations.modifiedContent;
+  let slocArray = extractedSceneLocations.slocArray;
+
+  const sortedItalicSection = sortItalicSection(modifiedContent, italicArray); //sorts through the remaining italics and renames them based on their content
+  modifiedContent = sortedItalicSection.modifiedContent;
+  italicArray = sortedItalicSection.italicArray;
+
+  const renamedStageDirections = parseStageDirections(
+    modifiedContent,
+    italicArray
+  ); //renames italics known to be Stage Directions
+
+  const parsedCharacterDirections = parseCharacterDirections(
+    renamedStageDirections
+  ); //renames italics known to be Stage Character Directions
+  modifiedContent = parsedCharacterDirections.modifiedContent;
+  italicArray = parsedCharacterDirections.italicArray;
+  modifiedContent = modifiedContent.replace(/<[^>]+>/g, "").trim();
+
+  const replacedEmphasizedText = parseEmphasizedText(
+    modifiedContent,
+    italicArray
+  ); //renames italics known to be Stage Character Directions
+  modifiedContent = replacedEmphasizedText.modifiedContent;
+  italicArray = replacedEmphasizedText.italicArray;
+
+  const extractedDialogue = extractDialogue(modifiedContent); //finds Dialogue and extracts them into their own array
+  modifiedContent = extractedDialogue.modifiedContent;
+  let dialogueArray = extractedDialogue.dialogueArray;
+
+  return {
     modifiedContent,
     italicArray,
-  }); //renames italics known to be Stage Directions
-
-  ({ modifiedContent, italicArray } = parseCharacterDirections(
-    renamedStageDirections
-  )); //renames italics known to be Stage Character Directions
-
-  return { modifiedContent, italicArray, actArray, actdArray };
+    actArray,
+    actdArray,
+    characterArray,
+    characterNames,
+    sceneArray,
+    slocArray,
+    dialogueArray,
+  };
 }
 
 function returnLooseParenthesis(content) {
@@ -508,11 +558,7 @@ function groupStageDirections(content) {
   return { italicArray, splitArray, condensedArray };
 }
 
-function splitStageDirections(content) {
-  let modifiedContent = content.modifiedContent;
-  const lines = content.italicArray;
-  const splitArray = content.splitArray;
-
+function splitStageDirections(modifiedContent, italicArray, splitArray) {
   splitArray.forEach((element) => {
     const splitElements = element.split("\n");
     const firstLine = splitElements[0];
@@ -520,7 +566,7 @@ function splitStageDirections(content) {
     const firstLineMatch = firstLine.match(/\{i(\d+)\}/);
     const secondLineMatch = secondLine.match(/\{i(\d+)\}/);
     const updatedTags = firstLineMatch[0] + secondLineMatch[0];
-    const indexToReplace = lines.findIndex((item) =>
+    const indexToReplace = italicArray.findIndex((item) =>
       item.startsWith(firstLineMatch[0])
     );
 
@@ -528,21 +574,17 @@ function splitStageDirections(content) {
       new RegExp(firstLineMatch[0], "g"),
       updatedTags
     );
-    lines.splice(indexToReplace, 1, ...splitElements);
+    italicArray.splice(indexToReplace, 1, ...splitElements);
   });
 
-  return { modifiedContent, lines };
+  return { modifiedContent, italicArray };
 }
 
-function condenseStageDirections(content) {
-  let modifiedContent = content.modifiedContent;
-  const lines = content.lines;
-  const condensedArray = content.condensedArray;
-
+function condenseStageDirections(modifiedContent, italicArray, condensedArray) {
   condensedArray.forEach((nestedArray) => {
     const listOfTags = [];
     const endingIndex = nestedArray.length;
-    const startingIndex = lines.findIndex((line) =>
+    const startingIndex = italicArray.findIndex((line) =>
       line.includes(nestedArray[0])
     );
 
@@ -565,7 +607,7 @@ function condenseStageDirections(content) {
     mergedLines = mergedLines.replace(/\[\|\\]/g, "");
     mergedLines = mergedLines.replace(/\{i\d+\}/g, mergedTags);
 
-    lines.splice(startingIndex, endingIndex, mergedLines);
+    italicArray.splice(startingIndex, endingIndex, mergedLines);
 
     let startingTag = listOfTags[0];
     let endingTag = listOfTags[endingIndex - 1];
@@ -574,7 +616,7 @@ function condenseStageDirections(content) {
     modifiedContent = modifiedContent.replace(regexPattern, mergedTags);
   });
 
-  return { modifiedContent, italicArray: lines };
+  return { modifiedContent, italicArray };
 }
 
 function extractActSections(content) {
@@ -604,7 +646,7 @@ function extractActSections(content) {
 
   let modifiedContent = content;
 
-  [...content.matchAll(regex)].forEach(([match, sectionAct]) => {
+  [...modifiedContent.matchAll(regex)].forEach(([match, sectionAct]) => {
     let section = sectionAct.split(" ")[1];
     if (sections.includes(section.toLowerCase())) {
       const placeholder = `{a${placeholderCount}}`;
@@ -617,9 +659,7 @@ function extractActSections(content) {
   return { modifiedContent, actArray };
 }
 
-function actDescriptionSearch(content) {
-  let modifiedContent = content.modifiedContent;
-  let italicArray = content.italicArray;
+function actDescriptionSearch(modifiedContent, italicArray) {
   let actdArray = [];
 
   const actRegex = /{a(\d+)}([\s\S]*?)(?={([a-z]+)(\d+(-\d+)*)})/g;
@@ -675,53 +715,31 @@ function actDescriptionSearch(content) {
   return { modifiedContent, italicArray, actdArray };
 }
 
-function parseStageDirections(content) {
-  let modifiedContent = content.modifiedContent;
-  let italicArray = content.italicArray;
-  const stgdRegex = /{i(\d+(?:-\d+)*)}(?:\s|<[^>]+>|\n)*{c/g;
+function extractCharacterTags(content) {
+  const characterArray = [];
+  let placeholderCount = 1;
+  const characterNames = new Set();
+  const nameRegex = /^[A-Z0-9][A-Z0-9\s&/]*\./;
 
-  modifiedContent = modifiedContent.replace(stgdRegex, (match, tagNumber) => {
-    const originalTag = `{i${tagNumber}}`;
-    const newTag = `{stgd${tagNumber}}`;
-
-    const italicArrayIndex = italicArray.findIndex((element) =>
-      element.includes(originalTag)
-    );
-    if (italicArrayIndex !== -1) {
-      italicArray[italicArrayIndex] = italicArray[italicArrayIndex].replace(
-        originalTag,
-        newTag
-      );
+  let modifiedContent = content.split("\n");
+  modifiedContent = modifiedContent.map((line) => {
+    let match = line.match(nameRegex);
+    if (match) {
+      // lines
+      let extractedText = match[0];
+      let placeholder = `{c${placeholderCount}}`;
+      line = line.replace(nameRegex, placeholder);
+      characterArray.push(`${placeholder} - [${extractedText}]`);
+      characterNames.add(extractedText.slice(0, -1));
+      placeholderCount++;
     }
-
-    return match.replace(originalTag, newTag);
+    return line;
   });
-
-  return { modifiedContent, italicArray };
-}
-
-function parseCharacterDirections(content) {
-  let modifiedContent = content.modifiedContent;
-  let italicArray = content.italicArray;
-  const cdirRegex = /{i(\d+(?:-\d+)*)}\s-\s\[\(/g;
-
-  italicArray.forEach((element, index) => {
-    let tagMatch;
-    while ((tagMatch = cdirRegex.exec(element)) !== null) {
-      const tagNumber = tagMatch[1];
-      const originalTag = `{i${tagNumber}}`;
-      const newTag = `{cdir${tagNumber}}`;
-
-      italicArray[index] = element.replace(originalTag, newTag);
-
-      modifiedContent = modifiedContent.replace(
-        new RegExp(originalTag, "g"),
-        newTag
-      );
-    }
-  });
-
-  return { modifiedContent, italicArray };
+  return {
+    modifiedContent: modifiedContent.join("\n"),
+    characterArray,
+    characterNames: Array.from(characterNames),
+  };
 }
 
 function extractSceneSections(content) {
@@ -761,30 +779,178 @@ function extractSceneSections(content) {
   return { modifiedContent: modifiedContent.join("\n"), sceneArray };
 }
 
-function extractCharacterTags(content) {
-  const characterArray = [];
-  let placeholderCount = 1;
-  const characterNames = new Set();
-  const nameRegex = /^([A-Z]\s*)+\./;
+function sceneLocationSearch(modifiedContent) {
+  let slocArray = [];
+  const sceneRegex = /{s(\d+)}([\s\S]*?)(?={[a-z]+)/g;
+  const htmlTagRegex = /<[^>]+>|\n/g;
 
-  let lines = content.split("\n");
-  let modifiedContent = lines.map((line) => {
-    let match = line.match(nameRegex);
-    if (match) {
-      let extractedText = match[0];
-      let placeholder = `{c${placeholderCount}}`;
-      line = line.replace(nameRegex, placeholder);
-      characterArray.push(`${placeholder} - [${extractedText}]`);
-      characterNames.add(extractedText.slice(0, -1));
-      placeholderCount++;
+  let match;
+  while ((match = sceneRegex.exec(modifiedContent)) !== null) {
+    const sceneNumber = match[1];
+    let betweenPlaceholders = match[2];
+    const textWithoutHtml = betweenPlaceholders
+      .replace(htmlTagRegex, "")
+      .trim();
+    const hasNonHtmlAlpha = /[a-zA-Z]/.test(textWithoutHtml);
+    const slocTag = `{sloc${sceneNumber}}`;
+
+    if (hasNonHtmlAlpha) {
+      slocArray.push(`${slocTag} - [${textWithoutHtml}]`);
+      modifiedContent = modifiedContent.replace(betweenPlaceholders, slocTag);
     }
-    return line;
+  }
+
+  return { modifiedContent, slocArray };
+}
+
+function sortItalicSection(modifiedContent, italicArray) {
+  const nonParenRegex = /{i\d+(-\d+)*}\s-\s\[[a-zA-Z]/g;
+
+  const updatedItalicArray = italicArray.map((line) => {
+    if (line.match(nonParenRegex)) {
+      const tagMatch = line.match(/{i(\d+(-\d+)*)}/);
+      const tagNumber = tagMatch[1];
+      const originalTag = `{i${tagNumber}}`;
+      const newTag = `{sdes${tagNumber}}`;
+
+      const updatedLine = line.replace(originalTag, newTag);
+
+      modifiedContent = modifiedContent.replace(
+        new RegExp(originalTag, "g"),
+        newTag
+      );
+
+      return updatedLine;
+    } else {
+      return line;
+    }
   });
-  return {
-    modifiedContent: modifiedContent.join("\n"),
-    characterArray,
-    characterNames: Array.from(characterNames),
-  };
+
+  return { modifiedContent, italicArray: updatedItalicArray };
+}
+
+function parseStageDirections(modifiedContent, italicArray) {
+  const stgdRegex = /{i(\d+(?:-\d+)*)}(?:\s|<[^>]+>|\n)*{c/g;
+
+  modifiedContent = modifiedContent.replace(stgdRegex, (match, tagNumber) => {
+    const originalTag = `{i${tagNumber}}`;
+    const newTag = `{stgd${tagNumber}}`;
+
+    const italicArrayIndex = italicArray.findIndex((element) =>
+      element.includes(originalTag)
+    );
+    if (italicArrayIndex !== -1) {
+      italicArray[italicArrayIndex] = italicArray[italicArrayIndex].replace(
+        originalTag,
+        newTag
+      );
+    }
+
+    return match.replace(originalTag, newTag);
+  });
+
+  return { modifiedContent, italicArray };
+}
+
+function parseCharacterDirections(content) {
+  let modifiedContent = content.modifiedContent;
+  const italicArray = content.italicArray;
+  const cdirRegex = /{i(\d+(?:-\d+)*)}\s-\s\[\(/g;
+
+  italicArray.forEach((element, index) => {
+    let tagMatch;
+    while ((tagMatch = cdirRegex.exec(element)) !== null) {
+      const tagNumber = tagMatch[1];
+      const originalTag = `{i${tagNumber}}`;
+      const newTag = `{cdir${tagNumber}}`;
+
+      italicArray[index] = element.replace(originalTag, newTag);
+
+      modifiedContent = modifiedContent.replace(
+        new RegExp(originalTag, "g"),
+        newTag
+      );
+    }
+  });
+
+  return { modifiedContent, italicArray };
+}
+
+function parseEmphasizedText(modifiedContent, italicArray) {
+  modifiedContent = modifiedContent.split("{c");
+  const sdesRegex = /{sdes(\d+(-\d+)*)}/g;
+  const slocOrSTagBeforeRegex =
+    /({sloc\d+}|{s\d+})(?:(?!{c).)*{sdes(\d+(-\d+)*)}/;
+  const cdirOrTextBeforeRegex =
+    /((\d+c\{)|(\d+-\d+ridc\{)|[^>}]*(?!\{[^}]*\}))/;
+
+  let toRemove = [];
+  italicArray.forEach((line, index) => {
+    let match;
+    while ((match = sdesRegex.exec(line)) !== null) {
+      const sdesTag = match[0];
+      const sdesTextMatch = line.match(/-\s\[(.*?)\]/);
+      const sdesText = sdesTextMatch ? sdesTextMatch[1] : "";
+
+      modifiedContent = modifiedContent.map((contentLine) => {
+        const prevLineContext = contentLine.substring(
+          0,
+          contentLine.indexOf(sdesTag) + sdesTag.length
+        );
+
+        const prevLineContext2 = contentLine.substring(
+          0,
+          contentLine.indexOf(sdesTag)
+        );
+
+        if (
+          slocOrSTagBeforeRegex.test(prevLineContext) //&&
+        ) {
+          return contentLine;
+        } else if (cdirOrTextBeforeRegex.test(prevLineContext2)) {
+          const sdesTagRegex = new RegExp(sdesTag, "g");
+          return contentLine.replace(sdesTagRegex, `<em>${sdesText}</em>`);
+        } else {
+          const newTag = `{OTHER${match[1]}}`;
+          return contentLine.replace(new RegExp(sdesTag, "g"), newTag);
+        }
+      });
+    }
+  });
+
+  for (let i = toRemove.length - 1; i >= 0; i--) {
+    italicArray.splice(toRemove[i], 1);
+  }
+
+  modifiedContent = modifiedContent.join("{c");
+
+  return { modifiedContent, italicArray };
+}
+
+function extractDialogue(content) {
+  let dialogueArray = [];
+  let placeholderCount = 1;
+
+  const dialogueRegex = /(\{c\d+\}|\{cdir\d+(-\d+)*\})([^{]*)/g;
+
+  let modifiedContent = content.replace(
+    dialogueRegex,
+    (match, tag, _, dialogueText) => {
+      dialogueText = dialogueText.trim();
+
+      if (dialogueText.length > 0) {
+        const placeholder = `{d${placeholderCount}}`;
+        dialogueArray.push(`${placeholder} - [${dialogueText}]`);
+        placeholderCount++;
+
+        return match.replace(dialogueText, placeholder);
+      }
+
+      return match;
+    }
+  );
+
+  return { modifiedContent, dialogueArray };
 }
 
 function createHTMLFile(filePath, content) {
@@ -801,3 +967,7 @@ if (process.argv.length < 3) {
 } else {
   convertRTFtoHTML(process.argv[2]);
 }
+//Fixes:
+//TODO search for section with: 'she goes about' as it is not being handled correctly. Figure out why and solve.
+// the reason is because it has a \ in it which turns into a <br> and then gets turned into <br>\n.
+// Look for other areas where there was a '\' in the middle of dialogue, and how that was successfully handled.

@@ -1,4 +1,10 @@
 {
+  "name": "@convert/rtf-to-custom-html",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node convertRTFToCustomHTML.js sample-scripts/Damsels.rtf"
+  },
   "dependencies": {
     "pdfjs-dist": "^4.0.379"
   }
