@@ -44,6 +44,7 @@ function processRTFContent(content) {
     .replace(/\\[a-zA-Z]+-?\d*\s?/g, "")
     .replace(/\{[^{}<]*\}/g, "")
     .replace(/\\/g, "")
+    .replace(/<(\w)>[\s|<br>]*<\/\1>/g, "")
     .replace(/\( /g, "(")
     .replace(/ \)/g, ")");
 
@@ -427,9 +428,7 @@ function reorganizeItalicSection(content) {
   modifiedContent = replacedEmphasizedText.modifiedContent;
   italicArray = replacedEmphasizedText.italicArray;
 
-  console.log(modifiedContent.substring(29500, 30050));
   modifiedContent = modifiedContent.replace(/\n/g, "");
-  console.log(modifiedContent.substring(29500, 30050));
 
   const extractedDialogue = extractDialogue(modifiedContent); //finds Dialogue and extracts them into their own array
   modifiedContent = extractedDialogue.modifiedContent;
@@ -727,6 +726,7 @@ function extractCharacterTags(content) {
   let placeholderCount = 1;
   const characterNames = new Set();
   const nameRegex = /^[A-Z0-9][A-Z0-9\s&/]*\./;
+  //TODO FIX FOR NAMES THAT HAVE PERIODS IN THEM
 
   let modifiedContent = content.split("\n");
   modifiedContent = modifiedContent.map((line) => {
@@ -905,7 +905,7 @@ function parseEmphasizedText(modifiedContent, italicArray) {
           contentLine.indexOf(sdesTag) + sdesTag.length
         );
 
-        const prevLineContext2 = contentLine.substring(
+        const prevLineContextEm = contentLine.substring(
           0,
           contentLine.indexOf(sdesTag)
         );
@@ -914,8 +914,17 @@ function parseEmphasizedText(modifiedContent, italicArray) {
           slocOrSTagBeforeRegex.test(prevLineContext) //&&
         ) {
           return contentLine;
-        } else if (cdirOrTextBeforeRegex.test(prevLineContext2)) {
+        } else if (cdirOrTextBeforeRegex.test(prevLineContextEm)) {
           const sdesTagRegex = new RegExp(sdesTag, "g");
+          const newContentLine = contentLine.replace(
+            sdesTagRegex,
+            `<em>${sdesText}</em>`
+          );
+          if (newContentLine !== contentLine) {
+            toRemove.push(index);
+            return newContentLine;
+          }
+
           return contentLine.replace(sdesTagRegex, `<em>${sdesText}</em>`);
         } else {
           const newTag = `{OTHER${match[1]}}`;
