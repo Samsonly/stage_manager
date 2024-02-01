@@ -29,7 +29,7 @@ function convertRTFtoHTML(filePath) {
 
 function processRTFContent(content) {
   let modifiedContent = convertRTFEscapeSequencesToHTML(content);
-
+  //TODO Look through the replaces below and check if they are necessary
   modifiedContent = modifiedContent
     .replace(/\\(\s|$)/gm, " <br>")
     .replace(/\\pard(?![a-zA-Z])/g, "</i></u></b>\\")
@@ -67,9 +67,6 @@ function processRTFContent(content) {
   const italicConsolidationResult = reorganizeItalicSection(
     italicExtractionResult
   );
-
-  //TODO parse and extract Dialoge
-  //TODO condense dialogue tags with new emphasis text inserted
 
   let finalModifiedContent = italicConsolidationResult.modifiedContent;
 
@@ -124,6 +121,8 @@ function convertRTFEscapeSequencesToHTML(content) {
 }
 
 function removeUnmatchedTags(content) {
+  //TODO figure out how this works and make adjustments
+
   const tags = ["i", "u", "b"];
 
   tags.forEach((tag) => {
@@ -206,6 +205,9 @@ function organizeHTMLTags(content) {
 }
 
 function createNewLines(content) {
+  //TODO figure out how this works and make adjustments
+  // Also check through the replace below and see if it is necessary
+
   let cleanedContent = content;
 
   cleanedContent = cleanedContent
@@ -234,6 +236,8 @@ function createNewLines(content) {
 }
 
 function addEndTagToLines(content) {
+  //TODO figure out how this works and make adjustments
+
   let lines = content.split("\n");
   let processedLines = lines.map((line) => {
     if (/^<[^>]+>.*[^\s<][^>]*$/.test(line)) {
@@ -245,6 +249,8 @@ function addEndTagToLines(content) {
 }
 
 function extractEndingTags(content) {
+  //TODO figure out how this works and make adjustments
+
   let lines = content.split("\n");
   let modifiedContent = [];
   let endArray = [];
@@ -272,6 +278,8 @@ function extractEndingTags(content) {
 }
 
 function findEndingTags(content) {
+  //TODO figure out how this works and make adjustments
+
   const wordsToCheck = [
     "Blackout",
     "Lights Out",
@@ -531,8 +539,7 @@ function groupStageDirections(content) {
             splitArray.push(i);
             condensedArray.push(italicArray.slice(startIndex, i + 1));
             //TODO There should be some additional logic here that confirms that the new '.5' line actually has a closing tag somewhere as well
-            //TODO does this 'break' pull it entirely out of the loop? Will it ever go through the successful find below?
-            //TODO test splitArray with a different script that has an example of this happening
+            //test splitArray with a different script that has an example of this happening
           }
           break;
         } else {
@@ -628,7 +635,7 @@ function condenseStageDirections(modifiedContent, italicArray, condensedArray) {
 function extractActSections(content) {
   const actArray = [];
   let placeholderCount = 1;
-  let regex = /(Act \w+)/gi;
+  let regex = /^(Act \w+)/gi;
   const sections = [
     "i",
     "ii",
@@ -651,7 +658,6 @@ function extractActSections(content) {
   ];
 
   let modifiedContent = content;
-
   [...modifiedContent.matchAll(regex)].forEach(([match, sectionAct]) => {
     let section = sectionAct.split(" ")[1];
     if (sections.includes(section.toLowerCase())) {
@@ -661,13 +667,13 @@ function extractActSections(content) {
       placeholderCount++;
     }
   });
+  console.log(modifiedContent);
 
   return { modifiedContent, actArray };
 }
 
 function actDescriptionSearch(modifiedContent, italicArray) {
   let actdArray = [];
-
   const actRegex = /{a(\d+)}([\s\S]*?)(?={([a-z]+)(\d+(-\d+)*)})/g;
   const htmlTagRegex = /<[^>]+>|\n/g;
 
@@ -725,9 +731,8 @@ function extractCharacterTags(content) {
   const characterArray = [];
   let placeholderCount = 1;
   const characterNames = new Set();
-  const nameRegex = /^[A-Z0-9][A-Z0-9\s&/]*\./;
+  const nameRegex = /^[A-Z0-9]([A-Z0-9\s&()/]*\.(?=[^\.]|$))+/;
   //TODO FIX FOR NAMES THAT HAVE PERIODS IN THEM
-
   let modifiedContent = content.split("\n");
   modifiedContent = modifiedContent.map((line) => {
     let match = line.match(nameRegex);
