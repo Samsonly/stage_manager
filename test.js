@@ -708,16 +708,20 @@
 // //     }
 //   }
 //   return { modifiedContent, dialogueArray };
+// // }
+// let content =
+//   "{c1} As he thus spoke, the good dwarfs felt pity for him and gave him the coffin. The prince had his servants carry it away on their shoulders. But- <br> \n {c2} Wait, wait, wait... They just {OTHER2} Snow Whites dead body to a random dude in the woods? <br> \n  {c3} Not a random dude. To the prince. But then it happened- <br> \n  {c4} No, not  {OTHER3}  prince,  {OTHER4}  prince. And the dwarfs didnt even know if he was the real deal. They just took his word and {OTHER5} him their friends body. <br>{stgd6} \n  {c5} What?! <br>;";
+
+// function extractDialogue(content) {
+//   const dialogueRegex = /\{c\d+\}((?:(?!\{).)*)/g;
+//   let match;
+//   while ((match = dialogueRegex.exec(content)) !== null) {
+//     console.log(match[1]);
+//   }
 // }
-let content =
-  "{c1} As he thus spoke, the good dwarfs felt pity for him and gave him the coffin. The prince had his servants carry it away on their shoulders. But- <br> \n {c2} Wait, wait, wait... They just {OTHER2} Snow Whites dead body to a random dude in the woods? <br> \n  {c3} Not a random dude. To the prince. But then it happened- <br> \n  {c4} No, not  {OTHER3}  prince,  {OTHER4}  prince. And the dwarfs didnt even know if he was the real deal. They just took his word and {OTHER5} him their friends body. <br>{stgd6} \n  {c5} What?! <br>;";
 
-function extractDialogue(content) {
-  const dialogueRegex = /\{c\d+\}((?:(?!\{).)*)/g;
-  let match;
-  while ((match = dialogueRegex.exec(content)) !== null) {
-    console.log(match[1]);
-  }
+// extractDialogue(content);
+
+function checkForTitle(content) {
+  const titleRegex = /^/;
 }
-
-extractDialogue(content);

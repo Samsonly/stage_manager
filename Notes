@@ -1,3 +1,26 @@
 Things that need to be included in order to fully utilize this program:
 - A way to merge characters (for duplicate like names)
 - A way to connect characters (for ones that have multiple people talking at once)
+
+Fixes Needed:
+    - Carly Reynolds:
+        {stgd79} - [( <i> WILKINS discovers the folder with “Photo 51”. WATSON runs away. WILKINS stops WATSON. They move off to the side, and WILKINS opens a folder. WATSON's jaw drops. He pulls out a newspaper and draws what he sees and exits. WATSON returns to CRICK. WILKINS exits.)]
+        {stgd174} - [( <i> MR. PAXTON shows that he had his briefcase on him the entire time.)]
+        Scene #s are being put into character names?
+        MS. ALEXANDRIA. STEAM
+        dialogue is pulling in other things. Re-look at this script in depthly after fixing other two
+ - Green Room the info before the scene is not being extracted. Needs something for title/play description?
+
+
+
+-title
+  -play description
+    -act
+      -act description
+        -scene
+          -scene description
+            -character
+              -character direction
+              -dialogue
+            -stage direction
+        -ending tag

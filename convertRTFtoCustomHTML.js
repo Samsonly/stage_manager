@@ -32,7 +32,6 @@ function processRTFContent(content) {
   //TODO Look through the replaces below and check if they are necessary
   modifiedContent = modifiedContent
     .replace(/\\(\s|$)/gm, " <br>")
-    .replace(/\\pard(?![a-zA-Z])/g, "</i></u></b>\\")
     .replace(/\\plain(?![a-zA-Z])/g, "</i></u></b>\\")
     .replace(/\\par/g, "\\ <br>\\")
     .replace(/\\i0/g, "\\ </i>\\")
@@ -43,7 +42,8 @@ function processRTFContent(content) {
     .replace(/\\b(?![a-zA-Z])/g, "\\ <b>\\")
     .replace(/\\[a-zA-Z]+-?\d*\s?/g, "")
     .replace(/\{[^{}<]*\}/g, "")
-    .replace(/\\/g, "")
+    .replace(/\\/g, " ")
+    .replace(/  /g, " ")
     .replace(/<(\w)>[\s|<br>]*<\/\1>/g, "")
     .replace(/\( /g, "(")
     .replace(/ \)/g, ")");
@@ -57,6 +57,9 @@ function processRTFContent(content) {
 
   modifiedContent = removeUnmatchedTags(modifiedContent);
   modifiedContent = organizeHTMLTags(modifiedContent);
+  console.log(modifiedContent);
+
+  let TODOresults = testFunctionToDo(modifiedContent);
 
   const createNewLinesResult = createNewLines(modifiedContent);
 
@@ -122,7 +125,6 @@ function convertRTFEscapeSequencesToHTML(content) {
 
 function removeUnmatchedTags(content) {
   //TODO figure out how this works and make adjustments
-
   const tags = ["i", "u", "b"];
 
   tags.forEach((tag) => {
@@ -160,13 +162,13 @@ function removeUnmatchedTags(content) {
 
 function organizeHTMLTags(content) {
   //TODO figure out how this works and make adjustments
+
   function moveTags(content, tag) {
     const regex = new RegExp(`(<${tag}>)([\\s\\S]*?)(</${tag}>)`, "g");
 
     return content.replace(regex, (_, openingTag, innerContent, closingTag) => {
       let beforeTextContent = "";
       let afterTextContent = "";
-
       const parts = innerContent.split(/(<\/?[bu]>)/);
       let textEncountered = false;
 
@@ -204,6 +206,18 @@ function organizeHTMLTags(content) {
   return content;
 }
 
+function testFunctionToDo(content) {
+  const regex = /^[\s\n]*<b>[\s\n]*<u>[\s\n]*(.*?)/;
+  const match = content.match(regex);
+  if (match) {
+    // If a match is found, the text is in match[1].
+    const text = match[1];
+    console.log("Text: " + text);
+  } else {
+    console.log("No bold and underlined text found.");
+  }
+}
+
 function createNewLines(content) {
   //TODO figure out how this works and make adjustments
   // Also check through the replace below and see if it is necessary
@@ -217,22 +231,12 @@ function createNewLines(content) {
     .replace(/^\s/gm, "")
     .replace(/<br>([\s]*|$)/gm, "<br>\n");
 
-  cleanedContent = addEndTagToLines(cleanedContent);
-
-  cleanedContent = cleanedContent.replace(/{end}\s*/g, "\n");
-
   const endingExtractionResult = extractEndingTags(cleanedContent);
 
   let cleanedExtraction = endingExtractionResult.modifiedContent;
   let endArray = endingExtractionResult.endArray;
 
-  cleanedContent = cleanedExtraction.replace(/^(<[^>]+>)+/gm, (match) => {
-    return "{start}" + match;
-  });
-
-  cleanedContent = cleanedContent.replace(/\n*{start}/g, "");
-
-  return { modifiedContent: cleanedContent, endArray };
+  return { modifiedContent: cleanedExtraction, endArray };
 }
 
 function addEndTagToLines(content) {
@@ -274,7 +278,12 @@ function extractEndingTags(content) {
     modifiedContent.push(line);
   });
 
-  return { modifiedContent: modifiedContent.join("\n"), endArray };
+  modifiedContent = modifiedContent.join("\n");
+  modifiedContent = modifiedContent
+    .replace(/{endt(\d+)\}/g, "</i>{endt$1}")
+    .replace(/<i>\s*<\/i>/g, "");
+
+  return { modifiedContent, endArray };
 }
 
 function findEndingTags(content) {
@@ -287,6 +296,7 @@ function findEndingTags(content) {
     "End of Act",
     "End of Scene",
     "Fade to Black",
+    "Transition To",
   ];
 
   let lines = content.split("\n");
@@ -294,7 +304,7 @@ function findEndingTags(content) {
 
   wordsToCheck.forEach((word) => {
     const regex = new RegExp(
-      `^\\s*(<[^>]*>)*\\s*([\\[\\({\\})\\]]*${word}[\\[\\({\\})\\]]*)\\s*(<[^>]*>)*\\s*$`,
+      `^\\s*(<[^>]*>)*\\s*([\\[\\({\\})\\]]*${word}[:\\[\\({\\})\\]]*)\\s*(<[^>]*>)*\\s*$`,
       "i"
     );
     lines.forEach((line, index) => {
@@ -312,11 +322,30 @@ function findEndingTags(content) {
 
 function extractItalicSections(content) {
   //TODO figure out how this works and make adjustments
-
   const italicArray = [];
   let placeholderCount = 1;
   let modifiedContent = "";
   let index = 0;
+  content = content.split("\n");
+  content = content.map((line) => {
+    return line.replace(/^\(/g, "<i> (");
+  });
+  content = content.join("\n");
+
+  content = content
+    .replace(/<i>\s(\([\s\S]+?\))/gm, "<i> $1 </i>")
+    .replace(/<i>[\s\n]*<i>/gm, "<i>")
+    .replace(/\s*<\/i>[\s\n]*<\/i>/gm, "</i>");
+
+  content = addEndTagToLines(content);
+  content = content.replace(/{end}\s*/g, "\n");
+  content = content.replace(/^(<[^>]+>)+/gm, (match) => {
+    return "{start}" + match;
+  });
+
+  content = content
+    .replace(/\n*{start}/g, "")
+    .replace(/<i>(<br>|\s*)*<i>/g, "<i>");
 
   while (index < content.length) {
     let startIndex = content.indexOf("<i>", index);
@@ -436,7 +465,7 @@ function reorganizeItalicSection(content) {
   modifiedContent = replacedEmphasizedText.modifiedContent;
   italicArray = replacedEmphasizedText.italicArray;
 
-  modifiedContent = modifiedContent.replace(/\n/g, "");
+  // modifiedContent = modifiedContent.replace(/\n/g, "");
 
   const extractedDialogue = extractDialogue(modifiedContent); //finds Dialogue and extracts them into their own array
   modifiedContent = extractedDialogue.modifiedContent;
@@ -667,7 +696,6 @@ function extractActSections(content) {
       placeholderCount++;
     }
   });
-  console.log(modifiedContent);
 
   return { modifiedContent, actArray };
 }
