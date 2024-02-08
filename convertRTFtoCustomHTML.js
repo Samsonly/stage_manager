@@ -1,4 +1,4 @@
-import { readFile, writeFileSync } from "fs";
+import { readFile, write, writeFileSync } from "fs";
 import { dirname, basename, join } from "path";
 
 function convertRTFtoHTML(filePath) {
@@ -33,7 +33,7 @@ function processRTFContent(content) {
   modifiedContent = modifiedContent
     .replace(/\\(\s|$)/gm, " <br>")
     .replace(/\\plain(?![a-zA-Z])/g, "</i></u></b>\\")
-    .replace(/\\par/g, "\\ <br>\\")
+    // .replace(/\\par(?!d)/g, "\\ <br>\\")
     .replace(/\\i0/g, "\\ </i>\\")
     .replace(/\\ulnone/g, "\\ </u>\\")
     .replace(/\\b0/g, "\\ </b>\\")
@@ -57,9 +57,6 @@ function processRTFContent(content) {
 
   modifiedContent = removeUnmatchedTags(modifiedContent);
   modifiedContent = organizeHTMLTags(modifiedContent);
-  console.log(modifiedContent);
-
-  let TODOresults = testFunctionToDo(modifiedContent);
 
   const createNewLinesResult = createNewLines(modifiedContent);
 
@@ -74,20 +71,56 @@ function processRTFContent(content) {
   let finalModifiedContent = italicConsolidationResult.modifiedContent;
 
   let extractedSections =
-    italicConsolidationResult.italicArray.join("\n") +
+    "Play Title" +
+    "\n" +
+    italicConsolidationResult.titleArray.join("\n") +
     "\n\n" +
+    "Play Descriptions" +
+    "\n" +
+    italicConsolidationResult.pdesArray.join("\n") +
+    "\n\n" +
+    "Act Title" +
+    "\n" +
     italicConsolidationResult.actArray.join("\n") +
     "\n\n" +
-    italicConsolidationResult.actdArray.join("\n") +
+    "Act Descriptions" +
+    "\n" +
+    italicConsolidationResult.adesArray.join("\n") +
     "\n\n" +
+    "Scene Titles" +
+    "\n" +
     italicConsolidationResult.sceneArray.join("\n") +
     "\n\n" +
+    "Scene Locations" +
+    "\n" +
     italicConsolidationResult.slocArray.join("\n") +
     "\n\n" +
+    "Scene Descriptions" +
+    "\n" +
+    italicConsolidationResult.sdesArray.join("\n") +
+    "\n\n" +
+    "Character" +
+    "\n" +
     italicConsolidationResult.characterArray.join("\n") +
     "\n\n" +
+    "Character Directions" +
+    "\n" +
+    italicConsolidationResult.cdirArray.join("\n") +
+    "\n\n" +
+    "Dialogue" +
+    "\n" +
     italicConsolidationResult.dialogueArray.join("\n") +
     "\n\n" +
+    "Stage Directions" +
+    "\n" +
+    italicConsolidationResult.stgdArray.join("\n") +
+    "\n\n" +
+    "Unsorted" +
+    "\n" +
+    italicConsolidationResult.italicArray.join("\n") +
+    "\n\n" +
+    "Endings" +
+    "\n" +
     createNewLinesResult.endArray.join("\n");
 
   let characterNames = italicConsolidationResult.characterNames.join("\n");
@@ -206,18 +239,6 @@ function organizeHTMLTags(content) {
   return content;
 }
 
-function testFunctionToDo(content) {
-  const regex = /^[\s\n]*<b>[\s\n]*<u>[\s\n]*(.*?)/;
-  const match = content.match(regex);
-  if (match) {
-    // If a match is found, the text is in match[1].
-    const text = match[1];
-    console.log("Text: " + text);
-  } else {
-    console.log("No bold and underlined text found.");
-  }
-}
-
 function createNewLines(content) {
   //TODO figure out how this works and make adjustments
   // Also check through the replace below and see if it is necessary
@@ -288,7 +309,6 @@ function extractEndingTags(content) {
 
 function findEndingTags(content) {
   //TODO figure out how this works and make adjustments
-
   const wordsToCheck = [
     "Blackout",
     "Lights Out",
@@ -304,7 +324,7 @@ function findEndingTags(content) {
 
   wordsToCheck.forEach((word) => {
     const regex = new RegExp(
-      `^\\s*(<[^>]*>)*\\s*([\\[\\({\\})\\]]*${word}[:\\[\\({\\})\\]]*)\\s*(<[^>]*>)*\\s*$`,
+      `^\\s*(<[^>]*>)*\\s*([\\[\\({\\})\\]]*\\s*${word}\\.*\\s*[:\\[\\({\\})\\]]*)\\s*(<[^>]*>)*\\s*$`,
       "i"
     );
     lines.forEach((line, index) => {
@@ -326,23 +346,25 @@ function extractItalicSections(content) {
   let placeholderCount = 1;
   let modifiedContent = "";
   let index = 0;
+
   content = content.split("\n");
+
   content = content.map((line) => {
-    return line.replace(/^\(/g, "<i> (");
+    return line
+      .replace(/(^((<[^>]*>)*|)\s*)(\(.*\))/g, "$1<i> $4 </i>")
+      .replace(/(^((<[^>]*>)*|)\s*)(\[.*\])/g, "$1<i> $4 </i>");
   });
   content = content.join("\n");
 
   content = content
-    .replace(/<i>\s(\([\s\S]+?\))/gm, "<i> $1 </i>")
     .replace(/<i>[\s\n]*<i>/gm, "<i>")
-    .replace(/\s*<\/i>[\s\n]*<\/i>/gm, "</i>");
+    .replace(/<\/i>[\s\n]*<\/i>/gm, "</i>");
 
   content = addEndTagToLines(content);
   content = content.replace(/{end}\s*/g, "\n");
   content = content.replace(/^(<[^>]+>)+/gm, (match) => {
     return "{start}" + match;
   });
-
   content = content
     .replace(/\n*{start}/g, "")
     .replace(/<i>(<br>|\s*)*<i>/g, "<i>");
@@ -360,7 +382,6 @@ function extractItalicSections(content) {
       console.error("No closing </i> tag found for <i> at index " + startIndex);
       break;
     }
-
     modifiedContent += content.slice(index, startIndex);
 
     let italicText = content.slice(startIndex + 3, endIndex);
@@ -394,6 +415,9 @@ function reorganizeItalicSection(content) {
   const pairedParenthesis = returnLooseParenthesis(content); //finds any parenthesis just outside of italicTags, and inserts them into the tag
   let modifiedContent = pairedParenthesis.modifiedContent;
 
+  modifiedContent = modifiedContent
+    .replace(/<br>/g, "")
+    .replace(/([a-z])\s*\n\s*([a-z])/g, `$1 $2`);
   const indexedOpenItalics = inventoryStageDirections(
     pairedParenthesis.italicArray
   ); //notes which lines have unmatched parenthesis
@@ -414,26 +438,28 @@ function reorganizeItalicSection(content) {
     italicArray,
     condensedArray
   ); //uses stored index of lines needing to be grouped, and then groups them
+  modifiedContent = finalizedStageDirections.modifiedContent;
+  italicArray = finalizedStageDirections.italicArray;
 
-  const extractedActTags = extractActSections(
+  const extractedTitle = extractTitleOfPlay(
     finalizedStageDirections.modifiedContent
-  ); //finds Acts and extracts them into their own array
+  ); //finds Title of Play and extracts it into its own array
+  let titleArray = extractedTitle.titleArray;
+  modifiedContent = extractedTitle.modifiedContent;
+  modifiedContent = modifiedContent.replace(/<[^>]+>/g, "");
+
+  const extractedActTags = extractActSections(modifiedContent); //finds Acts and extracts them into their own array
   let actArray = extractedActTags.actArray;
   modifiedContent = extractedActTags.modifiedContent;
-
-  const extractedActDescTags = actDescriptionSearch(
-    modifiedContent,
-    italicArray
-  ); //finds Act Descriptions and extracts them into their own array
-  let actdArray = extractedActDescTags.actdArray;
-  modifiedContent = extractedActDescTags.modifiedContent;
-  italicArray = extractedActDescTags.italicArray;
 
   const extractedSceneSections = extractSceneSections(modifiedContent); //finds Scenes and extracts them into their own array
   modifiedContent = extractedSceneSections.modifiedContent;
   let sceneArray = extractedSceneSections.sceneArray;
 
-  const extractedCharacterTags = extractCharacterTags(modifiedContent); //finds Characters and extracts them into their own array
+  const extractedCharacterTags = extractCharacterTags(
+    modifiedContent,
+    italicArray
+  ); //finds Characters and extracts them into their own array
   let characterArray = extractedCharacterTags.characterArray;
   let characterNames = extractedCharacterTags.characterNames;
   modifiedContent = extractedCharacterTags.modifiedContent;
@@ -446,26 +472,22 @@ function reorganizeItalicSection(content) {
   modifiedContent = sortedItalicSection.modifiedContent;
   italicArray = sortedItalicSection.italicArray;
 
-  const renamedStageDirections = parseStageDirections(
+  const replacedItalicText = parseItalicArray(
     modifiedContent,
-    italicArray
-  ); //renames italics known to be Stage Directions
-
-  const parsedCharacterDirections = parseCharacterDirections(
-    renamedStageDirections
-  ); //renames italics known to be Stage Character Directions
-  modifiedContent = parsedCharacterDirections.modifiedContent;
-  italicArray = parsedCharacterDirections.italicArray;
-  modifiedContent = modifiedContent.replace(/<[^>]+>/g, "").trim();
-
-  const replacedEmphasizedText = parseEmphasizedText(
-    modifiedContent,
-    italicArray
-  ); //renames italics known to be Stage Character Directions
-  modifiedContent = replacedEmphasizedText.modifiedContent;
-  italicArray = replacedEmphasizedText.italicArray;
-
-  // modifiedContent = modifiedContent.replace(/\n/g, "");
+    italicArray,
+    titleArray,
+    actArray,
+    sceneArray,
+    slocArray,
+    characterArray
+  );
+  modifiedContent = replacedItalicText.modifiedContent;
+  italicArray = replacedItalicText.italicArray;
+  let pdesArray = replacedItalicText.pdesArray;
+  let adesArray = replacedItalicText.adesArray;
+  let sdesArray = replacedItalicText.sdesArray;
+  let cdirArray = replacedItalicText.cdirArray;
+  let stgdArray = replacedItalicText.stgdArray;
 
   const extractedDialogue = extractDialogue(modifiedContent); //finds Dialogue and extracts them into their own array
   modifiedContent = extractedDialogue.modifiedContent;
@@ -477,12 +499,17 @@ function reorganizeItalicSection(content) {
     modifiedContent,
     italicArray,
     actArray,
-    actdArray,
+    adesArray,
     characterArray,
     characterNames,
     sceneArray,
     slocArray,
     dialogueArray,
+    titleArray,
+    pdesArray,
+    stgdArray,
+    cdirArray,
+    sdesArray,
   };
 }
 
@@ -661,10 +688,28 @@ function condenseStageDirections(modifiedContent, italicArray, condensedArray) {
   return { modifiedContent, italicArray };
 }
 
+function extractTitleOfPlay(content) {
+  let modifiedContent = content;
+  const regex = /<b>(?:[\s\S]*)<u>\s*([\s\S]*?)(?:(<br>|\s]*<\/u>\s)*<\/b>)/;
+  const titleArray = [];
+
+  const match = modifiedContent.match(regex);
+  if (match) {
+    let title = match[1];
+    const htmlRegex = /(\s*<[^>]+>\s*)+/g;
+    title = title.replace(htmlRegex, " ").trim();
+    const titleTag = `{play${1}}`;
+    modifiedContent = modifiedContent.replace(title, titleTag);
+    titleArray.push(`${titleTag} - [${title}]`);
+  }
+  return { modifiedContent, titleArray };
+}
+
 function extractActSections(content) {
   const actArray = [];
   let placeholderCount = 1;
-  let regex = /^(Act \w+)/gi;
+  let regex = /^(Act\s*\w+)/gim;
+
   const sections = [
     "i",
     "ii",
@@ -689,8 +734,8 @@ function extractActSections(content) {
   let modifiedContent = content;
   [...modifiedContent.matchAll(regex)].forEach(([match, sectionAct]) => {
     let section = sectionAct.split(" ")[1];
-    if (sections.includes(section.toLowerCase())) {
-      const placeholder = `{a${placeholderCount}}`;
+    if (section && sections.includes(section.toLowerCase())) {
+      const placeholder = `{act${placeholderCount}}`;
       actArray.push(`${placeholder} - [${sectionAct}]`);
       modifiedContent = modifiedContent.replace(sectionAct, placeholder);
       placeholderCount++;
@@ -700,59 +745,45 @@ function extractActSections(content) {
   return { modifiedContent, actArray };
 }
 
-function actDescriptionSearch(modifiedContent, italicArray) {
-  let actdArray = [];
-  const actRegex = /{a(\d+)}([\s\S]*?)(?={([a-z]+)(\d+(-\d+)*)})/g;
-  const htmlTagRegex = /<[^>]+>|\n/g;
+function extractSceneSections(content) {
+  const sceneArray = [];
+  let placeholderCount = 1;
+  const prologueRegex = /^prologue(\s*<[^>]*>|\s*{|$)/gim;
+  const intermissionRegex = /intermission(\s*<[^>]*>|$)/gim;
+  const epilogueRegex = /epilogue(\s*<[^>]*>|$)/gim;
+  const sceneRegex =
+    /^(\s*)scene(:\s|\s*-|\s[1-9]*|\s[one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty]|$)/gim;
+  const sceneNumRegex = /^(\s*)[1-9][0-9]*([:\s]*|[\s-]*|[\s[a-zA-Z]]*|$)/gim;
+  let lines = content.split("\n");
+  let modifiedContent = lines.map((line) => {
+    let matched = false;
+    let extractedText = "";
 
-  let match;
-  while ((match = actRegex.exec(modifiedContent)) !== null) {
-    const actNumber = match[1];
-    let betweenPlaceholders = match[2];
-    const nextPlaceholderType = match[3];
-    const nextPlaceholderNumber = match[4];
-    const textWithoutHtml = betweenPlaceholders
-      .replace(htmlTagRegex, "")
-      .trim();
-    const hasNonHtmlAlpha = /[a-zA-Z]/.test(textWithoutHtml);
-    const actdTag = `{actd${actNumber}}`;
-    const nextTag = `{${nextPlaceholderType}${nextPlaceholderNumber}}`;
+    [
+      prologueRegex,
+      intermissionRegex,
+      epilogueRegex,
+      sceneRegex,
+      sceneNumRegex,
+    ].forEach((regex) => {
+      if (!matched && line.match(regex)) {
+        const match = line.match(/.*?(?={|$)/);
 
-    if (hasNonHtmlAlpha) {
-      if (nextPlaceholderType === "i") {
-        const iTagContentIndex = italicArray.findIndex((element) =>
-          element.includes(nextTag)
-        );
-        if (iTagContentIndex !== -1) {
-          const iTagContent =
-            italicArray[iTagContentIndex].match(/-\s\[(.*?)\]/)[1];
-          actdArray.push(`${actdTag} - [${textWithoutHtml} ${iTagContent}]`);
-          italicArray.splice(iTagContentIndex, 1);
+        if (match) {
+          extractedText = match[0].replace(/<[^>]+>/g, "").trim();
+          line = line.replace(extractedText, `{s${placeholderCount}}`);
+
+          sceneArray.push(`{s${placeholderCount}} - [${extractedText}]`);
+          placeholderCount++;
+          matched = true;
         }
-        modifiedContent = modifiedContent
-          .replace(nextTag, actdTag)
-          .replace(betweenPlaceholders, "");
-      } else {
-        actdArray.push(`${actdTag} - [${textWithoutHtml}]`);
-        modifiedContent = modifiedContent.replace(betweenPlaceholders, "");
       }
-      modifiedContent = modifiedContent.replace(betweenPlaceholders, actdTag);
-    } else if (nextPlaceholderType === "i") {
-      const iTagContentIndex = italicArray.findIndex((element) =>
-        element.includes(nextTag)
-      );
-      if (iTagContentIndex !== -1) {
-        const iTagContent =
-          italicArray[iTagContentIndex].match(/-\s\[(.*?)\]/)[1];
-        actdArray.push(`${actdTag} - [${iTagContent}]`);
-        italicArray.splice(iTagContentIndex, 1);
-      }
-      modifiedContent = modifiedContent
-        .replace(nextTag, actdTag)
-        .replace(betweenPlaceholders, "");
-    }
-  }
-  return { modifiedContent, italicArray, actdArray };
+    });
+
+    return line;
+  });
+
+  return { modifiedContent: modifiedContent.join("\n"), sceneArray };
 }
 
 function extractCharacterTags(content) {
@@ -760,12 +791,10 @@ function extractCharacterTags(content) {
   let placeholderCount = 1;
   const characterNames = new Set();
   const nameRegex = /^[A-Z0-9]([A-Z0-9\s&()/]*\.(?=[^\.]|$))+/;
-  //TODO FIX FOR NAMES THAT HAVE PERIODS IN THEM
   let modifiedContent = content.split("\n");
   modifiedContent = modifiedContent.map((line) => {
     let match = line.match(nameRegex);
     if (match) {
-      // lines
       let extractedText = match[0];
       let placeholder = `{c${placeholderCount}}`;
       line = line.replace(nameRegex, placeholder);
@@ -782,43 +811,6 @@ function extractCharacterTags(content) {
   };
 }
 
-function extractSceneSections(content) {
-  const sceneArray = [];
-  let placeholderCount = 1;
-  const prologueRegex = /prologue(\s*<[^>]*>|$)/gim;
-  const intermissionRegex = /intermission(\s*<[^>]*>|$)/gim;
-  const epilogueRegex = /epilogue(\s*<[^>]*>|$)/gim;
-  const sceneRegex =
-    /^(\s*)scene(:\s|\s*-|\s[1-9]*|\s[one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty]|$)/gim;
-  const sceneNumRegex = /^(\s*)[1-9][0-9]*([:\s]*|[\s-]*|[\s[a-zA-Z]]*|$)/gim;
-
-  let lines = content.split("\n");
-  let modifiedContent = lines.map((line) => {
-    let matched = false;
-    let extractedText = "";
-
-    [
-      prologueRegex,
-      intermissionRegex,
-      epilogueRegex,
-      sceneRegex,
-      sceneNumRegex,
-    ].forEach((regex) => {
-      if (!matched && line.match(regex)) {
-        extractedText = line.replace(/<[^>]+>/g, "").trim();
-        line = line.replace(extractedText, `{s${placeholderCount}}`);
-        sceneArray.push(`{s${placeholderCount}} - [${extractedText}]`);
-        placeholderCount++;
-        matched = true;
-      }
-    });
-
-    return line;
-  });
-
-  return { modifiedContent: modifiedContent.join("\n"), sceneArray };
-}
-
 function sceneLocationSearch(modifiedContent) {
   let slocArray = [];
   const sceneRegex = /{s(\d+)}([\s\S]*?)(?={[a-z]+)/g;
@@ -827,10 +819,12 @@ function sceneLocationSearch(modifiedContent) {
   let match;
   while ((match = sceneRegex.exec(modifiedContent)) !== null) {
     const sceneNumber = match[1];
+
     let betweenPlaceholders = match[2];
     const textWithoutHtml = betweenPlaceholders
       .replace(htmlTagRegex, "")
       .trim();
+
     const hasNonHtmlAlpha = /[a-zA-Z]/.test(textWithoutHtml);
     const slocTag = `{sloc${sceneNumber}}`;
 
@@ -845,158 +839,574 @@ function sceneLocationSearch(modifiedContent) {
 
 function sortItalicSection(modifiedContent, italicArray) {
   const nonParenRegex = /{i\d+(-\d+)*}\s-\s\[[a-zA-Z]/g;
-
+  const parenRegex = /{i\d+(-\d+)*}\s-\s\[\(/g;
+  const bracketRegex = /{i\d+(-\d+)*}\s-\s\[\[/g;
   const updatedItalicArray = italicArray.map((line) => {
     if (line.match(nonParenRegex)) {
-      const tagMatch = line.match(/{i(\d+(-\d+)*)}/);
-      const tagNumber = tagMatch[1];
-      const originalTag = `{i${tagNumber}}`;
-      const newTag = `{sdes${tagNumber}}`;
+      const npTagMatch = line.match(/{i(\d+(-\d+)*)}/);
+      const npTagNumber = npTagMatch[1];
+      const originalNpTag = `{i${npTagNumber}}`;
+      const newNpTag = `{np${npTagNumber}}`;
 
-      const updatedLine = line.replace(originalTag, newTag);
+      const updatedNpLine = line.replace(originalNpTag, newNpTag);
 
       modifiedContent = modifiedContent.replace(
-        new RegExp(originalTag, "g"),
-        newTag
+        new RegExp(originalNpTag, "g"),
+        newNpTag
       );
 
-      return updatedLine;
-    } else {
-      return line;
+      return updatedNpLine;
+    } else if (line.match(parenRegex)) {
+      const pTagMatch = line.match(/{i(\d+(-\d+)*)}/);
+      const pTagNumber = pTagMatch[1];
+      const originalPTag = `{i${pTagNumber}}`;
+      const newPTag = `{p${pTagNumber}}`;
+
+      const updatedPLine = line.replace(originalPTag, newPTag);
+
+      modifiedContent = modifiedContent.replace(
+        new RegExp(originalPTag, "g"),
+        newPTag
+      );
+      return updatedPLine;
+    } else if (line.match(bracketRegex)) {
+      const bTagMatch = line.match(/{i(\d+(-\d+)*)}/);
+      const bTagNumber = bTagMatch[1];
+      const originalBTag = `{i${bTagNumber}}`;
+      const newBTag = `{b${bTagNumber}}`;
+
+      const updatedBLine = line.replace(originalBTag, newBTag);
+
+      modifiedContent = modifiedContent.replace(
+        new RegExp(originalBTag, "g"),
+        newBTag
+      );
+      return updatedBLine;
     }
+    return line;
   });
+  console.log(modifiedContent);
 
   return { modifiedContent, italicArray: updatedItalicArray };
 }
 
-function parseStageDirections(modifiedContent, italicArray) {
-  const stgdRegex = /{i(\d+(?:-\d+)*)}(?:\s|<[^>]+>|\n)*{c/g;
+function parseItalicArray(
+  modifiedContent,
+  italicArray,
+  titleArray,
+  actArray,
+  sceneArray,
+  slocArray,
+  characterArray
+) {
+  const playDescriptionExtracted = extractPlayDescription(
+    modifiedContent,
+    italicArray,
+    titleArray
+  );
+  let pdesArray = playDescriptionExtracted.pdesArray;
+  modifiedContent = playDescriptionExtracted.modifiedContent;
+  italicArray = playDescriptionExtracted.italicArray;
 
-  modifiedContent = modifiedContent.replace(stgdRegex, (match, tagNumber) => {
-    const originalTag = `{i${tagNumber}}`;
-    const newTag = `{stgd${tagNumber}}`;
+  const actDescriptionExtracted = extractActDescription(
+    modifiedContent,
+    italicArray,
+    actArray
+  );
+  let adesArray = actDescriptionExtracted.adesArray;
+  modifiedContent = actDescriptionExtracted.modifiedContent;
+  italicArray = actDescriptionExtracted.italicArray;
 
-    const italicArrayIndex = italicArray.findIndex((element) =>
-      element.includes(originalTag)
-    );
-    if (italicArrayIndex !== -1) {
-      italicArray[italicArrayIndex] = italicArray[italicArrayIndex].replace(
-        originalTag,
-        newTag
-      );
-    }
+  const sceneDescriptionExtracted = extractSceneDescription(
+    modifiedContent,
+    italicArray,
+    sceneArray,
+    slocArray
+  );
+  let sdesArray = sceneDescriptionExtracted.sdesArray;
+  modifiedContent = sceneDescriptionExtracted.modifiedContent;
+  italicArray = sceneDescriptionExtracted.italicArray;
 
-    return match.replace(originalTag, newTag);
-  });
+  const emphasizedDialogueReplaced = replaceEmphasizedDialogue(
+    modifiedContent,
+    italicArray,
+    characterArray
+  );
+  modifiedContent = emphasizedDialogueReplaced.modifiedContent;
+  italicArray = emphasizedDialogueReplaced.italicArray;
 
-  return { modifiedContent, italicArray };
+  const stageDirectionsExtracted = extractStageDirections(
+    modifiedContent,
+    italicArray
+  );
+  let stgdArray = stageDirectionsExtracted.stgdArray;
+  modifiedContent = stageDirectionsExtracted.modifiedContent;
+  italicArray = stageDirectionsExtracted.italicArray;
+
+  const characterDirectionsExtracted = extractCharacterDirections(
+    modifiedContent,
+    italicArray,
+    characterArray
+  );
+  let cdirArray = characterDirectionsExtracted.cdirArray;
+  modifiedContent = characterDirectionsExtracted.modifiedContent;
+  italicArray = characterDirectionsExtracted.italicArray;
+
+  return {
+    modifiedContent,
+    italicArray,
+    pdesArray,
+    adesArray,
+    sdesArray,
+    stgdArray,
+    cdirArray,
+  };
 }
 
-function parseCharacterDirections(content) {
-  let modifiedContent = content.modifiedContent;
-  const italicArray = content.italicArray;
-  const cdirRegex = /{i(\d+(?:-\d+)*)}\s-\s\[\(/g;
+function extractPlayDescription(modifiedContent, italicArray, titleArray) {
+  const npRegex = /^{np\d+(-\d+)*}/;
+  const playRegex = /{play(\d+)}/;
+  let pdesArray = [];
 
-  italicArray.forEach((element, index) => {
-    let tagMatch;
-    while ((tagMatch = cdirRegex.exec(element)) !== null) {
-      const tagNumber = tagMatch[1];
-      const originalTag = `{i${tagNumber}}`;
-      const newTag = `{cdir${tagNumber}}`;
+  italicArray = italicArray.map((npLine) => {
+    const npTagMatch = npLine.match(npRegex);
+    if (npTagMatch) {
+      const npTag = npTagMatch[0];
+      let writeDelete = false;
 
-      italicArray[index] = element.replace(originalTag, newTag);
+      titleArray.forEach((titleLine) => {
+        const playTagMatch = titleLine.match(playRegex);
+        if (playTagMatch) {
+          const playTag = playTagMatch[0];
+          const playTagNumber = playTagMatch[1];
+          const pdesTag = `{pdes${playTagNumber}}`;
+          const pdesLine = npLine.replace(npTag, pdesTag);
+          const npTagPos = modifiedContent.indexOf(npTag);
+          const playTagPos = modifiedContent.indexOf(playTag);
 
-      modifiedContent = modifiedContent.replace(
-        new RegExp(originalTag, "g"),
-        newTag
-      );
-    }
-  });
-
-  return { modifiedContent, italicArray };
-}
-
-function parseEmphasizedText(modifiedContent, italicArray) {
-  modifiedContent = modifiedContent.split("{c");
-  const sdesRegex = /{sdes(\d+(-\d+)*)}/g;
-  const slocOrSTagBeforeRegex =
-    /({sloc\d+}|{s\d+})(?:(?!{c).)*{sdes(\d+(-\d+)*)}/;
-  const cdirOrTextBeforeRegex =
-    /((\d+c\{)|(\d+-\d+ridc\{)|[^>}]*(?!\{[^}]*\}))/;
-
-  let toRemove = [];
-  italicArray.forEach((line, index) => {
-    let match;
-    while ((match = sdesRegex.exec(line)) !== null) {
-      const sdesTag = match[0];
-      const sdesTextMatch = line.match(/-\s\[(.*?)\]/);
-      const sdesText = sdesTextMatch ? sdesTextMatch[1] : "";
-
-      modifiedContent = modifiedContent.map((contentLine) => {
-        const prevLineContext = contentLine.substring(
-          0,
-          contentLine.indexOf(sdesTag) + sdesTag.length
-        );
-
-        const prevLineContextEm = contentLine.substring(
-          0,
-          contentLine.indexOf(sdesTag)
-        );
-
-        if (
-          slocOrSTagBeforeRegex.test(prevLineContext) //&&
-        ) {
-          return contentLine;
-        } else if (cdirOrTextBeforeRegex.test(prevLineContextEm)) {
-          const sdesTagRegex = new RegExp(sdesTag, "g");
-          const newContentLine = contentLine.replace(
-            sdesTagRegex,
-            `<em>${sdesText}</em>`
-          );
-          if (newContentLine !== contentLine) {
-            toRemove.push(index);
-            return newContentLine;
+          if (playTagPos !== -1 && npTagPos !== -1 && playTagPos < npTagPos) {
+            const betweenTags = modifiedContent.substring(
+              playTagPos + playTag.length,
+              npTagPos
+            );
+            if (!betweenTags.includes("{")) {
+              pdesArray.push(`${pdesLine}`);
+              modifiedContent = modifiedContent.replace(npTag, pdesTag);
+              writeDelete = true;
+            }
           }
-
-          return contentLine.replace(sdesTagRegex, `<em>${sdesText}</em>`);
-        } else {
-          const newTag = `{OTHER${match[1]}}`;
-          return contentLine.replace(new RegExp(sdesTag, "g"), newTag);
         }
       });
+      if (writeDelete) {
+        return "Delete";
+      }
     }
+    return npLine;
   });
 
-  for (let i = toRemove.length - 1; i >= 0; i--) {
-    italicArray.splice(toRemove[i], 1);
-  }
+  return { modifiedContent, italicArray, pdesArray };
+}
 
-  modifiedContent = modifiedContent.join("{c");
+function extractActDescription(modifiedContent, italicArray, actArray) {
+  const npRegex = /^{np\d+(-\d+)*}/;
+  const actRegex = /{act(\d+)}/;
+  let adesArray = [];
 
+  italicArray = italicArray.map((npLine) => {
+    const npTagMatch = npLine.match(npRegex);
+
+    if (npTagMatch) {
+      const npTag = npTagMatch[0];
+      let writeDelete = false;
+
+      actArray.forEach((actLine) => {
+        const actTagMatch = actLine.match(actRegex);
+        if (actTagMatch) {
+          const actTag = actTagMatch[0];
+          const actTagNumber = actTagMatch[1];
+          const adesTag = `{ades${actTagNumber}}`;
+          const adesLine = npLine.replace(npTag, adesTag);
+          const npTagPos = modifiedContent.indexOf(npTag);
+          const actTagPos = modifiedContent.indexOf(actTag);
+
+          if (actTagPos !== -1 && npTagPos !== -1 && actTagPos < npTagPos) {
+            const betweenTags = modifiedContent.substring(
+              actTagPos + actTag.length,
+              npTagPos
+            );
+            if (!betweenTags.includes("{")) {
+              adesArray.push(`${adesLine}`);
+              modifiedContent = modifiedContent.replace(npTag, adesTag);
+              writeDelete = true;
+            }
+          }
+        }
+      });
+      if (writeDelete) {
+        return "Delete";
+      }
+    }
+    return npLine;
+  });
+  return { modifiedContent, italicArray, adesArray };
+}
+
+function extractStageDirections(modifiedContent, italicArray) {
+  const pRegex = /{p(\d+(-\d+)*)}/;
+  const bRegex = /{b(\d+(-\d+)*)}/;
+  let stgdArray = [];
+  italicArray = italicArray
+    .reverse()
+    .map((pLine) => {
+      const pTagMatch = pLine.match(pRegex);
+      const bTagMatch = pLine.match(bRegex);
+      if (pTagMatch) {
+        const pTag = pTagMatch[0];
+        const pTagNumber = pTagMatch[1];
+        const behindCRegex = new RegExp(
+          `${pTag}[\\s\\S]*?({c\\d+}|{s\\d+}|{endt\\d+}|{a\\d+}|{stgd\\d+(-\\d+)*})`
+        );
+        const cTagMatch = modifiedContent.match(behindCRegex);
+
+        if (cTagMatch) {
+          const cTag = cTagMatch[1];
+          const stgdTag = `{stgd${pTagNumber}}`;
+          const stgdLine = pLine.replace(pTag, stgdTag);
+          const pTagPos = modifiedContent.indexOf(pTag);
+          const cTagPos = modifiedContent.indexOf(cTag);
+
+          if (pTagPos !== -1 && cTagPos !== -1 && pTagPos < cTagPos) {
+            const betweenTags = modifiedContent.substring(
+              pTagPos + pTag.length,
+              cTagPos
+            );
+
+            if (
+              !betweenTags.includes("{") &&
+              !betweenTags.replace(/<[^>]*>/g, "").match(/\w+/)
+            ) {
+              stgdArray.push(`${stgdLine}`);
+              modifiedContent = modifiedContent.replace(pTag, stgdTag);
+              return "Delete";
+            }
+          }
+        }
+      } else if (bTagMatch) {
+        const bTag = bTagMatch[0];
+        const bTagMatched = modifiedContent.match(bTag);
+        const bTagNumber = bTagMatch[1];
+
+        if (bTagMatched) {
+          const stgdTag = `{stgd${bTagNumber}}`;
+          const stgdLine = pLine.replace(bTag, stgdTag);
+          stgdArray.push(`${stgdLine}`);
+          modifiedContent = modifiedContent.replace(bTag, stgdTag);
+          return "Delete";
+        }
+      }
+      return pLine;
+    })
+    .reverse();
+  stgdArray = stgdArray.reverse();
+  return { modifiedContent, italicArray, stgdArray };
+}
+
+// TODO read through the item below to confirm it does what I want
+function extractCharacterDirections(
+  modifiedContent,
+  italicArray,
+  characterArray
+) {
+  const pRegex = /{p(\d+(-\d+)*)}/;
+  const characterRegex = /{c*(\d+)}/;
+  const cdirRegex = /{cdir(\d+(\.\d+)?)}/;
+  let cdirArray = [];
+
+  italicArray = italicArray.map((pLine) => {
+    const pTagMatch = pLine.match(pRegex);
+    if (pTagMatch) {
+      const pTag = pTagMatch[0];
+      let writeDelete = false;
+      let tagCount = 0.1;
+
+      characterArray.forEach((cLine) => {
+        const cTagMatch = cLine.match(characterRegex);
+        if (cTagMatch) {
+          const cTag = cTagMatch[0];
+          const cTagNumber = Number(cTagMatch[1]);
+          let cdirNumber = cTagNumber + tagCount;
+          const cdirTag = `{cdir${cdirNumber}}`;
+          const cdirLine = pLine.replace(pTag, cdirTag);
+          const pTagPos = modifiedContent.indexOf(pTag);
+          const cTagPos = modifiedContent.indexOf(cTag);
+
+          if (cTagPos !== -1 && pTagPos !== -1 && cTagPos < pTagPos) {
+            const betweenTags = modifiedContent.substring(
+              cTagPos + cTag.length,
+              pTagPos
+            );
+            if (!betweenTags.includes("{")) {
+              cdirArray.push(`${cdirLine}`);
+              modifiedContent = modifiedContent.replace(pTag, cdirTag);
+              writeDelete = true;
+            }
+          }
+        }
+      });
+
+      cdirArray.forEach((newCdirLine) => {
+        const newCdirTagMatch = newCdirLine.match(cdirRegex);
+        if (newCdirTagMatch) {
+          const newCdirTag = newCdirTagMatch[0];
+          const newCdirTagNumber = Number(newCdirTagMatch[1]);
+          let newCdirNumber =
+            Math.round((newCdirTagNumber + tagCount) * 10) / 10;
+          const cdirTag = `{cdir${newCdirNumber}}`;
+          const cdirLine = pLine.replace(pTag, cdirTag);
+          const pTagPos = modifiedContent.indexOf(pTag);
+          const newCdirTagPos = modifiedContent.indexOf(newCdirTag);
+
+          if (
+            newCdirTagPos !== -1 &&
+            pTagPos !== -1 &&
+            newCdirTagPos < pTagPos
+          ) {
+            const betweenTags = modifiedContent.substring(
+              newCdirTagPos + newCdirTag.length,
+              pTagPos
+            );
+            if (!betweenTags.includes("{")) {
+              cdirArray.push(`${cdirLine}`);
+              modifiedContent = modifiedContent.replace(pTag, cdirTag);
+              writeDelete = true;
+            }
+          }
+        }
+      });
+      if (writeDelete) {
+        return "Delete";
+      }
+    }
+    return pLine;
+  });
+  return { modifiedContent, italicArray, cdirArray };
+}
+
+function extractSceneDescription(
+  modifiedContent,
+  italicArray,
+  sceneArray,
+  slocArray
+) {
+  const npRegex = /^{np\d+(-\d+)*}/;
+  const sceneRegex = /{s(\d+)}/;
+  const slocRegex = /{sloc(\d+)}/;
+  const sdesRegex = /{sdes(\d+(-\d+)*)-*(\d+)*}/;
+  let sdesArray = [];
+
+  italicArray = italicArray.map((npLine) => {
+    const npTagMatch = npLine.match(npRegex);
+
+    if (npTagMatch) {
+      const npTag = npTagMatch[0];
+      let writeDelete = false;
+
+      slocArray.forEach((slocLine) => {
+        const slocTagMatch = slocLine.match(slocRegex);
+
+        if (slocTagMatch) {
+          const slocTag = slocTagMatch[0];
+          const slocTagNumber = slocTagMatch[1];
+          const sdesTag = `{sdes${slocTagNumber}}`;
+          const sdesLine = npLine.replace(npTag, sdesTag);
+          const npTagPos = modifiedContent.indexOf(npTag);
+          const slocTagPos = modifiedContent.indexOf(slocTag);
+
+          if (slocTagPos !== -1 && npTagPos !== -1 && slocTagPos < npTagPos) {
+            const betweenTags = modifiedContent.substring(
+              slocTagPos + slocTag.length,
+              npTagPos
+            );
+            if (!betweenTags.includes("{")) {
+              sdesArray.push(`${sdesLine}`);
+              modifiedContent = modifiedContent.replace(npTag, sdesTag);
+              writeDelete = true;
+            }
+          }
+        }
+      });
+
+      sceneArray.forEach((sceneLine) => {
+        const sceneTagMatch = sceneLine.match(sceneRegex);
+        if (sceneTagMatch) {
+          const sceneTag = sceneTagMatch[0];
+          const sceneTagNumber = sceneTagMatch[1];
+          const sdesTag = `{sdes${sceneTagNumber}}`;
+          const sdesLine = npLine.replace(npTag, sdesTag);
+          const npTagPos = modifiedContent.indexOf(npTag);
+          const sceneTagPos = modifiedContent.indexOf(sceneTag);
+          if (sceneTagPos !== -1 && npTagPos !== -1 && sceneTagPos < npTagPos) {
+            const betweenTags = modifiedContent.substring(
+              sceneTagPos + sceneTag.length,
+              npTagPos
+            );
+            if (!betweenTags.includes("{")) {
+              sdesArray.push(`${sdesLine}`);
+              modifiedContent = modifiedContent.replace(npTag, sdesTag);
+              writeDelete = true;
+            }
+          }
+        }
+      });
+
+      sdesArray.forEach((newSdesLine) => {
+        const newSdesTagMatch = newSdesLine.match(sdesRegex);
+        if (newSdesTagMatch) {
+          const newSdesTag = newSdesTagMatch[0];
+          const sceneTagNumber = newSdesTagMatch[1];
+          const extraNewSdesNumber = newSdesTagMatch[3]
+            ? Number(newSdesTagMatch[3]) + 1
+            : 1;
+          let inc = 1 + extraNewSdesNumber;
+          const sdesTag = `{sdes${sceneTagNumber}-${inc}}`;
+          const sdesLine = npLine.replace(npTag, sdesTag);
+          const npTagPos = modifiedContent.indexOf(npTag);
+          const newSdesTagPos = modifiedContent.indexOf(newSdesTag);
+
+          if (
+            newSdesTagPos !== -1 &&
+            npTagPos !== -1 &&
+            newSdesTagPos < npTagPos
+          ) {
+            const betweenTags = modifiedContent.substring(
+              newSdesTagPos + newSdesTag.length,
+              npTagPos
+            );
+            if (!betweenTags.includes("{")) {
+              sdesArray.push(`${sdesLine}`);
+              modifiedContent = modifiedContent.replace(npTag, sdesTag);
+              writeDelete = true;
+            }
+          }
+        }
+      });
+
+      if (writeDelete) {
+        return "Delete";
+      }
+    }
+    return npLine;
+  });
+  return { modifiedContent, italicArray, sdesArray };
+}
+
+function replaceEmphasizedDialogue(
+  modifiedContent,
+  italicArray,
+  characterArray
+) {
+  const npRegex = /^{np\d+(-\d+)*}/;
+  const characterRegex = /{c[a-z]*d+(\.\d+)?}/;
+  const npTextRegex = /\[(.*)\]/;
+
+  italicArray = italicArray.map((npLine) => {
+    const npTagMatch = npLine.match(npRegex);
+    if (npTagMatch) {
+      const npTag = npTagMatch[0];
+      let writeDelete = false;
+
+      characterArray.forEach((characterLine) => {
+        const characterTagMatch = characterLine.match(characterRegex);
+        if (characterTagMatch) {
+          const characterTag = characterTagMatch[0];
+          const npTagPos = modifiedContent.indexOf(npTag);
+          const characterTagPos = modifiedContent.indexOf(characterTag);
+          const npText = npLine.match(npTextRegex)[1];
+          const emText = ` <em>${npText}</em> `;
+
+          if (
+            characterTagPos !== -1 &&
+            npTagPos !== -1 &&
+            characterTagPos < npTagPos
+          ) {
+            const betweenTags = modifiedContent.substring(
+              characterTagPos + characterTag.length,
+              npTagPos
+            );
+            if (!betweenTags.includes("{c")) {
+              modifiedContent = modifiedContent
+                .replace(npTag, emText)
+                .replace(/\s*<em>/, " <em>")
+                .replace(/<\/em>\s*/, "</em> ");
+              writeDelete = true;
+            }
+          }
+        }
+      });
+      if (writeDelete) {
+        return "Delete";
+      }
+    }
+    return npLine;
+  });
   return { modifiedContent, italicArray };
 }
 
 function extractDialogue(content) {
+  let modifiedContent = content
+    .replace(/}\s*/g, "}")
+    .replace(/\n([a-zA-Z])/gm, `{stgd0}$1`)
+    .replace(/\n/g, "");
+  const characterRegex = /{c(\d+)}([^\{]+)/;
+  const characterNumberRegex = /{c(\d+)}/;
+  const combinedRegex = /({cdir\d+\.\d+}|{stgd\d+(-\d+)*})([^\{]+)/;
   let dialogueArray = [];
-  let placeholderCount = 1;
+  let lines = modifiedContent.split(/(?=\{c\d+\})/);
 
-  const dialogueRegex = /(\{c\d+\}|\{cdir\d+(-\d+)*\})([\s\S]*?)(?=\{)/g;
-  let modifiedContent = content.replace(
-    dialogueRegex,
-    (match, tag, _, dialogueText) => {
-      dialogueText = dialogueText.trim();
-
-      if (dialogueText.length > 0) {
-        const placeholder = `{d${placeholderCount}}`;
-        dialogueArray.push(`${placeholder} - [${dialogueText}]`);
-        placeholderCount++;
-
-        return match.replace(dialogueText, placeholder);
-      }
-
-      return match;
+  lines = lines.map((line) => {
+    let characterNumber = null;
+    let tagCount = 0.1;
+    const characterMatch = characterRegex.exec(line);
+    const characterNumberMatch = characterNumberRegex.exec(line);
+    if (characterNumberMatch) {
+      characterNumber = Number(characterNumberMatch[1]);
     }
-  );
+    if (characterMatch) {
+      tagCount = 0.1;
+      let dialogueContent = characterMatch[2].trim();
+      if (dialogueContent) {
+        let dialogueNumber = characterNumber + tagCount;
+        const dialogueTag = `{d${dialogueNumber}}`;
+        const arrayContent = `${dialogueTag} - [${dialogueContent}]`;
+        dialogueArray.push(arrayContent);
+        line = line.replace(characterMatch[2], dialogueTag);
+        tagCount += 0.1;
+      }
+    }
+    let combinedMatch = combinedRegex.exec(line);
+    while (combinedMatch) {
+      let dialogueContent = combinedMatch[3].trim();
+      if (dialogueContent) {
+        let dialogueNumber = characterNumber + tagCount;
+        const dialogueTag = `{d${dialogueNumber}}`;
+        const arrayContent = `${dialogueTag} - [${dialogueContent}]`;
+        dialogueArray.push(arrayContent);
+        line = line.replace(combinedMatch[3], dialogueTag);
+        tagCount += 0.1;
+      }
+      combinedMatch = combinedRegex.exec(line);
+    }
+
+    return line;
+  });
+  modifiedContent = lines.join("");
+  modifiedContent = modifiedContent
+    .replace(/{stgd0}/g, "")
+    .replace(/({s\d+})/g, "\n$1")
+    .replace(/({c\d+})/g, "\n$1")
+    .replace(/({stgd\d+(-\d+)*})/g, "\n$1")
+    .replace(/({endt\d+})/g, "\n$1")
+    .replace(/({a\d+})/g, "\n$1");
 
   return { modifiedContent, dialogueArray };
 }
