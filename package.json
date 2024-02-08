@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node convertRTFToCustomHTML.js sample-scripts/Damsels.rtf"
+    "d": "node convertRTFToCustomHTML.js sample-scripts/Damsels.rtf",
+    "c": "node convertRTFToCustomHTML.js sample-scripts/Carly.rtf",
+    "s": "node convertRTFToCustomHTML.js sample-scripts/Salem.rtf",
+    "m": "node convertRTFToCustomHTML.js sample-scripts/Mueller.rtf",
+    "g": "node convertRTFToCustomHTML.js sample-scripts/Green_Room.rtf"
   },
   "dependencies": {
     "pdfjs-dist": "^4.0.379"
