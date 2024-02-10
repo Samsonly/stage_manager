@@ -1,7 +1,2 @@
-//
-
-let base = 0.1;
-let addition = 0.2;
-
-let results = (base + addition).toFixed(2);
-console.log(results);
+// .replace(/([a-zA-Z])\s*\n/gm, `$1 `)
+// .replace(/\n[a-zA-Z]/gm, `{stgd0}$1`)
