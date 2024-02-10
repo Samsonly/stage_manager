@@ -3,6 +3,10 @@ Things that need to be included in order to fully utilize this program:
 - A way to connect characters (for ones that have multiple people talking at once)
 - There should be a check for dialogue that is split, and if so, they should get different dialogue numbers, that way they can be spaced out
 - refine scenic descriptions so the count is decimal based
+- create logic for making sure parenthesis or quotaations are not being cut off with italic tags
+- logic for checking modified content for nontags
+- make space deletion in modified content only for curly braces
+- logic for ensuring italic array is empty
 
 -title
   -play description
@@ -98,22 +102,4 @@ Fixes Needed:
     % -ending tag
     % -leftovers
     % -modifiedContent
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

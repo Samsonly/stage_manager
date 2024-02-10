@@ -31,6 +31,7 @@ function processRTFContent(content) {
   let modifiedContent = convertRTFEscapeSequencesToHTML(content);
   //TODO Look through the replaces below and check if they are necessary
   modifiedContent = modifiedContent
+    .replace(/\\u8232/g, "\\")
     .replace(/\\(\s|$)/gm, " <br>")
     .replace(/\\plain(?![a-zA-Z])/g, "</i></u></b>\\")
     // .replace(/\\par(?!d)/g, "\\ <br>\\")
@@ -57,6 +58,10 @@ function processRTFContent(content) {
 
   modifiedContent = removeUnmatchedTags(modifiedContent);
   modifiedContent = organizeHTMLTags(modifiedContent);
+  modifiedContent = modifiedContent.replace(
+    /\s(\(voice over\)|\(voiceover\)|\(v\.o\.\)|\(vo\)|\(offstage\)|\(off-stage\)|\(off stage\)|\(o\.s\.\)|\(os\))\./gi,
+    ". $1"
+  );
 
   const createNewLinesResult = createNewLines(modifiedContent);
 
@@ -317,6 +322,7 @@ function findEndingTags(content) {
     "End of Scene",
     "Fade to Black",
     "Transition To",
+    "The End",
   ];
 
   let lines = content.split("\n");
@@ -351,8 +357,8 @@ function extractItalicSections(content) {
 
   content = content.map((line) => {
     return line
-      .replace(/(^((<[^>]*>)*|)\s*)(\(.*\))/g, "$1<i> $4 </i>")
-      .replace(/(^((<[^>]*>)*|)\s*)(\[.*\])/g, "$1<i> $4 </i>");
+      .replace(/^(((<[^>]*>)*|)\s*)(\(.*\))/g, "$1<i> $4 </i>")
+      .replace(/(((<[^>]*>)*|)\s*)(\[.*\])/g, "$1<i> $4 </i>");
   });
   content = content.join("\n");
 
@@ -697,10 +703,11 @@ function extractTitleOfPlay(content) {
   if (match) {
     let title = match[1];
     const htmlRegex = /(\s*<[^>]+>\s*)+/g;
-    title = title.replace(htmlRegex, " ").trim();
+    let newTitle = title.replace(htmlRegex, " ").replace(/\n/, "").trim();
     const titleTag = `{play${1}}`;
+
     modifiedContent = modifiedContent.replace(title, titleTag);
-    titleArray.push(`${titleTag} - [${title}]`);
+    titleArray.push(`${titleTag} - [${newTitle}]`);
   }
   return { modifiedContent, titleArray };
 }
@@ -790,16 +797,18 @@ function extractCharacterTags(content) {
   const characterArray = [];
   let placeholderCount = 1;
   const characterNames = new Set();
-  const nameRegex = /^[A-Z0-9]([A-Z0-9\s&()/]*\.(?=[^\.]|$))+/;
+  // const nameRegex = /^[A-Z0-9]([A-Z0-9\s&()/]*\.(?=[^\.]|$))+/;
+  const nameRegex = /^([A-Z]+(?:\.(?![A-Z]|\.)|\/|\(|\)|\s|[A-Z])*\.)\s/g;
   let modifiedContent = content.split("\n");
   modifiedContent = modifiedContent.map((line) => {
     let match = line.match(nameRegex);
     if (match) {
       let extractedText = match[0];
+      console.log(extractedText);
       let placeholder = `{c${placeholderCount}}`;
       line = line.replace(nameRegex, placeholder);
-      characterArray.push(`${placeholder} - [${extractedText}]`);
-      characterNames.add(extractedText.slice(0, -1));
+      characterArray.push(`${placeholder} - [${extractedText.slice(0, -1)}]`);
+      characterNames.add(extractedText.slice(0, -2));
       placeholderCount++;
     }
     return line;
@@ -838,7 +847,7 @@ function sceneLocationSearch(modifiedContent) {
 }
 
 function sortItalicSection(modifiedContent, italicArray) {
-  const nonParenRegex = /{i\d+(-\d+)*}\s-\s\[[a-zA-Z]/g;
+  const nonParenRegex = /{i\d+(-\d+)*}\s-\s\[[^(\[]*\]/g;
   const parenRegex = /{i\d+(-\d+)*}\s-\s\[\(/g;
   const bracketRegex = /{i\d+(-\d+)*}\s-\s\[\[/g;
   const updatedItalicArray = italicArray.map((line) => {
@@ -885,8 +894,6 @@ function sortItalicSection(modifiedContent, italicArray) {
     }
     return line;
   });
-  console.log(modifiedContent);
-
   return { modifiedContent, italicArray: updatedItalicArray };
 }
 
@@ -1083,7 +1090,7 @@ function extractStageDirections(modifiedContent, italicArray) {
 
             if (
               !betweenTags.includes("{") &&
-              !betweenTags.replace(/<[^>]*>/g, "").match(/\w+/)
+              !betweenTags.replace(/<[^>]*>/g, "").match(/\w+|\?|!/)
             ) {
               stgdArray.push(`${stgdLine}`);
               modifiedContent = modifiedContent.replace(pTag, stgdTag);
@@ -1306,15 +1313,13 @@ function replaceEmphasizedDialogue(
   characterArray
 ) {
   const npRegex = /^{np\d+(-\d+)*}/;
-  const characterRegex = /{c[a-z]*d+(\.\d+)?}/;
+  const characterRegex = /{c[a-z]*\d+(\.\d+)?}/;
   const npTextRegex = /\[(.*)\]/;
-
   italicArray = italicArray.map((npLine) => {
     const npTagMatch = npLine.match(npRegex);
     if (npTagMatch) {
       const npTag = npTagMatch[0];
       let writeDelete = false;
-
       characterArray.forEach((characterLine) => {
         const characterTagMatch = characterLine.match(characterRegex);
         if (characterTagMatch) {
@@ -1355,8 +1360,10 @@ function replaceEmphasizedDialogue(
 function extractDialogue(content) {
   let modifiedContent = content
     .replace(/}\s*/g, "}")
+    .replace(/([a-zA-Z])\s*\n/gm, `$1 `)
     .replace(/\n([a-zA-Z])/gm, `{stgd0}$1`)
     .replace(/\n/g, "");
+
   const characterRegex = /{c(\d+)}([^\{]+)/;
   const characterNumberRegex = /{c(\d+)}/;
   const combinedRegex = /({cdir\d+\.\d+}|{stgd\d+(-\d+)*})([^\{]+)/;
