@@ -1,0 +1,9 @@
+#playContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#actsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}

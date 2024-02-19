@@ -4,102 +4,56 @@ Things that need to be included in order to fully utilize this program:
 - There should be a check for dialogue that is split, and if so, they should get different dialogue numbers, that way they can be spaced out
 - refine scenic descriptions so the count is decimal based
 - create logic for making sure parenthesis or quotaations are not being cut off with italic tags
-- logic for checking modified content for nontags
+% - logic for checking modified content for nontags
 - make space deletion in modified content only for curly braces
-- logic for ensuring italic array is empty
+% - logic for ensuring italic array is empty
+- fix side bars swapping in interface
+- fix the bottom staying up when minimized in interface
+- add logic for full plays with only 1 act
+- add logic for full plays with multiple acts
+- add logic for plays/acts with only 1 scene
 
 -title
   -play description
     -act
       -act description
         -scene
+          -scene location
           -scene description
             -character
               -character direction
               -dialogue
             -stage direction
-        -ending tag
+        -scene ending tag
+    -act ending tag
+-play ending tag
 
-Fixes Needed:
-{- Carly Reynolds:
-    % {stgd79} - [( <i> WILKINS discovers the folder with “Photo 51”. WATSON runs away. WILKINS stops WATSON. They move off to the side, and WILKINS opens a folder. WATSON's jaw drops. He pulls out a newspaper and draws what he sees and exits. WATSON returns to CRICK. WILKINS exits.)]
-    % {stgd174} - [( <i> MR. PAXTON shows that he had his briefcase on him the entire time.)]
-    % Scene #s are being put into character names?
-    % MS. ALEXANDRIA. STEAM
-    % dialogue is pulling in other things. Re-look at this script in depthly after fixing other two
-    -title
-    -play description
-    -act
-    -act description
-    -scene
-    -scene description
-    -scene locations
-    -character
-    -character direction
-    -dialogue
-    -stage direction
-    -ending tag
+if (!act){ 
+    create and make it outer structure
+} else {
+    if (prologue){
+        check which comes first
+        if (prologue comes first){
+            make it before Act
+        } else {
+            make it a scene inside appropriate Act
+        }
     }
-{- Green Room:
-    % the info before the scene is not being extracted. Needs something for title/play description?
-    -title
-    -play description
-    -act
-    -act description
-    -scene
-    -scene description
-    -scene locations
-    -character
-    -character direction
-    -dialogue
-    -stage direction
-    -ending tag
+    if (epilogue){
+        check which is last
+        if (epilogue is last){
+            make it after Act
+        } else {
+            make it a scene inside appropriate Act
+        }
     }
-{- Meuller:
-    -title
-    -play description
-    -act
-    -act description
-    -scene
-    -scene description
-    -scene locations
-    -character
-    -character direction
-    -dialogue
-    -stage direction
-    -ending tag
-    }
-{- Salem:
-    % -title
-    % -play description
-    % -act
-    % -act description
-    % -scene
-    % -scene description
-    % -scene locations
-    % -character
-    % -character direction
-    -dialogue
-        - {d245} - [to keep this whole thing going, but... well... the truth is that we've reached the end of their stories.On July 19th, 1692, Susannah Martin and Rebecca Nurse, were hanged in Salem Village. Along side them were, Elizabeth Howe, Sarah Wildes, and Sarah Good, whose newborn daughter had also passed a few days after entering the world in a Boston jail cell. 
-            At this point in the historic events of Salem, less than a third of the total executions had yet to take place. But the seed of doubt that Bridget's politically sanctioned murder had planted quickly grew into public indignation by the way Rebecca Nurse had been treated. 
-            With nearly two hundred people imprisoned, and a flawless conviction record of six for six, the Court of Oyer and Terminer plowed ahead without hesitation.]
-        - {d246} - [In addition to the way we were treated in the jail and courtroom, I had also recently discovered that Sheriff George Corwin, the favorite nephew of Judge Corwin, had ransacked my entire estate. 
-            He went about and stole anything that was not attached to the property. Even going as far as dumping out all of our food, ale, and supplies that he could not take with him just so that my family couldn't use them. My eleven children were left with a home empty of food or firewood.]
-        - {d247} - [I had also learned that my son, as well as the family members of Martha Carrier, had been tortured by the Sheriff in an attempt to elicit a guilty plea. Only when a man who was more merciful than the rest took pity upon was my son, was he released and sent home with marks all over his body and blood dripping from his nose. 
-            In a desperate attempt for mercy, I wrote a letter to a number of influential ministers from Boston, begging for them to send help, or at the very least for them to attend the trials so that some sort of justice could be restored.No reply ever came, so the trials and executions continued as planned. 
-            Within the next couple of weeks, six more innocent souls, including myself, my wife Elizabeth, Martha Carrier, George Jacobs Sr, John Willard, and George Burroughs would be condemned to be hanged, effectively doubling the total number of victims.]
-        - {d249} - [By this point in the trials, most of the community seemed split on how to proceed. Serious doubts had been raised about the way things were being handled, yet many were afraid to speak up about their concerns out of fear of being accused themselves. 
-            Letters from throughout the colony were sent to the Governor pleading with him to intercede, but they continued to go unanswered as those who were currently in charge of the trials continued to feel empowered by their successes and began to seem invincible.]
-        - {d251} - [The next to feel the brunt of their wrath was Giles Corey. Finally, after spending over 150 days in prison, he was finally given his day in court. After seeing how his wife had been treated during her trial, Giles had no interest in participating in what he had come to believe was a mockery of justice. 
-            So when the judges proceeded to ask if he would accept the terms of the trial, Giles refused to respond. The court was at a loss. Their own tradition stated that without his consent, they could not proceed with a trial. 
-            However, Thomas Putnam stepped up and reminded the court of an old English law which outlined a method for dealing with such a situation. 
-            The technique included laying an individual down on the ground before placing a wooden plank across the length of their body. Then they would add one stone after another, stopping only to ask the victim if they were willing to give their consent. 
-            Giles Corey, at the age of 81, withstood this torture for hours. When asked once more if he was willing to stand trial, he had two words for Sheriff Corwin: More Weight.]
-        - {d252} - [News of the torture of Giles Corey sent shockwaves throughout the village, but another group, including his own wife Martha, were already set to be executed just two days later. 
-            On September 22nd, 1692, eight more victims of the witch-hunt, Mary Easty, Martha Corey, Ann Pudeator, Samuel Wardwell, Mary Parker, Alice Parker, Wilmot Redd and Margaret Scott were driven out to Gallows Hill and executed in front of Salem village. 
-            With eight new names added to the books, it was the deadliest day of the Salem Witch Trials. But perhaps the most surprising victim of that fateful afternoon was the Court of Oyer and Terminer itself.]
-    % -stage direction
-    % -ending tag
-    % -leftovers
-    % -modifiedContent
+    
+}
+
+if there IS an Act, check to see if there is a prologue, if so which comes first
+
+If (prologue){
+
+
+
 }

@@ -34,7 +34,6 @@ function processRTFContent(content) {
     .replace(/\\u8232/g, "\\")
     .replace(/\\(\s|$)/gm, " <br>")
     .replace(/\\plain(?![a-zA-Z])/g, "</i></u></b>\\")
-    // .replace(/\\par(?!d)/g, "\\ <br>\\")
     .replace(/\\i0/g, "\\ </i>\\")
     .replace(/\\ulnone/g, "\\ </u>\\")
     .replace(/\\b0/g, "\\ </b>\\")
@@ -756,8 +755,8 @@ function extractSceneSections(content) {
   const sceneArray = [];
   let placeholderCount = 1;
   const prologueRegex = /^prologue(\s*<[^>]*>|\s*{|$)/gim;
-  const intermissionRegex = /intermission(\s*<[^>]*>|$)/gim;
-  const epilogueRegex = /epilogue(\s*<[^>]*>|$)/gim;
+  const intermissionRegex = /^intermission(\s*<[^>]*>|$)/gim;
+  const epilogueRegex = /^epilogue(\s*<[^>]*>|$)/gim;
   const sceneRegex =
     /^(\s*)scene(:\s|\s*-|\s[1-9]*|\s[one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty]|$)/gim;
   const sceneNumRegex = /^(\s*)[1-9][0-9]*([:\s]*|[\s-]*|[\s[a-zA-Z]]*|$)/gim;
@@ -797,7 +796,6 @@ function extractCharacterTags(content) {
   const characterArray = [];
   let placeholderCount = 1;
   const characterNames = new Set();
-  // const nameRegex = /^[A-Z0-9]([A-Z0-9\s&()/]*\.(?=[^\.]|$))+/;
   const nameRegex = /^([A-Z]+(?:\.(?![A-Z]|\.)|\/|\(|\)|\s|[A-Z])*\.)\s/g;
   let modifiedContent = content.split("\n");
   modifiedContent = modifiedContent.map((line) => {
@@ -1071,7 +1069,7 @@ function extractStageDirections(modifiedContent, italicArray) {
         const pTag = pTagMatch[0];
         const pTagNumber = pTagMatch[1];
         const behindCRegex = new RegExp(
-          `${pTag}[\\s\\S]*?({c\\d+}|{s\\d+}|{endt\\d+}|{a\\d+}|{stgd\\d+(-\\d+)*})`
+          `${pTag}[\\s\\S]*?({c\\d+}|{s\\d+}|{endt\\d+}|{act\\d+}|{stgd\\d+(-\\d+)*})`
         );
         const cTagMatch = modifiedContent.match(behindCRegex);
 
@@ -1413,7 +1411,7 @@ function extractDialogue(content) {
     .replace(/({c\d+})/g, "\n$1")
     .replace(/({stgd\d+(-\d+)*})/g, "\n$1")
     .replace(/({endt\d+})/g, "\n$1")
-    .replace(/({a\d+})/g, "\n$1");
+    .replace(/({act\d+})/g, "\n$1");
 
   return { modifiedContent, dialogueArray };
 }
