@@ -1,0 +1,34 @@
+let structurePlayContent = {
+    "playTitle": "",
+    "playDescription": "",
+    "actStructure": [
+        {
+        "actTitle": "",
+        "actDescription": "",
+        "sceneStructure": [
+            {
+            "sceneTitle": "",
+            "sceneDescription": "",
+            "sceneLocation": "",
+            "sceneContent": {
+                "characterAction": {
+                    "characterName": "",
+                    "characterDirection": "",
+                    "characterDialogue": ""
+                },
+                "sceneAction": {
+                    "stageDirection": ""
+                }  
+            },
+            "sceneEnding": ""
+        }],
+        "actEnding": ""
+    }],
+    "playEnding": ""
+}    
+
+structuredPlayContent.playTitle = ""
+structuredPlayContent.playDescription = ""
+structuredPlayContent.actStructure = []
+structuredPlayContent.playEnding = ""
+structuredPlayContent.actStructure.actTitle = ""
