@@ -1,0 +1,13 @@
+{
+  "playTitle": "Green Room",
+  "playDescription": "The screen is opened to a browser tab filled with one row of five black squares and one row of four, one for each character. After a few moments, one of the screens turns on, and we see ANNA enter. ANNA quickly glances at the screen and notices that she is alone. She lets out a long breath and starts using the screen like a mirror to fix her hair.",
+  "actStructure": [
+    {
+      "actTitle": " ",
+      "actDescription": " ",
+      "sceneStructure": [],
+      "actEnding": "END OF ACT"
+    }
+  ],
+  "playEnding": "END OF PLAY"
+}
