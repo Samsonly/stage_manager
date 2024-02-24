@@ -58,11 +58,13 @@ body {
 
 .vertical-div .design-bar {
   flex-grow: 1;
+  flex-shrink: 0;
   background-color: orange;
 }
 
 .vertical-div .script-bar {
   flex-grow: 1;
+  flex-shrink: 0;
   background-color: teal;
 }
 

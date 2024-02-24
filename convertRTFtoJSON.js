@@ -1684,7 +1684,7 @@ function matchSceneTags(
       const sceneLocationRegex = /{(s[a-z]?)(\d+)}({sloc\d+})/;
       const sceneDescriptionRegex = /{(s[a-z]?)(\d+)}.*({s[a-z]?des\d+})/;
       const completeSceneRegex = /{(s[a-z]?\d+)}.*({endt\d+})/;
-      const nextSceneRegex = /{(s[a-z]?\d+)|enda\d+}/;
+      const nextSceneRegex = /{(s[a-z]?\d+)}|{enda\d+}/;
       const sceneMatch = scene.match(sceneRegex);
       const sceneLocationMatch = scene.match(sceneLocationRegex);
       const sceneDescriptionMatch = scene.match(sceneDescriptionRegex);
@@ -1790,7 +1790,8 @@ function matchSceneTags(
           //prettier-ignore
           structuredPlayContent.actStructure[0].sceneStructure[sceneCount].sceneEnding = sceneEnding[1];
         } else {
-          const sceneTagContents = incompleteSceneMatch[1];
+          const sceneTagContents =
+            incompleteSceneMatch[1] + incompleteSceneMatch[2];
           let endingTag = `{end${sceneTagContents}}`;
           let i = index + 1;
           let nextScene = act[i];
@@ -1799,6 +1800,10 @@ function matchSceneTags(
           modifiedContent = modifiedContent.replace(
             nextSceneMatch[0],
             insertTagReplacement
+          );
+          extractedSections = extractedSections.replace(
+            /(Endings)/,
+            `$1\n${endingTag} - [ ]`
           );
           //prettier-ignore
           let sceneEnding = extractedSections.match(new RegExp(`${endingTag} - \\[(.*)\\]`));

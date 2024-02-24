@@ -1,39 +1,116 @@
-const placeholders = {
-  "{play1}": "[Damsels]",
-  "{pdes1}":
-    "[Here is where there would be information about the play regardless of act or scenes]",
-  "{act1}": "[Act I]",
-  "{ades1}": "[This is exclusively for act descriptions]",
-  // Add more placeholders as needed
-};
+function generatePlayContent(scriptJson) {
+  const playContainer = document.createElement("div");
+  playContainer.className = "playStructure";
 
-const tags = [
-  "{play1}",
-  "{pdes1}",
-  "{act1}",
-  "{ades1}",
-  // List all tags in the order they appear
-];
+  const playTitle = document.createElement("div");
+  playTitle.className = "playTitle";
+  playTitle.textContent = scriptJson.playTitle;
+  playContainer.appendChild(playTitle);
 
-document.addEventListener("DOMContentLoaded", () => {
-  tags.forEach((tag) => {
-    let content = placeholders[tag]; // Get content associated with the tag
-    let element;
+  const playDescription = document.createElement("div");
+  playDescription.className = "playDescription";
+  playDescription.textContent = scriptJson.playDescription;
+  playContainer.appendChild(playDescription);
 
-    // Determine where to place the content based on the tag
-    if (tag.startsWith("{play")) {
-      element = document.getElementById("playDescription");
-    } else if (tag.startsWith("{act")) {
-      element = document.getElementById("actsContainer");
-      // You can create a new div for each act if needed
-    }
-    // Add more conditions as needed
+  const actStructure = document.createElement("div");
+  actStructure.className = "actStructure";
+  playContainer.appendChild(actStructure);
 
-    // Create a new element for the content and append it to the correct container
-    if (element) {
-      let newElement = document.createElement("div");
-      newElement.innerHTML = content; // Set the content
-      element.appendChild(newElement);
-    }
+  scriptJson.actStructure.forEach((act) => {
+    const actDiv = document.createElement("div");
+    actDiv.className = "act";
+
+    const actTitle = document.createElement("div");
+    actTitle.className = "actTitle";
+    actTitle.textContent = act.actTitle;
+    actDiv.appendChild(actTitle);
+
+    const actDescription = document.createElement("div");
+    actDescription.className = "actDescription";
+    actDescription.textContent = act.actDescription;
+    actDiv.appendChild(actDescription);
+
+    const sceneStructure = document.createElement("div");
+    sceneStructure.className = "sceneStructure";
+    actDiv.appendChild(sceneStructure);
+
+    act.sceneStructure.forEach((scene) => {
+      const sceneDiv = document.createElement("div");
+      sceneDiv.className = "scene";
+
+      const sceneTitle = document.createElement("div");
+      sceneTitle.className = "sceneTitle";
+      sceneTitle.textContent = scene.sceneTitle;
+      sceneDiv.appendChild(sceneTitle);
+
+      const sceneLocation = document.createElement("div");
+      sceneLocation.className = "sceneLocation";
+      sceneLocation.textContent = scene.sceneLocation;
+      sceneDiv.appendChild(sceneLocation);
+
+      const sceneDescription = document.createElement("div");
+      sceneDescription.className = "sceneDescription";
+      sceneDescription.textContent = scene.sceneDescription;
+      sceneDiv.appendChild(sceneDescription);
+
+      const internalSceneStructure = document.createElement("div");
+      internalSceneStructure.className = "internalSceneStructure";
+      sceneDiv.appendChild(internalSceneStructure);
+
+      scene.internalSceneStructure.forEach((content) => {
+        const contentDiv = document.createElement("div");
+
+        if (content.stgdContent) {
+          contentDiv.className = "stgdContent";
+          content.stgdContent.forEach((item) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.className = "stageDirections";
+            itemDiv.textContent = item.tagContent;
+            contentDiv.appendChild(itemDiv);
+          });
+        } else if (content.characterContent) {
+          contentDiv.className = "characterContent";
+
+          const nameDiv = document.createElement("div");
+          nameDiv.className = "characterName";
+          nameDiv.textContent = content.characterContent.characterName;
+          contentDiv.appendChild(nameDiv);
+
+          content.characterContent.characterAction.forEach((action) => {
+            const actionDiv = document.createElement("div");
+            if (action.tagType === "d") {
+              actionDiv.className = "characterDialogue";
+              actionDiv.textContent = action.tagContent;
+            } else if (action.tagType === "cdir") {
+              actionDiv.className = "characterDirection";
+              actionDiv.textContent = action.tagContent;
+            }
+            contentDiv.appendChild(actionDiv);
+          });
+        }
+        internalSceneStructure.appendChild(contentDiv);
+      });
+
+      const sceneEnding = document.createElement("div");
+      sceneEnding.className = "sceneEnding";
+      sceneEnding.textContent = scene.sceneEnding;
+      sceneDiv.appendChild(sceneEnding);
+
+      sceneStructure.appendChild(sceneDiv);
+    });
+
+    const actEnding = document.createElement("div");
+    actEnding.className = "actEnding";
+    actEnding.textContent = act.actEnding;
+    actDiv.appendChild(actEnding);
+
+    actStructure.appendChild(actDiv);
   });
-});
+
+  const playEnding = document.createElement("div");
+  playEnding.className = "playEnding";
+  playEnding.textContent = scriptJson.playEnding;
+  playContainer.appendChild(playEnding);
+
+  scriptContent.appendChild(playContainer);
+}
