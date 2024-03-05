@@ -28,6 +28,9 @@ const taskbar = document.querySelector(".taskbar");
 const tasks = document.querySelectorAll(".task");
 
 let activeTab = null;
+let originalHTML;
+let draftHTML;
+let hasChanges = false;
 
 const horizontalSplit = Split([".section1", ".section2"], {
   sizes: [50, 50],
@@ -66,7 +69,6 @@ swapSidesButton.forEach((button) => {
 
 scriptIcons.forEach((icon) => {
   icon.addEventListener("click", (event) => {
-    //TODO: ask about depreciated portion below
     const altText = event.target.alt;
     switch (altText) {
       case "Upload Icon":
@@ -81,13 +83,15 @@ scriptIcons.forEach((icon) => {
       case "Character List Icon":
         viewCharacterList();
         break;
+      case "Style Settings Icon":
+        editStyleSettings();
+        break;
     }
   });
 });
 
 designIcons.forEach((icon) => {
   icon.addEventListener("click", (event) => {
-    //TODO: ask about depreciated portion below
     const altText = event.target.alt;
     switch (altText) {
       case "Groundplan Icon":
@@ -227,7 +231,8 @@ function uploadScript() {
       generatePlayContent(jsonData);
       createCharacterList();
       createTableOfContents();
-      const scriptIcons = document.querySelectorAll(".scriptIcons img");
+      const scriptIcons = document.querySelectorAll(".script-icons img");
+      console.log(scriptIcons);
       for (let i = 0; i < scriptIcons.length; i++) {
         scriptIcons[i].style.display = "inline";
       }
@@ -244,14 +249,26 @@ function uploadScript() {
 
 function createCharacterList() {
   const characterList = document.createElement("div");
-  const characterNames = document.querySelectorAll(".characterName");
-  const textContents = Array.from(characterNames).map(
-    (characterName) => characterName.textContent
+  const title = document.createElement("div");
+  title.id = "character-list-title";
+  title.textContent = "List of Characters";
+  characterList.appendChild(title);
+
+  const characterNames = Array.from(
+    new Set(
+      Array.from(document.querySelectorAll(".characterName")).map(
+        (characterName) => characterName.textContent
+      )
+    )
   );
-  const uniqueTextContents = [...new Set(textContents)];
-  uniqueTextContents.forEach((textContent) => {
+  characterNames.forEach((name) => {
     const p = document.createElement("p");
-    p.textContent = textContent;
+    p.textContent = name.slice(0, -1); // Remove the final period
+
+    p.addEventListener("click", () => {
+      editCharacter(name);
+    });
+
     characterList.appendChild(p);
   });
   characterList.id = "character-list";
@@ -271,15 +288,37 @@ function viewCharacterList() {
 
 function createTableOfContents() {
   const tableOfContents = document.createElement("div");
+  const playTitle = document.querySelector(".playTitle");
+  const play = document.createElement("a");
+  play.textContent = playTitle.textContent;
+  play.className = "playTitle playToC";
+  play.href = "#" + playTitle.id;
+  play.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default action
+    viewScript(event.currentTarget.href);
+  });
+  tableOfContents.appendChild(play);
   const actTitles = document.querySelectorAll(".actTitle");
-  actTitles.forEach((actTitle) => {
-    const act = document.createElement("p");
+  actTitles.forEach((actTitle, index) => {
+    const act = document.createElement("a");
     act.textContent = actTitle.textContent;
+    act.className = "actTitle actToC";
+    act.href = "#" + actTitle.id;
+    act.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default action
+      viewScript(event.currentTarget.href);
+    });
     tableOfContents.appendChild(act);
     const sceneTitles = actTitle.parentNode.querySelectorAll(".sceneTitle");
     sceneTitles.forEach((sceneTitle) => {
-      const scene = document.createElement("p");
+      const scene = document.createElement("a");
       scene.textContent = sceneTitle.textContent;
+      scene.className = "sceneTitle sceneToC";
+      scene.href = "#" + sceneTitle.id;
+      scene.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the default action
+        viewScript(event.currentTarget.href);
+      });
       tableOfContents.appendChild(scene);
     });
   });
@@ -298,74 +337,189 @@ function viewTableOfContents() {
   tableOfContents.style.display = "block";
 }
 
-function viewScript() {
-  const playContent = document.querySelector(".playStructure");
+function viewScript(href) {
+  const playStructure = document.querySelector(".playStructure");
   const scriptContent = document.querySelector("#script-content");
   const children = scriptContent.children;
   for (let i = 0; i < children.length; i++) {
     children[i].style.display = "none";
   }
-  document.querySelector(".playStructure").style.display = "block";
+  playStructure.style.display = "block";
+
+  if (href) {
+    const id = href.split("#")[1];
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
 }
 
-let uploadedPdf = null; // global variable to store the uploaded PDF
+function editStyleSettings() {
+  //TODO: Implement style settings menu
+}
 
-function viewGroundplan() {
-  if (uploadedPdf === null) {
-    // Prompt the user to upload a PDF
-    const fileInput = document.createElement("input");
-    fileInput.type = "file";
-    fileInput.accept = "application/pdf";
-    fileInput.style.display = "none";
+function editCharacter(characterName) {
+  const overlay = document.createElement("div");
+  overlay.id = "overlay";
+  document.body.appendChild(overlay);
 
-    fileInput.addEventListener("change", (event) => {
-      const file = event.target.files[0];
-      const reader = new FileReader();
+  const editDialog = document.createElement("div");
+  editDialog.id = "edit-dialog";
+  overlay.appendChild(editDialog);
 
-      reader.onload = (event) => {
-        uploadedPdf = event.target.result; // Store the uploaded PDF
-        displayPdf(uploadedPdf);
-      };
+  const wrapper = document.createElement("div");
+  wrapper.className = "wrapper";
+  wrapper.style.overflow = "auto";
+  editDialog.appendChild(wrapper);
 
-      reader.readAsDataURL(file);
+  const title = document.createElement("h1");
+  title.textContent = "Edit Character";
+  wrapper.appendChild(title);
+
+  const className = characterName
+    .slice(0, -1)
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  const name = document.createElement("p");
+  name.textContent = `"${className}"`;
+  name.id = "character-name";
+  wrapper.appendChild(name);
+
+  const characterElement = document.querySelector(`.${className}`);
+  const isRemoved = characterElement
+    ? characterElement.classList.contains("removedCharacter")
+    : false;
+
+  originalHTML = editDialog.innerHTML;
+  draftHTML = originalHTML;
+
+  const options = [
+    "Rename",
+    "Reassign",
+    "Assign to Multiple Characters",
+    isRemoved ? "Restore" : "Remove",
+  ];
+  const functions = [
+    () => renameCharacter(draftHTML),
+    () => reassignCharacter(draftHTML),
+    () => multipleAssignCharacter(draftHTML),
+    isRemoved
+      ? () => restoreCharacter(draftHTML)
+      : () => removeCharacter(draftHTML),
+  ];
+
+  options.forEach((option, index) => {
+    const p = document.createElement("p");
+    const a = document.createElement("a");
+    a.textContent = option;
+    a.href = "#";
+    a.onclick = functions[index];
+    p.appendChild(a);
+
+    const infoParent = document.createElement("span");
+    infoParent.className = "info-parent";
+    p.appendChild(infoParent);
+
+    const info = document.createElement("img");
+    info.src = "./icons/info.png";
+    info.className = "info";
+    info.id = `info-${option.toLowerCase().replace(" ", "-")}`;
+    infoParent.appendChild(info);
+
+    const infoWindow = document.createElement("div");
+    infoWindow.textContent = `info about ${option}`;
+    infoWindow.className = "info-window";
+    editDialog.appendChild(infoWindow);
+
+    info.addEventListener("mouseover", () => {
+      const infoRect = info.getBoundingClientRect();
+      const dialogRect = editDialog.getBoundingClientRect();
+      const top = infoRect.top - dialogRect.top + infoRect.height - 10;
+      const left = infoRect.left - dialogRect.left + infoRect.width + 15;
+      infoWindow.style.top = `${top}px`;
+      infoWindow.style.left = `${left}px`;
+      infoWindow.style.display = "block";
+    });
+    info.addEventListener("mouseout", () => {
+      infoWindow.style.display = "none";
     });
 
-    document.body.appendChild(fileInput);
-    fileInput.click();
-    document.body.removeChild(fileInput);
+    wrapper.appendChild(p);
+  });
+
+  const actionContainer = document.createElement("div");
+  actionContainer.className = "action-container";
+  editDialog.appendChild(actionContainer);
+
+  const saveImg = document.createElement("img");
+  saveImg.src = "./icons/save.png";
+  saveImg.className = "action";
+  saveImg.onclick = saveChanges;
+  actionContainer.appendChild(saveImg);
+
+  const closeImg = document.createElement("img");
+  closeImg.src = "./icons/close.png";
+  closeImg.className = "action";
+  closeImg.onclick = closeDialog;
+  actionContainer.appendChild(closeImg);
+
+  editDialog.style.display = "block";
+}
+
+function renameCharacter() {
+  // Rename character logic here
+  hasChanges = true;
+}
+
+function reassignCharacter() {
+  // Reassign character logic here
+  hasChanges = true;
+}
+
+function multipleAssignCharacter() {
+  // Assign to multiple characters logic here
+  hasChanges = true;
+}
+
+function removeCharacter() {
+  // Remove character logic here
+  hasChanges = true;
+}
+
+function restoreCharacter() {
+  // Restore character logic here
+  hasChanges = true;
+}
+
+function saveChanges() {
+  document.querySelector("#edit-dialog").innerHTML = draftHTML;
+  hasChanges = false;
+  closeDialog();
+}
+
+function closeDialog() {
+  const editDialog = document.querySelector("#edit-dialog");
+  if (hasChanges) {
+    confirmExit();
   } else {
-    // Display the uploaded PDF
-    displayPdf(uploadedPdf);
+    editDialog.style.display = "none";
+    document.querySelector("#overlay").remove();
   }
 }
 
-function displayPdf(pdf) {
-  const designContent = document.querySelector("#design-content");
-  const children = designContent.children;
-  for (let i = 0; i < children.length; i++) {
-    children[i].style.display = "none";
+function confirmExit() {
+  const confirmation = confirm(
+    "Exit without saving? All changes will be lost."
+  );
+  if (confirmation) {
+    const editDialog = document.querySelector("#edit-dialog");
+    editDialog.innerHTML = originalHTML;
+    editDialog.style.display = "none";
+    document.querySelector("#overlay").remove();
+    hasChanges = false;
   }
-
-  let pdfContainer = document.querySelector(".groundplan");
-
-  // If the container doesn't exist, create it
-  if (pdfContainer === null) {
-    pdfContainer = document.createElement("div");
-    pdfContainer.className = "groundplan";
-    designContent.appendChild(pdfContainer);
-  }
-
-  pdfContainer.style.display = "block";
-
-  // Create an object element to display the PDF
-  const object = document.createElement("object");
-  object.data = pdf + "#toolbar=0"; // Try to hide the toolbar
-  object.type = "application/pdf";
-  object.width = "100%";
-  object.style.height = "100%"; // Set height relative to the viewport
-  object.style.objectFit = "contain"; // Scale the object to fit its container
-
-  // Clear the previous PDF and append the new one
-  pdfContainer.innerHTML = "";
-  pdfContainer.appendChild(object);
 }

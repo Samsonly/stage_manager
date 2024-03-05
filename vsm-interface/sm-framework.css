@@ -28,7 +28,7 @@ h1 {
 
 .section4 {
   height: 40px;
-  background-color: pink;
+  background-color: violet;
 }
 
 .middle-container {
@@ -205,7 +205,7 @@ h1 {
   flex-direction: column;
   width: 100%;
   height: auto;
-  background-color: tan;
+  background-color: rgb(135, 74, 0);
   min-height: 0;
 }
 
@@ -213,7 +213,7 @@ h1 {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: maroon;
+  background-color: rgb(116, 38, 19);
 }
 
 .tab-bar {
@@ -255,7 +255,7 @@ h1 {
   flex: 1;
   border: 1px solid #000;
   box-sizing: border-box;
-  background-color: purple;
+  background-color: rgb(128, 0, 0);
 }
 
 .taskbar {
@@ -508,4 +508,146 @@ h1 {
   box-sizing: border-box;
   margin: -10px;
   overflow: auto;
+}
+
+.playToC {
+  display: block;
+  font-size: 40px;
+  color: inherit;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.actToC {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.sceneToC {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: left;
+  font-weight: normal;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+#character-list-title {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#edit-dialog {
+  background-color: black;
+  padding: 20px;
+  width: 40%;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  overflow: visible;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+#edit-dialog h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#edit-dialog p {
+  text-align: left;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+#edit-dialog a {
+  color: white;
+  text-decoration: none;
+}
+
+#edit-dialog img.info {
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  position: relative;
+  vertical-align: middle;
+}
+
+#edit-dialog .wrapper {
+  overflow: auto;
+}
+
+#edit-dialog img.action {
+  width: 2em;
+  height: 2em;
+  align-self: flex-end;
+}
+
+#edit-dialog .action-container {
+  width: calc(100% + 15px);
+  margin-top: 5px;
+  margin-bottom: -15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  position: sticky;
+}
+
+#edit-dialog .info-parent {
+  position: relative;
+}
+
+#edit-dialog .info-window {
+  position: absolute;
+  top: 2px;
+  left: 175%;
+  font-size: 12px;
+  box-sizing: border-box;
+  background-color: rgb(35, 34, 34);
+  color: rgb(225, 218, 218);
+  border: solid 1px rgb(225, 218, 218);
+  border-radius: 5px;
+  padding: 3px;
+  display: none;
+  z-index: 10000;
+  text-align: center;
+}
+
+#character-name {
+  font-size: 20px;
+  text-align: center !important;
+  margin-bottom: 10px;
 }
