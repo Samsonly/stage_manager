@@ -5,6 +5,8 @@ function generatePlayContent(scriptJson) {
   const playTitle = document.createElement("div");
   playTitle.className = "playTitle";
   playTitle.textContent = scriptJson.playTitle;
+  playTitle.id = "playTitle";
+  //fix above
   playContainer.appendChild(playTitle);
 
   const playDescription = document.createElement("div");
@@ -16,13 +18,14 @@ function generatePlayContent(scriptJson) {
   actStructure.className = "actStructure";
   playContainer.appendChild(actStructure);
 
-  scriptJson.actStructure.forEach((act) => {
+  scriptJson.actStructure.forEach((act, actIndex) => {
     const actDiv = document.createElement("div");
     actDiv.className = "act";
 
     const actTitle = document.createElement("div");
     actTitle.className = "actTitle";
     actTitle.textContent = act.actTitle;
+    actTitle.id = "actTitle" + actIndex;
     actDiv.appendChild(actTitle);
 
     const actDescription = document.createElement("div");
@@ -34,13 +37,14 @@ function generatePlayContent(scriptJson) {
     sceneStructure.className = "sceneStructure";
     actDiv.appendChild(sceneStructure);
 
-    act.sceneStructure.forEach((scene) => {
+    act.sceneStructure.forEach((scene, sceneIndex) => {
       const sceneDiv = document.createElement("div");
       sceneDiv.className = "scene";
 
       const sceneTitle = document.createElement("div");
       sceneTitle.className = "sceneTitle";
       sceneTitle.textContent = scene.sceneTitle;
+      sceneTitle.id = "sceneTitle" + actIndex + sceneIndex;
       sceneDiv.appendChild(sceneTitle);
 
       const sceneLocation = document.createElement("div");
@@ -72,8 +76,10 @@ function generatePlayContent(scriptJson) {
           contentDiv.className = "characterContent";
 
           const nameDiv = document.createElement("div");
-          nameDiv.className = "characterName";
-          nameDiv.textContent = content.characterContent.characterName;
+          const characterName = content.characterContent.characterName;
+          nameDiv.className =
+            "characterName " + characterName.toLowerCase().slice(0, -1);
+          nameDiv.textContent = characterName;
           contentDiv.appendChild(nameDiv);
 
           content.characterContent.characterAction.forEach((action) => {

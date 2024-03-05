@@ -9,5 +9,8 @@
     "m": "node convertRTFtoJSON.js sample-scripts/Mueller.rtf",
     "g": "node convertRTFtoJSON.js sample-scripts/Green_Room.rtf"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^18.2.0",
+    "three": "^0.161.0"
+  }
 }

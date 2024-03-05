@@ -1,0 +1,24 @@
+# TODO Worklist
+
+General: - SwapSides Logic
+
+Fixes:
+
+TopContainer:
+
+MiddleContainer:
+
+Gutter: Gutter should disappear when TaskSection is hidden.
+
+BottomContainer
+TaskBar
+TaskBarButtons: Single Line. Font Choice. Allow overflow to disappear off screen (nowrap)
+TaskSection: Make sure hidden logic includes hiding the gutter
+TaskTabBar
+TaskTab
+MinButton: Not that icon. Empty looking one is prefered. Get better Font, and take a look at padding and font sizes
+
+Before Rollout:
+rewrite: robots.txt
+update: logo512.png
+update: logo192.png
