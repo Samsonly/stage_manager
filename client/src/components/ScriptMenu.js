@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import uploadScriptImage from "../assets/upload-script.png";
 import viewScriptImage from "../assets/view-script.png";
 import tableOfContentsImage from "../assets/table-of-contents.png";

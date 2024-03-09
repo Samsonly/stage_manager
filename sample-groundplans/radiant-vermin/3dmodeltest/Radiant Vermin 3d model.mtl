@@ -1,0 +1,92 @@
+newmtl Material_1
+Kd 0.454902 0.368627 0.360784
+d 1
+
+newmtl Material_2
+Kd 0 0 0
+d 1
+
+newmtl Material_3
+Kd 1 1 1
+d 1
+
+newmtl Material_4
+Kd 1 1 1
+d 1
+map_Kd Texture_218.png
+
+newmtl Material_5
+Kd 0.133333 0.133333 0.133333
+d 1
+
+newmtl Material_6a
+Kd 1 1 1
+d 1
+map_Kd Texture_294.png
+
+newmtl Material_7
+Kd 1 1 1
+d 1
+map_Kd Texture_1215.png
+
+newmtl Material_8
+Kd 1 1 1
+d 1
+map_Kd Texture_230.png
+
+newmtl Material_9
+Kd 1 1 1
+d 1
+map_Kd Texture_221.png
+
+newmtl Material_10
+Kd 1 1 1
+d 1
+map_Kd Texture_220.png
+
+newmtl Material_11
+Kd 1 1 1
+d 1
+map_Kd Texture_233.png
+
+newmtl Material_12
+Kd 1 1 1
+d 1
+map_Kd Texture_226.png
+
+newmtl Material_13
+Kd 1 1 1
+d 1
+
+newmtl Material_14
+Kd 1 1 1
+d 1
+map_Kd Texture_234.png
+
+newmtl Material_15
+Kd 1 1 1
+d 1
+map_Kd Texture_252.png
+
+newmtl Material_16
+Kd 1 1 1
+d 1
+map_Kd Texture_232.png
+
+newmtl Material_17
+Kd 1 1 1
+d 1
+map_Kd Texture_283.png
+
+newmtl Material_18
+Kd 1 1 1
+d 1
+map_Kd Texture_284.png
+map_d Texture_284.png
+
+newmtl Material_19
+Kd 1 1 1
+d 1
+map_Kd Texture_285.png
+map_d Texture_285.png
+

@@ -7,23 +7,33 @@ import ScriptView from "./ScriptView";
 import DesignView from "./DesignView";
 import DesignMenu from "./DesignMenu";
 import ToggleRightMenuButton from "./ToggleRightMenuButton";
+//possibly delete line below
+// import GroundplanViewerTEST from "./GroundplanViewerTEST";
 
-function MiddleContainer() {
+function MiddleContainer({ onFileSelect, snapshotUrl }) {
   const [leftIsExpanded, setLeftIsExpanded] = useState(false);
   const [rightIsExpanded, setRightIsExpanded] = useState(false);
   const [traditionalState, setTraditionalState] = useState(true);
   const [currentView, setCurrentView] = useState("baseView");
   const [scriptData, setScriptData] = useState(null);
+  //delete lines below
+  // const [open, setOpen] = useState(false);
+  // const handleOpen = () => {
+  //   console.log("Opening GroundplanViewerTEST...");
+
+  //   setOpen(true);
+  // };
+
+  // const handleClose = () => {
+  //   console.log("Closing GroundplanViewerTEST...");
+  //   setOpen(false);
+  // };
+  //delete lines above
 
   const handleScriptUpload = (data) => {
     setScriptData(data);
     setCurrentView("script");
   };
-
-  // Replace 'itemView1' with the actual view name
-  // const switchToItemView = () => {
-  //   setCurrentView("itemView1");
-  // };
 
   const horizontalGutter = (index, direction) => {
     const gutterElement = document.createElement("div");
@@ -82,6 +92,11 @@ function MiddleContainer() {
         />{" "}
         <SwapSidesButton handleSwapSides={handleSwapSides} />{" "}
       </div>
+      {/* delete entire div below */}
+      {/* <div>
+        <button onClick={handleOpen}>View Ground Plan</button>
+        <GroundplanViewerTEST open={open} onClose={handleClose} />
+      </div> */}
       {leftIsExpanded && (
         <div
           id={traditionalState ? "left-menu" : "right-menu"}
@@ -93,7 +108,7 @@ function MiddleContainer() {
           {traditionalState ? (
             <ScriptMenu onScriptUpload={handleScriptUpload} />
           ) : (
-            <DesignMenu />
+            <DesignMenu onFileSelect={onFileSelect} /> // Pass onFileSelect to DesignMenu
           )}
         </div>
       )}
@@ -114,7 +129,7 @@ function MiddleContainer() {
           {traditionalState ? (
             <ScriptView currentView={currentView} scriptData={scriptData} />
           ) : (
-            <DesignView />
+            <DesignView snapshotUrl={snapshotUrl} /> // Pass snapshotUrl to DesignView
           )}
         </div>
         <div
@@ -122,7 +137,7 @@ function MiddleContainer() {
           style={{ display: "flex", flexGrow: 1 }}
         >
           {traditionalState ? (
-            <DesignView />
+            <DesignView snapshotUrl={snapshotUrl} /> // Pass snapshotUrl to DesignView
           ) : (
             <ScriptView currentView={currentView} scriptData={scriptData} />
           )}
@@ -138,7 +153,7 @@ function MiddleContainer() {
           }}
         >
           {traditionalState ? (
-            <DesignMenu />
+            <DesignMenu onFileSelect={onFileSelect} /> // Pass onFileSelect to DesignMenu
           ) : (
             <ScriptMenu onScriptUpload={handleScriptUpload} />
           )}
@@ -165,4 +180,5 @@ function MiddleContainer() {
     </div>
   );
 }
+
 export default MiddleContainer;

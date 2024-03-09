@@ -1,17 +1,26 @@
 import React, { useState } from "react";
+import uploadGroundplanImage from "../assets/upload-groundplan.png";
 
-function DesignMenu({ swapSides }) {
+function DesignMenu({ swapSides, onFileSelect }) {
   const [isExpanded, setIsExpanded] = useState(false);
-
   const [showUploadButton, setShowUploadButton] = useState(true);
   const [showViewAndExportButtons, setShowViewAndExportButtons] =
     useState(false);
 
   const uploadGroundplan = () => {
-    // Placeholder for uploadGroundplan logic
-    console.log("Uploading ground plan...");
-    setShowUploadButton(false);
-    setShowViewAndExportButtons(true);
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = ".obj, .zip";
+    fileInput.style.display = "none";
+    fileInput.onchange = (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        onFileSelect(file);
+      }
+    };
+    document.body.appendChild(fileInput);
+    fileInput.click();
+    document.body.removeChild(fileInput);
   };
 
   // Placeholder functions for other buttons
@@ -21,15 +30,17 @@ function DesignMenu({ swapSides }) {
   return (
     <div id="design-menu" style={{ display: "flex", flexDirection: "column" }}>
       {showUploadButton && (
-        <div
-          id=" upload-groundplan-button"
+        <button
+          id="upload-groundplan-button"
           onClick={uploadGroundplan}
-          style={{
-            width: "40px",
-            height: "40px",
-            backgroundImage: "url(upload-groundplan.png)",
-          }}
-        ></div>
+          style={{ padding: 0, border: "none", background: "transparent" }}
+        >
+          <img
+            src={uploadGroundplanImage}
+            style={{ width: "40px", height: "40px" }}
+            alt="Upload Groundplan"
+          />
+        </button>
       )}
       {showViewAndExportButtons && (
         <>
