@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function DesignView() {
+  const [snapshotUrl, setSnapshotUrl] = useState("");
+
+  const updateSnapshotUrl = (url) => {
+    setSnapshotUrl(url);
+  };
+
   return (
     <div
       id="design-view"
@@ -14,6 +20,15 @@ function DesignView() {
       }}
     >
       Design View
+      {snapshotUrl && (
+        <div>
+          <img
+            src={snapshotUrl}
+            alt="Snapshot"
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </div>
+      )}
     </div>
   );
 }
