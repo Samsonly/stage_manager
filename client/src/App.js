@@ -10,18 +10,18 @@ function App() {
   const [isTaskSectionVisible, setIsTaskSectionVisible] = useState(false);
   const [activeTaskTab, setActiveTaskTab] = useState(null);
   const [taskTabs, setTaskTabs] = useState([]);
-  const [fileToView, setFileToView] = useState(null); // State to hold the selected .obj file
-  const [snapshotUrl, setSnapshotUrl] = useState(""); // State to hold the snapshot URL
-  const [showViewer, setShowViewer] = useState(false); // State to control the visibility of GroundplanViewer
+  const [fileToView, setFileToView] = useState(null);
+  const [snapshotUrl, setSnapshotUrl] = useState("");
+  const [showViewer, setShowViewer] = useState(false);
 
   const handleFileSelect = (file) => {
     setFileToView(file);
-    setShowViewer(true); // Open GroundplanViewer
+    setShowViewer(true);
   };
 
   const handleSnapshot = (url) => {
     setSnapshotUrl(url);
-    setShowViewer(false); // Close GroundplanViewer after taking snapshot
+    setShowViewer(false);
   };
 
   const verticalGutter = (index, direction) => {
@@ -50,7 +50,14 @@ function App() {
   };
 
   return (
-    <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+      }}
+    >
       <TopContainer />
       {isTaskSectionVisible ? (
         <Split

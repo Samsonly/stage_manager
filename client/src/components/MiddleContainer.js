@@ -7,8 +7,6 @@ import ScriptView from "./ScriptView";
 import DesignView from "./DesignView";
 import DesignMenu from "./DesignMenu";
 import ToggleRightMenuButton from "./ToggleRightMenuButton";
-//possibly delete line below
-// import GroundplanViewerTEST from "./GroundplanViewerTEST";
 
 function MiddleContainer({ onFileSelect, snapshotUrl }) {
   const [leftIsExpanded, setLeftIsExpanded] = useState(false);
@@ -16,20 +14,6 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
   const [traditionalState, setTraditionalState] = useState(true);
   const [currentView, setCurrentView] = useState("baseView");
   const [scriptData, setScriptData] = useState(null);
-  //delete lines below
-  // const [open, setOpen] = useState(false);
-  // const handleOpen = () => {
-  //   console.log("Opening GroundplanViewerTEST...");
-
-  //   setOpen(true);
-  // };
-
-  // const handleClose = () => {
-  //   console.log("Closing GroundplanViewerTEST...");
-  //   setOpen(false);
-  // };
-  //delete lines above
-
   const handleScriptUpload = (data) => {
     setScriptData(data);
     setCurrentView("script");
@@ -72,7 +56,12 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
   return (
     <div
       id="middle-container"
-      style={{ height: "100%", display: "flex", flexDirection: "row" }}
+      style={{
+        overflow: "auto",
+        display: "flex",
+        flexGrow: "1",
+        flexDirection: "row",
+      }}
     >
       <div
         id="left-bar"
@@ -92,11 +81,6 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
         />{" "}
         <SwapSidesButton handleSwapSides={handleSwapSides} />{" "}
       </div>
-      {/* delete entire div below */}
-      {/* <div>
-        <button onClick={handleOpen}>View Ground Plan</button>
-        <GroundplanViewerTEST open={open} onClose={handleClose} />
-      </div> */}
       {leftIsExpanded && (
         <div
           id={traditionalState ? "left-menu" : "right-menu"}
@@ -108,7 +92,7 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
           {traditionalState ? (
             <ScriptMenu onScriptUpload={handleScriptUpload} />
           ) : (
-            <DesignMenu onFileSelect={onFileSelect} /> // Pass onFileSelect to DesignMenu
+            <DesignMenu onFileSelect={onFileSelect} />
           )}
         </div>
       )}
@@ -129,7 +113,7 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
           {traditionalState ? (
             <ScriptView currentView={currentView} scriptData={scriptData} />
           ) : (
-            <DesignView snapshotUrl={snapshotUrl} /> // Pass snapshotUrl to DesignView
+            <DesignView snapshotUrl={snapshotUrl} />
           )}
         </div>
         <div
@@ -137,7 +121,7 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
           style={{ display: "flex", flexGrow: 1 }}
         >
           {traditionalState ? (
-            <DesignView snapshotUrl={snapshotUrl} /> // Pass snapshotUrl to DesignView
+            <DesignView snapshotUrl={snapshotUrl} />
           ) : (
             <ScriptView currentView={currentView} scriptData={scriptData} />
           )}
@@ -153,7 +137,7 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
           }}
         >
           {traditionalState ? (
-            <DesignMenu onFileSelect={onFileSelect} /> // Pass onFileSelect to DesignMenu
+            <DesignMenu onFileSelect={onFileSelect} />
           ) : (
             <ScriptMenu onScriptUpload={handleScriptUpload} />
           )}

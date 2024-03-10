@@ -5,6 +5,7 @@
   right: 10px;
   padding: 10px;
   box-sizing: border-box;
+  position: absolute;
   margin: -10px;
   overflow: auto;
   font-family: "Times New Roman", Times, serif;
@@ -14,8 +15,13 @@
   display: flex;
   flex-grow: 1;
   padding: 1em;
-  flex-direction: row;
+  flex-direction: column;
   overflow: auto;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  color: white;
+  background-color: #444;
+  position: relative;
 }
 
 .playTitle {
