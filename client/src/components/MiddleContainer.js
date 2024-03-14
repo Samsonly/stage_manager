@@ -1,22 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import Split from "react-split";
-import ToggleLeftMenuButton from "./ToggleLeftMenuButton";
-import SwapSidesButton from "./SwapSidesButton";
 import ScriptMenu from "./ScriptMenu";
 import ScriptView from "./ScriptView";
 import DesignView from "./DesignView";
 import DesignMenu from "./DesignMenu";
-import ToggleRightMenuButton from "./ToggleRightMenuButton";
+import {
+  useGlobal,
+  SET_INVERTED_LAYOUT,
+  SET_LEFT_IS_EXPANDED,
+  SET_RIGHT_IS_EXPANDED,
+  SET_SCRIPT_DATA,
+  SET_CURRENT_VIEW,
+} from "./GlobalContext";
+import "./MiddleContainer.css";
 
-function MiddleContainer({ onFileSelect, snapshotUrl }) {
-  const [leftIsExpanded, setLeftIsExpanded] = useState(false);
-  const [rightIsExpanded, setRightIsExpanded] = useState(false);
-  const [traditionalState, setTraditionalState] = useState(true);
-  const [currentView, setCurrentView] = useState("baseView");
-  const [scriptData, setScriptData] = useState(null);
+function MiddleContainer({ onFileSelect }) {
+  const { state, dispatch } = useGlobal();
+  const {
+    layoutIsInverted,
+    leftIsExpanded,
+    rightIsExpanded,
+    currentView,
+    scriptData,
+  } = state;
+
   const handleScriptUpload = (data) => {
-    setScriptData(data);
-    setCurrentView("script");
+    dispatch({ type: SET_SCRIPT_DATA, payload: data });
+    dispatch({ type: SET_CURRENT_VIEW, payload: "script" });
   };
 
   const horizontalGutter = (index, direction) => {
@@ -42,61 +52,43 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
   };
 
   const toggleLeftMenu = () => {
-    setLeftIsExpanded(!leftIsExpanded);
+    if (!leftIsExpanded) {
+      dispatch({ type: SET_LEFT_IS_EXPANDED, payload: true });
+    } else {
+      dispatch({ type: SET_LEFT_IS_EXPANDED, payload: false });
+    }
   };
 
   const toggleRightMenu = () => {
-    setRightIsExpanded(!rightIsExpanded);
+    if (!rightIsExpanded) {
+      dispatch({ type: SET_RIGHT_IS_EXPANDED, payload: true });
+    } else {
+      dispatch({ type: SET_RIGHT_IS_EXPANDED, payload: false });
+    }
   };
 
   const handleSwapSides = () => {
-    setTraditionalState(!traditionalState);
+    if (!layoutIsInverted) {
+      dispatch({ type: SET_INVERTED_LAYOUT, payload: true });
+      dispatch({ type: SET_RIGHT_IS_EXPANDED, payload: false });
+      dispatch({ type: SET_LEFT_IS_EXPANDED, payload: false });
+    } else {
+      dispatch({ type: SET_INVERTED_LAYOUT, payload: false });
+      dispatch({ type: SET_RIGHT_IS_EXPANDED, payload: false });
+      dispatch({ type: SET_LEFT_IS_EXPANDED, payload: false });
+    }
   };
 
   return (
-    <div
-      id="middle-container"
-      style={{
-        overflow: "auto",
-        display: "flex",
-        flexGrow: "1",
-        flexDirection: "row",
-      }}
-    >
-      <div
-        id="left-bar"
-        style={{
-          width: "20px",
-          fontSize: "12px",
-          textAlign: "center",
-          backgroundColor: "LightGray",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
-        <ToggleLeftMenuButton
-          leftIsExpanded={leftIsExpanded}
-          toggleLeftMenu={toggleLeftMenu}
-        />{" "}
-        <SwapSidesButton handleSwapSides={handleSwapSides} />{" "}
-      </div>
-      {leftIsExpanded && (
-        <div
-          id={traditionalState ? "left-menu" : "right-menu"}
-          style={{
-            width: "40px",
-            backgroundColor: traditionalState ? "Gray" : "Coral",
-          }}
-        >
-          {traditionalState ? (
-            <ScriptMenu onScriptUpload={handleScriptUpload} />
-          ) : (
-            <DesignMenu onFileSelect={onFileSelect} />
-          )}
+    <div id="middle-container">
+      <div id="left-bar">
+        <div id="toggle-left-menu-button" onClick={toggleLeftMenu}>
+          {leftIsExpanded ? "<<" : ">>"}
         </div>
-      )}
-
+        <div id="swap-sides-button" onClick={handleSwapSides}>
+          ⇄
+        </div>
+      </div>
       <Split
         style={{ display: "flex", flexGrow: 1 }}
         sizes={[50, 50]}
@@ -106,60 +98,44 @@ function MiddleContainer({ onFileSelect, snapshotUrl }) {
         gutter={horizontalGutter}
         cursor="col-resize"
       >
-        <div
-          id={traditionalState ? "left-view" : "right-view"}
-          style={{ display: "flex", flexGrow: 1 }}
-        >
-          {traditionalState ? (
-            <ScriptView currentView={currentView} scriptData={scriptData} />
+        <div id="left-display">
+          {layoutIsInverted ? (
+            <div id="design-display">
+              {leftIsExpanded && <DesignMenu onFileSelect={onFileSelect} />}
+              <DesignView />
+            </div>
           ) : (
-            <DesignView snapshotUrl={snapshotUrl} />
+            <div id="script-display">
+              {leftIsExpanded && (
+                <ScriptMenu onScriptUpload={handleScriptUpload} />
+              )}
+              <ScriptView currentView={currentView} scriptData={scriptData} />
+            </div>
           )}
         </div>
-        <div
-          id={traditionalState ? "right-view" : "left-view"}
-          style={{ display: "flex", flexGrow: 1 }}
-        >
-          {traditionalState ? (
-            <DesignView snapshotUrl={snapshotUrl} />
+        <div id="right-display">
+          {!layoutIsInverted ? (
+            <div id="design-display">
+              <DesignView />
+              {rightIsExpanded && <DesignMenu onFileSelect={onFileSelect} />}
+            </div>
           ) : (
-            <ScriptView currentView={currentView} scriptData={scriptData} />
+            <div id="script-display">
+              <ScriptView currentView={currentView} scriptData={scriptData} />
+              {rightIsExpanded && (
+                <ScriptMenu onScriptUpload={handleScriptUpload} />
+              )}
+            </div>
           )}
         </div>
       </Split>
-
-      {rightIsExpanded && (
-        <div
-          id={traditionalState ? "right-menu" : "left-menu"}
-          style={{
-            width: "40px",
-            backgroundColor: traditionalState ? "Coral" : "Gray",
-          }}
-        >
-          {traditionalState ? (
-            <DesignMenu onFileSelect={onFileSelect} />
-          ) : (
-            <ScriptMenu onScriptUpload={handleScriptUpload} />
-          )}
+      <div id="right-bar">
+        <div id="toggle-right-menu-button" onClick={toggleRightMenu}>
+          {rightIsExpanded ? ">>" : "<<"}
         </div>
-      )}
-      <div
-        id="right-bar"
-        style={{
-          width: "20px",
-          fontSize: "12px",
-          textAlign: "center",
-          backgroundColor: "LightCoral",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
-        <ToggleRightMenuButton
-          rightIsExpanded={rightIsExpanded}
-          toggleRightMenu={toggleRightMenu}
-        />{" "}
-        <SwapSidesButton handleSwapSides={handleSwapSides} />{" "}
+        <div id="swap-sides-button" onClick={handleSwapSides}>
+          ⇄
+        </div>
       </div>
     </div>
   );
