@@ -1,41 +1,41 @@
-import React, { useEffect } from "react";
+import React from "react";
+import {
+  useGlobal,
+  SET_TASK_TABS,
+  SET_TASK_SECTION_VISIBILITY,
+  SET_ACTIVE_TASK_TAB,
+} from "./GlobalContext";
 
-function BottomContainer({
-  onToggleTaskSection,
-  showTaskSection,
-  setShowTaskSection,
-  activeTaskTab,
-  setActiveTaskTab,
-  taskTabs,
-  setTaskTabs,
-}) {
-  useEffect(() => {
-    onToggleTaskSection(showTaskSection);
-  }, [showTaskSection, onToggleTaskSection]);
-
-  const handleTaskButtonClick = (taskName) => {
-    if (taskName === activeTaskTab) {
-      handleMinButtonClick(taskName);
-    } else {
-      setShowTaskSection(true);
-      setActiveTaskTab(taskName);
-
-      if (!taskTabs.includes(taskName)) {
-        setTaskTabs([...taskTabs, taskName]);
-      }
-    }
-  };
+function BottomContainer() {
+  const { state, dispatch } = useGlobal();
+  const { isTaskSectionVisible, activeTaskTab, taskTabs } = state;
 
   const handleMinButtonClick = (taskName) => {
     const newTaskTabs = taskTabs.filter((tab) => tab !== taskName);
-    setTaskTabs(newTaskTabs);
-
+    dispatch({ type: SET_TASK_TABS, payload: newTaskTabs });
     if (taskName === activeTaskTab) {
-      setActiveTaskTab(newTaskTabs[0] || null);
+      const newActiveTab = newTaskTabs.length > 0 ? newTaskTabs[0] : null;
+      dispatch({ type: SET_ACTIVE_TASK_TAB, payload: newActiveTab });
+    }
+    if (newTaskTabs.length === 0) {
+      dispatch({ type: SET_TASK_SECTION_VISIBILITY, payload: false });
+    }
+  };
+
+  const handleTaskButtonClick = (taskName) => {
+    if (!taskTabs.includes(taskName)) {
+      const updatedTaskTabs = [...taskTabs, taskName];
+      dispatch({ type: SET_TASK_TABS, payload: updatedTaskTabs });
     }
 
-    if (newTaskTabs.length === 0) {
-      setShowTaskSection(false);
+    dispatch({ type: SET_ACTIVE_TASK_TAB, payload: taskName });
+
+    if (!isTaskSectionVisible) {
+      dispatch({ type: SET_TASK_SECTION_VISIBILITY, payload: true });
+    }
+
+    if (taskName === activeTaskTab && isTaskSectionVisible) {
+      handleMinButtonClick(taskName);
     }
   };
 
@@ -61,7 +61,7 @@ function BottomContainer({
         backgroundColor: "rgb(135, 74, 0)",
       }}
     >
-      {showTaskSection && (
+      {isTaskSectionVisible && (
         <div
           className="task-section"
           style={{
@@ -101,7 +101,6 @@ function BottomContainer({
                   style={{
                     textDecoration:
                       tabName === activeTaskTab ? "underline" : "none",
-                    // textDecorationColor: "Color Goes Here",
                     textUnderlineOffset: "2px",
                   }}
                 >

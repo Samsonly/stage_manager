@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useGlobal, SET_SCRIPT_SCROLL_POSITION } from "./GlobalContext";
 
 function PlayContent({ scriptJson }) {
+  const { state, dispatch } = useGlobal();
+  const { scriptScrollPosition } = state;
+  const playContentRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (playContentRef.current) {
+        dispatch({
+          type: SET_SCRIPT_SCROLL_POSITION,
+          payload: playContentRef.current.scrollTop,
+        });
+      }
+    };
+
+    const playContentElement = playContentRef.current;
+    playContentElement.addEventListener("scroll", handleScroll);
+
+    return () => {
+      playContentElement.removeEventListener("scroll", handleScroll);
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (playContentRef.current) {
+      playContentRef.current.scrollTop = scriptScrollPosition;
+    }
+  }, [scriptScrollPosition]);
+
   return (
-    <div className="playStructure">
+    <div className="playStructure" ref={playContentRef}>
       <div className="playTitle" id="playTitle">
         {scriptJson.playTitle}
       </div>
       <div className="playDescription">{scriptJson.playDescription}</div>
-
       <div className="actStructure">
         {scriptJson.actStructure.map((act, actIndex) => (
           <div className="act" key={actIndex}>

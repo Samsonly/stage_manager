@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import uploadScriptImage from "../assets/upload-script.png";
 import viewScriptImage from "../assets/view-script.png";
 import tableOfContentsImage from "../assets/table-of-contents.png";
 import characterListImage from "../assets/character-list.png";
 import stylesImage from "../assets/styles.png";
+import {
+  useGlobal,
+  SET_LEFT_BUTTONS_VISIBLE,
+  SET_CURRENT_VIEW,
+} from "./GlobalContext";
 
 function ScriptMenu({ onScriptUpload }) {
-  const [buttonsVisible, setButtonsVisible] = useState(false);
+  const { state, dispatch } = useGlobal();
+  const { leftButtonsVisible } = state;
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -16,7 +22,7 @@ function ScriptMenu({ onScriptUpload }) {
         try {
           const jsonData = JSON.parse(e.target.result);
           onScriptUpload(jsonData);
-          setButtonsVisible(true);
+          dispatch({ type: SET_LEFT_BUTTONS_VISIBLE, payload: true });
         } catch (error) {}
       };
       reader.readAsText(file);
@@ -36,17 +42,23 @@ function ScriptMenu({ onScriptUpload }) {
     document.body.removeChild(fileInput);
   };
 
-  const viewScript = () => console.log("Viewing script...");
+  const viewScript = () => {
+    dispatch({ type: SET_CURRENT_VIEW, payload: "script" });
+  };
 
-  const viewTableOfContents = () => console.log("Viewing table of contents...");
+  const viewTableOfContents = () => {
+    dispatch({ type: SET_CURRENT_VIEW, payload: "tableOfContents" });
+  };
 
-  const viewCharacterList = () => console.log("Viewing character list...");
+  const viewCharacterList = () => {
+    dispatch({ type: SET_CURRENT_VIEW, payload: "characterList" });
+  };
 
   const editStyles = () => console.log("Editing styles...");
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      {!buttonsVisible && (
+    <div id="script-menu">
+      {!leftButtonsVisible && (
         <button
           id="upload-script-button"
           onClick={uploadScript}
@@ -59,7 +71,7 @@ function ScriptMenu({ onScriptUpload }) {
           />
         </button>
       )}
-      {buttonsVisible && (
+      {leftButtonsVisible && (
         <>
           <button
             id="view-script-button"

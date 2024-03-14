@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Split from "react-split";
 import TopContainer from "./components/TopContainer";
+import { GlobalContext } from "./components/GlobalContext";
+import { MiddleProvider } from "./components/MiddleContext";
 import MiddleContainer from "./components/MiddleContainer";
 import BottomContainer from "./components/BottomContainer";
 import GroundplanViewer from "./components/GroundplanViewer";
 import "./App.css";
 
 function App() {
-  const [isTaskSectionVisible, setIsTaskSectionVisible] = useState(false);
-  const [activeTaskTab, setActiveTaskTab] = useState(null);
-  const [taskTabs, setTaskTabs] = useState([]);
+  const { state } = useContext(GlobalContext);
+  const { isTaskSectionVisible } = state;
   const [fileToView, setFileToView] = useState(null);
   const [snapshotUrl, setSnapshotUrl] = useState("");
   const [showViewer, setShowViewer] = useState(false);
@@ -45,10 +46,6 @@ function App() {
     return gutterElement;
   };
 
-  const handleToggleTaskSection = (isVisible) => {
-    setIsTaskSectionVisible(isVisible);
-  };
-
   return (
     <div
       style={{
@@ -69,35 +66,23 @@ function App() {
           direction="vertical"
           cursor="row-resize"
         >
-          <MiddleContainer
-            onFileSelect={handleFileSelect}
-            snapshotUrl={snapshotUrl}
-          />
-          <BottomContainer
-            onToggleTaskSection={handleToggleTaskSection}
-            showTaskSection={isTaskSectionVisible}
-            setShowTaskSection={setIsTaskSectionVisible}
-            activeTaskTab={activeTaskTab}
-            setActiveTaskTab={setActiveTaskTab}
-            taskTabs={taskTabs}
-            setTaskTabs={setTaskTabs}
-          />
+          <MiddleProvider>
+            <MiddleContainer
+              onFileSelect={handleFileSelect}
+              snapshotUrl={snapshotUrl}
+            />
+          </MiddleProvider>
+          <BottomContainer />
         </Split>
       ) : (
         <>
-          <MiddleContainer
-            onFileSelect={handleFileSelect}
-            snapshotUrl={snapshotUrl}
-          />
-          <BottomContainer
-            onToggleTaskSection={handleToggleTaskSection}
-            showTaskSection={isTaskSectionVisible}
-            setShowTaskSection={setIsTaskSectionVisible}
-            activeTaskTab={activeTaskTab}
-            setActiveTaskTab={setActiveTaskTab}
-            taskTabs={taskTabs}
-            setTaskTabs={setTaskTabs}
-          />{" "}
+          <MiddleProvider>
+            <MiddleContainer
+              onFileSelect={handleFileSelect}
+              snapshotUrl={snapshotUrl}
+            />
+          </MiddleProvider>
+          <BottomContainer />
         </>
       )}
       {showViewer && (
