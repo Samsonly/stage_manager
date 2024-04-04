@@ -18,7 +18,6 @@ function DesignMenu({ onFileSelect }) {
     document.body.removeChild(fileInput);
   };
 
-  // Placeholder functions for other buttons
   const viewGroundplan = () => console.log("Viewing ground plan...");
   const exportBlocking = () => console.log("Exporting blocking...");
 

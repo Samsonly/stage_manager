@@ -5,7 +5,7 @@ import { GlobalContext } from "./components/GlobalContext";
 import { MiddleProvider } from "./components/MiddleContext";
 import MiddleContainer from "./components/MiddleContainer";
 import BottomContainer from "./components/BottomContainer";
-import GroundplanViewer from "./components/GroundplanViewer";
+import GroundplanEditor from "./components/GroundplanEditor";
 import "./App.css";
 
 function App() {
@@ -86,7 +86,7 @@ function App() {
         </>
       )}
       {showViewer && (
-        <GroundplanViewer
+        <GroundplanEditor
           file={fileToView}
           onClose={() => setShowViewer(false)}
           onSnapshot={handleSnapshot}

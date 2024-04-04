@@ -11,6 +11,9 @@ export const SET_CURRENT_VIEW = "SET_CURRENT_VIEW";
 export const SET_SCRIPT_DATA = "SET_SCRIPT_DATA";
 export const SET_LEFT_BUTTONS_VISIBLE = "SET_LEFT_BUTTONS_VISIBLE";
 export const SET_SCRIPT_SCROLL_POSITION = "SET_SCRIPT_SCROLL_POSITION";
+export const STORE_GROUNDPLAN_MODEL = "STORE_GROUNDPLAN_MODEL";
+export const SET_GROUNDPLAN_VISIBLE = "SET_GROUNDPLAN_VISIBLE";
+export const SET_GROUNDPLAN_VIEW = "SET_GROUNDPLAN_VIEW";
 
 const globalReducer = (state, action) => {
   switch (action.type) {
@@ -34,6 +37,12 @@ const globalReducer = (state, action) => {
       return { ...state, leftButtonsVisible: action.payload };
     case SET_SCRIPT_SCROLL_POSITION:
       return { ...state, scriptScrollPosition: action.payload };
+    case STORE_GROUNDPLAN_MODEL:
+      return { ...state, groundplanModel: action.payload };
+    case SET_GROUNDPLAN_VISIBLE:
+      return { ...state, isGroundplanVisible: action.payload };
+    case SET_GROUNDPLAN_VIEW:
+      return { ...state, groundplanView: action.payload };
     default:
       return state;
   }
@@ -50,6 +59,9 @@ const initialState = {
   scriptData: null,
   leftButtonsVisible: false,
   scriptScrollPosition: 0,
+  groundplanModel: null,
+  isGroundplanVisible: false,
+  groundplanView: null,
 };
 
 export const GlobalProvider = ({ children }) => {
