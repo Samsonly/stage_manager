@@ -1,0 +1,38 @@
+/* #design-menu {
+  padding: 0;
+  border: none;
+  background: transparent;
+} */
+
+#upload-groundplan-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+#upload-groundplan-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#view-groundplan-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+#view-groundplan-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#export-blocking-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+#export-blocking-icon {
+  width: 40px;
+  height: 40px;
+}

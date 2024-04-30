@@ -9,7 +9,6 @@ function convertRTFtoJSON(filePath) {
       return;
     }
 
-    // Assuming processRTFContent now returns structured data for JSON
     const {
       modifiedContent,
       extractedSections,

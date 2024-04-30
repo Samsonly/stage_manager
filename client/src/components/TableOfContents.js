@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "./GlobalContext";
+import { ProjectContext } from "./Contexts/ProjectContext.js";
 
 const TableOfContents = ({ onViewSection }) => {
-  const { state } = useContext(GlobalContext);
+  const { state } = useContext(ProjectContext);
   const { scriptData } = state;
 
   const generateLinks = () => {
@@ -22,7 +22,6 @@ const TableOfContents = ({ onViewSection }) => {
       </a>
     );
 
-    // Links to acts and scenes
     scriptData.actStructure.forEach((act, actIndex) => {
       const actId = `actTitle${actIndex}`;
       links.push(

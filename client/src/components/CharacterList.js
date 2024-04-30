@@ -1,47 +1,38 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "./GlobalContext";
-import "./ScriptView.css";
+import React from "react";
+import { useProject } from "./Contexts/ProjectContext.js";
+import { useSettings } from "./Contexts/SettingsContext.js";
+import "../styles/CharacterList.css";
 
-const CharacterListView = () => {
-  const { state } = useContext(GlobalContext);
-  const { scriptData } = state;
+const CharacterList = () => {
+  const { state } = useProject();
+  const { projectSaveFile } = state;
+  const { hideSettings } = useSettings();
 
-  const extractCharacterNames = (data, names = []) => {
-    data.forEach((item) => {
-      if (item.characterContent && item.characterContent.characterName) {
-        names.push(
-          item.characterContent.characterName.trim().replace(/\.$/, "")
-        );
-      } else if (item.internalSceneStructure) {
-        extractCharacterNames(item.internalSceneStructure, names);
-      } else if (item.sceneStructure) {
-        item.sceneStructure.forEach((scene) =>
-          extractCharacterNames(scene.internalSceneStructure, names)
-        );
-      }
-    });
-    return names;
-  };
+  const characters = projectSaveFile.characterList;
 
-  const characterNames = Array.from(
-    new Set(extractCharacterNames(scriptData.actStructure))
-  ).filter((name) => name);
-
-  function editCharacter() {
-    //logic here for editing Character List
+  function editCharacter(name) {
+    console.log(`Editing character: ${name}`);
+    // Placeholder for logic to edit character details
   }
 
   return (
-    <div id="character-list">
-      {" "}
-      <div id="character-list-title">List of Characters</div>
-      {characterNames.map((name, index) => (
-        <p key={index} onClick={() => editCharacter(name)}>
-          {name}
-        </p>
-      ))}
+    <div className="modal-background-overlay">
+      <div className="modal-window">
+        <div id="character-list-table">
+          <div id="character-list-title">Character List</div>
+          {characters.map((character, index) => (
+            <div key={index} onClick={() => editCharacter(character)}>
+              <p>{character.characterName}</p>
+              {/* Display more details if needed */}
+            </div>
+          ))}
+          <button className="menu-close-button" onClick={hideSettings}>
+            Close
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default CharacterListView;
+export default CharacterList;

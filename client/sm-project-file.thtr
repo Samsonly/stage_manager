@@ -1,0 +1,33 @@
+{
+  "projectName": "Project A",
+  "script": {},
+  "characterList": [],
+  "contactDirectory": [
+    [
+      [
+        [],
+        {
+          "contactID": "#00001",
+          "firstName": "Adam",
+          "lastName": "Perry",
+          "email": "adam.samson.perry@gmail.com",
+          "hasEmailAddress": true
+        }
+      ],
+      {
+        "contactID": "#00002",
+        "firstName": "Samson",
+        "lastName": "Perry",
+        "email": "Samson@Climb.org",
+        "hasEmailAddress": true
+      }
+    ],
+    {
+      "contactID": "#00003",
+      "firstName": "Adam",
+      "lastName": "Perry",
+      "email": "adam.samson.perry@gmail.com",
+      "hasEmailAddress": true
+    }
+  ]
+}

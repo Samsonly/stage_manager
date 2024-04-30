@@ -1,8 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import { useGlobal, SET_SCRIPT_SCROLL_POSITION } from "./GlobalContext";
+import {
+  useProject,
+  SET_SCRIPT_SCROLL_POSITION,
+} from "./Contexts/ProjectContext.js";
 
 function PlayContent({ scriptJson }) {
-  const { state, dispatch } = useGlobal();
+  const { state, dispatch } = useProject();
   const { scriptScrollPosition } = state;
   const playContentRef = useRef(null);
 

@@ -1,22 +1,21 @@
 import React from "react";
-import PlayContent from "./PlayContent";
-import CharacterList from "./CharacterList";
-import TableOfContents from "./TableOfContents";
+import UploadScript from "./UploadScript.js";
+import PlayContent from "./PlayContent.js";
+import TableOfContents from "./TableOfContents.js";
 import {
-  useGlobal,
-  SET_CURRENT_VIEW,
+  useProject,
+  SET_CURRENT_SCRIPT_VIEW,
   SET_SCRIPT_SCROLL_POSITION,
-} from "./GlobalContext";
-import "./ScriptView.css";
+} from "./Contexts/ProjectContext.js";
+import "../styles/ScriptView.css";
 
 function ScriptView() {
-  const { state, dispatch } = useGlobal();
-  const { currentView, scriptData } = state;
+  const { state, dispatch } = useProject();
+  const { currentScriptView, projectSaveFile } = state;
 
   const onViewSection = (view, elementId) => {
-    dispatch({ type: SET_CURRENT_VIEW, payload: view });
+    dispatch({ type: SET_CURRENT_SCRIPT_VIEW, payload: view });
     if (view === "script") {
-      // Ensure the script view is rendered and then scroll to the element
       setTimeout(() => {
         const element = document.getElementById(elementId);
         if (element) {
@@ -30,19 +29,17 @@ function ScriptView() {
     }
   };
 
-  switch (currentView) {
+  switch (currentScriptView) {
     case "baseView":
-      return <div id="base-view">Script View</div>;
+      return (
+        <div id="base-view">
+          <UploadScript />
+        </div>
+      );
     case "script":
       return (
         <div id="script-view">
-          <PlayContent scriptJson={scriptData} />
-        </div>
-      );
-    case "characterList":
-      return (
-        <div id="script-view">
-          <CharacterList />
+          <PlayContent scriptJson={projectSaveFile.script} />
         </div>
       );
     case "tableOfContents":
