@@ -1,7 +1,8 @@
 import React from "react";
+import "../styles/DesignMenu.css";
 import uploadGroundplanImage from "../assets/upload-groundplan.png";
 
-function DesignMenu({ onFileSelect }) {
+function DesignMenu({ onGroundplanUpload }) {
   const uploadGroundplan = () => {
     const fileInput = document.createElement("input");
     fileInput.type = "file";
@@ -10,7 +11,7 @@ function DesignMenu({ onFileSelect }) {
     fileInput.onchange = (event) => {
       const file = event.target.files[0];
       if (file) {
-        onFileSelect(file);
+        onGroundplanUpload(file);
       }
     };
     document.body.appendChild(fileInput);
@@ -18,40 +19,32 @@ function DesignMenu({ onFileSelect }) {
     document.body.removeChild(fileInput);
   };
 
-  const viewGroundplan = () => console.log("Viewing ground plan...");
-  const exportBlocking = () => console.log("Exporting blocking...");
+  const viewGroundplan = () => console.log("Viewing ground plan..."); //Placeholder for future functionality
+  // const exportBlocking = () => console.log("Exporting blocking..."); //Placeholder for future functionality
 
   return (
     <div id="design-menu">
-      <button
-        id="upload-groundplan-button"
-        onClick={uploadGroundplan}
-        style={{ padding: 0, border: "none", background: "transparent" }}
-      >
+      <button id="upload-groundplan-button" onClick={uploadGroundplan}>
         <img
+          id="upload-groundplan-icon"
           src={uploadGroundplanImage}
-          style={{ width: "40px", height: "40px" }}
           alt="Upload Groundplan"
         />
       </button>
-      <div
-        id="view-groundplan-button"
-        onClick={viewGroundplan}
-        style={{
-          width: "40px",
-          height: "40px",
-          backgroundImage: "url(view-groundplan.png)",
-        }}
-      ></div>
-      <div
-        id="export-blocking-button"
-        onClick={exportBlocking}
-        style={{
-          width: "40px",
-          height: "40px",
-          backgroundImage: "url(export-blocking.png)",
-        }}
-      ></div>
+      <button id="view-groundplan-button" onClick={viewGroundplan}>
+        <img
+          id="view-groundplan-icon"
+          src={uploadGroundplanImage}
+          alt="View Groundplan"
+        />
+      </button>
+      {/* <button id="export-blocking-button" onClick={exportBlocking}>
+        <img
+          id="export-blocking-icon"
+          src="export-blocking.png"
+          alt="Export Blocking"
+        />
+      </button> */}
     </div>
   );
 }

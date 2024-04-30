@@ -1,0 +1,53 @@
+#welcome-screen {
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+#welcome-banner {
+  background-image: url("../assets/welcome-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
+
+#welcome-header {
+  font-size: 30px;
+  margin: 80px 0px;
+  color: white;
+  text-align: center;
+}
+
+#welcome-button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#welcome-create-button {
+  margin-right: 80px;
+  width: 250px;
+  height: 150px;
+  background-color: #121212;
+  color: white;
+  border: 1px solid lightGrey;
+  box-shadow: 0 0 2px 2px rgba(211, 211, 211, 0.5);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#welcome-open-button {
+  margin-left: 80px;
+  width: 250px;
+  height: 150px;
+  background-color: #121212;
+  color: white;
+  border: 1px solid lightGrey;
+  box-shadow: 0 0 2px 2px rgba(211, 211, 211, 0.5);
+  border-radius: 10px;
+  font-size: 20px;
+}

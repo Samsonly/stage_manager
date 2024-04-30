@@ -1,0 +1,16 @@
+.top-container {
+  width: 100%;
+  height: 125px;
+  background-color: rgb(37, 2, 71);
+  display: flex;
+  flex-direction: column;
+}
+
+.gadget-section {
+  height: 100px;
+  background-color: #202020;
+  color: lightGrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

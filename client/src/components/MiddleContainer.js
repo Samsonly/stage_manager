@@ -1,53 +1,41 @@
 import React from "react";
 import Split from "react-split";
-import ScriptMenu from "./ScriptMenu";
-import ScriptView from "./ScriptView";
-import DesignView from "./DesignView";
-import DesignMenu from "./DesignMenu";
+import ScriptMenu from "./ScriptMenu.js";
+import ScriptView from "./ScriptView.js";
+import DesignView from "./DesignView.js";
+import DesignMenu from "./DesignMenu.js";
 import {
-  useGlobal,
+  useProject,
+  SET_VERTICAL_PANE_SIZES,
   SET_INVERTED_LAYOUT,
   SET_LEFT_IS_EXPANDED,
   SET_RIGHT_IS_EXPANDED,
-  SET_SCRIPT_DATA,
-  SET_CURRENT_VIEW,
-} from "./GlobalContext";
-import "./MiddleContainer.css";
+  SET_CURRENT_DESIGN_VIEW,
+  STORE_GROUNDPLAN_FILE,
+} from "./Contexts/ProjectContext.js";
+import "../styles/MiddleContainer.css";
 
-function MiddleContainer({ onFileSelect }) {
-  const { state, dispatch } = useGlobal();
+function MiddleContainer() {
+  const { state, dispatch } = useProject();
   const {
     layoutIsInverted,
     leftIsExpanded,
     rightIsExpanded,
-    currentView,
-    scriptData,
+    verticalPaneSizes,
   } = state;
 
-  const handleScriptUpload = (data) => {
-    dispatch({ type: SET_SCRIPT_DATA, payload: data });
-    dispatch({ type: SET_CURRENT_VIEW, payload: "script" });
+  const handleGroundplanUpload = (file) => {
+    dispatch({ type: STORE_GROUNDPLAN_FILE, payload: file });
+    dispatch({ type: SET_CURRENT_DESIGN_VIEW, payload: "groundplanEditor" });
   };
 
-  const horizontalGutter = (index, direction) => {
+  const handleDragEnd = (verticalPaneSizes) => {
+    dispatch({ type: SET_VERTICAL_PANE_SIZES, payload: verticalPaneSizes });
+  };
+
+  const horizontalGutter = () => {
     const gutterElement = document.createElement("div");
-    gutterElement.className = "gutter";
-    gutterElement.style.background =
-      "linear-gradient(to right, lightgrey, black, lightgrey)";
-    gutterElement.style.width = "10px";
-    gutterElement.style.position = "relative";
-
-    const beforeElement = document.createElement("div");
-    beforeElement.style.content = '""';
-    beforeElement.style.position = "absolute";
-    beforeElement.style.top = "-3px";
-    beforeElement.style.bottom = "-3px";
-    beforeElement.style.left = "-3px";
-    beforeElement.style.right = "-3px";
-    beforeElement.style.zIndex = "10";
-
-    gutterElement.appendChild(beforeElement);
-
+    gutterElement.id = "middle-gutter";
     return gutterElement;
   };
 
@@ -91,25 +79,26 @@ function MiddleContainer({ onFileSelect }) {
       </div>
       <Split
         style={{ display: "flex", flexGrow: 1 }}
-        sizes={[50, 50]}
+        sizes={verticalPaneSizes}
         minSize={[100, 100]}
         direction="horizontal"
-        gutterSize={5}
+        gutterSize={3}
         gutter={horizontalGutter}
         cursor="col-resize"
+        onDragEnd={handleDragEnd}
       >
         <div id="left-display">
           {layoutIsInverted ? (
             <div id="design-display">
-              {leftIsExpanded && <DesignMenu onFileSelect={onFileSelect} />}
+              {leftIsExpanded && (
+                <DesignMenu onFileSelect={handleGroundplanUpload} />
+              )}
               <DesignView />
             </div>
           ) : (
             <div id="script-display">
-              {leftIsExpanded && (
-                <ScriptMenu onScriptUpload={handleScriptUpload} />
-              )}
-              <ScriptView currentView={currentView} scriptData={scriptData} />
+              {leftIsExpanded && <ScriptMenu />}
+              <ScriptView />
             </div>
           )}
         </div>
@@ -117,14 +106,14 @@ function MiddleContainer({ onFileSelect }) {
           {!layoutIsInverted ? (
             <div id="design-display">
               <DesignView />
-              {rightIsExpanded && <DesignMenu onFileSelect={onFileSelect} />}
+              {rightIsExpanded && (
+                <DesignMenu onGroundplanUpload={handleGroundplanUpload} />
+              )}
             </div>
           ) : (
             <div id="script-display">
-              <ScriptView currentView={currentView} scriptData={scriptData} />
-              {rightIsExpanded && (
-                <ScriptMenu onScriptUpload={handleScriptUpload} />
-              )}
+              <ScriptView />
+              {rightIsExpanded && <ScriptMenu />}
             </div>
           )}
         </div>

@@ -1,13 +1,14 @@
 import React from "react";
 import {
-  useGlobal,
+  useProject,
   SET_TASK_TABS,
   SET_TASK_SECTION_VISIBILITY,
   SET_ACTIVE_TASK_TAB,
-} from "./GlobalContext";
+} from "./Contexts/ProjectContext.js";
+import "../styles/BottomContainer.css";
 
 function BottomContainer() {
-  const { state, dispatch } = useGlobal();
+  const { state, dispatch } = useProject();
   const { isTaskSectionVisible, activeTaskTab, taskTabs } = state;
 
   const handleMinButtonClick = (taskName) => {
@@ -51,122 +52,37 @@ function BottomContainer() {
   ];
 
   return (
-    <div
-      className="bottom-container"
-      style={{
-        width: "100%",
-        minHeight: "20px",
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "rgb(135, 74, 0)",
-      }}
-    >
+    <div id="bottom-container">
       {isTaskSectionVisible && (
-        <div
-          className="task-section"
-          style={{
-            flex: 1,
-            backgroundColor: "rgb(174, 84, 0)",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <div
-            className="task-tab-bar"
-            style={{
-              height: "30px",
-              backgroundColor: "rgb(116, 38, 19)",
-              display: "flex",
-              alignItems: "center",
-              overflowX: "auto",
-            }}
-          >
+        <div id="task-section">
+          <div id="task-tab-bar">
             {taskTabs.map((tabName) => (
               <div
                 key={tabName}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexWrap: "nowrap",
-                  padding: "4px",
-                  marginRight: "10px",
-                  height: "25px",
-                  minWidth: "50px",
-                  fontSize: "12px",
-                  color: "white",
-                  paddingLeft: "10px",
-                }}
+                className={`task-tab ${
+                  tabName === activeTaskTab ? "active" : ""
+                }`}
               >
-                <div
-                  style={{
-                    textDecoration:
-                      tabName === activeTaskTab ? "underline" : "none",
-                    textUnderlineOffset: "2px",
-                  }}
-                >
+                <div>
                   {tabName}
-                  <button
-                    onClick={() => handleMinButtonClick(tabName)}
-                    style={{
-                      marginLeft: "-3px",
-                      marginTop: "-5px",
-                      color: "white",
-                      background: "none",
-                      border: "none",
-                      visibility:
-                        tabName === activeTaskTab ? "visible" : "hidden",
-                    }}
-                  >
+                  <button onClick={() => handleMinButtonClick(tabName)}>
                     ⌄
                   </button>
                 </div>
               </div>
             ))}
           </div>
-          <div
-            className="task-view"
-            style={{
-              flex: 1,
-              fontSize: "30px",
-              backgroundColor: "Red",
-              paddingLeft: "10px",
-              paddingTop: "10px",
-              overflow: "auto",
-            }}
-          >
+          <div id="task-view">
             {activeTaskTab && `${activeTaskTab} Content`}
           </div>
         </div>
       )}
-      <div
-        className="task-bar"
-        style={{
-          height: "20px",
-          backgroundColor: "Gold",
-          display: "flex",
-          alignItems: "center",
-          boxSizing: "border-box",
-          padding: "0px",
-        }}
-      >
+      <div id="task-bar">
         {taskButtons.map((buttonLabel) => (
           <div
+            className="task-button"
             key={buttonLabel}
             onClick={() => handleTaskButtonClick(buttonLabel)}
-            style={{
-              flex: "1",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxSizing: "border-box",
-              whiteSpace: "nowrap",
-              border: "1px solid black",
-              backgroundColor: "Yellow",
-              overflow: "hidden",
-              color: "black",
-              padding: "0 4px",
-              fontSize: "12px",
-            }}
           >
             {buttonLabel}
           </div>

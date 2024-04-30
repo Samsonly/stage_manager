@@ -1,15 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { useGlobal } from "./GlobalContext";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import { useProject } from "./Contexts/ProjectContext.js";
 
 function GroundplanView() {
   const canvasRef = useRef();
   const sceneRef = useRef(new THREE.Scene());
-  const { state } = useGlobal();
+  const { state } = useProject();
   const { groundplanModel, groundplanView } = state;
-
-  console.log(groundplanView);
 
   useEffect(() => {
     const scene = sceneRef.current;

@@ -1,0 +1,93 @@
+#bottom-container {
+  width: 100%;
+  min-height: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+}
+
+#task-section {
+  flex: 1;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+}
+
+#task-tab-bar {
+  height: 30px;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.task-tab {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 4px;
+  margin-right: 10px;
+  height: 25px;
+  min-width: 50px;
+  font-size: 12px;
+  color: lightGrey;
+  padding-left: 10px;
+}
+
+.task-tab > div {
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+.task-tab.active > div {
+  text-decoration: underline;
+}
+
+.task-tab button {
+  margin-left: -3px;
+  margin-top: -5px;
+  color: lightGrey;
+  background: none;
+  border: none;
+  visibility: hidden;
+}
+
+.task-tab.active button {
+  visibility: visible;
+}
+
+#task-view {
+  flex: 1;
+  font-size: 30px;
+  background-color: #121212;
+  padding-left: 10px;
+  color: lightGrey;
+  padding-top: 10px;
+  overflow: auto;
+}
+
+#task-bar {
+  height: 20px;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.task-button {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1; /* Allow the item to shrink */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align text to the left */
+  box-sizing: border-box;
+  white-space: nowrap;
+  background-color: #2b2b2b;
+  overflow: hidden;
+  color: lightGrey;
+  padding: 0 4px;
+  font-size: 12px;
+  text-align: left;
+}
