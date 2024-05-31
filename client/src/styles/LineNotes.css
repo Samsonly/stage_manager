@@ -1,0 +1,163 @@
+.modal-background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#line-notes-modal-window {
+  position: relative;
+  width: 560px;
+  height: 400px;
+  background-color: #121212;
+  color: lightGrey;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightGrey;
+  box-shadow: 0 0 2px 2px rgba(211, 211, 211, 0.5);
+}
+
+#line-notes-title {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#line-notes-table {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: -10px;
+  font-family: "Heuristica", serif;
+  overflow: auto;
+}
+
+#line-notes-character-name {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 30px 0px;
+  text-align: center;
+}
+
+#line-notes-error-options-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3px;
+  margin-left: 30px;
+  width: 560px;
+}
+
+.line-notes-error-options-row {
+  display: contents;
+}
+
+.line-notes-error-options-row > div {
+  grid-column: span 1;
+  padding: 3px;
+  justify-self: start;
+}
+
+#line-notes-correct-dialogue {
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 3px;
+  background-color: white;
+  color: black;
+  width: 90%;
+  height: 100px;
+  word-wrap: break;
+}
+
+#line-notes-button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.menu-close-button {
+  position: absolute;
+  bottom: 15px;
+  left: 16px;
+  cursor: pointer;
+  border: 1px solid lightGrey;
+  border-radius: 5px;
+  color: lightGrey;
+  background-color: #121212;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}
+
+.menu-save-button {
+  position: absolute;
+  bottom: 15px;
+  right: 16px;
+  cursor: pointer;
+  border: 1px solid lightGrey;
+  border-radius: 5px;
+  color: lightGrey;
+  background-color: #121212;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}
+
+.line-notes-static-text {
+  color: black;
+}
+
+.line-notes-dropped-text {
+  font-weight: bold;
+  color: green;
+  border: 0.5px solid black;
+}
+
+.line-notes-added-text {
+  position: relative;
+  text-decoration: line-through;
+  color: red;
+  margin-right: 0.5ch;
+  border: 0.5px solid black;
+}
+
+#line-notes-added-words-edit-bar {
+  position: absolute;
+  top: -30px;
+  width: 60px;
+  left: 0;
+  padding: 5px;
+  z-index: 1001;
+}
+
+#line-notes-added-words-edit-button {
+  cursor: pointer;
+  color: lightGrey;
+  background-color: #121212;
+  border: transparent;
+  border-radius: 5px;
+  margin-right: 3px;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}
+
+#line-notes-added-words-exit-button {
+  cursor: pointer;
+  color: lightGrey;
+  background-color: #121212;
+  border: transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}

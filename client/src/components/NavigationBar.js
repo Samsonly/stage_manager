@@ -1,23 +1,29 @@
 import React, { useState } from "react";
-import { useSettings } from "./Contexts/SettingsContext.js";
+import { useSettings } from "../contexts/SettingsContext.js";
 import {
   useGlobal,
   UPDATE_PROJECT_ACTIVE_STATUS,
-} from "./Contexts/GlobalContext.js";
-import { useProject } from "./Contexts/ProjectContext.js";
+} from "../contexts/GlobalContext.js";
+import { useProject } from "../contexts/ProjectContext.js";
 import CharacterList from "./CharacterList.js";
 import ContactDatabase from "./ContactDatabase.js";
-import CustomConfirm from "./Modals/CustomConfirm.js";
-import { saveProjectData } from "./Utils/saveProjectUtil";
-import "../styles/NavigationBar.css";
+import CustomConfirm from "../containers/CustomConfirm.js";
+import EndRehearsal from "./EndRehearsal.js";
+import OpenProject from "./OpenProject";
 import ProductionAssignments from "./ProductionAssignments.js";
+import UploadScript from "./UploadScript.js";
+import ViewLineNotes from "./ViewLineNotes.js";
+import { saveProjectData } from "../utils/saveProjectUtil.js";
+import "../styles/NavigationBar.css";
 
 function NavigationBar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const { showSettings } = useSettings();
+  const { showSettings, hideSettings } = useSettings();
   const { dispatch: dispatchGlobal } = useGlobal();
   const { state: projectState } = useProject();
   const { isProjectSaved, projectSaveFile } = projectState;
+  const uploadScript = UploadScript();
+  const openProject = OpenProject();
 
   const handleDropdown = (itemId) => {
     setActiveDropdown(itemId);
@@ -30,7 +36,7 @@ function NavigationBar() {
     }, 100);
   };
 
-  const handleNewProjectClick = () => {
+  const handleNewProjectClick = (callback) => {
     const confirmAndSave = (retry = false) => {
       const message = retry
         ? `Failed to save ${projectSaveFile.projectName}. Try again?`
@@ -39,16 +45,16 @@ function NavigationBar() {
       showSettings(CustomConfirm, {
         message,
         onNo: () => {
-          showSettings(null);
+          hideSettings();
           if (!retry) {
-            handleNewProjectProcess();
+            callback();
           }
         },
         onYes: () => {
           saveProjectData(projectState.projectSaveFile)
             .then(() => {
-              showSettings(null);
-              handleNewProjectProcess();
+              hideSettings();
+              callback();
             })
             .catch((error) => {
               console.error("Error saving the project:", error);
@@ -61,7 +67,7 @@ function NavigationBar() {
     if (!isProjectSaved) {
       confirmAndSave();
     } else {
-      handleNewProjectProcess();
+      callback();
     }
   };
 
@@ -69,21 +75,32 @@ function NavigationBar() {
     e.stopPropagation();
     setActiveDropdown(null);
     switch (item) {
-      case "CharacterList":
+      case "Character List":
         showSettings(CharacterList);
-        break;
-      case "NewProject":
-        handleNewProjectClick();
-        break;
-      case "SaveProject":
-        saveProjectData(projectState.projectSaveFile);
         break;
       case "Contact List":
         showSettings(ContactDatabase);
         break;
+      case "End Rehearsal":
+        showSettings(EndRehearsal);
+        break;
+      case "New Project":
+        handleNewProjectClick(handleNewProjectProcess);
+        break;
+      case "Open Project":
+        handleNewProjectClick(openProject);
+        break;
       case "Production Assignments":
         showSettings(ProductionAssignments);
-
+        break;
+      case "Save Project":
+        saveProjectData(projectState.projectSaveFile);
+        break;
+      case "Upload Script":
+        uploadScript();
+        break;
+      case "View Line Notes":
+        showSettings(ViewLineNotes);
         break;
       default:
         break;
@@ -104,17 +121,21 @@ function NavigationBar() {
             <div
               className="dditem"
               id="dd1item1"
-              onClick={(e) => handleItemClick(e, "NewProject")}
+              onClick={(e) => handleItemClick(e, "New Project")}
             >
               New Project
             </div>
-            <div className="dditem" id="dd1item2">
+            <div
+              className="dditem"
+              id="dd1item2"
+              onClick={(e) => handleItemClick(e, "Open Project")}
+            >
               Open Project
             </div>
             <div
               className="dditem"
               id="dd1item3"
-              onClick={(e) => handleItemClick(e, "SaveProject")}
+              onClick={(e) => handleItemClick(e, "Save Project")}
             >
               Save Project
             </div>
@@ -151,15 +172,15 @@ function NavigationBar() {
         Content
         {activeDropdown === 2 && (
           <div className="dropdown-content">
-            <div className="dditem" id="dd2item1">
-              Edit Script
-            </div>
             <div
               className="dditem"
-              id="dd2item2"
-              onClick={(e) => handleItemClick(e, "CharacterList")}
+              id="dd2item1"
+              onClick={(e) => handleItemClick(e, "Upload Script")}
             >
-              Character List
+              Upload Script
+            </div>
+            <div className="dditem" id="dd2item2">
+              Edit Script
             </div>
             <div className="dditem" id="dd2item3">
               Placeholder 3
@@ -167,8 +188,12 @@ function NavigationBar() {
             <div className="dditem" id="dd2item4">
               Placeholder 4
             </div>
-            <div className="dditem" id="dd2item5">
-              Placeholder 5
+            <div
+              className="dditem"
+              id="dd2item5"
+              onClick={(e) => handleItemClick(e, "Character List")}
+            >
+              Character List
             </div>
             <div className="dditem" id="dd2item6">
               Placeholder 6
@@ -274,8 +299,12 @@ function NavigationBar() {
             <div className="dditem" id="dd4item9">
               Placeholder 9
             </div>
-            <div className="dditem" id="dd4item10">
-              Placeholder 10
+            <div
+              className="dditem"
+              id="dd4item10"
+              onClick={(e) => handleItemClick(e, "End Rehearsal")}
+            >
+              End Rehearsal
             </div>
           </div>
         )}
@@ -328,26 +357,30 @@ function NavigationBar() {
         onClick={() => handleDropdown(6)}
         onMouseOver={() => activeDropdown && handleDropdown(6)}
       >
-        Help
+        Reports
         {activeDropdown === 6 && (
           <div className="dropdown-content">
-            <div className="dditem" id="dd6item1">
-              Placeholder 1
+            <div
+              className="dditem"
+              id="dd6item1"
+              onClick={(e) => handleItemClick(e, "View Line Notes")}
+            >
+              Line Notes
             </div>
             <div className="dditem" id="dd6item2">
-              Placeholder 2
+              Rehearsal Reports
             </div>
             <div className="dditem" id="dd6item3">
-              Placeholder 3
+              Performance Reports
             </div>
             <div className="dditem" id="dd6item4">
-              Placeholder 4
+              Production Meeting Notes
             </div>
             <div className="dditem" id="dd6item5">
-              Placeholder 5
+              Tech Week Notes
             </div>
             <div className="dditem" id="dd6item6">
-              Placeholder 6
+              Daily Call
             </div>
             <div className="dditem" id="dd6item7">
               Placeholder 7
@@ -359,6 +392,48 @@ function NavigationBar() {
               Placeholder 9
             </div>
             <div className="dditem" id="dd6item10">
+              [Equity]
+            </div>
+          </div>
+        )}
+      </div>
+      <div
+        className="nav-bar-item"
+        id="nb-item-7"
+        onClick={() => handleDropdown(7)}
+        onMouseOver={() => activeDropdown && handleDropdown(7)}
+      >
+        Help
+        {activeDropdown === 7 && (
+          <div className="dropdown-content">
+            <div className="dditem" id="dd7item1">
+              Placeholder 1
+            </div>
+            <div className="dditem" id="dd7item2">
+              Placeholder 2
+            </div>
+            <div className="dditem" id="dd7item3">
+              Placeholder 3
+            </div>
+            <div className="dditem" id="dd7item4">
+              Placeholder 4
+            </div>
+            <div className="dditem" id="dd7item5">
+              Placeholder 5
+            </div>
+            <div className="dditem" id="dd7item6">
+              Placeholder 6
+            </div>
+            <div className="dditem" id="dd7item7">
+              Placeholder 7
+            </div>
+            <div className="dditem" id="dd7item8">
+              Placeholder 8
+            </div>
+            <div className="dditem" id="dd7item9">
+              Placeholder 9
+            </div>
+            <div className="dditem" id="dd7item10">
               Placeholder 10
             </div>
           </div>

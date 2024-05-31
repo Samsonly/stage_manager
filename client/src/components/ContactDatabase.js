@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/ContactDatabase.css";
 import AddContact from "./AddContact.js";
-import { useProject } from "./Contexts/ProjectContext.js";
-import { useSettings } from "./Contexts/SettingsContext.js";
+import { useProject } from "../contexts/ProjectContext.js";
+import { useSettings } from "../contexts/SettingsContext.js";
 
 const ContactDatabase = () => {
   const { hideSettings, showSettings } = useSettings();

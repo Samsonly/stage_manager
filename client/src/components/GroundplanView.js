@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
-import { useProject } from "./Contexts/ProjectContext.js";
+import { useProject } from "../contexts/ProjectContext.js";
 
 function GroundplanView() {
   const canvasRef = useRef();

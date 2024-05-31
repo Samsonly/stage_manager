@@ -4,7 +4,7 @@ import {
   SET_TASK_TABS,
   SET_TASK_SECTION_VISIBILITY,
   SET_ACTIVE_TASK_TAB,
-} from "./Contexts/ProjectContext.js";
+} from "../contexts/ProjectContext.js";
 import "../styles/BottomContainer.css";
 
 function BottomContainer() {

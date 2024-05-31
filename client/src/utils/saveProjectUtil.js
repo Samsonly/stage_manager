@@ -1,7 +1,7 @@
 export function saveProjectData(projectSaveFile) {
   return new Promise((resolve, reject) => {
     if (!projectSaveFile) {
-      alert("No project data to save.");
+      console.error("No project data to save.");
       reject(new Error("No project data to save."));
       return;
     }

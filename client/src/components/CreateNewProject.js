@@ -3,11 +3,12 @@ import {
   useProject,
   UPDATE_PROJECT_SAVE_FILE,
   UPDATE_PROJECT_SAVE_STATUS,
-} from "./Contexts/ProjectContext.js";
+} from "../contexts/ProjectContext.js";
 import {
   useGlobal,
   UPDATE_PROJECT_ACTIVE_STATUS,
-} from "./Contexts/GlobalContext.js";
+  SET_LOADING_TYPE,
+} from "../contexts/GlobalContext.js";
 import "../styles/CreateNewProject.css";
 
 function CreateNewProject() {
@@ -26,6 +27,7 @@ function CreateNewProject() {
       payload: { projectName },
     });
     projectDispatch({ type: UPDATE_PROJECT_SAVE_STATUS, payload: false });
+    globalDispatch({ type: SET_LOADING_TYPE, payload: null });
   };
 
   const clearProject = () => {

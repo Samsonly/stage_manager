@@ -1,6 +1,6 @@
 #design-view {
   width: 100%;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Heuristica", serif;
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -9,6 +9,19 @@
   background-color: #121212;
   font-size: 30px;
   padding-top: 20px;
+}
+
+#base-design-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: lightGrey;
+  font-family: "Heuristica", serif;
+  background-color: #121212;
 }
 
 #design-text {
@@ -158,4 +171,25 @@
 #counter-clockwise-icon {
   width: 40px;
   height: 40px;
+}
+
+#upload-groundplan-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#upload-groundplan-button {
+  background: transparent;
+  border: none;
+}
+
+#upload-groundplan-button-icon {
+  width: 120px;
+}
+
+#upload-groundplan-button-text {
+  font-size: 20px;
+  font-family: "Heuristica", serif;
+  color: lightGrey;
+  text-align: center;
 }

@@ -1,0 +1,92 @@
+#open-project-modal-background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#open-project-modal-window {
+  position: relative;
+  width: 80%;
+  min-width: 500px;
+  max-width: 750px;
+  height: 200px;
+  background-color: #121212;
+  color: lightGrey;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightGrey;
+  box-shadow: 0 0 2px 2px rgba(211, 211, 211, 0.5);
+}
+
+#open-project-table {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: -10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#open-project-title {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+#open-project-filetype {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 12px;
+}
+
+#open-project-folder-button {
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  border: 1px solid lightGrey;
+  border-radius: 2px;
+  color: lightGrey;
+  background-color: #121212;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}
+
+#open-project-file-button {
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  border: 1px solid lightGrey;
+  border-radius: 2px;
+  color: lightGrey;
+  background-color: #121212;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}
+
+#open-project-close-button {
+  position: absolute;
+  bottom: 15px;
+  left: 16px;
+  cursor: pointer;
+  border: 1px solid lightGrey;
+  border-radius: 5px;
+  color: lightGrey;
+  background-color: #121212;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}

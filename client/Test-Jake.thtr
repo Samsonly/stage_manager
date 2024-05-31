@@ -1,0 +1,4987 @@
+{
+  "projectName": "Test With Jake",
+  "script": {
+    "playTitle": "Salem",
+    "playDescription": " ",
+    "actStructure": [
+      {
+        "actTitle": " ",
+        "actDescription": " ",
+        "sceneStructure": [
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: Prologue]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: \"Thou Shalt Not Suffer a Witch to Live\" Exodus 22:18]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "\"Thou Shalt Not Suffer a Witch to Live.\" Exodus 22:18."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Did you know that when that verse was first translated into ancient Greek over two thousand years ago, it may have actually meant to warn against poisoners, not witches?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Nothing about magic and no mention at all about secret compacts with the Devil."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I wonder how those whose lives were irrevocably impacted by centuries of witch hunts and persecutions would react to that little piece of trivia."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Long beat as audience takes this in)"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Out]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "In fact, it wasn't until around the time the bible was first translated into English that the idea of witches as lost souls who convene with the Devil for nefarious means began to emerge."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Coincidence?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(All three women shrug in their own way)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "For centuries, witches have been scattered throughout the stories and histories of Western Civilization."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "From fairy tales and plays of old, to even modern books and films, we've all grown up with an idea of what a witch may look like, or how she might behave."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Many of you right this very moment might even be thinking about another time you witnessed three seemingly innocent witches come together on a stage."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "TRIO.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "\"Double, double toil and trouble; Fire burn and cauldron bubble!\""
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(They laugh. Throughout the following, other witches enter and lurk in the shadows as lights slightly come up leaving them half visible in the background.)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "But when our families first came over to America, there were no best selling children's books about family friendly witches."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "You couldn't identify a witch by whether or not her skin was green."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And even the Brothers Grimm were still a couple of hundred years in the future."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "When we first crossed the ocean and settled into our New England towns and villages, only one book made the journey."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The Bible."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And that book had a very clear stance on witches."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: \"Thou Shalt Not Suffer a Witch to Live\" Exodus 22:18]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ALL.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "\"Thou Shalt Not Suffer a Witch to Live.\""
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(The TRIO stay in their pools of light as the rest of the lights go back out. Behind them during the following, multiple scenes are set in different parts of the stage by the others before they exit)"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: Out]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Out]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "There was a dramatic cultural shift in the way suspected witches were accused and dealt with in the century between the European Witch Hunts and the events that took place across Salem in 1692."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Although tens of thousands of Europeans had been hanged or burned at the stake, the associated fear and hysteria had begun to fade by the time many made the long journey to the new colonies."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "However, without having any solutions to the abundant threats they faced in the new world, many searched for guidance and advice in the superstitions of old."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And what better scapegoat than the Devil himself, or those working on his behalf, when your livestock dies overnight, or someone you care for comes down with a new and mysterious illness?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(The pools of light fade out and NURSE, BISHOP, and MARTIN exit as lights come up on an empty stage as ELIZABETH HOWE and MARTHA CARRIER enter from opposite sides of the stage and meet in the middle. They turn to the audience)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "Prologue",
+            "sceneLocation": " ",
+            "sceneDescription": "BRIDGET BISHOP, SUSANNAH MARTIN, and REBECCA NURSE enter and cross downstage. As each \"witch\" enters, a pool of light comes up where they land, keeping the rest of the stage in darkness.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Afflicted Girls]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HOWE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Towards the end of January, 1692, two young girls in Salem Village began to show signs of physical distress. For weeks, nine year old Betty Parris,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA CARRIER.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "and her eleven year old cousin, Abigail Williams, would have frequent fits of convulsions and spasms, appearing to be in great pain."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HOWE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "However, these were not just any random girls. Both of these girls lived in the house of the newly ordained, and highly controversial, minister:"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(GILES COREY enters in time for:)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "GILES COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Samuel Parris."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(G. COREY moves into the background. HOWE and CARRIER continue talking to the audience as they also get ready for the scene by laying down on benches and pulling blankets over themselves)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA CARRIER.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Many in Salem felt cheated by the rushed process in finding their new minister."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HOWE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Unsure if he was the right fit, the village committee decided to vote against providing firewood for him and his family."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA CARRIER.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Leaving the Parris household to fend for themselves in the brutal New England winter, and causing Parris to resent the very community he was tasked with leading."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HOWE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "But the symptoms were getting worse for his daughter and niece, and he had to get to the bottom of it."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(JOHN PROCTOR enters to G. COREY center stage)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And soon, a doctor was sent for, in order to weigh in on the mysterious illness."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights shift subtly to establish scene)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Do you have any idea what ails them, doctor?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "DR GRIGGS (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Whatever it is, the only thing I can be certain of is that it is not natural in origin."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Doctor?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "DR GRIGGS (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Reverend, I fear that the cause of the girls convulsions may well stem from some sort of... sorcery."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Beat)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "I believe them to be afflicted by witchcraft."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(After a moment, J. PROCTOR exits to one side of the stage and takes off cloak as he settles into his scene. G. COREY crosses over to HOWE and CARRIER)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Do you see who does this to you?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Both girls shake their heads no)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "BETTY PARRIS (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I know not, father."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(G. COREY places a damp piece of cloth on HOWE's head and then returns the background. MARTHA COREY enters to join J. PROCTOR. Across the stage, SARAH GOOD and ELIZABETH PROCTOR enter)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "GILES COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The fits of both young girls continued to grow worse, and before long, two more girls became afflicted."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The seventeen year old niece and housemaid of Dr. Griggs, Elizabeth Hubbard, who had likely heard about the afflictions from her guardian,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH GOOD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "As well as twelve year old Ann Putnam Jr, the eldest child of Thomas Putnam and his wife-"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Ann Putnam Sr. Both of whom were among the most prominent advocates for Reverend Parris and his parish."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(HOWE, M. COREY, CARRIER, and GOOD all return to the scenes. All three scenes happen simultaneously)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM SR (E. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Ann, please tell me who does this to you. Who hurts you and torments you with the devil's aide?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She blinds me with her magic."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Abigail, please. You need to give me a name. I cannot help you or my daughter if I do not know who is responsible."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She doesn't want me to know who she is."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She? So it is a witch?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(ABIGAIL doesn't respond)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "DR GRIGGS (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Elizabeth, I've always taken care of you since your parents passed, and I always will, but I need you to tell me now. Who afflicts you?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HUBBARD (M. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I can't tell, uncle. But she hurts me so. I feel her stabbing me with pins all over."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I've had enough of this, Betty. Now tell me: Whose face do you see when the fits come?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(HOWE doesn't respond. J. PROCTOR, G. COREY, and E. PROCTOR all begin to leave. HOWE has one last spasm and faintly calls out:)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "BETTY PARRIS (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Tituba..."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(ALL stop moving. G. COREY turns to HOWE and rushes to her side. HOWE doesn't seem to realize what she said)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Tituba? Our Tituba does this to you? Is that who you see?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(HOWE hesitantly nods her head)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "BETTY PARRIS (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "...yes."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(G. COREY stands up and moves to leave before stopping once more)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Is there anyone else, Betty?"
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Beat)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Does anyone else afflict you, or does the responsibility of these despicable actions rest solely on Tituba?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BETTY PARRIS (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "It's not only Tituba."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SAMUEL PARRIS (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Excitedly)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Who? Who else does this to you?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(ALL AFFLICTED GIRLS turn to their guardians)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ALL AFFLICTED GIRLS.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Sarah Good and Sarah Osborne."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(G. COREY, J. PROCTOR, and E. PROCTOR all react to finally hearing names from their charges. Then they exit.)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "BETTY PARRIS (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "To spare his daughter, he sent her to Salem Town to stay with a distant relative and to avoid what he knew was on the horizon."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(HOWE exits)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "As fear spread throughout the village, Samuel Parris began to notice that all of a sudden, the seats in his parish were filled, and there was no longer talk of trying to force him out."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HUBBARD (M. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "However, if it had come out that Tituba, the reverend's own slave, was the sole cause of all of the sorcery, things would have changed quite quickly for the polarizing minister."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Fortunately for him, his daughter and niece, as well as the other two afflicted girls, all soon named the other two women, officially kicking off what would become the foundation for the Salem Witch Trials with three accused witches."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights out as GOOD, M. COREY, and CARRIER exit. A pool of light comes up downstage and SUSANNAH MARTIN walks into it)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "1. The Afflicted Girls",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: Salem's First Three Witches]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Salem Village Meetinghouse]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Following the accusations from the afflicted girls, warrants went out for Tituba, Sarah Good, and Sarah Osborne, and the very next day all three were held for questioning by the local magistrates."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Sarah Good, a local homeless woman who was known for wandering door to door with her four year old daughter Dorothy begging for food or shelter, was often seen muttering under her breath when leaving, regardless of the outcome, which led many to believe she was casting spells. During her examination, she claimed innocence, and when the girls in the crowd began to act tormented, she blamed her co-accused Sarah Osborne."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Osborne, on the other hand, maintained that she had nothing to do with witchcraft and was confused as to why anyone would claim otherwise. However, one family in Salem Village would disagree with that notion. A few years prior when her husband passed away, he left the land to their two sons. But when she eventually remarried, she kept the land for herself, which greatly angered her late husband's relatives... the Putnam family."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "But the one who stood out the most out of the trio, was Samuel Parris' slave Tituba. She was liked within the minister's household, and unlike the Sarahs who were named alongside her, the community in general knew very little about her. Although before very long, that would all change. When Tituba was examined in front of a crowd nearly the size of the village itself, she not only admitted to hurting the girls and being a witch, but she swore that both Sarah Good and Sarah Osborne, as well as a few others whose names she did not know, were all tormenting the girls"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Magistrates Hathorne and Corwin decided they had enough evidence to charge the three women with witchcraft, and they were all sent to Boston to wait in jail for their trials while the rest of Salem Village began to wonder to themselves just who those other witches she talked about might be."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: Out]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Out]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(The pool of light goes out as MARTIN exits. Lights transition into two scenes in the background. On one side of the stage, MARTHA COREY and GILES COREY enter and sit on chairs facing each other. On the other side of the stage, ELIZABETH PROCTOR, SARAH GOOD, and ELIZABETH HOWE enter and huddle around a table)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "2. Salem's First Three Witches",
+            "sceneLocation": " ",
+            "sceneDescription": "Throughout the following, shadow puppets appear and act out the scenes as they are narrated.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: Martha Corey, The Oracle]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH GOOD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The Putnams were not the type to let such an enticing opportunity simply pass them by."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "But this was quickly becoming far too important of an operation to place in the hands of just one twelve year old girl,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HOWE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "So they also recruited their orphaned maid Mercy Lewis to assist them."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH GOOD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And with the community fearful of who else might be working with the devil,"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(JOHN PROCTOR enters and joins the Putnam side)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Thomas Putnam and his family went to work."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH GOOD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "It was a good time to be on the side of the Putnams."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "GILES COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Something I wish my wife Martha would have considered before publicly declaring the afflicted to be a bunch of foolish girls starving for attention."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to G. COREY)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Hush, Giles. What are you even doing over here? You're supposed to be over there playing Ezekiel Cheever so you can verify what the Putnams say happened."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "GILES COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Oh! That's this scene?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(M. COREY sighs deeply in frustration. J. PROCTOR, E. PROCTOR, GOOD, and HOWE attempt to quietly signal for G. COREY to get over to their side. M. COREY gives G. COREY a slight push, and he finally crosses over to the Putnam side. ALL transition into their scenes. M. COREY is busy folding linens on her side, while the rest begin on the other side. Lights dim on Corey side)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "We will be going over to the Corey household shortly to inquire about her actions."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "EZEKIEL CHEEVER (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "When she attacked you this morning, can you remember what it was that she was wearing? If she is wearing the same when we call upon her, it will prove her guilt."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I could not tell. When she first came to me, she blinded me so that I could not see her or what she was wearing, but she told me her name. She told me it was Goody Corey and that she'd be back to hurt me again!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(J. PROCTOR and G. COREY exit the Putnam side of the stage and make their way to the Corey side. Lights dim on the Putnams, and rise on the Coreys. J. PROCTOR and G. COREY walk up behind M. COREY. He takes off his hat and starts to talk)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I am not a witch."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Uh.. E-excuse me?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(M. COREY turns to face J. PROCTOR directly now)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "That is why you are here, is it not? To accuse me of being a witch like those three poor women you all paraded through the village last week?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Those, women, were conspiring with the devil to torment my daughter. As well as the daughter and niece of our minister, I might add."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(M. COREY scoffs and returns to folding her linens)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The only thing afflicting those young girls is a bad case of wanting to get out of their housework. You and I both know that."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Are you saying that my daughter is lying, Goody Corey?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Aye."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I assure you tha-"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Oh drop the act, Thomas. We both know that you don't have any evidence to formally make an accusation because no such evidence exists."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Sternly)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "There are other ways of determining guilt."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Are there now?"
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Pausing her folding)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Okay, then. If I have been attacking your daughter as you suggest, what is it that I was wearing when she saw me? I doubt she could answer such a question."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(M. COREY turns back to her work with a smug smile on her face. G. COREY and J. PROCTOR look shocked)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "EZEKIEL CHEEVER (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Excuse me, Goody Corey, but why would you ask such a question?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Because if she could tell you what I was wearing all the way back at the Putnam farm, then you would know that I had been there. But since I highly doubt she could know such a thing, I am not worried."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "You should be, Goody Corey."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Annoyed, M. COREY stares up at the two men)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And why is that?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "EZEKIEL CHEEVER (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Because young Ann did say you came to her this very morning."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And she said that you knew we'd ask what you were wearing, so you blinded her!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Then how did she know it was I?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS PUTNAM (J. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She said you told her so."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Goodman Putnam, if you think me a witch, then you are the blind one. The eyes of all those in Salem who think so are kept closed. But I will open them."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(M. COREY returns to her work once more. J. PROCTOR and G. COREY share a look, and then leave the Corey side. Lights fade and scene resets. ALL reset the stage and exit as a pool of light comes up downstage and REBECCA NURSE enters into it)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "3. Martha Corey, The Oracle",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: Don't Mess with the Putnams]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Putnam Household]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "With Martha Corey, two other names were supplied by the Putnam family that week. Dorothy Good, the four year old daughter of now imprisoned Sarah, was questioned and then arrested when Ann Jr and Mary Walcott claimed that she acted like a deranged animal, and that her apparition would bite and scratch them."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "And soon, news would reach me at my home that another name provided by the Putnam clan was none other than my own, Rebecca Nurse. The most absurd part of it all, is that no one even knows who it was who first mentioned my name."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Ann Putnam Jr and Mercy Lewis both claimed that it was Ann's mother who told them to accuse me. Whereas Ann Sr told everyone that her daughter had provided my name."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Despite the confusion about how I was initially accused, more would join in and claim that I was afflicting them. I never stood a chance."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Proctor Household]"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "However, as more and more girls throughout the village became afflicted, not everyone in the community was so quick to believe their stories."
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "John Proctor, a local farmer whose own maid had begun to have fits, was heard telling his neighbor that he thought that the girls should all be hanged for the lies they were spreading."
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Word of what John Proctor had said about the girls quickly made it back to the families of the afflicted, and by the end of the week, his wife Elizabeth Proctor, was brought in for questioning."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: Out]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Out]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(The pool of light goes out as NURSE exits. GILES COREY enters and crosses to the judge's bench. MARTHA CARRIER, SARAH GOOD, ELIZABETH HOWE, SARAH WILDES, MARTHA COREY, ALICE PARKER, and MARY EASTY enter and cross to the witness benches. JOHN PROCTOR enters and sits in front of them. ELIZABETH PROCTOR enters last and crosses up to the examination chair as the lights settle in for the court setting)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "4. Don't Mess with the Putnams",
+            "sceneLocation": " ",
+            "sceneDescription": "Throughout the following, shadow puppets appear and act out the scenes as they are narrated.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Examination of Elizabeth Proctor]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to Afflicted Girls)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Is this the woman who torments you?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She tried to make me sign her book!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Me too! She showed me her dark book and told me to sign it or she'd have my life."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(GOOD stands and moves to strike E. PROCTOR but before she can hit her, she howls in pain and falls to the floor)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Look up on the beam, her spirit sits and mocks us!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(CARRIER points to the ceiling and everyone follows her gaze)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "This is pure nonsense, Magistr-"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Oh no, Goodman Proctor is about to make Mercy Lewis have a fit!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(HOWE hears this and then has a fit)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Look how he makes Elizabeth Hubbard levitate!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(M. COREY lifts in her seat, but before anyone can investigate, G. COREY continues)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to J. PROCTOR)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "What do you say to this?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I-"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Watch out! He plans to attack Susanna Sheldon and Betty Booth!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(PARKER and EASTY writhe in pain)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Do you see how the Devil will deceive you?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Now he is to make us all fall over."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(ALL the afflicted girls fall over in unison)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The children could see what you were going to do before you hurt them!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "This is Nonsense!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(ALL except J. PROCTOR freeze. He turns to the audience, visibly shaken from the chaos)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "By the end of the day my wife and I were in chains and on our way to the Boston jail, and I was officially the first man accused of witchcraft in Salem Village."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights fade as ALL exit. Three pools of light appear downstage as SUSANNAH MARTIN, BRIDGET BISHOP, and REBECCA NURSE enter into them)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "5. The Examination of Elizabeth Proctor",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Power of the Afflicted]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "After the events that occurred during the examination of Elizabeth Proctor, the group of girls headed by Ann Putnam Jr and Abigail Williams became known as the \"Visionary Girls\"."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And by the first couple weeks of May, these visionary girls went on to accuse dozens more throughout Salem and beyond."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Nearby towns and villages had started hearing all about the witches of Salem, and the brave young girls who stood up to them."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "So whenever someone was taken ill without any known origin, witchcraft was quickly assumed to be the cause."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The reputation of the visionary girls led the leaders of neighboring communities to send word, asking if they would come visit and lend their talents to root out witches."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And by using local gossip, town history, and the reputations of those who lived nearby, names were quickly provided."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And so while more people were still being questioned and imprisoned in Salem Village, other communities quickly joined in by sending their own accused to Boston in order to await trial."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The vast majority of all the people who were rounded up over the next few weeks fit into one of three categories."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Some were easy targets who simply had a history of being stubborn or difficult-"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "As was the case for both Susannah Martin and Bridget Bishop here. (MARTIN and BISHOP glare at NURSE) as well as Martha Carrier:"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA CARRIER.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "A year or so before the visionary girls came to Andover, my family had moved to town. Shortly after, we all came down with Smallpox, which some in the community claimed we brought."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "and of course Sarah Good:"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH GOOD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Who better to lock up than the local homeless woman who was a constant thorn in everyone's side"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Others were targeted for their decisions to speak out against the proceedings like the Proctors and the Corey's had,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "They targeted my wife Elizabeth for calling them Liars."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And then John for defending me in court."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "GILES COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I warned Martha not to dismiss the girls so quickly."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Yet my fool of a husband Giles went and did the same thing after I was arrested."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And as John Willard was about to do"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN WILLARD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "It was my job to arrest the accused, but I saw through their lies and refused to be their muscle any longer."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Whereas others found themselves guilty of perhaps the most scandalous offense of all... Standing in the way of the Putnam family. A lesson Rebecca Nurse had to learn the hard way:"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I had never done a single thing to the Putnam family. But they had been in power struggles with my husband, as well as land battles with my brothers. Yet it was the women in my family who paid the price."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Beat)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Soon after my arrest, two of my sister's were also accused. My sister Mary Easty-"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARY EASTY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Would be tried and found guilty less than a month after Rebecca. Our other sister Sarah Cloyce was also jailed, but she would eventually live to see the end of the trials. The Putnams didn't stop with just us though. They even went after another relation: Elizabeth Howe."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HOWE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I had been in the middle of my own land dispute against a neighboring family when their daughter became ill. Soon after, I was accused of witchcraft since it was believed to run in families, even though I was only the niece by law of Rebecca, Mary, and Sarah."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And then there was the wicked Sarah Wildes:"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH WILDES.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "My biggest mistake was marrying a man just seven months after his wife had died. His late wife... a member of the Putnams."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "One by one the outcasts, the brave, and the enemies of those in power were accused, examined, and sent to jail.."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "It was during this time that the first victim of the Salem Witch trials lost their life. Sarah Osborne, one of the original three to be accused, died in prison while awaiting trial."
+                    }
+                  ]
+                }
+              }
+            ],
+            "sceneTitle": "6. The Power of the Afflicted",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Search for John Willard]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Willard Household]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "At about the same time that the innocent prisoners witnessed the first death from their group, scared villagers believed they witnessed the first murder by a witch against a victim."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "John Willard had been a constable tasked with the job of bringing in accused witches for examinations. As he saw how the young girls behaved, however, he stepped away from his job, refusing to contribute to what he saw as frivolous accusations. To perhaps nobody's surprise but his own, the afflicted girls soon went on to then accuse him of being a witch. Wanting to avoid the ordeal, Willard decided to go on the run. But the idea of a witch on the loose heightened an already tense community, and even with him gone, the girls found ways to cause him trouble. When Willard's cousin-in-law Daniel Wilkins became suddenly sick, the girls seized the opportunity to blame him for that as well. Mercy Lewis claimed to see Willard's apparition hovering over and afflicting him. She then made the bold prediction that if Willard was not apprehended within the next two days, that Wilkins would die from his afflictions."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Unfortunately, for both Wilkins and Willard, Mercy's bluff proved to be true and two days later, Wilkins passed away. A new warrant was released for Willard's arrest, and two days later they discovered him hiding out halfway across the colony, tending to one of his properties. He was immediately examined and sent to prison for the murder of Daniel Wilkins."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Out]"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "7. The Search for John Willard",
+            "sceneLocation": " ",
+            "sceneDescription": "Throughout the following, shadow puppets appear and act out the scenes as they are narrated.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Court of Oyer and Terminer]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "As the newly appointed Governor began to assemble a panel of judges to oversee the witch trials, there was one topic no one could seem to agree on:"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The issue of whether or not to allow testimony including supernatural evidence into the trials."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "But the magistrates and residents of Salem and throughout the colony had already put a lot of weight on the testimony of those who claimed to have visions or see apparitions."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And to ignore it entirely would have led to most of the cases being dismissed before the trials even started."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Which was not really a great strategy for a group of judges trying to make a name for themselves in a new world."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Beat)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "In the end, they decided to hear all potential evidence against the accused,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And the Court of Oyer and Terminer wasted no time in going after their first victim."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "It couldn't be one of the first accused, since Sarah Osborne had already died in prison, and Sarah Good was about to give birth to a new baby any day."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And Tituba was thought to be a prime witness for many of the cases, so they couldn't start with her either."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Instead they decided to go with someone they knew beyond any reasonable doubt that they could make the accusation stick."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Someone who had been accused of being a witch before."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Someone with other crimes on their record other than just witchcraft."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Someone they knew absolutely no one could argue was anything but the vilest..."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Most treacherous..."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Good for noth-"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "That's enough!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights out on NURSE and MARTIN. BISHOP is all alone on stage. MARTIN and NURSE move to sit in the back of the witness benches as GILES COREY enters and crosses to the judge's bench. MARTHA CARRIER, SARAH GOOD, ELIZABETH HOWE, SARAH WILDES, MARTHA COREY, ALICE PARKER, and MARY EASTY enter and cross to the witness benches)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "8. The Court of Oyer and Terminer",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Trial of Bridget Bishop]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Bridget Bishop, You are now brought before Authority to give account of what witchcraft you have conversed in."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to Afflicted Girls)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Has this woman hurt you?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She has!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Goody Bishop pokes me with pins and stabs me!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MERCY LEWIS (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She stabs me as well!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "You are accused by many for hurting them, what do you say to it?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I never saw these persons before; nor I never was in this place before."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARY WALCOTT (WILDES).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "My brother struck at her appearance when she came to me, and we heard her coat tear!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(HATHORNE motions for BISHOP to show her cloak, and indeed a tear can be seen in it)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "They say you bewitched your first husband to death."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "If it please your worship, I know nothing of it."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(BISHOP shakes her head, and the afflicted girls all writhe in pain as their heads shake too)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "It's been said that you have been called a witch for over 10 years, but that you don't think you are a witch because the Devil can't hurt you."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I am no witch. I have no familiarity with the Devil."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "How is it then, that your appearance hurts these girls?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I am innocent."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Then why do we witness witchcraft before us. The way you move your body impacts the afflicted before our eyes."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I know nothing of it. I am not a witch. I don't know what a witch is."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "How do you know that you are not a witch if you do not know what one is?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Let me be clear. If I were any such person, you would know it."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "You may threaten me, but that is all you can do here."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I told you, I am innocent."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Lights shift to downstage pools. BISHOP walks into one as MARTIN and NURSE join her)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "I was the only one tried and executed in that first session. I was an example. A threat. An omen of things to come. But I wouldn't be there for any of it."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Beat. BISHOP exits as NURSE and MARTIN watch her go)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "9. The Trial of Bridget Bishop",
+            "sceneLocation": " ",
+            "sceneDescription": "Lights shift to the courtroom. As BISHOP crosses to the examination chair, the afflicted girls fall into fits.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The First Execution]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Everything changed after Bridget."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The community began to split between those wanting the trials to end, and those who wanted to root out all the perceived evils in Salem and beyond."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And things had only gotten worse by the time I was pulled in..."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Everyone changes seats. NURSE returns to the upstage bench. MARTIN moves to sit in the examination chair)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "10. The First Execution",
+            "sceneLocation": " ",
+            "sceneDescription": "NURSE and MARTIN glance at the empty light solemnly, and then return to the audience.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Trial of Susannah Martin]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to Afflicted Girls)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Do you know this Woman?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Aye! It is Goody Martin. She hath hurt me often."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(GOOD throws her glove at MARTIN in a fit. MARTIN laughs loudly)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "What, do you laugh at it?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Well I may at such folly."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Is this folly? The hurt of these young girls?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Scoffing)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "I never hurt man, woman, or child."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MERCY LEWIS (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She hath hurt me a great many times as well, and she pulls me down!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(MARTIN laughs again)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARY WALCOTT (WILDES).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "This woman hath hurt me a great many times!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "What do you say to all this?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I have no hand in witchcraft."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "What did you do then? Did you not give yourself to the Devil?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "No, never in my life."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Then what ails these girls?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I do not know."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "But what do you think?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I have no interest in thinking of such things."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "So you do not think they are bewitched?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "No."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Beat)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "I do not think they are."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(AFFLICTED GIRLS moan and scream. They all react differently, but obviously distressed)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Then tell me your thoughts about them."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I cannot give you my thoughts, for they are only mine when I possess them. If I gave my thoughts, then they would belong to you."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Long Beat Lights shift. Everyone except MARTIN and NURSE freezes.)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "(to audience) I don't think they liked how I handled the early examination, and I was thrown in jail shortly following that encounter. However, if I thought that by the time I was called for trial they would use more sense, I was sorely mistaken. Behold the undeniable evidence placed upon me..."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights return. Everyone changes seats to imply it is a different time. ELIZABETH PROCTOR and JOHN PROCTOR enter separately. J. PROCTOR stands in front of the benches as E. PROCTOR sits)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Goody Atkinson, what say you about Goody Martin?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH ATKINSON (E. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Eighteen years hence, I was visited upon by Goody Martin. She had walked all the way from her home in Amesbury to my own, nine miles away in Newbury. It was a particularly dirty and wet time of year, but when she arrived at my door..."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Beat)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "she was as dry and clean as I was."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Murmurs increase)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Goody Martin, how do you explain walking nine miles in such conditions, and yet be as clean as if you had just stepped out your own door."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Incredulously)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "I do not enjoy a dirty cloak. Have you ever attempted to get mud and soil out of clean linen?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Murmurs continue to grow as no one listens to her. Lights shift. ALL are still as MARTIN and NURSE walk down to their pools of light. MARTIN is silent, and then exits)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Susannah was found guilty of witchcraft that morning and sentenced to hang. However, unlike Bridget Bishop, she would not do so alone."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(NURSE moves to sit in the examination chair. G. COREY stays at the judge's bench. HOWE exits. CARRIER, GOOD, WILDES, M. COREY, PARKER, and EASTY reposition. E. PROCTOR sits close to WILDES. J. PROCTOR exits)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "11. The Trial of Susannah Martin",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Trial of Rebecca Nurse]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Is this the woman you have seen?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARY WALCOTT (WILDES).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I have seen her, but I do not know if she is the one who has hurt me."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ABIGAIL WILLIAMS (CARRIER).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She has hurt me! She has bitten and pinched me."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And I as well. She sits in my grandmother's chair and mocks and torments me."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "What say you, Goody Nurse?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The lord knows I have not hurt them. I am an innocent person."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(WILDES screams and holds her arm close to her body while displaying three pins for all to see)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARY WALCOTT (WILDES).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Rebecca Nurse just appeared before me and stuck me with these pins!"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(E. PROCTOR stands up)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH CLOYCE (E. PROCTOR).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She lies! I just saw her pull those pins from her dress with my own eyes."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARY WALCOTT (WILDES).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She stood in front of me and told me it was her and not the devil. It is her who hurts me!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I am as innocent as a newborn and have hurt no one!"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Yet they accuse you of hurting them, so if you think they are untruthful, then you must look upon them as murders."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I do think them bewitched, but I cannot help if the devil appears in my image."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Lights shift. Everyone except NURSE freezes)"
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to audience)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "No matter how I responded, Judge Hathorne refused to believe me, and he sent me to jail to await my trial. Thirty-nine brave villagers, including cousins and relatives of Thomas Putnam, signed a petition asking for my release, but it had no effect. Instead I was kept locked up in conditions unsuitable for someone of my age and health for almost a hundred days before my trial."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights return. Everyone changes seats to imply it is a different time. ELIZABETH HOWE enters downstage)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "How does the jury find the prisoner?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS FISK (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "We the jury find Rebecca Nurse... Not Guilty."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(There is a general uproar in the crowd. Some are happy, others are furious. The noise is overwhelming)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Quiet! All of you. Sit in your seats and remain quiet. (to HOWE) Did you say Not Guilty?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS FISK (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I did."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(G. COREY considers this for a moment)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Did the jury consider the testimony given in which the accused referred to Goody Hobbs, a confessed witch, in saying \"I thought she was one of us?\""
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS FISK (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "If it pleases the honored court, we did."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "I think you should all take some time to consider it once more."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights dim. A pool of light remains over NURSE)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to audience)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "The jury reconvened to discuss the matter before coming back to ask me a question."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights reset to courtroom)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Has the jury re-considered the testimony?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS FISK (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "We'd like to ask Goody Nurse a question if we may?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Proceed."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS FISK (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Goody Nurse. We'd like to know what it is you meant when you referred to the known witch, Goody Hobbs, as \"one of us\". Can you explain this to us?"
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(NURSE is not looking at HOWE at all. She is just staring off into the distance and ignoring everything in sight. Lights dim. A pool of light remains over NURSE)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to audience)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "What no one told them, or that they failed to notice throughout my entire trial, was that at the age of 72, I had lost most of my hearing. I didn't even know that anyone had asked me a question until two days later when my family came to visit me and asked me about it. I thought we were all just waiting."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights reset to courtroom)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JONATHAN HATHORNE (G. COREY).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Has the jury finally reached a verdict?"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "THOMAS FISK (HOWE).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "We have. Although we had originally found Rebecca Nurse Not Guilty of witchcraft, the evidence that the honored courtroom encouraged us to review, along with the unsatisfactory response from Goody Nurse when questioned, has led us to re-consider our decision. We, the jury of Essex County find Rebecca Nurse Guilty on all charges of witchcraft."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(CROWD erupts again, this time with opposite reactions from each faction until lights switch to display three pools of light downstage. ALL exit as NURSE walks into her pool of light. The other two remain empty. She looks out to the audience, and after a beat, exits. Lights out.)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "12. The Trial of Rebecca Nurse",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: John Proctor's Letter to Boston]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "...having condemned us already before our trials, being so much incensed and engaged against us by the Devil, makes us bold to beg and implore your..."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(J. PROCTOR pauses and looks out to the audience)"
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(to audience)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Oh."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Beat)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Um."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Beat)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "I apologize for that. You were probably expecting one of them"
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Gesturing to TRIO offstage)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "to keep this whole thing going, but... well... the truth is that we've reached the end of their stories.On July 19th, 1692, Susannah Martin and Rebecca Nurse, were hanged in Salem Village. Along side them were, Elizabeth Howe, Sarah Wildes, and Sarah Good, whose newborn daughter had also passed a few days after entering the world in a Boston jail cell."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "At this point in the historic events of Salem, less than a third of the total executions had yet to take place. But the seed of doubt that Bridget's politically sanctioned murder had planted quickly grew into public indignation by the way Rebecca Nurse had been treated."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "With nearly two hundred people imprisoned, and a flawless conviction record of six for six, the Court of Oyer and Terminer plowed ahead without hesitation."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(J. PROCTOR has hit his pool of light by this point. Lights shift)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "13. John Proctor's Letter to Boston",
+            "sceneLocation": " ",
+            "sceneDescription": "Lights up on JOHN PROCTOR sitting on the floor as he writes a letter in dim light. He reads what he is writing as he puts the quill to paper.<br><br>Throughout the scene, he makes his way downstage left towards a slowly growing pool of light.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: George Corwin, The High Sheriff of Essex County]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Proctor Household]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "In addition to the way we were treated in the jail and courtroom, I had also recently discovered that Sheriff George Corwin, the favorite nephew of Judge Corwin, had ransacked my entire estate."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "He went about and stole anything that was not attached to the property. Even going as far as dumping out all of our food, ale, and supplies that he could not take with him just so that my family couldn't use them. My eleven children were left with a home empty of food or firewood."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Salem Jail]"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "I had also learned that my son, as well as the family members of Martha Carrier, had been tortured by the Sheriff in an attempt to elicit a guilty plea. Only when a man who was more merciful than the rest took pity upon was my son, was he released and sent home with marks all over his body and blood dripping from his nose."
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "In a desperate attempt for mercy, I wrote a letter to a number of influential ministers from Boston, begging for them to send help, or at the very least for them to attend the trials so that some sort of justice could be restored.No reply ever came, so the trials and executions continued as planned."
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Within the next couple of weeks, six more innocent souls, including myself, my wife Elizabeth, Martha Carrier, George Jacobs Sr, John Willard, and George Burroughs would be condemned to be hanged, effectively doubling the total number of victims."
+                  }
+                ]
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Out]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(ELIZABETH PROCTOR enters and walks over to J. PROCTOR. She places her hand on his shoulder before turning to the audience)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "14. George Corwin, The High Sheriff of Essex County",
+            "sceneLocation": " ",
+            "sceneDescription": "Throughout the following, shadow puppets appear and act out the scenes as they are narrated.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: A Life Spared]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Despite being found guilty, I was given a temporary reprieve due to the fact I was pregnant. The rest of my group, including my husband, weren't so lucky."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(J. PROCTOR looks up to E. PROCTOR. They share a look before he exits)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "By this point in the trials, most of the community seemed split on how to proceed. Serious doubts had been raised about the way things were being handled, yet many were afraid to speak up about their concerns out of fear of being accused themselves."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Letters from throughout the colony were sent to the Governor pleading with him to intercede, but they continued to go unanswered as those who were currently in charge of the trials continued to feel empowered by their successes and began to seem invincible."
+                    }
+                  ]
+                }
+              }
+            ],
+            "sceneTitle": "15. A Life Spared",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Pressing of Giles Corey]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Salem Village Meetinghouse]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "The next to feel the brunt of their wrath was Giles Corey. Finally, after spending over 150 days in prison, he was finally given his day in court. After seeing how his wife had been treated during her trial, Giles had no interest in participating in what he had come to believe was a mockery of justice."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "So when the judges proceeded to ask if he would accept the terms of the trial, Giles refused to respond. The court was at a loss. Their own tradition stated that without his consent, they could not proceed with a trial."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "However, Thomas Putnam stepped up and reminded the court of an old English law which outlined a method for dealing with such a situation."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "The technique included laying an individual down on the ground before placing a wooden plank across the length of their body. Then they would add one stone after another, stopping only to ask the victim if they were willing to give their consent."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Giles Corey, at the age of 81, withstood this torture for hours. When asked once more if he was willing to stand trial, he had two words for Sheriff Corwin: More Weight."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Beat)"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Shadow Box: Out]"
+                  },
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights shift back to a single pool of light above E. PROCTOR)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "16. The Pressing of Giles Corey",
+            "sceneLocation": " ",
+            "sceneDescription": "Throughout the following, shadow puppets appear and act out the scenes as they are narrated.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Final Trip to Gallows Hill]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "News of the torture of Giles Corey sent shockwaves throughout the village, but another group, including his own wife Martha, were already set to be executed just two days later."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "On September 22nd, 1692, eight more victims of the witch-hunt, Mary Easty, Martha Corey, Ann Pudeator, Samuel Wardwell, Mary Parker, Alice Parker, Wilmot Redd and Margaret Scott were driven out to Gallows Hill and executed in front of Salem village."
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "With eight new names added to the books, it was the deadliest day of the Salem Witch Trials. But perhaps the most surprising victim of that fateful afternoon was the Court of Oyer and Terminer itself."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Lights shift as E. PROCTOR crosses towards mid stage. The rest of the ensemble returns to the stage a few moments before their line)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "As more and more complaints of disgust made their way to those in Boston, someone finally decided to take a stand."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "One week later, Governor Phips orders that supernatural evidence would no longer allowed,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Effectively rendering most of the accusations against the over 150 people still waiting in jail useless."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And by the end of October, Phips put a stop to any further arrests of suspected witches throughout the colonies"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Despite this limitation, the new court still managed to find three more woman guilty of witchcraft,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "and in January, Chief Justice Stoughton signed the death warrant for the newly condemned,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "as well as those such as Elizabeth Proctor who were previously sentenced but still waiting their execution."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Finally, almost a full year after the first warrant was issued for three innocent women in the small village of Salem, all that had been accused were finally released."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "In a tragic case of symmetry, the last person released from jail was the same who kicked off the entire hysteria."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Tituba had previously renounced her claims about witchcraft and later admitted that Parris told her that he would leave her to rot in jail if she didn't keep the lies going."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "A promise that he would keep. She was eventually sold to an unknown family who agreed to pay for her court fees after Parris refused to do so a year later."
+                    },
+                    {
+                      "tagType": "cdir",
+                      "tagContent": "(Beat)"
+                    },
+                    {
+                      "tagType": "d",
+                      "tagContent": "Accusers and accused alike would spend decades living in the same communities as each other, attending the same churches, and voting on the same committees, all without anyone officially taking responsibility for what had happened."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "All except one young woman."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Almost two decades after the events of Salem, Ann Putnam Jr decided to break the silence on what had occurred, offering an apology for her part in the events."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "She was the only afflicted to ever do so."
+                    }
+                  ]
+                }
+              }
+            ],
+            "sceneTitle": "17. The Final Trip to Gallows Hill",
+            "sceneLocation": " ",
+            "sceneDescription": " ",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: The Apology of Ann Putnam Jr]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "\"I, Ann Putnam, desire to be humbled before God for that sad and humbling providence that befell my father's family in the year about '92; that I, then being in my childhood, should, by such a providence of God, be made an instrument for the accusing of several persons of a grievous crime, whereby their lives were taken away from them, whom now I have just grounds and good reason to believe they were innocent persons...\""
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights shift)"
+                  }
+                ]
+              }
+            ],
+            "sceneTitle": "18. The Apology of Ann Putnam Jr",
+            "sceneLocation": " ",
+            "sceneDescription": "SARAH GOOD enters into a downstage pool of light, as ALL enter and watch from their places on stage.<br><br>She is holding a letter in her hand, and she occasionally glances at it as she reads it out loud for everyone to hear.",
+            "sceneEnding": "TRANSITION TO:"
+          },
+          {
+            "internalSceneStructure": [
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "[Title Box: Finale]"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH GOOD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "\"Innocent persons.\""
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Beat)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Those innocent persons were Sarah Osborne, Roger Toothaker,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Bridget Bishop,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH GOOD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Sarah and Mercy Good,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Rebecca Nurse,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Susannah Martin,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SARAH WILDES.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Sarah Wildes,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH HOWE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Elizabeth Howe,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "John Proctor,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA CARRIER.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Martha Carrier,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "JOHN WILLARD.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "John Willard,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "ELIZABETH PROCTOR.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "George Jacobs Sr, George Burroughs"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "GILES COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Giles Corey,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARTHA COREY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Martha Corey,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "MARY EASTY.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Mary Easty."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Alice Parker, Ann Pudeator, Margaret Scott,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Wilmot Redd, Samuel Wardwell, Mary Parker,"
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Ann Foster, and Lydia Dustin."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Twenty Five \"innocent persons\" would lose their lives in a nine month time period."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Nineteen were hanged at the gallows."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "SUSANNAH MARTIN.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Four were left to die in a jail cell that they never belonged in."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "BRIDGET BISHOP.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "And two were tortured to death all in an attempt to extract the guilt for a crime that was fabricated for no reason other than a failed attempt to grab power for those who felt wronged by their community in the past. Power that was never obtained."
+                    }
+                  ]
+                }
+              },
+              {
+                "characterContent": {
+                  "characterName": "REBECCA NURSE.",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "Only time would eventually allow our loved ones to continue forward where we could not, and even perhaps learn how to forgive those who had wronged us."
+                    }
+                  ]
+                }
+              },
+              {
+                "stgdContent": [
+                  {
+                    "tagType": "stgd",
+                    "tagContent": "(Lights shift. GOOD continues reading from her letter. Throughout the following, the group moves in close behind her, some placing their hands gently on her shoulder, as they dip their heads)"
+                  }
+                ]
+              },
+              {
+                "characterContent": {
+                  "characterName": "ANN PUTNAM JR (GOOD).",
+                  "characterAction": [
+                    {
+                      "tagType": "d",
+                      "tagContent": "..I was a cause, with others, of so sad a calamity to them and their families; for which cause I desire to lie in the dust, and earnestly beg forgiveness of God, and from all those unto whom I have given just cause of sorrow and offense.\""
+                    },
+                    {
+                      "tagType": "enda",
+                      "tagContent": "END OF ACT"
+                    }
+                  ]
+                }
+              }
+            ],
+            "sceneTitle": "19. Finale",
+            "sceneLocation": " ",
+            "sceneDescription": "ALL enter into their spots just before their lines, looking out to the audience.",
+            "sceneEnding": "FADE TO BLACK"
+          }
+        ],
+        "actEnding": "END OF ACT"
+      }
+    ],
+    "playEnding": "END OF PLAY"
+  },
+  "characterList": [
+    {
+      "characterName": "BRIDGET BISHOP",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "SUSANNAH MARTIN",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "REBECCA NURSE",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "TRIO",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "ALL",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "ELIZABETH HOWE",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "MARTHA CARRIER",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "GILES COREY",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "JOHN PROCTOR",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "SAMUEL PARRIS (G. COREY)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "DR GRIGGS (J. PROCTOR)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "BETTY PARRIS (HOWE)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "MARTHA COREY",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "SARAH GOOD",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "ELIZABETH PROCTOR",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "ANN PUTNAM SR (E. PROCTOR)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "ANN PUTNAM JR (GOOD)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "ABIGAIL WILLIAMS (CARRIER)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "ELIZABETH HUBBARD (M. COREY)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "ALL AFFLICTED GIRLS",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "THOMAS PUTNAM (J. PROCTOR)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "EZEKIEL CHEEVER (G. COREY)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "JONATHAN HATHORNE (G. COREY)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "JOHN WILLARD",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "MARY EASTY",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "SARAH WILDES",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "MERCY LEWIS (HOWE)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "MARY WALCOTT (WILDES)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "SARAH ATKINSON (E. PROCTOR)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "SARAH CLOYCE (E. PROCTOR)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    },
+    {
+      "characterName": "THOMAS FISK (HOWE)",
+      "mainActor": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ],
+      "understudy": [
+        {
+          "actorID": "",
+          "actorName": "",
+          "actorEmail": ""
+        }
+      ]
+    }
+  ],
+  "contactDirectory": [],
+  "productionAssignments": [
+    {
+      "department": "cast",
+      "role": "BRIDGET BISHOP",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "SUSANNAH MARTIN",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "REBECCA NURSE",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "TRIO",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "ALL",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "ELIZABETH HOWE",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "MARTHA CARRIER",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "GILES COREY",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "JOHN PROCTOR",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "SAMUEL PARRIS (G. COREY)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "DR GRIGGS (J. PROCTOR)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "BETTY PARRIS (HOWE)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "MARTHA COREY",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "SARAH GOOD",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "ELIZABETH PROCTOR",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "ANN PUTNAM SR (E. PROCTOR)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "ANN PUTNAM JR (GOOD)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "ABIGAIL WILLIAMS (CARRIER)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "ELIZABETH HUBBARD (M. COREY)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "ALL AFFLICTED GIRLS",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "THOMAS PUTNAM (J. PROCTOR)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "EZEKIEL CHEEVER (G. COREY)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "JONATHAN HATHORNE (G. COREY)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "JOHN WILLARD",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "MARY EASTY",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "SARAH WILDES",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "MERCY LEWIS (HOWE)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "MARY WALCOTT (WILDES)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "SARAH ATKINSON (E. PROCTOR)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "SARAH CLOYCE (E. PROCTOR)",
+      "assignee": "",
+      "email": ""
+    },
+    {
+      "department": "cast",
+      "role": "THOMAS FISK (HOWE)",
+      "assignee": "",
+      "email": ""
+    }
+  ],
+  "lineNotes": []
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import { useProject } from "./Contexts/ProjectContext.js";
-import { useSettings } from "./Contexts/SettingsContext.js";
+import { useProject } from "../contexts/ProjectContext.js";
+import { useSettings } from "../contexts/SettingsContext.js";
 import "../styles/CharacterList.css";
 
 const CharacterList = () => {

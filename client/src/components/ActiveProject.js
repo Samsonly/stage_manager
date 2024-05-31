@@ -1,5 +1,5 @@
 import React from "react";
-import { SettingsProvider } from "./Contexts/SettingsContext";
+import { SettingsProvider } from "../contexts/SettingsContext";
 import ProjectWindow from "./ProjectWindow";
 
 function ActiveProject() {

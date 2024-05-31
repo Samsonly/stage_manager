@@ -2,13 +2,15 @@ import React from "react";
 import {
   useGlobal,
   UPDATE_PROJECT_ACTIVE_STATUS,
-} from "./Contexts/GlobalContext.js";
+  SET_LOADING_TYPE,
+} from "../contexts/GlobalContext.js";
 import "../styles/WelcomeScreen.css";
 
 function WelcomeScreen() {
   const { dispatch } = useGlobal();
 
-  const createNewProject = () => {
+  const activateProject = (loadingType) => {
+    dispatch({ type: SET_LOADING_TYPE, payload: `${loadingType}` });
     dispatch({ type: UPDATE_PROJECT_ACTIVE_STATUS, payload: true });
   };
 
@@ -17,12 +19,15 @@ function WelcomeScreen() {
       <div id="welcome-banner"></div>
       <div id="welcome-header">Create or Choose a Project to Manage</div>
       <div id="welcome-button-row">
-        <button id="welcome-create-button" onClick={createNewProject}>
+        <button
+          id="welcome-create-button"
+          onClick={() => activateProject("new")}
+        >
           Create New Project
         </button>
         <button
           id="welcome-open-button"
-          onClick={() => console.log("Open Project button clicked")}
+          onClick={() => activateProject("open")}
         >
           Open Project
         </button>

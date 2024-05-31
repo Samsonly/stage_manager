@@ -1,0 +1,110 @@
+.modal-background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#end-rehearsal-modal-window {
+  position: relative;
+  width: 560px;
+  height: 90%;
+  background-color: #121212;
+  color: lightGrey;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Heuristica", serif;
+  border: 1px solid lightGrey;
+  box-shadow: 0 0 2px 2px rgba(211, 211, 211, 0.5);
+}
+
+#end-rehearsal-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  overflow: auto;
+}
+
+#end-rehearsal-title {
+  grid-column: 1 / -1;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#end-rehearsal-line-notes-row {
+  display: flex;
+  margin-top: 20px;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox + label {
+  position: relative;
+  padding-left: 30px;
+}
+
+.custom-checkbox + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  background: transparent;
+}
+
+.custom-checkbox:checked + label:before {
+  background: lightgrey;
+}
+
+.custom-checkbox:checked + label:after {
+  content: "✓";
+  position: absolute;
+  left: 0px;
+  top: -3px;
+  font-size: 20px;
+  color: #121212;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-close-button {
+  position: absolute;
+  bottom: 15px;
+  left: 16px;
+  cursor: pointer;
+  border: 1px solid lightGrey;
+  border-radius: 5px;
+  color: lightGrey;
+  background-color: #121212;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}
+
+.menu-save-button {
+  position: absolute;
+  bottom: 15px;
+  right: 16px;
+  cursor: pointer;
+  border: 1px solid lightGrey;
+  border-radius: 5px;
+  color: lightGrey;
+  background-color: #121212;
+  box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}

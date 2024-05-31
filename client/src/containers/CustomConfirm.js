@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/CustomConfirm.css"; // Adjust path as necessary
+import "../styles/CustomConfirm.css"; // Adjust path as necessary
 
 function CustomConfirm({ message, onNo, onYes }) {
   return (
