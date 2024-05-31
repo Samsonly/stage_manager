@@ -3,9 +3,10 @@ import * as THREE from "three";
 import {
   useProject,
   SET_CAMERA_PARAMETERS,
-} from "./Contexts/ProjectContext.js";
+} from "../contexts/ProjectContext.js";
 import GroundplanView from "./GroundplanView.js";
 import GroundplanEditor from "./GroundplanEditor.js";
+import UploadGroundplan from "./UploadGroundplan.js";
 import "../styles/DesignView.css";
 import rightIcon from "../assets/right.png";
 import leftIcon from "../assets/left.png";
@@ -409,10 +410,8 @@ function DesignView() {
   switch (currentDesignView) {
     case "baseView":
       return (
-        <div id="design-view">
-          <div id="groundplan-frame" ref={frameRef}>
-            <div id="design-text">Design View</div>
-          </div>
+        <div id="base-design-view">
+          <UploadGroundplan />
         </div>
       );
     case "groundplanView":

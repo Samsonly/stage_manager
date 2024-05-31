@@ -1,6 +1,6 @@
 import React from "react";
-import { useGlobal } from "./components/Contexts/GlobalContext"; // Adjust path as necessary
-import { ProjectProvider } from "./components/Contexts/ProjectContext"; // Adjust path as necessary
+import { useGlobal } from "./contexts/GlobalContext"; // Adjust path as necessary
+import { ProjectProvider } from "./contexts/ProjectContext"; // Adjust path as necessary
 import WelcomeScreen from "./components/WelcomeScreen";
 import ActiveProject from "./components/ActiveProject";
 

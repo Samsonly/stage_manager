@@ -3,8 +3,8 @@ import {
   useProject,
   UPDATE_PROJECT_SAVE_FILE,
   UPDATE_PROJECT_SAVE_STATUS,
-} from "./Contexts/ProjectContext.js";
-import { useSettings } from "./Contexts/SettingsContext.js";
+} from "../contexts/ProjectContext.js";
+import { useSettings } from "../contexts/SettingsContext.js";
 import "../styles/AddContact.css";
 
 const AddContact = () => {
@@ -15,8 +15,6 @@ const AddContact = () => {
   const [email, setEmail] = useState("");
   const [hasEmailAddress, setHasEmailAddress] = useState(false);
   const { projectSaveFile } = state;
-
-  console.log(projectSaveFile);
 
   const generateContactId = () => {
     const lastContact = projectSaveFile.contactDirectory?.slice(-1)[0];

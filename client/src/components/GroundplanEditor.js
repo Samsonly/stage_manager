@@ -9,7 +9,7 @@ import {
   SET_CAMERA_PARAMETERS,
   SET_OBJECT_SIZE,
   SET_RENDER_FUNCTION,
-} from "./Contexts/ProjectContext.js";
+} from "../contexts/ProjectContext.js";
 import "../styles/GroundplanEditor.css";
 
 const GroundplanEditor = ({ resizeTrigger }) => {

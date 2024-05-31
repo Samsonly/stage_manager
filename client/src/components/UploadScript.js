@@ -1,14 +1,12 @@
-import React from "react";
-import uploadScriptImage from "../assets/upload-script.png";
 import {
   useProject,
   UPDATE_PROJECT_SAVE_FILE,
   UPDATE_PROJECT_SAVE_STATUS,
   SET_LEFT_BUTTONS_VISIBLE,
   SET_CURRENT_SCRIPT_VIEW,
-} from "./Contexts/ProjectContext.js";
+} from "../contexts/ProjectContext.js";
 
-function UploadScript() {
+const UploadScript = () => {
   const { dispatch } = useProject();
 
   const handleFileChange = (event) => {
@@ -19,10 +17,16 @@ function UploadScript() {
         try {
           const jsonData = JSON.parse(e.target.result);
           const characters = createUniqueCharacterList(jsonData.actStructure);
+          const initialProductionAssignments =
+            createInitialProductionAssignments(characters);
 
           dispatch({
             type: UPDATE_PROJECT_SAVE_FILE,
-            payload: { script: jsonData, characterList: characters },
+            payload: {
+              script: jsonData,
+              characterList: characters,
+              productionAssignments: initialProductionAssignments,
+            },
           });
           dispatch({ type: UPDATE_PROJECT_SAVE_STATUS, payload: false });
           dispatch({ type: SET_LEFT_BUTTONS_VISIBLE, payload: true });
@@ -73,22 +77,16 @@ function UploadScript() {
     }));
   };
 
-  return (
-    <div id="upload-script-button-container">
-      <button
-        id="upload-script-button"
-        onClick={uploadScript}
-        style={{ padding: 0, border: "none", background: "transparent" }}
-      >
-        <img
-          id="upload-script-button-icon"
-          src={uploadScriptImage}
-          alt="Upload Script"
-        />
-        <div id="upload-script-button-text">Upload Script</div>
-      </button>
-    </div>
-  );
-}
+  const createInitialProductionAssignments = (characters) => {
+    return characters.map((character) => ({
+      department: "cast",
+      role: character.characterName, //edit this to match desired result
+      assignee: "",
+      email: "",
+    }));
+  };
+
+  return uploadScript;
+};
 
 export default UploadScript;

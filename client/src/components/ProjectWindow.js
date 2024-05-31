@@ -4,15 +4,19 @@ import TopContainer from "./TopContainer.js";
 import MiddleContainer from "./MiddleContainer.js";
 import BottomContainer from "./BottomContainer.js";
 import CreateNewProject from "./CreateNewProject.js";
+import OpenProject from "./OpenProject.js";
 import {
   useProject,
   SET_HORIZONTAL_PANE_SIZES,
-} from "./Contexts/ProjectContext.js";
+} from "../contexts/ProjectContext.js";
+import { useGlobal } from "../contexts/GlobalContext.js";
 import "../styles/ProjectWindow.css";
 
 function ProjectWindow() {
-  const { state, dispatch } = useProject();
-  const { horizontalPaneSizes, isTaskSectionVisible, projectSaveFile } = state;
+  const { state: projectState, dispatch } = useProject();
+  const { state: globalState } = useGlobal();
+  const { horizontalPaneSizes, isTaskSectionVisible } = projectState;
+  const { loadingType } = globalState;
 
   const handleDragEnd = (horizontalPaneSizes) => {
     dispatch({ type: SET_HORIZONTAL_PANE_SIZES, payload: horizontalPaneSizes });
@@ -47,7 +51,8 @@ function ProjectWindow() {
           <BottomContainer />
         </>
       )}
-      {!projectSaveFile.projectName && <CreateNewProject />}
+      {loadingType === "new" && <CreateNewProject />}
+      {loadingType === "open" && <OpenProject />}
     </div>
   );
 }

@@ -1,56 +1,36 @@
 import React from "react";
-import UploadScript from "./UploadScript.js";
 import PlayContent from "./PlayContent.js";
-import TableOfContents from "./TableOfContents.js";
-import {
-  useProject,
-  SET_CURRENT_SCRIPT_VIEW,
-  SET_SCRIPT_SCROLL_POSITION,
-} from "./Contexts/ProjectContext.js";
+import UploadScript from "./UploadScript.js";
+import uploadScriptImage from "../assets/upload-script.png";
+import { useProject } from "../contexts/ProjectContext.js";
 import "../styles/ScriptView.css";
 
 function ScriptView() {
-  const { state, dispatch } = useProject();
-  const { currentScriptView, projectSaveFile } = state;
+  const { state } = useProject();
+  const { projectSaveFile } = state;
+  const uploadScript = UploadScript();
+  const isScriptLoaded = Object.keys(projectSaveFile.script).length > 0;
 
-  const onViewSection = (view, elementId) => {
-    dispatch({ type: SET_CURRENT_SCRIPT_VIEW, payload: view });
-    if (view === "script") {
-      setTimeout(() => {
-        const element = document.getElementById(elementId);
-        if (element) {
-          const scrollPosition = element.offsetTop;
-          dispatch({
-            type: SET_SCRIPT_SCROLL_POSITION,
-            payload: scrollPosition,
-          });
-        }
-      }, 0);
-    }
-  };
-
-  switch (currentScriptView) {
-    case "baseView":
-      return (
+  return (
+    <div id="script-view">
+      {isScriptLoaded ? (
+        <PlayContent scriptJson={projectSaveFile.script} />
+      ) : (
         <div id="base-view">
-          <UploadScript />
+          <div id="upload-script-button-container">
+            <button id="upload-script-button" onClick={uploadScript}>
+              <img
+                id="upload-script-button-icon"
+                src={uploadScriptImage}
+                alt="Upload Script"
+              />
+              <div id="upload-script-button-text">Upload Script</div>
+            </button>
+          </div>
         </div>
-      );
-    case "script":
-      return (
-        <div id="script-view">
-          <PlayContent scriptJson={projectSaveFile.script} />
-        </div>
-      );
-    case "tableOfContents":
-      return (
-        <div id="script-view">
-          <TableOfContents onViewSection={onViewSection} />
-        </div>
-      );
-    default:
-      return null;
-  }
+      )}
+    </div>
+  );
 }
 
 export default ScriptView;

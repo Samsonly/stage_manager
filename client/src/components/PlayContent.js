@@ -1,13 +1,16 @@
 import React, { useEffect, useRef } from "react";
+import LineNotes from "./LineNotes.js";
 import {
   useProject,
   SET_SCRIPT_SCROLL_POSITION,
-} from "./Contexts/ProjectContext.js";
+} from "../contexts/ProjectContext.js";
+import { useSettings } from "../contexts/SettingsContext.js";
 
 function PlayContent({ scriptJson }) {
   const { state, dispatch } = useProject();
   const { scriptScrollPosition } = state;
   const playContentRef = useRef(null);
+  const { showSettings } = useSettings();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +35,15 @@ function PlayContent({ scriptJson }) {
       playContentRef.current.scrollTop = scriptScrollPosition;
     }
   }, [scriptScrollPosition]);
+
+  const handleShiftClick = (event, characterName, dialogue) => {
+    if (event.shiftKey) {
+      showSettings(LineNotes, {
+        characterName: characterName.slice(0, -1),
+        characterDialogue: dialogue.tagContent,
+      });
+    }
+  };
 
   return (
     <div className="playStructure" ref={playContentRef}>
@@ -73,6 +85,7 @@ function PlayContent({ scriptJson }) {
                               ? "characterContent"
                               : ""
                           }
+                          // onClick={(e) => handleShiftClick(e, content)}
                         >
                           {content.stgdContent &&
                             content.stgdContent.map((item, itemIndex) => (
@@ -99,6 +112,13 @@ function PlayContent({ scriptJson }) {
                                       action.tagType === "d"
                                         ? "characterDialogue"
                                         : "characterDirection"
+                                    }
+                                    onClick={(e) =>
+                                      handleShiftClick(
+                                        e,
+                                        content.characterContent.characterName,
+                                        action
+                                      )
                                     }
                                   >
                                     {action.tagContent}
