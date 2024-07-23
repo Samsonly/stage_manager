@@ -33,13 +33,25 @@ const LineNotes = ({ characterName, characterDialogue }) => {
   const inputRef = useRef([]);
   const isHandlingWordClick = useRef(false);
 
+  document.addEventListener("click", () => {
+    if (!isHandlingWordClick.current) {
+      setActiveInput(null);
+    }
+  });
+
   const handleWordClick = (index) => {
+    //remove below
+    console.log(`handleWordClick triggered at index: ${index}`);
+    console.log(
+      `addedWords: ${addedWords}, format: ${dialogueWords[index].format}`
+    );
+    //remove above
     isHandlingWordClick.current = true;
-
     setDialogueWords((prevWords) => {
-      const newWords = prevWords.map((word, idx) => ({ ...word }));
-
+      let newWords = [...prevWords];
       if (addedWords && newWords[index].format === "space") {
+        console.log(`Inserting new input field at index: ${index + 1}`);
+
         const newInput = {
           text: "",
           format: "",
@@ -47,6 +59,11 @@ const LineNotes = ({ characterName, characterDialogue }) => {
         };
         newWords.splice(index + 1, 0, newInput);
         setActiveInput(index + 1);
+        setTimeout(() => {
+          if (inputRef.current[index + 1]) {
+            inputRef.current[index + 1].focus();
+          }
+        }, 0);
       } else if (droppedWords && newWords[index].format === "static") {
         newWords[index].format = "dropped";
       } else if (droppedWords && newWords[index].format === "dropped") {
@@ -54,32 +71,29 @@ const LineNotes = ({ characterName, characterDialogue }) => {
       } else if (newWords[index].format === "added") {
         newWords[index].format = "";
         setActiveInput(index);
+        setTimeout(() => {
+          if (inputRef.current[index]) {
+            inputRef.current[index].focus();
+            inputRef.current[index].select();
+          }
+        }, 0);
       }
-
       return newWords;
     });
-
     setTimeout(() => {
-      if (inputRef.current[index + 1] && addedWords) {
-        inputRef.current[index + 1].focus();
-      } else if (inputRef.current[index]) {
-        inputRef.current[index].focus();
-        inputRef.current[index].select();
-      }
       isHandlingWordClick.current = false;
     }, 0);
   };
+
   const handleInputChange = (index, event) => {
-    const hiddenMeasurer = document.getElementById("hiddenMeasurer");
-    hiddenMeasurer.textContent = event.target.value || " ";
-    const width = hiddenMeasurer.offsetWidth;
+    const width = `${Math.max(event.target.value.length, 1)}ch`;
     setDialogueWords(
       dialogueWords.map((word, idx) => {
         if (idx === index) {
           return {
             ...word,
             text: event.target.value,
-            inputWidth: `${width + 1}px`,
+            inputWidth: width,
           };
         }
         return word;
@@ -87,7 +101,7 @@ const LineNotes = ({ characterName, characterDialogue }) => {
     );
   };
 
-  const handleInputBlur = (index, event) => {
+  const handleInputBlur = (index) => {
     setDialogueWords((prevWords) => {
       if (prevWords[index].text.trim() === "") {
         return prevWords.filter((word, idx) => idx !== index);
@@ -104,13 +118,12 @@ const LineNotes = ({ characterName, characterDialogue }) => {
   };
 
   const saveLineNote = () => {
+    // Ensure all input fields are blurred before saving
     inputRef.current.forEach((input) => {
       if (input) input.blur();
     });
-    const filteredDialogueWords = dialogueWords.filter(
-      (word) => word.format !== "space"
-    );
-    const formattedDialogue = filteredDialogueWords.reduce((acc, word) => {
+
+    const formattedDialogue = dialogueWords.reduce((acc, word) => {
       if (word.format === "added") {
         return acc.concat(
           word.text.split(/\s+/).map((w) => ({
@@ -282,9 +295,8 @@ const LineNotes = ({ characterName, characterDialogue }) => {
                     }}
                     style={{
                       width: word.inputWidth,
-                      fontFamily: "Heuristica",
-                      fontSize: "20px",
-                      height: "18px",
+                      textDecoration: "line-through",
+                      color: "red",
                     }}
                   />
                 ) : (
@@ -294,13 +306,19 @@ const LineNotes = ({ characterName, characterDialogue }) => {
                     } ${
                       word.format === "added"
                         ? "line-notes-added-text"
-                        : word.format === "space"
-                        ? "line-notes-space"
                         : "line-notes-static-text"
                     }`}
                     onClick={() => handleWordClick(index)}
                   >
                     {word.text}
+                  </span>
+                )}
+                {index < dialogueWords.length - 1 && (
+                  <span
+                    className="line-notes-space"
+                    onClick={() => handleWordClick(index)}
+                  >
+                    {" "}
                   </span>
                 )}
               </React.Fragment>
@@ -314,17 +332,6 @@ const LineNotes = ({ characterName, characterDialogue }) => {
               Save
             </button>
           </div>
-          <span
-            id="hiddenMeasurer"
-            className="hidden-measurer"
-            style={{
-              position: "absolute",
-              visibility: "hidden",
-              whiteSpace: "nowrap",
-              fontSize: "20px",
-              fontFamily: "Heuristica",
-            }}
-          ></span>
         </div>
       </div>
     </div>

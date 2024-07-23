@@ -12,29 +12,34 @@ function ViewLineNotes() {
 
   const [activeCharacter, setActiveCharacter] = useState(null);
 
-  const formatLineText = (text) => {
-    const regex = /(\*[^*]+\*)|(_[^_]+_)/g;
-    return text.split(regex).map((part, index) => {
-      if (part) {
-        if (part.startsWith("*") && part.endsWith("*")) {
-          return (
-            <span key={index} className="droppedWords">
-              {part.slice(1, -1)}
-            </span>
-          );
-        } else if (part.startsWith("_") && part.endsWith("_")) {
-          return (
-            <span key={index} className="addedWords">
-              {part.slice(1, -1)}
-            </span>
-          );
-        }
-        return part;
+  const formatLineText = (line) => {
+    return line.map((word, index) => {
+      let formattedText;
+      if (word.format === "dropped") {
+        formattedText = (
+          <span key={index} className="droppedWords">
+            {word.text}
+          </span>
+        );
+      } else if (word.format === "added") {
+        formattedText = (
+          <span key={index} className="addedWords">
+            {word.text}
+          </span>
+        );
+      } else {
+        formattedText = <span key={index}>{word.text}</span>;
       }
-      return null;
+
+      // Add a space after each word except the last one
+      return (
+        <React.Fragment key={index}>
+          {formattedText}
+          {index < line.length - 1 && " "}
+        </React.Fragment>
+      );
     });
   };
-
   const renderCharacterTabs = () => {
     if (!storedLineNotes || storedLineNotes.length === 0)
       return <div>No line notes available.</div>;
@@ -71,7 +76,8 @@ function ViewLineNotes() {
 
   const handleExport = () => {
     if (activeCharacter) {
-      exportLineNotesUtil(storedLineNotes, activeCharacter);
+      const doc = exportLineNotesUtil(storedLineNotes, activeCharacter);
+      doc.save(`${activeCharacter}_line_notes.pdf`); // Save the PDF
     } else {
       alert("Please select a character to export notes for.");
     }
