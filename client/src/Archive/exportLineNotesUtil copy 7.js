@@ -11,6 +11,9 @@ const exportLineNotesUtil = (lineNotes, character) => {
   // set the margin to 36 points (0.5 inches)
   const margin = 36;
 
+  // set the top margin to 72 points (1 inch)
+  const topMargin = 72;
+
   // set the table width to 57% of the page width
   const tableWidth = (pageWidth - 2 * margin) * 0.57;
 
@@ -26,9 +29,14 @@ const exportLineNotesUtil = (lineNotes, character) => {
   const headerWidth = doc.getTextWidth(headerText);
 
   // draw the header text in the center of the page with an underline
-  doc.text(headerText, (pageWidth - headerWidth) / 2, margin + headerFontSize, {
-    underline: true,
-  });
+  doc.text(
+    headerText,
+    (pageWidth - headerWidth) / 2,
+    topMargin + headerFontSize,
+    {
+      underline: true,
+    }
+  );
 
   // define the header row and apply dataKeys to each column in the static table
   const staticTableColumns = [
@@ -75,7 +83,7 @@ const exportLineNotesUtil = (lineNotes, character) => {
   // creates the static table
   doc.autoTable({
     // set the start Y position for the top of the table
-    startY: margin + headerFontSize + 20,
+    startY: topMargin + 20,
 
     // set the header row
     head: [staticTableColumns.map((col) => col.header)],
@@ -195,47 +203,6 @@ const exportLineNotesUtil = (lineNotes, character) => {
     },
   });
 
-  const calculateTextHeight = (textArray) => {
-    let lineCount = 1;
-    const cellWidth = (pageWidth - 2 * margin) * 0.9 - 10;
-    let currentLineWidth = 0;
-    const spaceWidth = doc.getTextWidth(" ");
-
-    textArray.forEach((part) => {
-      const wordWidth = doc.getTextWidth(part.text);
-      if (currentLineWidth + spaceWidth + wordWidth > cellWidth) {
-        lineCount++;
-        currentLineWidth = wordWidth;
-      } else {
-        currentLineWidth += spaceWidth + wordWidth;
-      }
-    });
-    return lineCount * doc.getLineHeight();
-  };
-
-  // calculates the height of an actual character in the font
-  const getFontHeight = (doc) => {
-    const tempDoc = new jsPDF();
-    tempDoc.setFont("times", "normal");
-    tempDoc.setFontSize(doc.internal.getFontSize());
-
-    const text = "I"; // Use a character with consistent height
-    const textDimensions = tempDoc.getTextDimensions(text); // Get the text dimensions
-
-    return textDimensions.h * 2; // Return the height of the text which is the dimensions.h x2
-  };
-
-  // calculates the starting Y position for the text
-  const calculateStartingY = (cell, textHeight, doc) => {
-    const availableHeight = cell.height; // Total height of the cell
-    const lineHeight = doc.getLineHeight(); // Height of one line of text (including line spacing)
-    const fontHeight = getFontHeight(doc); // Measure the height of the actual characters
-    const lineSpacing = lineHeight - fontHeight; // Calculate line spacing between every line of text
-    const contentHeight = textHeight - lineSpacing; // Remove the excess line spacing from the total height of the content (divide lineSpacing by 2 to match ID 'center')
-    const cellPadding = (availableHeight - contentHeight) / 2; // Space remaining beyond the height of the content
-
-    return cell.y + cellPadding + fontHeight; // Starting point with correct font height
-  };
   // checks each grouping of line notes for the matching character and returns it if found.
   const findCharacterNotes = (lineNotes, character) => {
     const characterObj = lineNotes.find((note) => note[character]);
@@ -261,92 +228,169 @@ const exportLineNotesUtil = (lineNotes, character) => {
   };
 
   // converts the line notes into an array of objects with rich text formatting
-  // const richLine = (text) => {
-  //   const parts = [];
-  //   const regex = /(\*([^*]+)\*)|(_([^_]+)_)|([^*_]+)/g;
-  //   let match;
+  const richLine = (text) => {
+    const parts = [];
+    const regex = /(\*([^*]+)\*)|(_([^_]+)_)|([^*_]+)/g;
+    let match;
 
-  //   while ((match = regex.exec(text)) !== null) {
-  //     if (match[1]) {
-  //       parts.push({
-  //         text: match[2],
-  //         droppedWords: true,
-  //       });
-  //     } else if (match[3]) {
-  //       parts.push({
-  //         text: match[4],
-  //         addedWords: true,
-  //       });
-  //     } else if (match[5]) {
-  //       parts.push({ text: match[5] });
-  //     }
-  //   }
-
-  //   return parts;
-  // };
-
-  // determines the necessary height of the line note's cell with formatted text
-  const findCellHeight = (textArray) => {
-    const cellWidth = (pageWidth - 2 * margin) * 0.9 - 10;
-    const wordArray = [];
-    let lineCount = 0;
-    let currentLineWidth = 0;
-
-    doc.setFont("times", "normal");
-    doc.setFontSize(10);
-    const spaceWidth = doc.getTextWidth(" ");
-
-    textArray.forEach((part) => {
-      if (part.format === "dropped") {
-        doc.setFont("times", "bold");
-      } else {
-        doc.setFont("times", "normal");
+    while ((match = regex.exec(text)) !== null) {
+      if (match[1]) {
+        parts.push({
+          text: match[2],
+          droppedWords: true,
+        });
+      } else if (match[3]) {
+        parts.push({
+          text: match[4],
+          addedWords: true,
+        });
+      } else if (match[5]) {
+        parts.push({ text: match[5] });
       }
-      const wordWidth = doc.getTextWidth(part.text);
-      wordArray.push(wordWidth);
-    });
+    }
 
-    wordArray.forEach((wordWidth) => {
-      if (currentLineWidth + spaceWidth + wordWidth > cellWidth) {
-        lineCount++;
-        currentLineWidth = wordWidth; // Start new line with the current word
-      } else {
-        currentLineWidth += spaceWidth + wordWidth;
-      }
-    });
-
-    const rowHeight = "\n".repeat(lineCount);
-
-    return rowHeight;
+    return parts;
   };
 
-  // iterates through each line note object, converts the errors to abbreviated codes and applies the 'id' key to them. Then converts the line text to rich text formatting and applies the 'note' key to them
+  const createRichLineNotes = (doc, textArray, cellWidth) => {
+    let y = 0;
+    let lines = 0;
+    let x = 0;
+    const formattedText = [];
+
+    textArray.forEach((part) => {
+      const textWidth = cellWidth - doc.getLineHeight() * 2;
+
+      if (part.droppedWords) {
+        const textColor = [0, 128, 0];
+        const fontStyle = "bold";
+        const isLineThrough = false;
+        handleTextFormatting(
+          doc,
+          part.text,
+          textWidth,
+          formattedText,
+          x,
+          y,
+          textColor,
+          fontStyle,
+          isLineThrough
+        );
+      } else if (part.addedWords) {
+        const textColor = [255, 0, 0];
+        const fontStyle = "normal";
+        const isLineThrough = true;
+        handleTextFormatting(
+          doc,
+          part.text,
+          textWidth,
+          formattedText,
+          x,
+          y,
+          textColor,
+          fontStyle,
+          isLineThrough
+        );
+      } else {
+        const textColor = [0, 0, 0];
+        const fontStyle = "normal";
+        const isLineThrough = false;
+        handleTextFormatting(
+          doc,
+          part.text,
+          textWidth,
+          formattedText,
+          x,
+          y,
+          textColor,
+          fontStyle,
+          isLineThrough
+        );
+      }
+    });
+
+    return { formattedText, lines };
+
+    function handleTextFormatting(
+      doc,
+      text,
+      textWidth,
+      formattedText,
+      x,
+      y,
+      textColor,
+      fontStyle,
+      isLineThrough
+    ) {
+      doc.setFont("times", fontStyle);
+      doc.setTextColor(...textColor);
+
+      while (doc.getTextWidth(text) > textWidth) {
+        const textArr = text.split(" ");
+        let line = "";
+
+        while (
+          textArr.length > 0 &&
+          doc.getTextWidth(line + textArr[0]) <= textWidth
+        ) {
+          line += textArr.shift() + " ";
+        }
+
+        formattedText.push({
+          text: line.trim(),
+          x,
+          y,
+          color: textColor,
+          fontStyle,
+          isLineThrough,
+        });
+
+        y += doc.getLineHeight();
+        lines += 1;
+        text = textArr.join(" ");
+      }
+
+      formattedText.push({
+        text: text,
+        x,
+        y,
+        color: textColor,
+        fontStyle,
+        isLineThrough,
+      });
+
+      x += doc.getTextWidth(text);
+
+      if (x + doc.getTextWidth(text) > cellWidth - doc.getLineHeight() * 2) {
+        x = doc.getLineHeight();
+        y += doc.getLineHeight();
+        lines += 1;
+      }
+    }
+  };
+
   const dynamicTableRows = characterNotes.map((note) => {
-    // const textArray = richLine(note.line);
-    const textArray = note.line;
-    const rowHeight = findCellHeight(textArray);
+    const textArray = richLine(note.line);
+    const cellWidth = (pageWidth - 2 * margin) * 0.9;
+    const richLineNote = createRichLineNotes(doc, textArray, cellWidth);
+    const noteSpacing = "\n".repeat(richLineNote.lines); // Placeholder to match the number of lines
 
     return {
       id: errorCode(note.error),
-      note: textArray,
-      height: rowHeight,
+      note: richLineNote.formattedText,
+      height: noteSpacing,
     };
   });
 
-  // creates a dynamic table with the 'id' and 'note' keys for each row
   const dynamicTableColumns = [
     { header: "ID", dataKey: "id" },
     { header: "Note", dataKey: "note" },
   ];
 
-  // creates the dynamic table
   doc.autoTable({
-    // set the start Y position for the top of the table, and sets the header and body rows
     startY: doc.lastAutoTable.finalY + 20,
     head: [dynamicTableColumns.map((col) => col.header)],
     body: dynamicTableRows.map((row) => [row.id, row.height]),
-
-    // sets the structure and styles of the table
     columnStyles: {
       0: { cellWidth: (pageWidth - 2 * margin) * 0.1 },
       1: {
@@ -368,64 +412,45 @@ const exportLineNotesUtil = (lineNotes, character) => {
       fontStyle: "bold",
       fillColor: [255, 255, 255],
     },
-
-    // draws the line notes with rich text into each cell in the note column
     didDrawCell: (data) => {
       const { row, column, cell } = data;
 
       if (column.index === 1 && row.section === "body") {
         const textArray = dynamicTableRows[row.index].note;
-        const textHeight = calculateTextHeight(textArray);
-        let y = calculateStartingY(cell, textHeight, doc);
-        let x = cell.x + cell.padding("left");
 
-        textArray.forEach((part) => {
-          // Set the font and color based on the format
-          if (part.format === "dropped") {
-            doc.setFont("times", "bold");
-            doc.setTextColor(0, 128, 0);
-          } else if (part.format === "added") {
-            doc.setFont("times", "normal");
-            doc.setTextColor(255, 0, 0);
-          } else {
-            doc.setFont("times", "normal");
-            doc.setTextColor(0);
-          }
+        if (textArray && cell) {
+          let x = cell.x + cell.padding("left");
+          let y = cell.y + cell.padding("top") + doc.getLineHeight();
 
-          // Measure the text width after setting font's format
-          const textWidth = doc.getTextWidth(part.text);
-
-          // If the text exceeds the cell width, move to the next line before drawing
-          if (x + textWidth > cell.x + cell.width - cell.padding("right")) {
-            x = cell.x + cell.padding("left");
-            y += doc.getLineHeight();
-          }
-
-          // Draws the text, any formatting lines, and moves to the next position
-          if (part.format === "dropped") {
+          textArray.forEach((part) => {
+            doc.setFont("times", part.fontStyle); // Apply the font style
+            doc.setTextColor(...part.color);
             doc.text(part.text, x, y);
-            doc.setDrawColor(0, 128, 0);
-            doc.setLineWidth(0.75);
-            doc.line(x, y + 1.25, x + textWidth, y + 1.25);
-            x += textWidth + doc.getTextWidth(" ");
-          } else if (part.format === "added") {
-            doc.text(part.text, x, y);
-            doc.setDrawColor(255, 0, 0);
-            doc.setLineWidth(0.75);
-            doc.line(x - 0.5, y - 2.5, x + textWidth + 0.5, y - 2.5);
-            x += textWidth + doc.getTextWidth(" ");
-          } else {
-            doc.text(part.text, x, y);
-            x += textWidth + doc.getTextWidth(" ");
-          }
-        });
 
-        cell.text = "";
+            if (part.isLineThrough) {
+              doc.setDrawColor(...part.color);
+              doc.setLineWidth(1);
+              doc.line(x, y - 3, x + doc.getTextWidth(part.text), y - 3);
+            }
+
+            x += doc.getTextWidth(part.text);
+
+            if (
+              x + doc.getTextWidth(part.text) >
+              cell.width - cell.padding("right")
+            ) {
+              x = cell.x + cell.padding("left");
+              y += doc.getLineHeight();
+            }
+          });
+
+          cell.text = "";
+        }
       }
     },
   });
 
-  return doc;
+  doc.save(`${character}_line_notes.pdf`);
 };
 
 export default exportLineNotesUtil;

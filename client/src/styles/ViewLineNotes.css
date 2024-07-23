@@ -78,7 +78,6 @@
 .addedWords {
   color: red;
   text-decoration: line-through;
-  padding-right: 0.5ch;
 }
 
 .droppedWords {
@@ -94,6 +93,9 @@
 
 .note-line {
   margin-top: 5px;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .menu-close-button {

@@ -646,10 +646,165 @@
 // const maxZBoundary = -(Math.max(size.x + size.z, size.y + size.z) / 2);
 // currentCameraRef.current.position.set(0, 0, maxZBoundary);
 
-<div id="character-list-table">
+{
+  /* <div id="character-list-table">
   <div className="character-list-row">
     <div className="character-name-cell"></div>
     <div className="character-id-cell"></div>
     <div className="character-assignee-cell"></div>
   </div>
-</div>;
+</div>; */
+}
+
+const richLine = (text) => {
+  const parts = [];
+  const regex = /(\*([^*]+)\*)|(_([^_]+)_)|([^*_]+)/g;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match[1]) {
+      parts.push({
+        text: match[2],
+        droppedWords: true,
+      });
+    } else if (match[3]) {
+      parts.push({
+        text: match[4],
+        addedWords: true,
+      });
+    } else if (match[5]) {
+      parts.push({ text: match[5] });
+    }
+  }
+
+  return parts;
+};
+
+const findCellHeight = (textArray) => {
+  const cellWidth = (pageWidth - 2 * margin) * 0.9 - 10;
+  const wordArray = [];
+  let lineCount = 1;
+  let currentLineWidth = 0;
+
+  doc.setFont("times", "normal");
+  doc.setFontSize(10);
+  const spaceWidth = doc.getTextWidth(" ");
+
+  textArray.forEach((part) => {
+    if (part.format === "droppedWord") {
+      doc.setFont("times", "bold");
+    } else {
+      doc.setFont("times", "normal");
+    }
+
+    const words = part.text.split(" ");
+    words.forEach((word) => {
+      const wordWidth = doc.getTextWidth(word);
+      wordArray.push(wordWidth);
+    });
+  });
+
+  wordArray.forEach((wordWidth) => {
+    if (currentLineWidth + spaceWidth + wordWidth > cellWidth) {
+      lineCount++;
+      currentLineWidth = wordWidth; // Start new line with the current word
+    } else {
+      currentLineWidth += spaceWidth + wordWidth;
+    }
+  });
+
+  const rowHeight = "\n".repeat(lineCount);
+
+  return rowHeight;
+};
+
+const dynamicTableRows = characterNotes.map((note) => {
+  const textArray = richLine(note.line);
+  const rowHeight = findCellHeight(textArray);
+
+  return {
+    id: errorCode(note.error),
+    note: textArray,
+    height: rowHeight,
+  };
+});
+
+const dynamicTableColumns = [
+  { header: "ID", dataKey: "id" },
+  { header: "Note", dataKey: "note" },
+];
+
+doc.autoTable({
+  startY: doc.lastAutoTable.finalY + 20,
+  head: [dynamicTableColumns.map((col) => col.header)],
+  body: dynamicTableRows.map((row) => [row.id, row.height]),
+  columnStyles: {
+    0: { cellWidth: (pageWidth - 2 * margin) * 0.1 },
+    1: {
+      cellWidth: (pageWidth - 2 * margin) * 0.9,
+    },
+  },
+  styles: {
+    overflow: "linebreak",
+    valign: "middle",
+    halign: "center",
+    lineWidth: 0.5,
+    lineColor: 0,
+    font: "times",
+    cellPadding: 5,
+    fontSize: 10,
+    textColor: 0,
+  },
+  headStyles: {
+    fontStyle: "bold",
+    fillColor: [255, 255, 255],
+  },
+  didDrawCell: (data) => {
+    const { row, column, cell } = data;
+
+    if (column.index === 1 && row.section === "body") {
+      const textArray = dynamicTableRows[row.index].note;
+
+      if (textArray && cell) {
+        let x = cell.x + cell.padding("left");
+        let y = cell.y + cell.padding("top") + doc.getLineHeight();
+
+        textArray.forEach((part) => {
+          doc.setFont("times", part.fontStyle); // Apply the font style
+          doc.setTextColor(...part.color);
+          doc.text(part.text, x, y);
+
+          if (part.isLineThrough) {
+            doc.setDrawColor(...part.color);
+            doc.setLineWidth(1);
+            doc.line(x, y - 3, x + doc.getTextWidth(part.text), y - 3);
+          }
+
+          x += doc.getTextWidth(part.text);
+
+          if (
+            x + doc.getTextWidth(part.text) >
+            cell.width - cell.padding("right")
+          ) {
+            x = cell.x + cell.padding("left");
+            y += doc.getLineHeight();
+          }
+        });
+
+        cell.text = "";
+      }
+    }
+  },
+});
+
+//message that I might not need: After each part has had its text width measured, I want this logic to occur:
+// const spaceWidth = //this should be the measurement of a single empty space in fontSize 10 times.
+// let lineCount = 1;
+
+// Let's pretend we had an array where the partWidth attribute values of each element were as follows:
+
+// [15, 6, 21, 3, 4, 45, 12, 2]
+
+// I want a system that takes the value of the first element: `part[0].partWidth`, and compares it to the `cellWidth`. If `part[0].partWidth` is less than `cellWidth`, then we should add `spaceWidth` and `part[1].partWidth`, and then compare THAT number to `cellWidth`. If `part[0].partWidth + spaceWidth + part[1].partWidth` is still less than `cellWidth`, then we should continue by adding `spaceWidth` and `part[2].partWidth` etc. etc.
+
+// IF/When our equation reaches a point where the tally becomes "Greater Than" `cellWidth`, then we need to take the most recently added part, and break the string down

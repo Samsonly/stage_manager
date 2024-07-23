@@ -1,5 +1,5 @@
 {
-  "projectName": "Project Work File",
+  "projectName": "Line Note Tester",
   "script": {
     "playTitle": "Carly Reynolds and the S.T.E.A.M. Team",
     "playDescription": " ",
@@ -6622,226 +6622,107 @@
       ]
     }
   ],
-  "contactDirectory": [
-    {
-      "contactID": "#00001",
-      "firstName": "Alan",
-      "lastName": "Aronson",
-      "email": "samsoninthearts+alan@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00002",
-      "firstName": "Briana",
-      "lastName": "Bloucher",
-      "email": "samsoninthearts+Briana@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00003",
-      "firstName": "Christine",
-      "lastName": "Carlson",
-      "email": "samsoninthearts+Christine@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00004",
-      "firstName": "David",
-      "lastName": "Danielson",
-      "email": "samsoninthearts+David@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00005",
-      "firstName": "Emily",
-      "lastName": "Erickson",
-      "email": "samsoninthearts+Emily@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00006",
-      "firstName": "Freddy",
-      "lastName": "French",
-      "email": "samsoninthearts+Freddy@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00007",
-      "firstName": "Gina",
-      "lastName": "Gomez",
-      "email": "samsoninthearts+Gina@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00008",
-      "firstName": "Hank",
-      "lastName": "Hutchinson",
-      "email": "samsoninthearts+Hank@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00009",
-      "firstName": "Ingrid",
-      "lastName": "Islington",
-      "email": "samsoninthearts+Ingrid@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00010",
-      "firstName": "Jerome",
-      "lastName": "Jacobson",
-      "email": "samsoninthearts+Jerome@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00011",
-      "firstName": "Kim",
-      "lastName": "Kohl",
-      "email": "samsoninthearts+Kim@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00012",
-      "firstName": "Larry",
-      "lastName": "Lynx",
-      "email": "samsoninthearts+Larry@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00013",
-      "firstName": "Martha",
-      "lastName": "Mason",
-      "email": "samsoninthearts+Martha@gmail.com",
-      "hasEmailAddress": true
-    },
-    {
-      "contactID": "#00014",
-      "firstName": "Nancy",
-      "lastName": "Nancerson",
-      "email": "samsoninthearts+nancy@gmail.com",
-      "hasEmailAddress": true
-    }
-  ],
+  "contactDirectory": [],
   "productionAssignments": [
     {
       "department": "cast",
       "role": "CARLY",
-      "assignee": "Alan Aronson",
-      "email": "samsoninthearts+alan@gmail.com"
+      "assignee": "",
+      "email": ""
     },
     {
       "department": "cast",
       "role": "MR. PAXTON",
-      "assignee": "Briana Bloucher",
-      "email": "samsoninthearts+Briana@gmail.com"
+      "assignee": "",
+      "email": ""
     },
     {
       "department": "cast",
       "role": "MS. ALEXANDRIA",
-      "assignee": "Christine Carlson",
-      "email": "samsoninthearts+Christine@gmail.com"
+      "assignee": "",
+      "email": ""
     },
     {
       "department": "cast",
       "role": "HEDY LAMARR",
-      "assignee": "David Danielson",
-      "email": "samsoninthearts+David@gmail.com"
+      "assignee": "",
+      "email": ""
     },
     {
       "department": "cast",
       "role": "ROSALIND FRANKLIN",
-      "assignee": "Emily Erickson",
-      "email": "samsoninthearts+Emily@gmail.com"
+      "assignee": "",
+      "email": ""
     },
     {
       "department": "cast",
       "role": "ROSALYN YALOW",
-      "assignee": "Freddy French",
-      "email": "samsoninthearts+Freddy@gmail.com"
+      "assignee": "",
+      "email": ""
     },
     {
       "department": "cast",
       "role": "BARBARA MCCLINTOCK",
-      "assignee": "Gina Gomez",
-      "email": "samsoninthearts+Gina@gmail.com"
+      "assignee": "",
+      "email": ""
     },
     {
       "department": "cast",
       "role": "MRS. SWANSON",
-      "assignee": "Hank Hutchinson",
-      "email": "samsoninthearts+Hank@gmail.com"
-    },
-    {
-      "department": "",
-      "role": "",
-      "assignee": "Nancy Nancerson",
-      "email": "samsoninthearts+nancy@gmail.com"
+      "assignee": "",
+      "email": ""
     }
   ],
   "lineNotes": [
     {
-      "CARLY": [
+      "MR. PAXTON": [
         {
-          "line": "But I was also in that group! *Shouldn't* that *count* for something?",
-          "error": [
-            "Dropped Word(s)",
-            "Line Called"
-          ]
-        },
-        {
-          "line": "But how does that *help* me? I love theatre, but I want to major in Computer *Science!*",
-          "error": [
-            "Dropped Word(s)"
-          ]
-        },
-        {
-          "line": "Not exactly. After seeing the list, I asked him what I could do to improve my chances in the future, and he said nothing. That I was a great candidate, but that I should try again next year and just be happy with my theatre role.",
-          "error": [
-            "Jumped Cue"
-          ]
-        },
-        {
-          "line": "Excuse me, Mr. _Paxil_*Paxton?*",
-          "error": [
-            "Added Word(s)",
-            "Dropped Word(s)",
-            "Wrong Word(s)",
-            "Out of Order",
-            "Missed Cue",
-            "Jumped Cue",
-            "Line Called"
-          ]
-        },
-        {
-          "line": "Well, _test_I _test2_don't _test3_mean _test4_to _test5_be _test6_rude, but about *the* new S.T.E.M. team announcements. I know *you* give *priority* to Seniors and Juniors, but I am a little surprised by your two Sophomore picks.",
-          "error": [
-            "Added Word(s)",
-            "Dropped Word(s)"
-          ]
-        }
-      ]
-    },
-    {
-      "MS. ALEXANDRIA": [
-        {
-          "line": "Mr. Paxton? He talked with you about it?",
-          "error": [
-            "Line Called"
-          ]
-        },
-        {
-          "line": "Hedy _the Carr_*Lamarr.*",
-          "error": [
-            "Added Word(s)",
-            "Dropped Word(s)"
-          ]
-        }
-      ]
-    },
-    {
-      "HEDY LAMARR": [
-        {
-          "line": "When I was _younger_*a* *little* *girl,* my father and I would walk along the streets of Vienna, and he would point out something along the way, like a streetcar, and he would explain to me all the little pieces that would go into making it work.",
+          "line": [
+            {
+              "text": "Miss",
+              "format": "dropped"
+            },
+            {
+              "text": "Mrs",
+              "format": "added"
+            },
+            {
+              "text": "Reynolds!",
+              "format": "static"
+            },
+            {
+              "text": "What",
+              "format": "static"
+            },
+            {
+              "text": "can",
+              "format": "static"
+            },
+            {
+              "text": "I",
+              "format": "static"
+            },
+            {
+              "text": "do",
+              "format": "static"
+            },
+            {
+              "text": "for",
+              "format": "static"
+            },
+            {
+              "text": "you",
+              "format": "static"
+            },
+            {
+              "text": "this",
+              "format": "static"
+            },
+            {
+              "text": "afternoon?",
+              "format": "static"
+            }
+          ],
           "error": [
             "Added Word(s)",
             "Dropped Word(s)"
