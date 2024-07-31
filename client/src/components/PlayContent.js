@@ -36,6 +36,25 @@ function PlayContent({ scriptJson }) {
     }
   }, [scriptScrollPosition]);
 
+  useEffect(() => {
+    const handleMouseDown = (e) => {
+      if (e.shiftKey) {
+        e.preventDefault();
+      }
+    };
+
+    const playContentElement = playContentRef.current;
+    if (playContentElement) {
+      playContentElement.addEventListener("mousedown", handleMouseDown);
+    }
+
+    return () => {
+      if (playContentElement) {
+        playContentElement.removeEventListener("mousedown", handleMouseDown);
+      }
+    };
+  }, []);
+
   const handleShiftClick = (event, characterName, dialogue) => {
     if (event.shiftKey) {
       showSettings(LineNotes, {
@@ -43,6 +62,55 @@ function PlayContent({ scriptJson }) {
         characterDialogue: dialogue.tagContent,
       });
     }
+  };
+
+  const formatContent = (content) => {
+    const tagMap = {
+      em: "em",
+      i: "i",
+      b: "b",
+      u: "u",
+    };
+
+    const regex = new RegExp(
+      Object.keys(tagMap)
+        .map((tag) => `</?${tag}>`)
+        .join("|"),
+      "gi"
+    );
+
+    const parts = content.split(regex);
+    const tags = content.match(regex) || [];
+    const stack = [];
+
+    return parts.reduce((acc, part, index) => {
+      if (index === 0) {
+        // No tags before the first part
+        return [<React.Fragment key={index}>{part}</React.Fragment>];
+      }
+
+      const tag = tags[index - 1];
+      if (tag) {
+        const tagName = tag.replace(/[<>/]/g, "").toLowerCase();
+
+        if (tag.startsWith("</")) {
+          // Closing tag
+          stack.pop();
+        } else {
+          // Opening tag
+          stack.push(tagMap[tagName]);
+        }
+
+        const CurrentComponent =
+          stack.length > 0 ? stack[stack.length - 1] : React.Fragment;
+
+        acc.push(<CurrentComponent key={index}>{part}</CurrentComponent>);
+      } else {
+        acc.push(<React.Fragment key={index}>{part}</React.Fragment>);
+      }
+
+      return acc;
+    }, []);
   };
 
   return (
@@ -85,12 +153,11 @@ function PlayContent({ scriptJson }) {
                               ? "characterContent"
                               : ""
                           }
-                          // onClick={(e) => handleShiftClick(e, content)}
                         >
                           {content.stgdContent &&
                             content.stgdContent.map((item, itemIndex) => (
                               <div key={itemIndex} className="stageDirections">
-                                {item.tagContent}
+                                {formatContent(item.tagContent)}
                               </div>
                             ))}
                           {content.characterContent && (
@@ -121,7 +188,7 @@ function PlayContent({ scriptJson }) {
                                       )
                                     }
                                   >
-                                    {action.tagContent}
+                                    {formatContent(action.tagContent)}
                                   </div>
                                 )
                               )}

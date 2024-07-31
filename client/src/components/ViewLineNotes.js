@@ -3,14 +3,16 @@ import "../styles/ViewLineNotes.css";
 import { useSettings } from "../contexts/SettingsContext.js";
 import { useProject } from "../contexts/ProjectContext.js";
 import exportLineNotesUtil from "../utils/exportLineNotesUtil.js";
+import EditLineNote from "./EditLineNote.js";
 
 function ViewLineNotes() {
-  const { hideSettings } = useSettings();
+  const { hideSettings, showSettings } = useSettings();
   const { state } = useProject();
   const { projectSaveFile } = state;
   const storedLineNotes = projectSaveFile.lineNotes;
 
   const [activeCharacter, setActiveCharacter] = useState(null);
+  const [activeNote, setActiveNote] = useState(null);
 
   const formatLineText = (line) => {
     return line.map((word, index) => {
@@ -40,6 +42,7 @@ function ViewLineNotes() {
       );
     });
   };
+
   const renderCharacterTabs = () => {
     if (!storedLineNotes || storedLineNotes.length === 0)
       return <div>No line notes available.</div>;
@@ -66,10 +69,33 @@ function ViewLineNotes() {
     );
     if (!characterNotes) return <div>No notes found for this character.</div>;
 
-    return characterNotes[activeCharacter].map((note, index) => (
-      <div key={index} className="note-entry">
+    return characterNotes[activeCharacter].map((note, noteIndex) => (
+      <div
+        key={noteIndex}
+        className="note-entry"
+        onMouseLeave={() => setActiveNote(null)}
+      >
         <div className="note-errors">{note.error.join(", ")}</div>
         <div className="note-line">{formatLineText(note.line)}</div>
+        <button
+          className="menu-button"
+          onClick={() => setActiveNote(noteIndex)}
+        >
+          ...
+        </button>
+        {activeNote === noteIndex && (
+          <div className="dropdown-menu active">
+            <button
+              onClick={() => {
+                showSettings(EditLineNote, { activeCharacter, noteIndex });
+              }}
+            >
+              Edit
+            </button>{" "}
+            <button>Archive</button>
+            <button>Delete</button>
+          </div>
+        )}
       </div>
     ));
   };

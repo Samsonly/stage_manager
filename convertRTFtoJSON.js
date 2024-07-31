@@ -1404,7 +1404,8 @@ function replaceEmphasizedDialogue(
 function extractDialogue(content) {
   let modifiedContent = content
     .replace(/}\s*/g, "}")
-    .replace(/([a-zA-Z])\s*\n/gm, `$1 `)
+    //.replace(/([a-zA-Z])\s*\n/gm, `$1 `)
+    .replace(/([a-zA-Z.,;!?])\s*\n/gm, `$1 `) //This includes punctuation, fixing my issue, but maybe making more?
     .replace(/\n([a-zA-Z])/gm, `{stgd0}$1`)
     .replace(/\n/g, "");
 
@@ -1871,6 +1872,9 @@ function createInternalSceneStructure(
 function processCharacterStructure(line, characterTag, extractedSections) {
   let characterContent = {};
   let extractedLines = extractedSections.split("\n");
+  console.log("Extracted Sections: ", extractedSections);
+  console.log("Character Tag: ", characterTag);
+  console.log("Line: ", line);
 
   let characterIndex = extractedLines.findIndex((extractedLine) =>
     extractedLine.startsWith(characterTag)
