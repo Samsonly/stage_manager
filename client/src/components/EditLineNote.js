@@ -7,26 +7,45 @@ import {
 import { useSettings } from "../contexts/SettingsContext.js";
 import "../styles/LineNotes.css";
 
-const LineNotes = ({ characterName, characterDialogue }) => {
+const EditLineNote = ({ activeCharacter, noteIndex }) => {
   const { state, dispatch } = useProject();
   const { projectSaveFile } = state;
   const { hideSettings } = useSettings();
-  const [lineCalled, setLineCalled] = useState(false);
-  const [wrongWords, setWrongWords] = useState(false);
-  const [addedWords, setAddedWords] = useState(false);
-  const [droppedWords, setDroppedWords] = useState(false);
-  const [outOfOrder, setOutOfOrder] = useState(false);
-  const [missedCue, setMissedCue] = useState(false);
-  const [jumpedCue, setJumpedCue] = useState(false);
-  const [other, setOther] = useState(false);
+  const characterName = activeCharacter;
+
+  // Find the correct note based on characterName and noteIndex
+  const note = projectSaveFile.lineNotes.find(
+    (charNotes) => Object.keys(charNotes)[0] === characterName
+  )[characterName][noteIndex];
+
+  console.log(note);
+
   const [dialogueWords, setDialogueWords] = useState(() => {
-    const words = characterDialogue.split(/\s+/).flatMap((word) => [
-      { text: word, format: "static" },
+    const words = note.line.flatMap((word) => [
+      { ...word },
       { text: " ", format: "space" },
     ]);
-    words.push({ text: " ", format: "space" }); // Add space at the end
+    words.push({ text: " ", format: "space" });
     return words;
   });
+  const [lineCalled, setLineCalled] = useState(
+    note.error.includes("Line Called")
+  );
+  const [wrongWords, setWrongWords] = useState(
+    note.error.includes("Wrong Word(s)")
+  );
+  const [addedWords, setAddedWords] = useState(
+    note.error.includes("Added Word(s)")
+  );
+  const [droppedWords, setDroppedWords] = useState(
+    note.error.includes("Dropped Word(s)")
+  );
+  const [outOfOrder, setOutOfOrder] = useState(
+    note.error.includes("Out of Order")
+  );
+  const [missedCue, setMissedCue] = useState(note.error.includes("Missed Cue"));
+  const [jumpedCue, setJumpedCue] = useState(note.error.includes("Jumped Cue"));
+  const [other, setOther] = useState(note.error.includes("Other"));
   const [activeInput, setActiveInput] = useState(null);
   const inputRef = useRef([]);
   const isHandlingWordClick = useRef(false);
@@ -109,9 +128,11 @@ const LineNotes = ({ characterName, characterDialogue }) => {
     inputRef.current.forEach((input) => {
       if (input) input.blur();
     });
+
     const filteredDialogueWords = dialogueWords.filter(
       (word) => word.format !== "space"
     );
+
     const formattedDialogue = filteredDialogueWords.reduce((acc, word) => {
       if (word.format === "added") {
         return acc.concat(
@@ -130,26 +151,22 @@ const LineNotes = ({ characterName, characterDialogue }) => {
 
     const errors = getActiveErrors();
 
-    const newLineNote = {
-      line: formattedDialogue,
-      error: errors,
-    };
+    // Directly update the note at the specified index
+    let updatedLineNotes = projectSaveFile.lineNotes.map((charNotes) => {
+      const character = Object.keys(charNotes)[0];
+      if (character === characterName) {
+        return {
+          [character]: charNotes[character].map((existingNote, noteIdx) =>
+            noteIdx === noteIndex
+              ? { line: formattedDialogue, error: errors }
+              : existingNote
+          ),
+        };
+      }
+      return charNotes;
+    });
 
-    let updatedLineNotes = projectSaveFile.lineNotes;
-
-    const existingCharacterIndex = updatedLineNotes.findIndex((note) =>
-      note.hasOwnProperty(characterName)
-    );
-
-    if (existingCharacterIndex >= 0) {
-      updatedLineNotes[existingCharacterIndex][characterName].push(newLineNote);
-    } else {
-      const newCharacterEntry = {
-        [characterName]: [newLineNote],
-      };
-      updatedLineNotes.push(newCharacterEntry);
-    }
-
+    // Dispatch the updated line notes to the project context
     dispatch({
       type: UPDATE_PROJECT_SAVE_FILE,
       payload: { lineNotes: updatedLineNotes },
@@ -174,11 +191,43 @@ const LineNotes = ({ characterName, characterDialogue }) => {
     return errors;
   }
 
+  const handleStartOfLine = (event) => {
+    const clickY = event.clientY;
+
+    const spans = document.querySelectorAll(
+      "#line-notes-correct-dialogue span"
+    );
+
+    let targetIndex = -1;
+    for (let i = 0; i < spans.length; i++) {
+      const spanRect = spans[i].getBoundingClientRect();
+      if (spanRect.top <= clickY && spanRect.bottom >= clickY) {
+        targetIndex = i;
+        break;
+      }
+    }
+
+    if (targetIndex !== -1) {
+      setDialogueWords((prevWords) => {
+        const newWords = prevWords.map((word, idx) => ({ ...word }));
+        const newInput = {
+          text: "",
+          format: "",
+          inputWidth: "1ch",
+        };
+        newWords.splice(targetIndex, 0, newInput);
+        newWords.splice(targetIndex + 1, 0, { text: " ", format: "space" });
+        setActiveInput(targetIndex);
+        return newWords;
+      });
+    }
+  };
+
   return (
     <div className="modal-background-overlay">
       <div id="line-notes-modal-window">
         <div id="line-notes-table">
-          <div id="line-notes-title">Line Notes</div>
+          <div id="line-notes-title">Edit Line Notes</div>
           <div id="line-notes-character-name">{characterName}</div>
           <div id="line-notes-error-options-box">
             <div className="line-notes-error-options-row">
@@ -267,6 +316,15 @@ const LineNotes = ({ characterName, characterDialogue }) => {
             </div>
           </div>
           <div id="line-notes-correct-dialogue">
+            <div
+              style={{
+                width: "1ch",
+                height: "100%",
+                display: "inline-block",
+                cursor: "pointer",
+              }}
+              onClick={handleStartOfLine}
+            />
             {dialogueWords.map((word, index) => (
               <React.Fragment key={index}>
                 {word.format === "" && activeInput === index ? (
@@ -333,4 +391,4 @@ const LineNotes = ({ characterName, characterDialogue }) => {
   );
 };
 
-export default LineNotes;
+export default EditLineNote;

@@ -68,11 +68,19 @@
 }
 
 .note-entry {
+  position: relative;
   background-color: #181818;
   margin-bottom: 10px;
   padding: 10px;
+  padding-right: 40px;
   border-radius: 2px;
   border: 1px solid #ccc;
+  display: flex;
+  align-items: center; /* Center content vertically */
+}
+
+.note-entry:hover .menu-button {
+  display: block;
 }
 
 .addedWords {
@@ -89,6 +97,8 @@
 .note-errors {
   font-weight: bold;
   text-decoration: underline;
+  max-width: 90px;
+  text-align: center; /* Centers text horizontally */
 }
 
 .note-line {
@@ -96,6 +106,7 @@
   white-space: normal;
   overflow-wrap: normal;
   word-break: normal;
+  padding-left: 10px;
 }
 
 .menu-close-button {
@@ -120,4 +131,46 @@
   color: lightGrey;
   background-color: #121212;
   box-shadow: 0 0 1px 1px rgba(211, 211, 211, 0.5);
+}
+
+.menu-button {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-8px);
+  background: none;
+  border: none;
+  color: lightGrey;
+  font-size: 25px;
+  cursor: pointer;
+  line-height: 0.1;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background-color: #121212;
+  border: 1px solid lightGrey;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  color: lightGrey;
+}
+
+.dropdown-menu button:hover {
+  background-color: #181818;
 }
