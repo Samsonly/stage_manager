@@ -130,9 +130,16 @@ const LineNotes = ({ characterName, characterDialogue }) => {
 
     const errors = getActiveErrors();
 
+    const currentDate = new Date();
+    const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
+    const day = String(currentDate.getDate()).padStart(2, "0");
+    const formattedDate = `${month}/${day}`;
+
     const newLineNote = {
       line: formattedDialogue,
       error: errors,
+      status: "active",
+      date: formattedDate,
     };
 
     let updatedLineNotes = projectSaveFile.lineNotes;
@@ -173,6 +180,46 @@ const LineNotes = ({ characterName, characterDialogue }) => {
     if (other) errors.push("Other");
     return errors;
   }
+
+  const handleStartOfLine = (event) => {
+    if (addedWords) {
+      const clickY = event.clientY;
+
+      const spans = document.querySelectorAll(
+        "#line-notes-correct-dialogue span"
+      );
+
+      let targetIndex = -1;
+      for (let i = 0; i < spans.length; i++) {
+        const spanRect = spans[i].getBoundingClientRect();
+        if (spanRect.top <= clickY && spanRect.bottom >= clickY) {
+          targetIndex = i;
+          break;
+        }
+      }
+
+      if (targetIndex !== -1) {
+        setDialogueWords((prevWords) => {
+          const newWords = prevWords.map((word, idx) => ({ ...word }));
+          const newInput = {
+            text: "",
+            format: "",
+            inputWidth: "1ch",
+          };
+          newWords.splice(targetIndex, 0, newInput);
+          newWords.splice(targetIndex + 1, 0, { text: " ", format: "space" });
+          setActiveInput(targetIndex);
+          return newWords;
+        });
+
+        setTimeout(() => {
+          if (inputRef.current[targetIndex]) {
+            inputRef.current[targetIndex].focus();
+          }
+        }, 0);
+      }
+    }
+  };
 
   return (
     <div className="modal-background-overlay">
@@ -266,47 +313,61 @@ const LineNotes = ({ characterName, characterDialogue }) => {
               </div>
             </div>
           </div>
-          <div id="line-notes-correct-dialogue">
-            {dialogueWords.map((word, index) => (
-              <React.Fragment key={index}>
-                {word.format === "" && activeInput === index ? (
-                  <input
-                    id={`input-${index}`}
-                    ref={(el) => (inputRef.current[index] = el)}
-                    type="text"
-                    value={word.text}
-                    onChange={(event) => handleInputChange(index, event)}
-                    onBlur={() => handleInputBlur(index)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleInputBlur(index);
-                      }
-                    }}
-                    style={{
-                      width: word.inputWidth,
-                      fontFamily: "Heuristica",
-                      fontSize: "20px",
-                      height: "18px",
-                    }}
-                  />
-                ) : (
-                  <span
-                    className={`${
-                      word.format === "dropped" ? "line-notes-dropped-text" : ""
-                    } ${
-                      word.format === "added"
-                        ? "line-notes-added-text"
-                        : word.format === "space"
-                        ? "line-notes-space"
-                        : "line-notes-static-text"
-                    }`}
-                    onClick={() => handleWordClick(index)}
-                  >
-                    {word.text}
-                  </span>
-                )}
-              </React.Fragment>
-            ))}
+          <div id="line-notes-correct-dialogue-container">
+            <div
+              style={{
+                width: "1ch",
+                height: "100%",
+                display: "inline-block",
+                cursor: "text",
+                flexShrink: 0,
+              }}
+              onClick={handleStartOfLine}
+            />
+            <div id="line-notes-correct-dialogue">
+              {dialogueWords.map((word, index) => (
+                <React.Fragment key={index}>
+                  {word.format === "" && activeInput === index ? (
+                    <input
+                      id={`input-${index}`}
+                      ref={(el) => (inputRef.current[index] = el)}
+                      type="text"
+                      value={word.text}
+                      onChange={(event) => handleInputChange(index, event)}
+                      onBlur={() => handleInputBlur(index)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          handleInputBlur(index);
+                        }
+                      }}
+                      style={{
+                        width: word.inputWidth,
+                        fontFamily: "Heuristica",
+                        fontSize: "20px",
+                        height: "18px",
+                      }}
+                    />
+                  ) : (
+                    <span
+                      className={`${
+                        word.format === "dropped"
+                          ? "line-notes-dropped-text"
+                          : ""
+                      } ${
+                        word.format === "added"
+                          ? "line-notes-added-text"
+                          : word.format === "space"
+                          ? "line-notes-space"
+                          : "line-notes-static-text"
+                      }`}
+                      onClick={() => handleWordClick(index)}
+                    >
+                      {word.text}
+                    </span>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
           <div id="line-notes-button-row">
             <button className="menu-close-button" onClick={hideSettings}>

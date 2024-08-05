@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Split from "react-split";
 import TopContainer from "./TopContainer.js";
 import MiddleContainer from "./MiddleContainer.js";
@@ -10,11 +10,14 @@ import {
   SET_HORIZONTAL_PANE_SIZES,
 } from "../contexts/ProjectContext.js";
 import { useGlobal } from "../contexts/GlobalContext.js";
+import { useSettings } from "../contexts/SettingsContext.js";
+import RehearsalNotes from "./RehearsalNotes.js";
 import "../styles/ProjectWindow.css";
 
 function ProjectWindow() {
   const { state: projectState, dispatch } = useProject();
   const { state: globalState } = useGlobal();
+  const { showSettings } = useSettings();
   const { horizontalPaneSizes, isTaskSectionVisible } = projectState;
   const { loadingType } = globalState;
 
@@ -27,6 +30,22 @@ function ProjectWindow() {
     gutterElement.id = "bottom-gutter";
     return gutterElement;
   };
+
+  useEffect(() => {
+    const handleKeydown = (e) => {
+      // Check if the key combination is Alt (or Option) + N
+      if (e.altKey && e.key === "n") {
+        e.preventDefault();
+        showSettings(RehearsalNotes, {}); // Adjust the props as needed
+      }
+    };
+
+    window.addEventListener("keydown", handleKeydown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, [showSettings]);
 
   return (
     <div id="project-window">

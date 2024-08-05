@@ -40,18 +40,10 @@ const LineNotes = ({ characterName, characterDialogue }) => {
   });
 
   const handleWordClick = (index) => {
-    //remove below
-    console.log(`handleWordClick triggered at index: ${index}`);
-    console.log(
-      `addedWords: ${addedWords}, format: ${dialogueWords[index].format}`
-    );
-    //remove above
     isHandlingWordClick.current = true;
     setDialogueWords((prevWords) => {
       let newWords = [...prevWords];
       if (addedWords && newWords[index].format === "space") {
-        console.log(`Inserting new input field at index: ${index + 1}`);
-
         const newInput = {
           text: "",
           format: "",
