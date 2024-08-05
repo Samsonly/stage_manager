@@ -18,8 +18,6 @@ const EditLineNote = ({ activeCharacter, noteIndex }) => {
     (charNotes) => Object.keys(charNotes)[0] === characterName
   )[characterName][noteIndex];
 
-  console.log(note);
-
   const [dialogueWords, setDialogueWords] = useState(() => {
     const words = note.line.flatMap((word) => [
       { ...word },
@@ -192,34 +190,42 @@ const EditLineNote = ({ activeCharacter, noteIndex }) => {
   }
 
   const handleStartOfLine = (event) => {
-    const clickY = event.clientY;
+    if (addedWords) {
+      const clickY = event.clientY;
 
-    const spans = document.querySelectorAll(
-      "#line-notes-correct-dialogue span"
-    );
+      const spans = document.querySelectorAll(
+        "#line-notes-correct-dialogue span"
+      );
 
-    let targetIndex = -1;
-    for (let i = 0; i < spans.length; i++) {
-      const spanRect = spans[i].getBoundingClientRect();
-      if (spanRect.top <= clickY && spanRect.bottom >= clickY) {
-        targetIndex = i;
-        break;
+      let targetIndex = -1;
+      for (let i = 0; i < spans.length; i++) {
+        const spanRect = spans[i].getBoundingClientRect();
+        if (spanRect.top <= clickY && spanRect.bottom >= clickY) {
+          targetIndex = i;
+          break;
+        }
       }
-    }
 
-    if (targetIndex !== -1) {
-      setDialogueWords((prevWords) => {
-        const newWords = prevWords.map((word, idx) => ({ ...word }));
-        const newInput = {
-          text: "",
-          format: "",
-          inputWidth: "1ch",
-        };
-        newWords.splice(targetIndex, 0, newInput);
-        newWords.splice(targetIndex + 1, 0, { text: " ", format: "space" });
-        setActiveInput(targetIndex);
-        return newWords;
-      });
+      if (targetIndex !== -1) {
+        setDialogueWords((prevWords) => {
+          const newWords = prevWords.map((word, idx) => ({ ...word }));
+          const newInput = {
+            text: "",
+            format: "",
+            inputWidth: "1ch",
+          };
+          newWords.splice(targetIndex, 0, newInput);
+          newWords.splice(targetIndex + 1, 0, { text: " ", format: "space" });
+          setActiveInput(targetIndex);
+          return newWords;
+        });
+
+        setTimeout(() => {
+          if (inputRef.current[targetIndex]) {
+            inputRef.current[targetIndex].focus();
+          }
+        }, 0);
+      }
     }
   };
 
@@ -227,7 +233,7 @@ const EditLineNote = ({ activeCharacter, noteIndex }) => {
     <div className="modal-background-overlay">
       <div id="line-notes-modal-window">
         <div id="line-notes-table">
-          <div id="line-notes-title">Edit Line Notes</div>
+          <div id="line-notes-title">Edit Line Note</div>
           <div id="line-notes-character-name">{characterName}</div>
           <div id="line-notes-error-options-box">
             <div className="line-notes-error-options-row">
@@ -315,56 +321,61 @@ const EditLineNote = ({ activeCharacter, noteIndex }) => {
               </div>
             </div>
           </div>
-          <div id="line-notes-correct-dialogue">
+          <div id="line-notes-correct-dialogue-container">
             <div
               style={{
                 width: "1ch",
                 height: "100%",
                 display: "inline-block",
-                cursor: "pointer",
+                cursor: "text",
+                flexShrink: 0,
               }}
               onClick={handleStartOfLine}
             />
-            {dialogueWords.map((word, index) => (
-              <React.Fragment key={index}>
-                {word.format === "" && activeInput === index ? (
-                  <input
-                    id={`input-${index}`}
-                    ref={(el) => (inputRef.current[index] = el)}
-                    type="text"
-                    value={word.text}
-                    onChange={(event) => handleInputChange(index, event)}
-                    onBlur={() => handleInputBlur(index)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        handleInputBlur(index);
-                      }
-                    }}
-                    style={{
-                      width: word.inputWidth,
-                      fontFamily: "Heuristica",
-                      fontSize: "20px",
-                      height: "18px",
-                    }}
-                  />
-                ) : (
-                  <span
-                    className={`${
-                      word.format === "dropped" ? "line-notes-dropped-text" : ""
-                    } ${
-                      word.format === "added"
-                        ? "line-notes-added-text"
-                        : word.format === "space"
-                        ? "line-notes-space"
-                        : "line-notes-static-text"
-                    }`}
-                    onClick={() => handleWordClick(index)}
-                  >
-                    {word.text}
-                  </span>
-                )}
-              </React.Fragment>
-            ))}
+            <div id="line-notes-correct-dialogue">
+              {dialogueWords.map((word, index) => (
+                <React.Fragment key={index}>
+                  {word.format === "" && activeInput === index ? (
+                    <input
+                      id={`input-${index}`}
+                      ref={(el) => (inputRef.current[index] = el)}
+                      type="text"
+                      value={word.text}
+                      onChange={(event) => handleInputChange(index, event)}
+                      onBlur={() => handleInputBlur(index)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          handleInputBlur(index);
+                        }
+                      }}
+                      style={{
+                        width: word.inputWidth,
+                        fontFamily: "Heuristica",
+                        fontSize: "20px",
+                        height: "18px",
+                      }}
+                    />
+                  ) : (
+                    <span
+                      className={`${
+                        word.format === "dropped"
+                          ? "line-notes-dropped-text"
+                          : ""
+                      } ${
+                        word.format === "added"
+                          ? "line-notes-added-text"
+                          : word.format === "space"
+                          ? "line-notes-space"
+                          : "line-notes-static-text"
+                      }`}
+                      onClick={() => handleWordClick(index)}
+                    >
+                      {word.text}
+                    </span>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
           <div id="line-notes-button-row">
             <button className="menu-close-button" onClick={hideSettings}>

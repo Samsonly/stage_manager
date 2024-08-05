@@ -75,7 +75,9 @@
   justify-self: start;
 }
 
-#line-notes-correct-dialogue {
+#line-notes-correct-dialogue-container {
+  display: flex;
+  align-items: flex-start;
   font-size: 20px;
   margin-top: 15px;
   padding: 3px;
@@ -87,6 +89,23 @@
   word-wrap: break-word;
   white-space: pre-wrap;
 }
+
+#line-notes-correct-dialogue {
+  flex-grow: 1;
+}
+
+/* #line-notes-correct-dialogue {
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 3px;
+  background-color: white;
+  color: black;
+  width: 90%;
+  height: 100px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+} */
 
 #line-notes-button-row {
   display: flex;
