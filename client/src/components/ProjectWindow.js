@@ -33,10 +33,10 @@ function ProjectWindow() {
 
   useEffect(() => {
     const handleKeydown = (e) => {
-      // Check if the key combination is Alt (or Option) + N
-      if (e.altKey && e.key === "n") {
+      // Check if the key combination is Shift + Option (Alt) + N
+      if (e.shiftKey && e.altKey && e.key.toLowerCase() === "n") {
         e.preventDefault();
-        showSettings(RehearsalNotes, {}); // Adjust the props as needed
+        showSettings(RehearsalNotes, {}); // Ensure RehearsalNotes is properly passed
       }
     };
 

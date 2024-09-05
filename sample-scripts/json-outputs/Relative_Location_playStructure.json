@@ -1,0 +1,3674 @@
+{
+  "playTitle": "RELATIVE LOCATION",
+  "playDescription": " ",
+  "actStructure": [
+    {
+      "actTitle": " ",
+      "actDescription": " ",
+      "sceneStructure": [
+        {
+          "internalSceneStructure": [
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ALEX stands alone, head down. He holds a notebook. After a moment, we hear pre-recorded voices that overlap.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Seems like something's up lately."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Are you okay?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "All places on earth have relative locations."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't want to talk about it. VOICE OF ALEX'S DAD. You can't let the small things overshadow the story."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's not fair, though. It's just not fair."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF BROWN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "In journalism, the term 'transition' refers to the portion of a story which helps the reader move from one point to the next."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You've got all the time in the world. VOICE OF ALEX'S DAD.  The acceptance rate for incoming freshmen at Northwestern Evanston's school of journalism is only 7%."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm just going through some stuff."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF BROWN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "If you don't focus, you're going to miss the deadline."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ALEX raises his head slowly as the voices fade and speaks directly to the audience.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "In journalism class, we're often called upon to report on events in a chronological report. When the reporter does the research to cover the piece, they have to document every minute, every second, every fact of the event with such detail that it's almost overwhelming. Who said what, who did what, what happened next. Just like in a good novel or movie, every event affects the next one through cause-and-effect. It's like a ladder - each moment builds on the next - or a clock, with the second hand ticking away non-stop. Keeping it all straight is a challenge, but like my dad always says, \"you can't let the small things overshadow the story.\""
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "This is my story."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(A clock ticks.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Tick. Tick. Tick. Tick."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(The bell rings. Transition to classroom, where CAM and ALEX both sit. BROWN addresses the audience.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROWN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Before the bell rings, I wanted to remind you: after school today is our All-Hands Meeting. The print deadline for the upcoming issue of the Featherduster is tomorrow. That's TO. MOR. ROW. All your pieces have to be proofread and handed in to layout with all photos by lunch today. And don't forget, today is also your grade check. Anyone not passing any of their classes won't be permitted to attend the All-Hands Meeting. The policy here is \"Bad News Fast,\" people. Let me know right away if you think you aren't going to make the grade. See me if you have any questions."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROWN exits. **BROWN could be pre-recorded voice over if necessary, or even a video clip if that's within your means.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cam, did you edit those photos from last night's hockey game? We'll need them by lunch."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah, yeah. I got 'em."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But did you get all the players' names?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'll get them."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You can't rely on the students to check their email, Cam. You've got to hunt down the coaches and -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Alex. I know. I'll get it. Don't worry."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's just that deadline is lunch for photos and I want to be sure we're ready for the All-Hands."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'll be ready."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Good. I'm... glad to hear it. I've got to study for this Human Geo** test anyway."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(**Use Human Geo for grades 6-8, but if playing in a 9-12 environment, feel free to change any Human Geo references to US History or European History.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I forgot that was today. Huh."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I studied for two hours last night. I heard it was stupid hard."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "People always say that."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You didn't study?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You always get so worked up about these tests, and then it's like, 30 multiple choice questions and the answers are all 'D' and you do fine."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't know. I'm not taking any chances this time."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatever. You do your thing, man. I'll do mine."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't know how you can be so casual about it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "This is not casual. This is confident."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM throws her headphones on, and jams out to her music. ALEX puts his head down in his Human Geography book. The bell rings. Transition to the hall. CAM and ALEX walk together, as MORGAN passes.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Morgan! How was the Human Geo test?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Not bad."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(To ALEX)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "See?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sure. Okay."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I keep telling Alex not to stress out about these tests, but he doesn't listen. You meeting us for lunch?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sure."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We have to stop in to Brown's room right after the bell. I've got to drop off our final draft, but we'll catch you after."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sounds good."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MORGAN exits the opposite direction.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Did she seem off to you?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nah. It's Wednesday."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What is that supposed to mean?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I dunno. People are weird on Wednesdays."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM exits. ALEX steps forward again to address the audience.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't care what Cam says, if there's a test - any test - I take time to study. I actually should have done more last night, but there's also Honors Algebra** and that essay in English and some project I'm not even close to finishing in Comp Sci. My brain is so full, and it's ticking away so fast, and there's only so much time, so I had to use the time today in Journalism to study for this Human Geo test. I wish I could be like Cam and be more confident. More grounded. The test was not, however, 30 multiple choice questions. Every event affects the next. Tick, tick, tick, tick..."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(**or whatever upper-level math class is appropriate)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(A school bell rings. ALEX exits. Lunchtime. CAM and MORGAN re-enter with trays or lunch bags.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Where's Alex?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh man. I totally forgot. Journalism."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Deadline time?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "For real. I think Brown thinks the whole room is going to implode if we don't go to press on time. Worst that could happen is that the Featherduster comes out a day or two late. It's just a high school newsmagazine, right? It's not like we're working for Time Magazine or something."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Do they even still print Time Magazine?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "How should I know?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Anyway, a deadline's a deadline, Cam."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatever."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You and your whatevers. Did you get your Human Geo test back? Gonzalez has that scantron machine in her room and I swear it's on its last legs, but she got my class's grades entered right after 2nd period."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That fast?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah. I got an 80, but I'm good with that. That's like an A in Gonzalez's class."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Heck yeah."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(A text message alert. MORGAN looks down at her phone.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You good?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah. It's just my sister."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Everything okay?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's nothing."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nothing?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't want to talk about it."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ALEX enters.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "70!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "70 what?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I squeaked by with a 70 on that test. Don't know how. But I'll take it. Passing is passing."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Our class's grades are up already?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Told you. Gonzalez is on fire today. Go and check."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM pulls out a phone and busies herself with the search for the grade.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Can't stay for lunch. I've still got to go to Journalism."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You didn't go before you got here?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I was still taking that test."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wow. Okay. Feel okay?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "There's just... a lot."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I hear that. Catch you later."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ALEX exits in a rush. CAM puts her phone down.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "So? What's the word?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "68."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oof."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's not fair, though."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What's not fair?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey, I can multi-task. I heard Alex. He just finished that test? What's that about? The rest of us only got 50 minutes, and he's took half of lunch too. I've got to go talk to Gonzalez about this."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Now?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yes, now! A 68? That's, like, awkward. Even by my standards. I should at least be able to pass, you know? And if I don't get him to push that up to a 70, my quarter grade is going to drop and I'm off the Featherduster until next quarter. I'll be back. Don't eat my fruit snacks."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM exits. Another text message alert. MORGAN looks down at her phone. Sighs. Exits. ALEX re-enters and addresses the audience.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The piece Cam and I are working on for the school newsmagazine is \"The Road to the Championship: What Makes an All-State Championship Hockey Team.\" It's been time consuming, to say the least. I've been interviewing the players and coaches over the course of the season, and I even had to go along on an overnight with the team and ride the bus. I hate buses. They're so... close? Like the guy next to me clearly hadn't showered in some time, and he's a hockey player and they sweat a LOT. It's cold in those arenas, but you have a ton of pads on and you can still wear deodorant, okay? But I didn't say that. Dude's buff. Like, majorly and incredibly ripped. All I'm saying is that the piece has taken more time than I thought it would, but I'm trying to manage it all. It's a scheduling nightmare, and I –"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(For the first time, ALEX has to take a moment to breathe. His hand starts to shake, and he crosses his arms.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's nothing."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You do your thing, I'll do mine."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF BROWN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The policy here is 'Bad News Fast.'"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "VOICE OF ALEX'S DAD. Don't let the details overshadow the story."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(During the voices, ALEX closes his eyes. Puts a hand on his chest. Tries to focus. Freezes in place. Takes a deep breath. Continues.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I just want to be able to get it all done. Climb the ladder rung by rung. Get to the top. It's not easy for me. Sometimes everything runs together when I'm looking at a book or a test or a study guide. Sometimes I can't get myself to speak in class."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(A clock ticks.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sometimes sounds all overlap. Sometimes I feel like taking a test is the absolute end of the world and it's hard for me to breathe. Sometimes I feel like there's just so much to do that I don't know where to start. And I just freeze. It's... so busy. And so overwhelming. \"Don't let the details overshadow the story.\""
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(The school bell rings. ALEX exits. CAM and GONZALEZ enter.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The answer is no."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But Gonzalez, you don't understand -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I absolutely understand. I can't just add two percentage points to your score if you didn't earn them."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What if - okay, but what if I earned them somehow? I'll do whatever."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cam -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, I'll... I'll go back and do quiz corrections on my last quiz."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You know I don't allow quiz corrections after the grading period ends."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Then I can organize the department supply closet. I know Ms. White is always complaining about how disorganized it is and how you all never have time to fix it -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The grade you see in the system is the grade you earned."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But it's just not fair. I could have passed it if I wasn't rushed by the clock. Alex got all that extra time and-"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm not going to discuss another student with you. I can only talk to you about your work. And I can tell you that this isn't new, Cam. You've been slacking off since the start of the semester. Did you study for this test?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, I -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Up until now, you've been able to just skate by. You're smart. Don't think I don't know it. But this class gets more difficult as we head into the spring, and you've got to step up your game."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I need to pass this class for Featherduster."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I know how it works. Try to see the positives here. You didn't fail the entire course. Just this quarter. You still have a chance to pull this grade up. Maybe this is actually a good thing for you. You'll be able to dedicate some additional time to your studies and focus on your grades for the next few weeks. There's a lot on your plate right now, I'm sure."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But Alex gets all the time in the world to -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We're not discussing Alex. We're discussing you."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM rushes off, and bumps into ALEX on her exit.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whoa. Sorry. Missed you at Featherduster. Brown asked about you. Are you heading there now?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No. I'm off."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Off... ?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm off Featherduster. I failed that Human Geography test and Gonzalez won't help me, and you only passed because you get extra time."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's not true, I -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatever. Listen, I don't want to talk about it. You're just going to have to handle the rest of the article on your own. Brown's gonna kick me off for the whole quarter, so... it's your project now."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But the photos you took -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatever."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM exits. ALEX addresses the audience.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "In Human Geography**, we learn that all places on earth have relative locations. Like, you can describe where they are by saying what's close to them. I think people are like that, too. You can always find me if you find Morgan or Cam. But I think that can backfire, that relative location. My Dad says that when people are falling, they like to grab on to whatever or whoever they can, and sometimes they end up taking people down with them. Sometimes the people that get pulled down with us are the people that are closest to us."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(**Leave this Human Geo reference in place, but add \"in freshman year\" if you are using the US or European History changes for upper level grades.)"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(ALEX's hand starts to shake, and he stops it by pulling it to his chest with his other hand. A clock ticks.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "What if I can't get it done on my own? What if there's just not enough time? I don't have the photos and Cam's mad at me now and I don't know how I'm supposed to get the photos from her if she's acting like this and not talking to me and -"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(The clock stops. MORGAN enters, on her way elsewhere.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Morgan! Did you see Cam?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I mean, at lunch?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "How did she seem?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I mean, did she say anything? About me, I mean?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, man. Not really. She was gonna talk about her grade in Gonzalez's class, I guess. Seemed upset about that."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "She's totally freaking out on me and I don't know how I'm going to get this project done now."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MORGAN's text alert again. She looks at the phone.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Look, I'm sorry, okay? I don't know how to help you. I've gotta go."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(MORGAN exits.)"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(A school bell rings. ALEX exits. Transition to MORGAN, at home. She sits on a beanbag or something similar, trying to study. We hear voices offstage or pre-recorded: an argument.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "VOICE OF MORGAN'S MOM It's too late for apologies, Shay. Our house. Our rules."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You only enforce the rules when you feel like it. VOICE OF MORGAN'S DAD Don't talk back to me!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "This is a joke. This whole family is a joke. VOICE OF MORGAN'S DAD Don't walk away when I'm talking to you!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(SHAY enters. Sees MORGAN. Plops down in the beanbag next to her.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatcha doing?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't know why you have to text me all day long. I'm in class."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I can't communicate with my little sister?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm in class. You should be too."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Eh. Class is overrated."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You can't expect to pass your classes and graduate if you don't even go to class."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You're right. I don't expect to do any of that."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Why do you do this?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Do what?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Do you like causing problems? Does it make you happy to make Mom and Dad crazy?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I mean, a little. Not gonna lie."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You are a piece of work."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Look. I'm just living my life. You don't have to worry about me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't want to worry about you! I want to look up to my big sister! I want to have an example. Someone who leads! But I got you instead, and all you do is text me pictures of you skipping class all day, and when I get home, Mom and Dad are flipping out while I try to study."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whoa. Word vomit. Gross."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Just... I dunno, man. Make better life choices."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I won't text you anymore. Fine."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(SHAY exits.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's not what I - never mind."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MORGAN exits. ALEX enters, holding a notebook and a camera. He addresses the audience. A clock ticks.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "My dad went to Northwestern Evanston. He was a journalism major. Evanston's journalism program only takes 7% of applicants. When I apply for colleges, I need to be ready. I need to have a portfolio of pieces from across all subject areas, and I need to show a history of meeting my deadlines. I need recommendation letters from my instructors and I need to be - at least! - in the top 20% of my class. Right now, though, I need to get Cam to give me those photos."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(The clock stops. CAM enters.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cam! Hey. Stop for a minute."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I can't. I have to go study."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM exits. MORGAN enters.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Morgan, can you talk to Cam for me?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Can't, man. Handle your own business."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM enters. MORGAN exits.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Come on, Cam. Just talk to me. I can't finish this -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Too bad. Maybe if you had some extra time."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM exits. MORGAN enters.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Morgan, if you could just talk to her -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I can't deal with that right now, man."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MORGAN exits. ALEX turns to the audience, visibly shaken.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I missed the deadline. Brown kicked Cam off the project because of grades, which I knew but it was hard to hear at the All-Hands meeting after school."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(The shaking hand. It's pulled to his chest again. Sounds of voices overlapping.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF BROWN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The deadline is TO. MOR. ROW."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't want to talk about it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Handle your own business."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cam won't talk to me or give me the photos for the article. I don't know why."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(ALEX tries to catch his breath but it's becoming more and more difficult.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Morgan won't talk to me. Seems like she's been avoiding me since after lunch yesterday. All I needed was some help, and..."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(The voices from before continue to overlap in the background as ALEX continues.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't want to talk about it. VOICE OF ALEX'S DAD. You can't let the small things overshadow the story."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's not fair, though. It's just not fair."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF GONZALEZ.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "All places on earth have relative locations."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm just going through some stuff. VOICE OF ALEX'S DAD. \"You can't let the small things overshadow the story."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's not fair, though. It's just not fair."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF BROWN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Transitions help a story move from one point to the next."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You've got all the time in the world. VOICE OF ALEX'S DAD. The acceptance rate for incoming freshmen at Northwestern Evanston's school of journalism is only 7%."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "VOICE OF MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't want to talk about it."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(During the voices, ALEX sinks slowly to the floor.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I missed the deadline and I'm behind and I don't know if I'll ever catch up. It feels like everything is happening in fast forward and slow motion all at the same time and I can't stop it. Nothing can stop it. It won't... stop, it just -"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Tick, tick, tick, tick -(A clock ticks. It speeds up. ALEX has frozen, head down on his knees in sort of an upright fetal position. For a moment, everything is still. Sounds of rapid breathing are heard. MORGAN and CAM slowly re-enter on either side of ALEX. The clock stops.)"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Dude. Are you okay?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Alex?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Can you hear us, man?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Come on, stop messing around."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ALEX does not respond.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What do we do?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "A story can't just... stop."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "This isn't our story to tell. It's Alex's story."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We're just players in these events."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Events. How did we get here?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "How did Alex get here?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "There was a test."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The test. The one I failed. The one he got all the time in the world on."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You know, that's not really what happened."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MORGAN exits.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(To the audience)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, but seriously. He gets extra time or something. You've seen it. If I had extra time, I could have aced that test and still been working on that article with him and none of this would have happened. It's ridiculous."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MORGAN re-enters and interacts with ALEX in a flashback, tossing a football back and forth. CAM watches.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Did you get those test corrections turned in, man?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, yeah. It took me two hours last night."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Two hours? What were you doing?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uh... The test corrections?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, I mean. They took me twenty minutes. It wasn't a long test."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You know me. Tests and quizzes get me all messed up. Especially if there are bubbles I have to fill in, like in Gonzalez's class. It's all too much pressure, and I have to take time to keep myself from getting too freaked out about it. It's why I get extra time on tests. Gives me time to read everything, breathe, keep myself calm, cool and collected."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I didn't know that."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ever wonder why I never volunteer to read out loud in English class?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Figured you just hated Shakespeare like the rest of us."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, well that AND I have this deep-seated fear that I'd probably get half the words wrong and everyone would make fun of me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nah. They're messing up Shakespeare too. Dude wrote all of his sentences BACKWARDS, right?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They laugh, as CAM turns back to the audience. During the following, MORGAN exits and ALEX returns to his position.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It would have taken me twenty minutes to do those test corrections too. If I'd remembered to do them on time."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(re-entering)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sometimes you only see what is happening to you, Cam, and not what's happening with everyone else. You have this... distance. In order to understand what's going on with someone else, you've really got to see it from their perspective."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I didn't know."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You never asked him. You just made assumptions."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't know what I'd do if I couldn't read as fast as I do. I can go through, like, a whole book on a plane trip. And sometimes I read so fast I don't remember what I read."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's a whole other issue. You ever think you might - I don't know - need some other sort of help?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Like what?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I dunno. Alex gets those accommodations for anxiety. You might need something else."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No way. It's more like an \"ish-me\" than an \"ish-you.\""
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's equity, Cam. Different people just need different accommodations. There's not a person in this world who doesn't need some sort of assistance. There's no shame it that. You? You operate at warp speed, and sometimes things get lost in the shuffle. You're always bouncing from one thing to another. Like homework, or tests, or the photo deadline, or -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's just part of who I am. I manage."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But there's a lot of ways that you could get help with that. You could do more than just \"manage,\" you know? Maybe it's time for you to be a self-advocate and ask for the help that you need."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Maybe. You think I was too rough on him?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't know, man. Guy's been bugging me all day, but I just didn't have time to deal with all the drama you create."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Me? Oh come on."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Don't give me that \"come on.\""
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Everybody's going through something. Alex knows that. He's not stupid. He knows that sometimes I just need a day to get my head together."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It does seem like something's been up with you lately. You want to talk about it?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "See that's what I'm talking about."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You can't just bottle it up."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Bottle what up?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(Gestures back at ALEX)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "How do you think we got here?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM exits.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Point taken."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(To the audience)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "It just all seems so - out of my control, I guess? Like there's so many problems, but I can't fix any of them."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(SHAY enters and interacts with MORGAN in a flashback.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Look, I'm sorry I'm such a disappointment."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Did you go to class today?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I went to a class today."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's an improvement."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I know I'm not making life easy for you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, I mean, just keep screwing up. I look better by comparison."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's not funny."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's a little funny."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "How about we make a deal?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What kind of deal?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I try to do better -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Be more specific."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I try to get to class and keep Mom and Dad from getting so mad at me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And yelling."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Now I don't know if I can stop them from yelling. That's really up to them. I think they're getting good at it now after all this practice."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Shay."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I do better, okay? I do better and you -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What do I have to do with this?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "If you get mad at me, let's just - talk it out? I think I've had enough people angry at me to last a lifetime. I don't think I could handle it if you started yelling at me all the time too, or worse, gave me the silent treatment."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That - that sounds like a plan."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "SHAY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That sounds like a DEAL, is what you mean."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They shake. SHAY exits.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Talk it out. Probably the only good advice my sister has ever given me, and I forget to use it. Typical."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAM reenters.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Don't beat yourself up. Now. Morgan. What are we gonna do about him?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Alex."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Alex."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(The two friends sit down on either side of ALEX. He does not respond.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Alex. You need us to get someone? You want us to get the nurse?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ALEX shakes his head.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, but... we've got to transition you out of this, okay? We're gonna stay right here."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You remember what Brown said about transitions? Right now, you're stuck. But we've got to move from this point to the next."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You hear us, man? Keep breathing. Remember what we used to do in elementary school at assembly? Square breathing."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Inhale for four."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They do, together.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hold for four."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They do, together.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Exhale for four."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They do, together.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hold for four."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They keep breathing for a few moments in this manner.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Good man, good. I know you're overwhelmed right now. Can you talk?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's good. That's real good. You sure you don't want us to get someone? The nurse's office is just -"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No nurse. Just you guys. What's happening?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Seems like you're having an anxiety attack. My sister gets them sometimes. Keep breathing, okay?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We're here for you, man. This is going to pass."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What do you hear?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hear?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Name five things. What do you hear?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "My heart beating."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Besides that, man. Besides that."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uh. The air conditioner."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's one."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Mr. Adams talking next door."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's two."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The locker doors. Miriam's music from her headphones that she always turns up way too loud."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "One more."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The toilet flushed in the restroom just now."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, gross. But good."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Still breathing?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm breathing."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Name four things you see."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I see... the tile floor. And that exit sign. And you guys. Morgan. Cam."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We're here."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We're not going anywhere."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You doing better?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I think so."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ALEX starts to get up.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You don't need to move yet. It's okay."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm sorry about the Featherduster."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Me too. It's my fault. I should have studied for that test."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You'll be back next quarter."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, you can bet on it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I could sure use those photos though. I'm past deadline, and I don't know how long Brown is going to wait for me to catch up."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You want 'em, you got 'em. I can even help with proofreading if you need. Just because I'm off the newsmagazine doesn't mean I can't help a friend on a project, right?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Right."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And look, man. I should have been more helpful. I - I'm just going through some stuff at home and... well... I'm going to try to do more talking and less simmering."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Simmering."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah. Got to let all that steam out before the lid pops off."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm going to hold you to that, Morgan."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MORGAN.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I hope you do."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You feel like you're back?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You know? I do. I'm here. I'm ready."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MORGAN and CAM help ALEX to his feet. The two friends exit, as ALEX addresses the audience once more.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ALEX.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "All places on Earth have a relative location. It's a way of describing how that place is related to other places on Earth. Like, when my dad says that the remote for the Roku is on the coffee table and can I hand it to him, the remote is also about two feet out of his reach and he could just lean and get it if he wanted to. But that's not the point. The point is - well. The point is that we're all just out here figuring it out together. So we're all in relative location to each other. Me. Cam. Morgan. Our teachers. Our parents. Helps if you can have some empathy for all of those connected, relative beings while you're out on your own path trying to keep yourself afloat. And it helps if you don't let the small things overshadow the story. Tick, tick, tick, tick –"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(A clock ticks. The clock slows down. It stops. ALEX breathes deeply, then exhales.)"
+                }
+              ]
+            }
+          ],
+          "sceneTitle": "Scene 1",
+          "sceneLocation": " ",
+          "sceneDescription": " ",
+          "sceneEnding": " "
+        }
+      ],
+      "actEnding": "END OF ACT"
+    }
+  ],
+  "playEnding": "THE END.."
+}

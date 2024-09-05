@@ -2,7 +2,6 @@ import {
   useProject,
   UPDATE_PROJECT_SAVE_FILE,
   UPDATE_PROJECT_SAVE_STATUS,
-  SET_LEFT_BUTTONS_VISIBLE,
   SET_CURRENT_SCRIPT_VIEW,
 } from "../contexts/ProjectContext.js";
 
@@ -29,7 +28,6 @@ const UploadScript = () => {
             },
           });
           dispatch({ type: UPDATE_PROJECT_SAVE_STATUS, payload: false });
-          dispatch({ type: SET_LEFT_BUTTONS_VISIBLE, payload: true });
           dispatch({ type: SET_CURRENT_SCRIPT_VIEW, payload: "script" });
         } catch (error) {
           console.error("Error parsing JSON:", error);

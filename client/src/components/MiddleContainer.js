@@ -13,11 +13,6 @@ function MiddleContainer() {
   const { state, dispatch } = useProject();
   const { layoutIsInverted, verticalPaneSizes } = state;
 
-  // const handleGroundplanUpload = (file) => {
-  //   dispatch({ type: STORE_GROUNDPLAN_FILE, payload: file });
-  //   dispatch({ type: SET_CURRENT_DESIGN_VIEW, payload: "groundplanEditor" });
-  // };
-
   const handleDragEnd = (verticalPaneSizes) => {
     dispatch({ type: SET_VERTICAL_PANE_SIZES, payload: verticalPaneSizes });
   };

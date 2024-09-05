@@ -1,0 +1,2678 @@
+{
+  "playTitle": "THE GIFT CAT",
+  "playDescription": " ",
+  "actStructure": [
+    {
+      "actTitle": " ",
+      "actDescription": " ",
+      "sceneStructure": [
+        {
+          "internalSceneStructure": [
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(enters, speaks to audience)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Bwawwff! Bwawwff! I'm Pippi, the puppy! You want to know a secret? I have a special super-power. And, it's not that I can talk. All of the animals here can talk—at least to each other. My super-power is so special that even Stevie, my person, doesn't know what it is. She'll never know, but you will…watch and wait!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP curls up on bench to take a nap.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(Off stage sound of rice falling.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MOM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, for pity sake! The plastic bag the rice comes in just broke and now there's rice all over everything. As if I didn't already have enough to do."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(off stage noise drawers opening, closing.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "What's all the racket about, Stevie?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(off-stage noise continues throughout.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm looking for something and it's really, really important."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MOM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, could you look a little more quietly, please. I have a headache."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(off-stage noise finally ends.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE enters, walks sadly to PIP.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I can't find it, Pip. I've looked everywhere. My money's gone."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP concerned dog vocalization.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(becoming emotional)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "What am I gonna do, Pip? I promised Mom FOUR presents for her birthday and now I can't find my money anywhere and I had a bunch of it, too."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP sits up on bench, cocks head left and right, thinking.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What is it girl? You have an idea?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP shakes head, 'no', drops head to chest, then pops it up, cocks head left and right, thinking, jumps down, starts to howl.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What is it Pip? Why are you howling?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP stops howling, looks at STEVIE, starts to howl again.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stop that, Pip. Mom has a headache."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(idea!)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait! I forgot to look in all my pants pockets! Good dog! I'm going to go look in all my pants pockets!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(to PIP as she goes into the house.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(howls quietly, says)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Gift Horse. I'm calling you!!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT enters, filing fingernails.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP growls)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, be quiet."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT sits, puts on nail polish.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP stealthily moves toward CAT, growling.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Why so rude? After all, you invited me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What! I did not!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Did too!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Did not!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Did too!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Did not! I invited the Gift Horse."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, you got me. The Horse is busy. Howdie-do. I'm the Gift Cat."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(puts polish away.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "What do you need."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I need the Gift Horse. You know to help with gifts."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, boo-hoo, you got me. Get on with it. I haven't got all day."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(sigh)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "My person, Stevie, lost her money and…"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT starts to leave.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait! Where are you going?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm the Gift Cat. Not the Lost-And-Found Cat. Catchya later, dude."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP runs in front of CAT, stopping CAT in its tracks, growls.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Use your words, dog."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stevie, my person needs you. She lost their money and she needs FOUR birthday presents for her Mom."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, unfortunately, I'm fresh out of presents and money."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP makes confused dog sound.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Like this scarf? I just got it. TJ MAX $14.99!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(growls angrily at the CAT.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "You spent the Gift Horse's money on presents for yourself!!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(scared)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "All right. I shouldn't have done that. Give me a minute I'll think of something the kid can give the Mom."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(thinks)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uhhmm…Ahh…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I can't think like this. Quit growling at me!!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP growls)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(thinking hard)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, help me think. I'm sure you could help. I heard somewhere that dogs are smarter than cats. You know? Please, oh please oh please stop growling so I can think."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "All right, then."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(does so.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Let's think!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(A bit where they are both earnestly thinking, maybe pacing, discarding ideas before even speaking them.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP gets an idea, starts to pull bag of trash out.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You could give me a hand here."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "My nails aren't dry."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP Pants, tilts head to the side, puppy whimper.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stop. Stop that. Stop with the irresistible puppy stuff. Fine. I'll help."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(Together they pull out ice cube tray, cardboard egg carton, empty toilet paper rolls, blanket, small wood or tin box, paper used on one side, newspaper, sweater, shoe, socks, ribbon, big coffee can, used tissue paper. They behave cat-like with some items and dog-like with others. This contains adlibs and bits with items.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(looking over everything)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "There!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "There what?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Don't you see? We can REUSE these. They can be presents."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Presents?!! That is junk, garbage, trash. I'm leaving."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP growls)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "All right, fine, I'm staying..."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Good. I'll get Stevie."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP exits.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT looks disinterested, yawns, hides where STEVIE can't see.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP and STEVIE enter, PIP brings STEVIE to table of trash.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What is it, girl? Oh no, Pippi, what's all this trash doing out? Mom won't like this!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(As STEVIE starts to clean up, PIP makes magical gesture, STEVIE and CAT are frozen, speaks to audience, STEVIE is frozen with an article of trash in her hand.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "There it is--my super-power. See?! I can make everything stop and then, I can give people ideas. Cool, huh. If you can think of something here on the table that Stevie could REUSE! something that could hold uncooked rice. Something Stevie could decorate and REUSE as a gift for her Mom-- please raise your hand and I'll call on you."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(focus on two or three objects, coach as necessary, pulls answers from the audience: coffee can.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Good thinking. I'll give Stevie that idea."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(makes magic gesture.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE sees the coffee can.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait a minute, there's treasure in this trash. My Mom just spilled rice all over the floor 'cause the bag it came in broke. I could REUSE this coffee can. I can decorate it and she could put her rice in it! AND I could give it to her for her birthday!!"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(puts can under bench)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "REUSE! REUSING is REDUCING. Yes."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP barks happily)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But that's not enough. I told Mom I'd be giving her FOUR presents."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(looks over items)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "and I don't see anything else here I can give her. Oh, no."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP makes magical gesture, STEVIE and CAT are frozen, speaks to audience.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stevie needs another idea. If we REUSE stuff, then we can REDUCE how much new stuff has to be made, reduce how much stuff goes into the trash!"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(Holds up cardboard egg carton or cracked ice cube tray.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "If you think this can be REUSED as a present, raise your hand? Thank you, you can put your hands down. Maybe Stevie could paint this and her Mom could put something in it. Stevie's Mom could sort stuff in here. If you can think of something to put in here, besides eggs, raise your hand and I'll call on someone."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(jewelry, --medicine, gives clues, if needed.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, I'll give Stevie that idea."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(makes magical gesture.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh. I just had an idea! I could paint this and my Mom could put her jewelry, maybe earrings, in it!"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(puts egg carton or ice cube tray under bench.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Pippi, that's 2 presents! How many more do I need?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP barks once)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Huh."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(looks over items)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "This is hard."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MOM.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(OFFSTAGE)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stevie, lunch!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(calls out)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Coming Mom!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE exits)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(browsing through pile of trash)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hhhmmm…."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT starts to play with ribbon.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Fun!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT plays with ribbon in a way that leads PIP into the play. They play for a time until PIP realizes and pulls away, attempting to recover. CAT shrugs and starts to leave with ribbon.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cat! What do you think you're doing?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What does it look like, dog. I'm leaving."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Not with that ribbon you're not. At least not without paying for it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?!! It's just ribbon trash."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, it's not. It's a ribbon treasure—AND IT CAN BE REUSED to REDUCE WASTE! Pay up. 25 cents."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT does so.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I thought you didn't have any money."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm a cat. Whattya think? Can I always be trusted?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(pause)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Say, did you notice this bag of trash is getting smaller."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Duh…that's because we're REUSING a lot of it. REDUCES WASTE. It's good for the earth."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT is rummaging among items.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "How do you know that?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I must have read it somewhere."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT puts blanket on.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You can read! Seriously?!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Good grief. I forgot. Cat."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "How much for this blanket?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Two dollars."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(CAT pays up, starts to play with an empty tube of wrapping paper.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cool. I want it. I really want it. How much?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't know. A nickel?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT gives money to PIP.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Is this a yard sale?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP puts money in wood or metal box, digs in potted plant, puts box in it, covers it up.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I think this is a yard sale. Yard. Sale. People sell stuff they don't want anymore—so the stuff they don't want gets REUSED! OR sometimes they just give REUSEABLE things to a thrift store like Good Will. Like I said. Good for the earth."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What's Good Will?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No idea."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT exits.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stevie's coming! Stevie's coming! Stevie's coming!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(starts to wag tail, jump around)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(enters)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hi Pippi!"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(STEVIE throws ball.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Get it, girl."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(pets PIP)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Mom's gonna like the presents I'm making her, but I'm still sad 'cause I really wanted to give her a pretty scarf."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP digs up box, brings it to STEVIE.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatchya got there, Pippi?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP barks)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE opens box, sees money.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wow, Pippi. Where'd you get all this money?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP goes to plant, digs.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You found buried treasure! Cool! I don't think this is enough for a scarf though. Shoot."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(Stevie looks through trash.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, look! I can REUSE this paper on the clean side to make Mom a card. We really should REUSE this paper on both sides before we throw it out."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE exits, CAT enters.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(pause)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, Cat. I need that scarf for Stevie."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP grabs scarf, starts wrapping it in newspaper, puts ribbon on it throughout next speeches.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?! I paid hard earned money for that scarf."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You bought it with money you took from the Gift Horse's present fund."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh yeah. I forgot."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(exasperated dog sound)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "grrr. Cat."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE enters.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP brings wrapped scarf to STEVIE)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What's that, Pippi? A present for me?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP barks)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE opens present.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey, Pip, you REUSED newspaper like it was wrapping paper. Cool! Look, it's a scarf! A scarf I can give to my Mom! Thanks! Pippi! I'm going to wrap all these presents in newspaper right now."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(Stevie exits)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And then after that, the kid should recycle the newspaper."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What? What's recycle?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's when you put things in one of those things."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(CAT points to bin)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "I watch a lot of T.V."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(referring to signs on bins, one saying recycle, one saying garbage, another organics recycling)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Too bad we can't read."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP makes magical gesture, CAT freezes.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "So, secret power: I can read these words!"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(Reads)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Trash, recycle, organics."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(Plays a game of having the audience do call and response with these bin words, consider teaching the words, then having them divided into groups for responses. Or not.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Thank you! That was great! I'm gonna give Cat those words!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP makes magic gesture to give the idea to CAT.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Meeow! I wish you wouldn't do that! Wait a minute! Wait! Wait! Wait! Hold the phone. I think I feel some words happening. Here we go!"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(CAT goes to bins, reads)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Trash, Recycle. Organics. Who's the greatest now, dog? Cats or dogs, huh? Huh?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP winks at the audience, or finger to mouth swear them to secrecy.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, Cat, I think we're BOTH great. I magically gave you those words."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, you're so great, huh? Well, to prove how great cats are, I will now read again."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(CAT tries a couple of times, but can't.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hhmm... oh well."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yep. But, we are both great. In our unique ways!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah, yeah, yeah. Just don't do the irresistible puppy face, okay?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You mean this face?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stop it. Stop that. Oh, look--there's nothing in the recycle bin. Nothing in the organics bin either."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cat, you wanna help me fix this? We can sort the trash!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But, my nails...."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(cute puppy face)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Please...Cat. We could...work together...."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Really? Cat and dog? Together? Sorting the trash?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yes! Reducing, reusing, recycling! C'mon."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I must say, you're very energetic, aren't you?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP goes to trash bag.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Get the newspaper and put it in the recycle bin."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And, a tiny bit bossy…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sorry. I'll get the glass."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(puts it in the bin.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Let's get the plastic. Some for you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And, some for you!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(Both put plastic in the bin.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Good job, Cat."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uh--well-uh--good job, dog."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait! what about...the banana peel and the apple core?!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hm...well...they used to be living things...so----"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "So..."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP/CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Organics recycling!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They put the banana peel and apple core into the organics bin. They do some sort of paws slap.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(SECOND ROUND OF SORTING. Sorting has been modelled, now it becomes a game involving the audience. This is a group game. Thank them for their help. Can use thumb polls and/or clapping to get them to aid in sorting.)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT notices all of the Starbucks- style coffee cups in the trash.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What's all this?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "The Mom likes fancy coffee from coffee shops."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Too bad! THIS DOES NOT REDUCE! THIS is more using, not less! All those cups in the trash. Something should be done about that. Bad for the earth. Too many cups in the trash—all headed for the landfill."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT exits.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait! What's a landfill? Arfff! Huh…gone."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE enters with 3 wrapped presents, she sits on the bench.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay. Let's see I have"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(counts)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "1, 2, 3, presents. Wait, I thought I had 4"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(counts again)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Shoot. I need another present and I have no idea what to get."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(holding empty coffee cups, makes magic freezing gesture.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "If you can think of something Stevie could get her Mom, maybe something so her mom won't have to use so many of these cups, raise your hand and I'll call on someone. (pulls from audience: coffee travel mug). A travel mug is a great idea! Cat will like this idea, too because there won't be any more coffee cups in the trash going to the landfill—whatever that is. Let's give Stevie that idea."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP makes magic gesture to unfreeze STEVIE.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait! I've got it! I could buy Mom a travel mug for her coffee. I'll bet I have just enough money to do that. AND then all of these cups wouldn't have to go to the landfill."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(looks confused)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Arffff, Warfff????"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You know—the landfill—They're not good for the earth. That's why we should reduce, reuse and recycle our trash."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(quietly, not menacingly—PIP is confused, looking at bins.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "GRRRRgggghhhh!?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah, I know. Mom and I aren't very good about doing the 3Rs. Mom's so busy and I forget all the time. But, when we found presents for Mom in the trash and we reused all that stuff, it was fun. WE REDUCED the Waste! I could do that more."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP barks happily)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And, when I give Mom her travel mug, I could remind her about reducing trash 'cause of the landfills."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(confused)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Rrrawwff."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You know…the landfills. BIG BIG piles of trash just lying there waiting to get buried. Waiting to rot. Stinking up the planet. Heating things up."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(scared)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "rrrrrrrawf."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I guess I could do the recycling. It's really not that hard. You just rinse stuff out a little and put them in the right bin. Wait!!! That could be another present! I could tell Mom that I'll do the recycling. That's a good present for Mom and for the earth!! Pip, I've got to go write that stuff down and then I'll wrap that piece of paper like a gift! (As he runs into the house)"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hmm…Landfill huh? Like this?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP starts digging, then puts some trash in the hole. STEVIE enters, sees the hole.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh no! Pippi, what did you do? Mom's going to be really mad at you."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP hangs head in disappointment.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I thought you learned your lesson when you dug up Mom's tomato plants."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE starts to put the dirt back into the hole, then sees the trash bits in the hole.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait a minute. Wait. Pippi, you are such a smart puppy. You were making a landfill, weren't you?!?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP jumps and barks and tail wags gleefully. STEVIE pets PIP fondly.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Good dog. Uh-oh I got dirt on my pants and Gramma's coming over."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE exits. CAT enters with a bag.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cat! I learned about landfill."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(PIP sniffs at bag.)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "What's inside the bag?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, I returned the sweater I bought"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(pointedly)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "since I no longer have the scarf that goes with it …and picked up a few things for your kid person."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stevie."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah, whatever."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You bought Stevie presents?! Really? Let's see! Take them out! Take them out! Rrafff!!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT sticks head deeply into bag. Flicks tail. Then suddenly emerges with toys.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "AND! Voila! The Cat's outa the bag!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT takes out 2 toys, one is overly packaged and one is fine.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(PIP is examining the presents)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "This is very nice of you, Cat. I'm starting to like you a little, even if you are a cat."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Lovely. And I, CATegorically find you um---appealing"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And...? And? And?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay. I guess I like you, too. You are likeable. For a dog."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They start to paw five or something, kinda turns into a sort of dance/play when the CAT produces the ribbon. This goes on for a bit, then:)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, I'll be DOGgoned."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "CAT.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ooh. Speaking of gone. I'm out. See ya. Ciao"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(said in a “meow” way)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(CAT exits.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "PIP.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(calling after CAT)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey! Hey! Hey! come back here! Cats. No loyalty."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(pause, then begins to howl)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(STEVIE enters.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What is it Pip?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP hands the toys to Stevie.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "For me?! Wow! You must have found more buried treasure in the yard, huh, Pip. Cool! Hhmm… I feel good about having this toy"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(displaying the environmentally consciously packaged one)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "but not so good about this one."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP makes a questioning dog sound.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, this one has way too much packaging and it's just going to end up in the landfill. It's not even close to REDUCING! But see, this one doesn't make hardly any trash so it's reducing and I can recycle most of it. I'm gonna really take charge of helping sort the trash, and recycling and reducing. AND RE-USING!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP makes another questioning dog noise)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "See, if we all watch what we buy, we'd be REDUCING and throwing out a lot less trash. Shoot, like I shouldn't have used this paper plate for my snack."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(throws it out)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "If I used a plate I could wash, I'd have made less trash. I'm gonna start doing that."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MOM is standing by the door.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "MOM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stevie, Gramma and Auntie Heather and Brittany are here. Why don't you and Pippi come in now."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(MOM opens door.)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "'Kay."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(as she exits)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey, Mom, did you see! I have 5 presents for you to open!! This is your best birthday ever, huh, Mom?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "MOM.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yes, sweetie, the best birthday ever. Oh my, and after the party we're going to clean up the mess in this yard."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "STEVIE.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Come, Pippi!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(PIP starts to follow STEVIE, then turns to the audience, waves and exits.)"
+                }
+              ]
+            }
+          ],
+          "sceneTitle": "Scene 1",
+          "sceneLocation": " ",
+          "sceneDescription": " ",
+          "sceneEnding": " "
+        }
+      ],
+      "actEnding": "END OF ACT"
+    }
+  ],
+  "playEnding": "The End"
+}
