@@ -1,0 +1,13 @@
+{
+  "playTitle": "Title of Play",
+  "playDescription": " ",
+  "actStructure": [
+    {
+      "actTitle": " ",
+      "actDescription": " ",
+      "sceneStructure": [],
+      "actEnding": "END OF ACT"
+    }
+  ],
+  "playEnding": "END OF PLAY"
+}

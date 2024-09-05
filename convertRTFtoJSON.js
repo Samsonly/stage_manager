@@ -1694,6 +1694,7 @@ function matchSceneTags(
 
       if (sceneMatch) {
         const sceneTag = sceneMatch[0];
+        console.log(sceneTag);
         structuredPlayContent.actStructure[0].sceneStructure.push({});
         //prettier-ignore
         structuredPlayContent.actStructure[0].sceneStructure[sceneCount].internalSceneStructure = [];
@@ -1872,9 +1873,6 @@ function createInternalSceneStructure(
 function processCharacterStructure(line, characterTag, extractedSections) {
   let characterContent = {};
   let extractedLines = extractedSections.split("\n");
-  console.log("Extracted Sections: ", extractedSections);
-  console.log("Character Tag: ", characterTag);
-  console.log("Line: ", line);
 
   let characterIndex = extractedLines.findIndex((extractedLine) =>
     extractedLine.startsWith(characterTag)
@@ -1893,12 +1891,41 @@ function processCharacterStructure(line, characterTag, extractedSections) {
       extractedLine.startsWith(tag)
     );
     let extractedTag = extractedLines[tagIndex];
-    // console.log(extractedTag);
 
     let extractedTagContent = extractedTag.match(/\[(.*)\]/);
     let tagTypeMatch = tag.match(/[a-z]+/);
     let tagType = tagTypeMatch[0];
-    let tagContent = extractedTagContent[1];
+    let tagStartingContent = extractedTagContent[1];
+    let multiWordEmphasisRegex = /<em>(\S+\s+\S+.*?)<\/em>/;
+    let processedString = tagStartingContent.replace(
+      multiWordEmphasisRegex,
+      (p1) => {
+        let words = p1.split(/\s+/);
+        let wrappedWords = words.map((word) => `<em>${word}</em>`).join(" ");
+        return wrappedWords;
+      }
+    );
+
+    let singleWordArray = processedString.split(/\s+/);
+    console.log(singleWordArray);
+    let singleWordEmphasisRegex = /<em>(.*?)<\/em>/;
+    let tagContent = singleWordArray.map((word) => {
+      let match = singleWordEmphasisRegex.exec(word);
+
+      if (match) {
+        return {
+          text: match[1],
+          format: "static",
+          style: "italic",
+        };
+      } else {
+        return {
+          text: word,
+          format: "static",
+          style: null,
+        };
+      }
+    });
     characterContent.characterAction.push({ tagType, tagContent });
   });
 

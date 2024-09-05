@@ -1,0 +1,50 @@
+delete everything before and including <w:body>
+delete everything after and including </w:body>
+replace `"<w:p ----- >"  with "/n"`                             <w:p .*?>
+replace `"</w:p>" with ""`                                      </w:p>
+replace `"<w:br/>" with "\n"`                                   <w:br/>
+replace `"<w:pPr>" with ""`                                     <w:pPr>
+replace `"</w:pPr>" with ""`                                    </w:pPr>
+replace `"<w:rPr>" with ""`                                     <w:rPr>
+replace `"</w:rPr>" with ""`                                    </w:rPr>
+replace `"<w:iCs/>" with ""`                                    <w:iCs/>
+replace `"<w:bCs/>" with ""`                                    <w:bCs/>
+replace `"<w:jc ----- >" with ""`                               <w:jc.*?>
+replace `"<w:pStyle ----- >" with ""`                           <w:pStyle.*?>
+replace `"<w:rStyle ----- >" with ""`                           <w:rStyle.*?>
+replace `"<w:rFonts ----- >" with ""`                           <w:rFonts.*?>
+replace `"<w:numPr ----- >" with ""`                            <w:numPr.*?>
+replace `"<w:numId ----- >" with ""`                            <w:numId.*?>
+replace `"</w:numPr>" with ""`                                  </w:numPr>
+replace `"<w:ilvl ----- >" with ""`                             <w:ilvl.*?>
+replace `"<w:lang ----- >" with ""`                             <w:lang.*?>
+replace `"<w:sz ----- >" with ""`                               <w:sz.*?>
+replace `"<w:szCs ----- >" with ""`                             <w:szCs.*?> (not needed)
+replace `"<w:color ----- >" with ""`                            <w:color.*?>
+replace `"<w:vertAlign ----- >" with ""`                        <w:vertAlign.*?>
+replace `"<w:spacing ----- >" with ""`                          <w:spacing.*?>
+replace `"<w:ind ----- >" with ""`                              <w:ind.*?>
+replace `"<w:proofErr ----- >" with ""`                         <w:proofErr.*?>
+replace `" w: ----- >" with ">"`                                 w:.*?>
+replace `"^<w:b/>" with ""`                                     ^<w:b/>
+replace `"<w:b/>" with "<b>"`                                   <w:b/>
+replace `"^<w:u ----- >" with ""`                               ^<w:u.*?>
+replace `"<w:u ----- >" with "<u>"`                             <w:u.*?>
+replace `"^<w:i/>" with ""`                                     ^<w:i/>
+replace `"<w:i/>" with "<i>"`                                   <w:i/>
+replace `"<w:t ----- >" with "<w:t>"`                           <w:t.*?>
+replace `"<w:r>(.*?<b>.*?)</w:r>" with "<w:r>$1</b></w:r>"`     <w:r>$1</b></w:r>
+replace `"<w:r>(.*?<u>.*?)</w:r>" with "<w:r>$1</u></w:r>"`     <w:r>$1</u></w:r>
+replace `"<w:r>(.*?<i>.*?)</w:r>" with "<w:r>$1</i></w:r>"`     <w:r>$1</i></w:r>
+replace `"<w:.*?>" with ""`                                     <w:.*?>
+replace `"</w:.*?>" with ""`                                    </w:.*?>
+replace `"’" with "'"`                                          ’
+replace `"‘" with "'"`                                          ‘
+replace >(.*?)<   with  >{{{$1<
+replace >\{\{\{\}\}\}< with ><
+replace </b>((?:(?!\{).)*)<b> with $1
+replace </u>((?:(?!\{).)*)<u> with $1
+replace </i>((?:(?!\{).)*)<i> with $1
+replace {{{ with ""
+replace "^<[^>]*>?([A-Z]+(?:[A-Z\s/.-]*))<\/[^>]*>?\s*(<i>\([A-Za-z\s,/-]*\)</i>|\([A-Za-z\s,/-]*\))?$/n" with "$1. $2"
+Find characters: ^([A-Z]+(?:\.(?![A-Z]|\.)|\/|\(|\)|\s|[A-Z])*\.)\s

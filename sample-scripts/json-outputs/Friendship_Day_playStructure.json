@@ -1,0 +1,4784 @@
+{
+  "playTitle": "FRIENDSHIP DAY",
+  "playDescription": " ",
+  "actStructure": [
+    {
+      "actTitle": " ",
+      "actDescription": " ",
+      "sceneStructure": [
+        {
+          "internalSceneStructure": [
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(Music. Animal Academy. The playground has a play tunnel, a bench, a cornhole game, and hopscotch. BROOKS enters, with a decorated gift bag under their arm, and scurries around. BROOKS charges through the tunnel, tosses bean bags as if playing the game with abandon, jumps and rolls up on the bench. Hopscotches a bit. Lets out a big, big sigh. ED enters, carrying a decorated gift bag. BROOKS tries to get ED's attention, but ED is listening to music in their earbuds)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED looks straight ahead)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Seriously. Ed."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED comes to rest inside the tunnel. ED is grooving with the tunes. BROOKS is getting frustrated)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, Ed. I got no choice."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS tosses a piece of candy from their bag, which hits ED)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ow! Aaagh! What? Why?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED takes out one earbud)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, you wouldn't answer me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I didn't hear you! See? Earbuds?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I needed you to answer me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What's the emergency? You gave up a red Starburst!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uh—yeah. Can I have it back?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED picks it up and puts it in his bag)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't think so. Throwing stuff at people is not good manners."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, not answering people when they talk to you is bad manners, too!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I told you. Earbuds. I did not hear."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "So? Give me back my candy."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Can't."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS grabs at ED's gift bag)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey! You owe me an apology."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You owe me a Starburst!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(The two students struggle)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't owe you, you tossed it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Let. Go."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You let go. You're breaking it!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You're breaking your own bag! Let go!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No. You're breaking it!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Just. Give. Me. The Candy!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY enters during the kerfuffle. TORY has a red backpack, and wears heart-infused clothes. TORY is singing loudly, something like “You've Got a Friend in Me.” TORY has a red gift bag decorated with their name. TORY sits on the bench. BROOKS and ED stop fighting for a moment and turn to look)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(shivers)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whoa. I can't believe we have a fox in our class…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I know! She's so cool."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's not cool."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You're overreacting. You don't even know her yet. You acted just like this when we got a bear classmate. And when there was an eagle… and—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But it's a fox!!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Technically, she's a red fox. Red foxes are known for their intelligence, and their loyalty to their families, and—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Not. In. The mood. For. Another. Ed-speech. What if it was an alligator, or a shark? They love yummy turtles! Yeah. Bet you're scared now."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh! You're scared? Of a fox…?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Don't call me scared!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS grabs ED's bag, spilling the contents. There are only two Friendship Day cards)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You ate all your candy already?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You only got two Friendship treats?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED backs into the tunnel, pulling their head into their shell. TORY opens their backpack and takes out some small red baby bell cheeses)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I got one from the teacher, and one from a mystery student."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That was me. My dad heard that everyone had to give Friendship treats to everyone else, so he made me. You're welcome."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Right. Thank your dad."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, cheeses, are you ready for a little excitement?"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(as the cheeses)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wheee! Whee! Yay!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY tries to juggle the cheeses)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey, that fox eats cheese, not… Um—you know—smaller animals…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "If I was a hedgehog, I would be scared."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, maybe you're scared of everything. I'm not."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(ducking back into their shell)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Kay…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(with bravado)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey. Never saw a fox eat cheese."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm not eating cheese."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS stops)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yet."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(cheekily)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "So, you play with your food?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Many predators have a habit of wrestling with their food—um, prey—and they–"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS shoots ED a look)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Never mind…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm not really playing with my after-school snack. I'm juggling."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Looks like playing."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Juggling is not playing. It's art."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(bravely)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Looks more like dropping…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(cheese voice)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's fun! Whee! Yay!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(laughs)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's what I call “cheesy”!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(laughs)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "YES!"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(drops one)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uh-oh!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(laughing)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cheese down!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(walking away)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah– nope."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(following BROOKS)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "I brought the red cheeses because it's Friendship Day. My favorite holiday."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Not mine."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS hops onto the bench and walks on it like a balance beam, does a handstand, etc)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um… Do you have a favorite holiday?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(moves away)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "I just want to wait for my dad."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(leaps out of reach)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "In peace."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Right."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(to ED)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "What about you?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Huh?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What's your favorite holiday?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "My favorite holiday would be National Turtle Day."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "So weird. That's not a holiday."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS remains engaged with the playground equipment, scurrying and playing. Occasionally they sigh or groan)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yep. May 23rd. Me and my mom go to the Shellebration of turtles everywhere. It's a spotlight on turtles! It's a focus on the need to protect turtles, tortoises, and habitats, ‘cause we're losing our places to live– Did you know that all tortoises are turtles, but not all turtles are tortoises?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Fascinating– really fascinating!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(muttering)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "“Fascinating, really fascinating.”"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um– what?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(oops)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um-nothing. Never mind."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "This year's theme for World Turtle Day is “I Love Turtles.” A lot of kids don't know real turtles or tortoises. They only know Teenage Mutant Ninja Turtles. And that's okay because it's at least a start. I mean, they were just regular baby turtles, and somebody dropped them into a sewer, and—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um? Excuse me–"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "—then they landed in some bad goo that changed them into Big Mutants, and they have four different personalities; Leonardo “Leo”– The Leader. Donatello “Donnie”– The Genius. Michelangelo “Mikey”– The Funny One. Raphael “Raph”– The Rebel. And Mikey is the youngest one, he's really funny and—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I did not know that tortoises could talk so fast."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, we're not slow all the time. Anyways, the Ninja Turtles are what my mom calls “gateway turtles…” Like the gate to caring about real ones, like me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wow, there's so much to know about real tortoises… and of course the, um– imaginary? Ones?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(serious)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh. Ninja Turtles are very real."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Don't get him going!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Too late. Hey, tortoise. Ask me a question."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS groans)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I asked you a question. Now it's your turn to ask me a question. That's how friends talk."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Friends? Puh-lease!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We're friends?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We're not. But we could be. All three of us."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ha! I've got all the friends I need."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Then you know that friendly people SOAR."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uh. Right."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "My mom taught me this: S– Smile. O– Offer your hand. A– Ask their name. R– Repeat their name and tell them yours. S-O-A-R. SOAR. It's how to be friendly! Want to practice?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS starts playing hopscotch or bean bags)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uh, nope."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'll try."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Thank you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um-kay."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(coaching)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Say, “you're welcome.”"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um, you're welcome?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, then. SOAR. That's SOAR like—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(mocking)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sore like I fell down and hurt my knee, boo-hoo!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's SOAR, like flying high, like being really successful at being friendly!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Gross. And not as funny as mine."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(to ED)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Alright. My turn, then your turn."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(demonstrating)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "S– Smile. O– Offer your hand."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(They shake hands or fist-bump)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "A– Ask their name. What's your name?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um, Ed."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "R– Repeat their name and tell them yours. Hi Ed, I'm Tory. Yay! Now your turn, Ed."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "S– Smile. O– Offer your hand."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(They shake hands or fist-bump again)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "A– Ask their name. What's your name?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Tory."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "R– Repeat their name and tell them yours. Hi Tory, I'm Ed."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yes! Thanks Ed! Way to be friendly."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I can practice that at World Turtle Day."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS groans very loudly)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And then, friendly folks ask questions and give compliments. Here's one:"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(to BROOKS)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey there, I like your spikes."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "They are spines."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You're welcome."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?!?!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, sorry, I thought you said thank you when I gave you a compliment. You know, manners and stuff."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah. I know manners “and stuff.” But I don't have spikes."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I got spines."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh! Spines! Well, they are very nice."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(exaggeratedly)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Thank you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You're welcome. Are they sharp?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I like them too."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's enough!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But, if you have manners, you say thanks."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, they look sharp."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Back off."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm just saying–"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(blurts angrily)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "They look sharp, so bigger creatures won't try to– nothin."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Try to what?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I said, nothin."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS sits, then curls up. ED puts his earbuds in and backs into the tunnel)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Maybe we could…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "This. Is. Hedgehog. For lea'me alone."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(They curl up again)"
+                },
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY looks over at ED, who is listening to music and chewing a piece of lettuce. TORY begins to hopscotch, alone, and not very well. After a beat, BROOKS approaches TORY)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's ridiculous. What're you trying to do?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Thank you for asking. I am practicing hopscotch."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nope, you're not."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I am."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You're just jumping on the squares without using a marker."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's true. But I don't know how to play with a marker."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You don't know how to play with a marker?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wanna teach me?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(know it all)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Not really."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You're not really afraid of me, right? I don't bite. Show me? Please?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well…"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(thinks)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's easy. I could show you in like, two seconds."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, there's lots of seconds before my mom gets here, so you can teach me thousands of times!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatever. But I'm serious. Two seconds! Then you have to leave me alone. Or else, I'll—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(swishing tail curiously)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS is spooked by the tail flick. They hand TORY the marker at arm's length)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Here, use this marker."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY takes the marker and approaches ED)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey, Ed!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED looks up. BROOKS steps in front of TORY, making a face and covertly shaking their head. ED sees)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey. What are you doing?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't want Ed to play. Okay, scoot back. Toss the marker down, then watch how I jump."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nope. I can't."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sure, you can. Do it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Only if we all three play."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Look. You're new here. Ed doesn't care. Ed is used to being alone."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Why? Why is that?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "He obviously likes it that way."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'll just ask."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY taps the tunnel next to where ED is sitting. ED looks up and takes out one earbud)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sorry to disturb you, Ed, but I was just wondering why you sit alone."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You can't just ask that!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I just did."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't want to talk about it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "See? Just leave him."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You don't have to tell me right now, but I'll be hanging out right here if you want to talk."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY folds their arms and leans against the tunnel. BROOKS is attempting to continue the hopscotch lesson, tossing the marker, hopping, etc. TORY sings to themselves)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatever."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Everybody hates me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm sorry, I didn't hear that, I was singing."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Are you watching me?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(sotto voce)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "I said, everyone hates me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's silly."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, it isn't. It's true."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, I'm somebody, and I don't hate you. I barely even know you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nobody knows me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait a minute. You said everyone hates you. Then you said that nobody knows you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "So?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "If nobody knows you, then nobody hates you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Huh?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't think you can hate what you don't know!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(loudly)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "After I toss the marker on a square, I jump over it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "C'mon Ed. It's time for JOY! J– Just jump in. O– Own your place. Y– Yes, I can."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Do you know a lot of these things? Like SOAR, like JOY?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, the letter games? They're kind of a code. My mom teaches me. She's an animal whisperer. She uses them to help young animals with friendships. So, it's time to SOAR with JOY."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I jump over it. I never touch that square again. See?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(demonstrates)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ed is playing too."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Why?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I think you know. It's rude, it's bad manners, to leave someone out. And, I'm trying to use empathy."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Empathy?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's putting yourself in someone else's shoes. Imagining what they must be feeling. Feeling how that feels."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "So… You're feeling Ed's feelings?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Kinda. And being alone doesn't make Ed happy. So, Ed is gonna have to J-O-Y. JOY. J– Just jump in. O– Own my place. Y– Yes, I can."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Fine, but you know tortoises can't jump."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That big old shell can't get off the ground."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ed! Come on over. Let's learn hopscotch."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay then. Time for JOY."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(enjoys being bossy)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, anyways. I toss the marker on a square, and I jump over it. I never touch the square again. See?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY and ED support the demonstration with oohs, ahhs, and applause. BROOKS eats it up)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "We clapped. What comes next?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Somebody takes a turn."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Before that. Manners?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Uh… Thank you? TORY: You're welcome. Way to go!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay. Ok ok. I'll try."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sure? Cause I'm not helping you if you fall. You're on your own."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Time for JOY."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED pulls out a bandana like the TMNT wear, and puts it on)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What. Is. That??"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "My ninja turtle head gear. Got it at the Shellebration last year."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(impatiently)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Just toss the marker and hop!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey, didja know that the original hopscotch courts were over 100 feet long? Good thing they're shorter now. And the record hopscotch jumper finished the game in one minute and two seconds. And the rules change a lot, so—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(moves to shove ED)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Go already!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(off balance)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey! Not fair. No shoving."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey. Keeping our hands to ourselves is friendly. That was not."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "This is dumb."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Then make it smart. Apologize."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(ending the argument by taking a big leap)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "JOY!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED is an excellent hopper, exceeding the distance covered by BROOKS. TORY supports his hop with oohs, ahhs, and applause. BROOKS eventually joins in)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That. Was. Kinda. Fun!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Do you ever wonder about the hop on one foot rule?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I thought you didn't know how to play."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't. I just know how to hop."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(pointedly)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "And, I know how to apologize."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Show us."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You first."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, okay. Ed, I'm sorry I shoved you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Thanks."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, now go?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "‘Kay. No shoving. Here goes JOY!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY jumps with mixed success. BROOKS and ED cheer them on)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, that's over."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS and ED split. BROOKS curls up on the bench. ED sits in the tunnel)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey. Wait up, guys."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY takes a moment to assess, then approaches the curled-up BROOKS)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I think somebody needs to practice being friendly. So, let's SOAR."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "See this? I told you. This is hedgehog for lea'me alone. So, lea'me alone. I don't need friendly practice. I got friends."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yep. They are super popular."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I am not."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah, you are."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'm not popular."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yes, you are!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, I'm not."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You got, like, a million Friendship Day treats."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Everyone did."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And if you tell people to do something, they do it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't tell people what to do!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You always tell people not to let me play."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, I—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And they do it. That's popular."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whatever."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And they always laugh at your jokes. That's popular."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS. STOP IT.",
+                "characterAction": [
+                  {
+                    "tagType": "c",
+                    "tagContent": "ED."
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Why are you so mad? I would love it if everyone liked me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Stop saying that!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Saying what?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That everyone likes me!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Everyone does!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "No, they don't!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Who doesn't like you?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay. I'll prove it. Remember when I shared in morning circle today?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I told about my dog having puppies? Do you remember what kind of dog I have?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um. No."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's because I never said."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, knowing the kind of dog does kinda help us imagine better."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I know that. I forgot it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You forgot what kind of dog you have?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I was standing in front of the class and I totally forgot it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ah. Nerves made your memory stop for a second. My mom says that can—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Anyway, I couldn't remember it. I said, “My dog is a–” and then I started stuttering. And these two girls in the back of the class kept laughing at me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah, I saw that."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And I got really hot. I could feel my face going red. I really wanted to curl right up. I sat back down and I felt… I don't know."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Embarrassed?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Right. And nobody said anything to me. We went out to recess, and all my friends stayed away from me. They knew I was upset and they just ignored me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That's terrible."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It was terrible. They're supposed to be my friends. If I'm so popular, how come nobody would talk to me?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What would you want them to say?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I don't know. Like, “Are you okay?” or something."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "A little empathy for you would have been good."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And, I think it's poor manners to laugh at somebody who is having a hard time."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah. Empathy. Manners. Right."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, are you okay?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah. I guess. I feel better now."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You just wanted someone to ask."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(to BROOKS)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, now you gotta SOAR with me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It doesn't hurt. If I can do it, you can do it."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay…"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I think you should do JOY first."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Good idea, Ed."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping below)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "J– Just jump in. O– Own your space. Y– Yes, I can."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping above)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "J– Just jump in. O– Own your space. Y– Yes, I can."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, all together! J– Just jump in. O– Own your space. Y– Yes, I can. One more time! All together now! J– Just jump in. O– Own your space. Y– Yes, I can."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait, your mom taught you that?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah. She helps kids be friendly and get better at making friends. Like us."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, I did tell you that I don't have any trouble making friends."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY and ED give BROOKS a look)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It can never hurt to be friendlier."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(BROOKS sighs)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay. I have another game. Are you ready?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sure."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yes."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Questions. People who are good at making friends are good at asking questions. So, here's a beanbag from that game. We hold the beanbag, we ask a question, then we quickly toss the bag to someone else. And they ask a question and toss quickly to someone else. The game is called Speedy Q."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Wait, no answers? Just questions?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "It's question practice. Not answer practice."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And also thinking fast?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Truth!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What kinds of questions?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Just a question. After you ask it, you toss the bag to the person who must ask the next question."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Got that."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ed starts."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I can't think of anything."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Come on!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um. Why is the sky blue?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses the bag to TORY)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Why did the chicken cross the road?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses the bag to BROOKS)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What kind of dog is Clifford the Big Red Dog?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to TORY)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Dogs or cats?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to ED)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Um– Um—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Faster."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Cheese or meat?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to TORY)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Tater tots or french fries?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to BROOKS)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "How many licks does it take to get to the center of a Tootsie Roll Pop?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to ED)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Favorite movie?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to BROOKS)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Favorite song?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to ED)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Where were you born?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to TORY)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Got any siblings?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to ED)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What do you like to do with your family?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to BROOKS)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Can we answer?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to TORY)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Name of your dog?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to BROOKS)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Can we answer?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to ED)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "CAN WE ANSWER?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to BROOKS)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I wanna answer."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to TORY)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Can you ask a question?!"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to BROOKS)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Why do you like the Mutant Ninja Turtles so much?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to ED)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Why me?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(tosses to TORY)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And… stop."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Whoa. That was hard. Taking turns, thinking fast–"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "NOT ANSWERING the questions."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Okay, if you can remember a question you really wanted to answer, go."
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(ED and BROOKS talk over each other, eagerly sharing the answers they held in. They overlap, but hear each other's answers. TORY watches from off to the side)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I do like dogs. I have a big one. Her name is Gina. And, I do have siblings, a sister and a baby brother, and my family likes to go fishing together and sometimes we play games and–"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "I like cats, we have two of them. They are both orange. Tater tots are better because they hold more ketchup, and I like Mikey because they are the youngest and the Ninja Turtles make me proud to be a tortoise."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(to TORY)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "So, you didn't answer yet. Why Friendship Day?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, I'm a red fox, and I like all the red stuff, and the hearts, and—uh—it's my birthday."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "What?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "See, we do learn about each other by asking questions."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Are you having a party? Are you having cake?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh, you should have a party!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sure. I'll invite all my friends. See?"
+                  }
+                ]
+              }
+            },
+            {
+              "stgdContent": [
+                {
+                  "tagType": "stgd",
+                  "tagContent": "(TORY takes three Friendship treats out of their bag)"
+                }
+              ]
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "You got more than me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "And, you're new. They weren't ready for you."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Way to practice empathy. Happy birthday, anyway."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, thanks. So there's a treat from the teacher. And—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping below)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "And one from me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping above)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "And one from me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping below)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "My mom—"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping above)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "And my dad."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "—asked me to give one to everyone."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Be sure to thank your parents."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "So, you're having a birthday party? Tonight?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Sure. With all my friends."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Alright! I'll just go home and get cleaned up."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Me too. I know my mom will bring me."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "But–"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nope. No buts. We're your friends now, right?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yes, but, we didn't do the friendly meeting thing. I don't actually remember your name."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Oh! Almost forgot."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I'll start. SOAR. S– Smile. O– Offer your hand. A– Ask their name. R– Repeat their name and tell them yours. S-O-A-R. SOAR."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(this time doing the actions)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "S– Smile. O– Offer your hand. A– Ask. What's your name?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Brooks."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "R– Repeat their name and tell them yours. Hi, Brooks, I'm Tory."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "That was fun. My turn."
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(to ED)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "S– Smile. O– Offer your hand. A– Ask. What's your name?"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Ed."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "R– Repeat their name and tell them yours. Hi Ed, I'm Brooks."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nice to meet you! S-O-A-R SOAR!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nice to meet you! S-O-A-R SOAR!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(overlapping)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "Nice to meet you! S-O-A-R SOAR!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Well, we'd better hustle. We have a birthday party to get to!"
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "My mom's gonna flip that I made new friends."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I think we all got new friends."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "BROOKS.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "I know, right? We. Are. Soaring."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "TORY.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Yeah, SOARing with JOY."
+                  }
+                ]
+              }
+            },
+            {
+              "characterContent": {
+                "characterName": "ED.",
+                "characterAction": [
+                  {
+                    "tagType": "d",
+                    "tagContent": "Hey, did you know how birthday celebrations got started? Back in ancient times, 5,000 years ago, Egyptians celebrated for the—"
+                  },
+                  {
+                    "tagType": "cdir",
+                    "tagContent": "(Music up as they exit together, laughing. Adlib)"
+                  },
+                  {
+                    "tagType": "d",
+                    "tagContent": "END."
+                  }
+                ]
+              }
+            }
+          ],
+          "sceneTitle": "Scene 1",
+          "sceneLocation": " ",
+          "sceneDescription": " ",
+          "sceneEnding": " "
+        }
+      ],
+      "actEnding": "END OF ACT"
+    }
+  ],
+  "playEnding": "END OF PLAY"
+}

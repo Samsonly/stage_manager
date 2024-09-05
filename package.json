@@ -7,7 +7,11 @@
     "c": "node convertRTFtoJSON.js sample-scripts/Carly.rtf",
     "s": "node convertRTFtoJSON.js sample-scripts/Salem.rtf",
     "m": "node convertRTFtoJSON.js sample-scripts/Mueller.rtf",
-    "g": "node convertRTFtoJSON.js sample-scripts/Green_Room.rtf"
+    "g": "node convertRTFtoJSON.js sample-scripts/Green_Room.rtf",
+    "t": "node convertRTFtoJSON-CLIMB.js sample-scripts/Trash!.rtf",
+    "gc": "node convertRTFtoJSON-CLIMB.js sample-scripts/The_Gift_Cat.rtf",
+    "rl": "node convertRTFtoJSON-CLIMB.js sample-scripts/Relative_Location.rtf",
+    "fd": "node convertRTFtoJSON-CLIMB.js sample-scripts/Friendship_Day.rtf"
   },
   "dependencies": {
     "react": "^18.2.0",
